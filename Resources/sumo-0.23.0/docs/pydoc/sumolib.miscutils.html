@@ -1,0 +1,149 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module sumolib.miscutils</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="sumolib.html"><font color="#ffffff">sumolib</font></a>.miscutils</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/sumolib/miscutils.py">/home/behr_mi/sumo/tools/sumolib/miscutils.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;miscutils.py<br>
+@author&nbsp;&nbsp;Jakob&nbsp;Erdmann<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2012-05-08<br>
+@version&nbsp;$Id:&nbsp;miscutils.py&nbsp;18096&nbsp;2015-03-17&nbsp;09:50:59Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Common&nbsp;utility&nbsp;functions<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2012-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="colorsys.html">colorsys</a><br>
+<a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="socket.html">socket</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="sumolib.miscutils.html#Colorgen">Colorgen</a>
+</font></dt><dt><font face="helvetica, arial"><a href="sumolib.miscutils.html#Statistics">Statistics</a>
+</font></dt><dt><font face="helvetica, arial"><a href="sumolib.miscutils.html#working_dir">working_dir</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Colorgen">class <strong>Colorgen</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Colorgen-__call__"><strong>__call__</strong></a>(self)</dt><dd><tt>return&nbsp;constant&nbsp;or&nbsp;randomized&nbsp;rgb-color&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="Colorgen-__init__"><strong>__init__</strong></a>(self, hsv)</dt></dl>
+
+<dl><dt><a name="Colorgen-byteTuple"><strong>byteTuple</strong></a>(self)</dt><dd><tt>return&nbsp;color&nbsp;as&nbsp;a&nbsp;tuple&nbsp;of&nbsp;bytes&nbsp;each&nbsp;in&nbsp;[0,255]</tt></dd></dl>
+
+<dl><dt><a name="Colorgen-floatTuple"><strong>floatTuple</strong></a>(self)</dt><dd><tt>return&nbsp;color&nbsp;as&nbsp;a&nbsp;tuple&nbsp;of&nbsp;floats&nbsp;each&nbsp;in&nbsp;[0,1]</tt></dd></dl>
+
+<dl><dt><a name="Colorgen-get_value"><strong>get_value</strong></a>(self, opt)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Statistics">class <strong>Statistics</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Statistics-__init__"><strong>__init__</strong></a>(self, label<font color="#909090">=None</font>, abs<font color="#909090">=False</font>, histogram<font color="#909090">=False</font>, printMin<font color="#909090">=True</font>, scale<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="Statistics-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statistics-add"><strong>add</strong></a>(self, v, label<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Statistics-average_absolute_deviation_from_mean"><strong>average_absolute_deviation_from_mean</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statistics-avg"><strong>avg</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;mean&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Statistics-avg_abs"><strong>avg_abs</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;mean&nbsp;of&nbsp;absolute&nbsp;values</tt></dd></dl>
+
+<dl><dt><a name="Statistics-clear"><strong>clear</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statistics-count"><strong>count</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statistics-histogram"><strong>histogram</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statistics-mean"><strong>mean</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;median&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Statistics-mean_abs"><strong>mean_abs</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;median&nbsp;of&nbsp;absolute&nbsp;values</tt></dd></dl>
+
+<dl><dt><a name="Statistics-median"><strong>median</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statistics-median_abs"><strong>median_abs</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statistics-quartiles"><strong>quartiles</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Statistics-rank"><strong>rank</strong></a>(self, fraction)</dt></dl>
+
+<dl><dt><a name="Statistics-relStdDev"><strong>relStdDev</strong></a>(self, limit<font color="#909090">=None</font>)</dt><dd><tt>return&nbsp;the&nbsp;relative&nbsp;standard&nbsp;deviation&nbsp;optionally&nbsp;limited&nbsp;to&nbsp;the&nbsp;last&nbsp;limit&nbsp;values</tt></dd></dl>
+
+<dl><dt><a name="Statistics-update"><strong>update</strong></a>(self, other)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="working_dir">class <strong>working_dir</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;temporarily&nbsp;change&nbsp;working&nbsp;directory&nbsp;using&nbsp;'with'&nbsp;statement<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="working_dir-__enter__"><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="working_dir-__exit__"><strong>__exit__</strong></a>(self, type, value, traceback)</dt></dl>
+
+<dl><dt><a name="working_dir-__init__"><strong>__init__</strong></a>(self, dir)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-benchmark"><strong>benchmark</strong></a>(func)</dt></dl>
+ <dl><dt><a name="-geh"><strong>geh</strong></a>(m, c)</dt><dd><tt>Error&nbsp;function&nbsp;for&nbsp;hourly&nbsp;traffic&nbsp;flow&nbsp;measures&nbsp;after&nbsp;Geoffrey&nbsp;E.&nbsp;Havers</tt></dd></dl>
+ <dl><dt><a name="-getFreeSocketPort"><strong>getFreeSocketPort</strong></a>(numTries<font color="#909090">=10</font>, minPort<font color="#909090">=8000</font>, maxPort<font color="#909090">=50000</font>)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>uMax</strong> = uMax<br>
+<strong>uMin</strong> = uMin</td></tr></table>
+</body></html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Networks/Further_Outputs - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Networks/Further Outputs</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.981285 from <a href="http://sumo.dlr.de/wiki/Networks/Further_Outputs">the wiki page for Networks/Further_Outputs</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>, <a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a>, and <a href="../NETEDIT.html" title="NETEDIT">NETEDIT</a> allow to generate additional output files besides writing a SUMO network file. They will be presented in the following.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Writing.2FExporting_Networks"><span class="tocnumber">1</span> <span class="toctext">Writing/Exporting Networks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#SUMO_Road_Networks"><span class="tocnumber">1.1</span> <span class="toctext">SUMO Road Networks</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Plain_XML_Output"><span class="tocnumber">1.2</span> <span class="toctext">Plain XML Output</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#MATsim_Road_Networks"><span class="tocnumber">1.3</span> <span class="toctext">MATsim Road Networks</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#OpenDRIVE_Road_Networks"><span class="tocnumber">1.4</span> <span class="toctext">OpenDRIVE Road Networks</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Further_Outputs"><span class="tocnumber">2</span> <span class="toctext">Further Outputs</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Information_about_Geometry_Removal"><span class="tocnumber">2.1</span> <span class="toctext">Information about Geometry Removal</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Writing.2FExporting_Networks">Writing/Exporting Networks</span></h1>
+<p>If no other output option is given, <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> and <a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a> will write the result of network import/generation as a SUMO network file into "net.net.xml". Otherwise the specified output will be generated.
+</p><p>Currently, the applications allow to write networks in the following formats:
+</p>
+<ul><li> SUMO road networks
+</li><li> plain XML definitions, as described in <a href="../Networks/Building_Networks_from_own_XML-descriptions.html" title="Networks/Building Networks from own XML-descriptions">Networks/Building Networks from own XML-descriptions</a>
+</li><li> MATsim networks
+</li></ul>
+<h2> <span class="mw-headline" id="SUMO_Road_Networks">SUMO Road Networks</span></h2>
+<p>This is the default output format, see above. The name of the file to write the network into can be given using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--output-file <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>. <span style="color: #111144; font-weight: bold; white-space: pre;">--sumo-output <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> and <span style="color: #111144; font-weight: bold; white-space: pre;">--output <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> are synonymes.
+</p>
+<h2> <span class="mw-headline" id="Plain_XML_Output">Plain XML Output</span></h2>
+<p>Parsed node and edge definitions may be saved into a XML-files which have the same formats as the ones used for importing XML-networks (as described in <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Node_Descriptions" title="Networks/Building Networks from own XML-descriptions">Node Descriptions</a> and <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Node_Descriptions" title="Networks/Building Networks from own XML-descriptions">Edge Descriptions</a>). This shall ease processing of networks read from other formats than XML. The option <span style="color: #111144; font-weight: bold; white-space: pre;">--plain-output <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> forces <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> and <a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a> to generate a file named "<a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a>.nod.xml" which contains the previously imported nodes, a file named "<a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a>.edg.xml" which contains the previously imported edges, and a file named "<a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a>.con.xml" which contains the previously imported connections. The edge file will contain the list of previously read edges and each edge will have the information about the edge's id, the allowed velocity, the number of lanes, and the from/to - nodes stored. Geometry information is stored only if the imported edge has a shape, meaning that it is not only a straight connection between the from/to-nodes. The lane spread type and the basic edge type are only saved if differing from defaults ("right" and "normal", respectively). Additionally, if one of the lanes prohibits/allows vehicle classes, this information is saved, too (see also "Defining allowed Vehicle Types").
+</p>
+<h2> <span class="mw-headline" id="MATsim_Road_Networks">MATsim Road Networks</span></h2>
+<p>To write the imported/generated network as a MATsim file, use the option <span style="color: #111144; font-weight: bold; white-space: pre;">--matsim-output <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>. The extension for MATsim networks is usually ".xml".
+</p><p>Please note that the capacity is computed by multiplying an edge's lane number with the capacity norm:
+</p>
+<pre>MAXIMUM_FLOW = LANE_NUMBER * CAPACITY_NORM
+</pre>
+<p>The value of CAPACITY_NORM is controlled via the option <span style="color: #111144; font-weight: bold; white-space: pre;">--capacity-norm <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> (default: 1800).
+</p><p><br />
+</p>
+<h2> <span class="mw-headline" id="OpenDRIVE_Road_Networks">OpenDRIVE Road Networks</span></h2>
+<p>To write the imported/generated network as a OpenDRIVE file, use the option <span style="color: #111144; font-weight: bold; white-space: pre;">--opendrive-output <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>. The extension for OpenDRIVE networks is usually ".xodr".
+</p><p>Some notes:
+</p>
+<ul><li> The feature is currently under implementation
+</li><li> <span class="inlxml">road</span> - the normal ones
+<ul><li> the <span class="inlxml">type</span> is always set to "<span class="inlxml">town</span>" for the complete street
+</li><li> <span class="inlxml">link</span>
+<ul><li> The road is always connected to the nodes it is outgoing (<span class="inlxml">predecessor</span>) / incoming (<span class="inlxml">successor</span>) from/to
+</li></ul>
+</li><li> <span class="inlxml">planView</span>
+<ul><li> the geometry is given as lines only
+</li></ul>
+</li><li> no road widenings are modeled - if the number of lanes changes, the road changes
+</li><li> <span class="inlxml">elevationProfile</span> and <span class="inlxml">lateralProfile</span> do not contain relevant information
+</li><li> the roads are always unidirectional, this means only the center lane and the right lanes are given
+</li><li> <span class="inlxml">objects</span> and <span class="inlxml">signals</span> do not contain relevant information
+</li></ul>
+</li></ul>
+<h1> <span class="mw-headline" id="Further_Outputs">Further Outputs</span></h1>
+<h2> <span class="mw-headline" id="Information_about_Geometry_Removal">Information about Geometry Removal</span></h2>
+<p>The option <span style="color: #111144; font-weight: bold; white-space: pre;">--map-output <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-M <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> for short) generates a file which contains the information about which edges have been joined (see chapter "Removing Geometry Nodes").
+</p><p>The format is a little bit strange and should be reworked in the next time. At the begin of each line of the generated file, you will find the id of an edge from the generated network. Then, divided by tabs, you will find the list of edge ids together with the corresponding edges' lengths, the edge consists of. The id is divided from the length by a ':'. This means if that an edge that was joined from the edges 'edge1', 'edge2', 'edge3', each having the length 10, 20, and 30m, respectively, it would appear in the file encoded as following:
+</p>
+<pre>edge1&lt;TAB&gt;edge1:10&lt;TAB&gt;edge2:20&lt;TAB&gt;edge3:30
+</pre>
+<p>If the edge was not build by joining other edges, the list of edge ids/length will have only one value, of course:
+</p>
+<pre>edge&lt;TAB&gt;edge:100
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 117/1000000
+Preprocessor generated node count: 340/1000000
+Post‐expand include size: 1879/2097152 bytes
+Template argument size: 588/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:224-0!*!0!!en!*!* and timestamp 20150330202622 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 6 June 2013, at 08:59.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

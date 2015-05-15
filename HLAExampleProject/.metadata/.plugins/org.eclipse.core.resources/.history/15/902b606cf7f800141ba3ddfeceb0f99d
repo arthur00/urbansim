@@ -1,0 +1,9 @@
+localSettingsDesignator=Tutorial
+federationName=HLA Tutorial
+federateName=CarSimJ
+
+scenarioDir=../../../scenario
+fom=foms/FuelEconomyBase.xml
+
+#Update rate is expressed in hz
+updateRate=10

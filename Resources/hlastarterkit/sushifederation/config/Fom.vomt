@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_18" class="java.beans.XMLDecoder"> 
+ <int>1</int> 
+ <object class="se.pitch.vomt2.model.PersistentProjectHelper$PersistentProject"> 
+  <boolean>true</boolean> 
+  <string>Sushi Restaurant</string> 
+  <boolean>true</boolean> 
+  <boolean>true</boolean> 
+  <boolean>true</boolean> 
+  <object class="se.pitch.vomt2.model.PersistentProjectHelper$PersistentDefaults"> 
+   <object class="se.pitch.vomt2.model.OrderType" method="valueOf"> 
+    <string>RECEIVE</string> 
+   </object> 
+   <object class="se.pitch.vomt2.model.TransportationType" method="valueOf"> 
+    <string>HLA_RELIABLE</string> 
+   </object> 
+   <object class="se.pitch.vomt2.model.Ownership" method="valueOf"> 
+    <string>NO_TRANSFER</string> 
+   </object> 
+  </object> 
+  <object class="java.util.ArrayList"> 
+   <void method="add"> 
+    <object class="se.pitch.vomt2.model.PersistentProjectHelper$PersistentModule"> 
+     <string>MIM</string> 
+     <string>C:\Users\asa\Development\Sushi federation\config\HLAstandardMIM.xml</string> 
+     <boolean>true</boolean> 
+     <boolean>false</boolean> 
+     <boolean>true</boolean> 
+     <boolean>true</boolean> 
+     <object class="java.util.ArrayList"/> 
+     <boolean>true</boolean> 
+     <boolean>true</boolean> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object class="se.pitch.vomt2.model.PersistentProjectHelper$PersistentModule"> 
+     <string>Restaurant</string> 
+     <string>restaurant_1.xml</string> 
+     <boolean>false</boolean> 
+     <boolean>false</boolean> 
+     <boolean>true</boolean> 
+     <boolean>true</boolean> 
+     <object class="java.util.ArrayList"> 
+      <void method="add"> 
+       <int>0</int> 
+      </void> 
+     </object> 
+     <boolean>false</boolean> 
+     <boolean>false</boolean> 
+    </object> 
+   </void> 
+  </object> 
+  <null/> 
+  <null/> 
+ </object> 
+</java> 

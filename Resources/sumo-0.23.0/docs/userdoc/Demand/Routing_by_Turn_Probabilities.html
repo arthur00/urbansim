@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Demand/Routing_by_Turn_Probabilities - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Demand/Routing by Turn Probabilities</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.896135 from <a href="http://sumo.dlr.de/wiki/Demand/Routing_by_Turn_Probabilities">the wiki page for Demand/Routing_by_Turn_Probabilities</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>The <a href="../JTRROUTER.html" title="JTRROUTER">JTRROUTER</a> is a routing applications which uses flows and turning percentages at junctions as input. The following parameter must be supplied: 
+</p>
+<ul><li> the network to route the vehicles through,
+</li><li> the description of the turning ratios for the junctions (defaults may be used for this, too), and
+</li><li> the descriptions of the flows.
+</li></ul>
+<p>A call may look like this:
+</p>
+<pre>jtrrouter --flow-files=&lt;FLOW_DEFS&gt; --turn-ratio-files=&lt;TURN_DEFINITIONS&gt; --net-file=&lt;SUMO_NET&gt; \
+  --output-file=MySUMORoutes.rou.xml --begin &lt;UINT&gt; --end &lt;UINT&gt;
+</pre>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Turn_Definitions"><span class="tocnumber">1</span> <span class="toctext">Turn Definitions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Sinks_Definitions"><span class="tocnumber">2</span> <span class="toctext">Sinks Definitions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Flow_Definitions"><span class="tocnumber">3</span> <span class="toctext">Flow Definitions</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Specific_Options"><span class="tocnumber">4</span> <span class="toctext">Specific Options</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Further_notes"><span class="tocnumber">5</span> <span class="toctext">Further notes</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Turn_Definitions">Turn Definitions</span></h2>
+<table class="wikitable" style="width:25em; border-width:1px 1px; border-style:solid; border-color:#909090; background-color:#f8f8ff; font-size:90%; margin:1em 0em 1em 2em; padding:3px 6px">
+<caption> <b>Turn and Sink Definitions</b>
+</caption>
+<tr>
+<td width="45%"> Filename extension </td>
+<td> .turns.xml
+</td></tr>
+<tr>
+<td> Type of content </td>
+<td> turn and sink definitions
+</td></tr>
+<tr>
+<td> Open format? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> SUMO specific? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> XML Schema
+</td>
+<td> <a rel="nofollow" class="external text" href="http://sumo.sf.net/doc/current/docs/xsd/turns_file.xsd">turns_file.xsd</a>
+</td></tr></table>
+<p>To describe the turn definitions, one has to build a further file. Within this file, for each interval and each edge the list of percentages to use a certain follower has to be given. An example:
+</p>
+<pre class="xml">
+&lt;turns&gt;
+   &lt;interval begin=&quot;0&quot; end=&quot;3600&quot;&gt;
+      &lt;fromEdge id=&quot;myEdge0&quot;&gt;
+         &lt;toEdge id=&quot;myEdge1&quot; probability=&quot;0.2&quot;/&gt;
+         &lt;toEdge id=&quot;myEdge2&quot; probability=&quot;0.7&quot;/&gt;
+         &lt;toEdge id=&quot;myEdge3&quot; probability=&quot;0.1&quot;/&gt;
+      &lt;/fromEdge&gt;
+
+      ... any other edges ...
+
+   &lt;/interval&gt;
+
+   ... some further intervals ...
+
+&lt;/turns&gt;
+</pre>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />If you provide turn definitions that overlap (for example in multiple files), the latter turn definition will override the former.</div>
+<p>The snippet defines that vehicles coming at the end of edge "<span class="inlxml">myEdge0</span>" within the time interval between 0s and 3600s will choose the edge "<span class="inlxml">myEdge1</span>" with a probability of 20%, "<span class="inlxml">myEdge2</span>" with a probability of 70% and "<span class="inlxml">myEdge3</span>" with a probability of 10%. Another possibility to save time on preparing the description is to use default values. The parameter <span style="color: #111144; font-weight: bold; white-space: pre;">--turn-defaults (-T) &lt;TURN_DEFAULTS&gt;</span> can be used to describe the default ratios that will be used for all junctions for all time steps. &lt;TURN_DEFAULTS&gt; is a list of doubles, separated by a ','. To achieve the same behaviour as in the example above, use <span style="color: #111144; font-weight: bold; white-space: pre;">--turn-defaults 20,70,10</span>. The values will be applied to an edge's following edges beginning at the right edge (20%) and ending at the leftmost edge (10%). As the number of possible followers changes for different edges, the values are resampled for edges which number of following edges differs from the number of given turning probability defaults. Given <span style="color: #111144; font-weight: bold; white-space: pre;">--turn-defaults 20,70,10</span> a vehicle using an edge that has two followers would use the follower to the right with 55% probability, the one to the left with 45%.
+</p>
+<h2> <span class="mw-headline" id="Sinks_Definitions">Sinks Definitions</span></h2>
+<p>A vehicle leaves the network as soon as it comes to a sink edge. As not all networks have sink edges defined, one can support a list of edges to be declared as sinks using <span style="color: #111144; font-weight: bold; white-space: pre;">--sinks &lt;EDGE_ID&gt;[,&lt;EDGE_ID&gt;]*</span>. You may also add your sink definitions to a turn-file (XML only):
+</p>
+<pre class="xml">
+&lt;turns&gt;
+   ... some further turning definitions as above ...
+ 
+   &lt;sink edges=&quot;&lt;EDGE_ID&gt;[ &lt;EDGE_ID&gt;]*&quot;/&gt;
+   ... further sink definitions ...
+
+&lt;/turns&gt;
+</pre>
+<h2> <span class="mw-headline" id="Flow_Definitions">Flow Definitions</span></h2>
+<p>The definitions of the flow is the same as for the <a href="../DUAROUTER.html" title="DUAROUTER">DUAROUTER</a> with just a single difference: as it is not known where the vehicle will leave the network as the route it uses is randomly computed, the destination parameter has no meaning for jtr-routing and so may be left off. 
+</p>
+<h2> <span class="mw-headline" id="Specific_Options">Specific Options</span></h2>
+<p>As theoretically a route may get infinitely long when a vehicle is forced to take always the same direction, it is possible to limit the route's size using max-edges-factor. This factor, multiplied with the number of the used network's edges is the maximum number of edges a route may have. With the default of 2.0, a route may contain twice as many edges as the network has. Any route longer than this size will be marked as invalid. We assume that for each network this number has to be chosen again.
+</p>
+<h2> <span class="mw-headline" id="Further_notes">Further notes</span></h2>
+<ul><li> For automatic, yet artificial, turn definitions generation based on the network structure, see <a href="../Tools/Turn-defs.html" title="Tools/Turn-defs">turn-def tools</a>.
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 118/1000000
+Preprocessor generated node count: 420/1000000
+Post‐expand include size: 1239/2097152 bytes
+Template argument size: 614/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:229-0!*!0!!en!*!* and timestamp 20150330202558 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 19 August 2012, at 11:44.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

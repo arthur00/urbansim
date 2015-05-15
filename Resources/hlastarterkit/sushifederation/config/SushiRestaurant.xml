@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<objectModel xsi:schemaLocation="http://standards.ieee.org/IEEE1516-2010 http://standards.ieee.org/downloads/1516/1516.2-2010/IEEE1516-DIF-2010.xsd" xmlns="http://standards.ieee.org/IEEE1516-2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelIdentification>
+        <name>Sushi Restaurant</name>
+        <type>FOM</type>
+        <version>1.0</version>
+        <modificationDate>2011-05-20</modificationDate>
+        <securityClassification>Unclassified</securityClassification>
+        <purpose>Learning</purpose>
+        <applicationDomain>Analysis</applicationDomain>
+        <description>This is a small example FOM that is used for demonstration purposes in the Sushi Federation sample that is included in the Pitch pRTI LE</description>
+        <useLimitation></useLimitation>
+        <other></other>
+    </modelIdentification>
+    <objects>
+        <objectClass>
+            <name>HLAobjectRoot</name>
+            <objectClass>
+                <name>Restaurant</name>
+                <sharing>Neither</sharing>
+                <semantics>A collection class for all entities in the restaurant</semantics>
+                <attribute>
+                    <name>Position</name>
+                    <dataType>Position</dataType>
+                    <updateType>Periodic</updateType>
+                    <updateCondition>1/timestep</updateCondition>
+                    <ownership>DivestAcquire</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>TimeStamp</order>
+                    <semantics>The position of the entity.</semantics>
+                </attribute>
+                <objectClass>
+                    <name>Serving</name>
+                    <sharing>PublishSubscribe</sharing>
+                    <semantics>A serving of sushi</semantics>
+                    <attribute>
+                        <name>Type</name>
+                        <dataType>ServingType</dataType>
+                        <updateType>Static</updateType>
+                        <updateCondition>NA</updateCondition>
+                        <ownership>NoTransfer</ownership>
+                        <sharing>PublishSubscribe</sharing>
+                        <dimensions/>
+                        <transportation>HLAreliable</transportation>
+                        <order>TimeStamp</order>
+                        <semantics>The type of this serving</semantics>
+                    </attribute>
+                </objectClass>
+                <objectClass>
+                    <name>Boat</name>
+                    <sharing>PublishSubscribe</sharing>
+                    <semantics>A floating device that can transport servings of sushi</semantics>
+                    <attribute>
+                        <name>SpaceAvailable</name>
+                        <dataType>HLAboolean</dataType>
+                        <updateType>Conditional</updateType>
+                        <updateCondition>On change</updateCondition>
+                        <ownership>NoTransfer</ownership>
+                        <sharing>PublishSubscribe</sharing>
+                        <dimensions/>
+                        <transportation>HLAreliable</transportation>
+                        <order>TimeStamp</order>
+                        <semantics>Is there space available on this boat? Determines if it is possible to load a serving</semantics>
+                    </attribute>
+                    <attribute>
+                        <name>Cargo</name>
+                        <dataType>HLAunicodeString</dataType>
+                        <updateType>Conditional</updateType>
+                        <updateCondition>On change</updateCondition>
+                        <ownership>NoTransfer</ownership>
+                        <sharing>PublishSubscribe</sharing>
+                        <dimensions/>
+                        <transportation>HLAreliable</transportation>
+                        <order>TimeStamp</order>
+                        <semantics>The instance name of the serving currently loaded on this boat</semantics>
+                    </attribute>
+                </objectClass>
+                <objectClass>
+                    <name>Actor</name>
+                    <sharing>Neither</sharing>
+                    <semantics>A physical person that can interact with objects</semantics>
+                    <attribute>
+                        <name>ServingName</name>
+                        <dataType>HLAunicodeString</dataType>
+                        <updateType>Static</updateType>
+                        <updateCondition>NA</updateCondition>
+                        <ownership>NoTransfer</ownership>
+                        <sharing>PublishSubscribe</sharing>
+                        <dimensions/>
+                        <transportation>HLAreliable</transportation>
+                        <order>TimeStamp</order>
+                        <semantics>The instance name of the serving beeing handled.</semantics>
+                    </attribute>
+                    <objectClass>
+                        <name>Chef</name>
+                        <sharing>PublishSubscribe</sharing>
+                        <semantics>A chef that can produce servings of sushi</semantics>
+                        <attribute>
+                            <name>ChefState</name>
+                            <dataType>ChefStateEnum</dataType>
+                            <updateType>Conditional</updateType>
+                            <updateCondition>On change</updateCondition>
+                            <ownership>NoTransfer</ownership>
+                            <sharing>PublishSubscribe</sharing>
+                            <dimensions/>
+                            <transportation>HLAreliable</transportation>
+                            <order>TimeStamp</order>
+                            <semantics>The state this chef is in</semantics>
+                        </attribute>
+                    </objectClass>
+                    <objectClass>
+                        <name>Diner</name>
+                        <sharing>PublishSubscribe</sharing>
+                        <semantics>A customer of the restaurant that eats sushi</semantics>
+                        <attribute>
+                            <name>DinerState</name>
+                            <dataType>DinerStateEnum</dataType>
+                            <updateType>Conditional</updateType>
+                            <updateCondition>On change</updateCondition>
+                            <ownership>NoTransfer</ownership>
+                            <sharing>PublishSubscribe</sharing>
+                            <dimensions/>
+                            <transportation>HLAreliable</transportation>
+                            <order>TimeStamp</order>
+                            <semantics>The state this diner is in</semantics>
+                        </attribute>
+                    </objectClass>
+                </objectClass>
+            </objectClass>
+        </objectClass>
+    </objects>
+    <interactions>
+        <interactionClass>
+            <name>HLAinteractionRoot</name>
+            <interactionClass>
+                <name>TransferAccepted</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>TimeStamp</order>
+                <semantics>Sent to confirm transfer of attribute ownership</semantics>
+                <parameter>
+                    <name>ServingName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>The instance name of the serving whose position attribute is transferred</semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>HLAmanager</name>
+                <interactionClass>
+                    <name>SimulationEnds</name>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>The interaction tells all involved federates that it is time to end the simulation</semantics>
+                </interactionClass>
+            </interactionClass>
+        </interactionClass>
+    </interactions>
+    <time>
+        <timeStamp>
+            <dataType>HLAfloat64Time</dataType>
+            <semantics></semantics>
+        </timeStamp>
+        <lookahead>
+            <dataType>HLAfloat64Time</dataType>
+            <semantics></semantics>
+        </lookahead>
+    </time>
+    <switches>
+        <autoProvide isEnabled="true"/>
+        <conveyRegionDesignatorSets isEnabled="false"/>
+        <conveyProducingFederate isEnabled="false"/>
+        <attributeScopeAdvisory isEnabled="false"/>
+        <attributeRelevanceAdvisory isEnabled="false"/>
+        <objectClassRelevanceAdvisory isEnabled="false"/>
+        <interactionRelevanceAdvisory isEnabled="false"/>
+        <serviceReporting isEnabled="false"/>
+        <exceptionReporting isEnabled="false"/>
+        <delaySubscriptionEvaluation isEnabled="false"/>
+        <automaticResignAction resignAction="CancelThenDeleteThenDivest"/>
+    </switches>
+    <dataTypes>
+        <simpleDataTypes>
+            <simpleData>
+                <name>ServingType</name>
+                <representation>HLAinteger32BE</representation>
+                <units>NA</units>
+                <resolution>NA</resolution>
+                <accuracy>NA</accuracy>
+                <semantics>The type of the serving. This is a simple identifier</semantics>
+            </simpleData>
+            <simpleData>
+                <name>Angle</name>
+                <representation>HLAfloat64BE</representation>
+                <units>degrees</units>
+                <resolution>1</resolution>
+                <accuracy>1</accuracy>
+                <semantics>An angle expressed i degrees</semantics>
+            </simpleData>
+        </simpleDataTypes>
+        <enumeratedDataTypes>
+            <enumeratedData>
+                <name>OffsetEnum</name>
+                <representation>HLAinteger32BE</representation>
+                <semantics>Helps determine the position of a serving</semantics>
+                <enumerator>
+                    <name>INBOARD_CANAL</name>
+                    <value>1</value>
+                </enumerator>
+                <enumerator>
+                    <name>ON_CANAL</name>
+                    <value>2</value>
+                </enumerator>
+                <enumerator>
+                    <name>OUTBOARD_CANAL</name>
+                    <value>3</value>
+                </enumerator>
+                <enumerator>
+                    <name>INVALID</name>
+                    <value>0</value>
+                </enumerator>
+            </enumeratedData>
+            <enumeratedData>
+                <name>ChefStateEnum</name>
+                <representation>HLAinteger32BE</representation>
+                <semantics>The different states of a chef</semantics>
+                <enumerator>
+                    <name>MAKING_SUSHI</name>
+                    <value>1</value>
+                </enumerator>
+                <enumerator>
+                    <name>LOOKING_FOR_BOAT</name>
+                    <value>2</value>
+                </enumerator>
+                <enumerator>
+                    <name>WAITING_TO_TRANSFER</name>
+                    <value>3</value>
+                </enumerator>
+                <enumerator>
+                    <name>INVALID</name>
+                    <value>0</value>
+                </enumerator>
+            </enumeratedData>
+            <enumeratedData>
+                <name>DinerStateEnum</name>
+                <representation>HLAinteger32BE</representation>
+                <semantics>The different states of a diner</semantics>
+                <enumerator>
+                    <name>LOOKING_FOR_FOOD</name>
+                    <value>1</value>
+                </enumerator>
+                <enumerator>
+                    <name>ACQUIRING</name>
+                    <value>2</value>
+                </enumerator>
+                <enumerator>
+                    <name>EATING</name>
+                    <value>3</value>
+                </enumerator>
+                <enumerator>
+                    <name>PREPARING_TO_DELETE_SERVING</name>
+                    <value>4</value>
+                </enumerator>
+                <enumerator>
+                    <name>INVALID</name>
+                    <value>0</value>
+                </enumerator>
+            </enumeratedData>
+        </enumeratedDataTypes>
+        <arrayDataTypes/>
+        <fixedRecordDataTypes>
+            <fixedRecordData>
+                <name>Position</name>
+                <encoding>HLAfixedRecord</encoding>
+                <semantics>Expresses a position in the restaurant. The angle expresses where on the "wheel" the position is and the offset determines if it is inside the canal, on the canal or outside.</semantics>
+                <field>
+                    <name>Angle</name>
+                    <dataType>Angle</dataType>
+                    <semantics>The angle relative to the center of the "wheel"</semantics>
+                </field>
+                <field>
+                    <name>Offset</name>
+                    <dataType>OffsetEnum</dataType>
+                    <semantics>The offset from the center of the "wheel"</semantics>
+                </field>
+            </fixedRecordData>
+        </fixedRecordDataTypes>
+        <variantRecordDataTypes/>
+    </dataTypes>
+    <notes/>
+</objectModel>

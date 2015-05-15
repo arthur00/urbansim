@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>TraCI/Interfacing_TraCI_from_Python - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">TraCI/Interfacing TraCI from Python</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.132789 from <a href="http://sumo.dlr.de/wiki/TraCI/Interfacing_TraCI_from_Python">the wiki page for TraCI/Interfacing_TraCI_from_Python</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>The traci commands are split into the 13 domains gui, lane, poi, simulation, trafficlights, vehicletype, edge, inductionloop, junction, multientryexit, polygon, route, and vehicle, which correspond to individual modules. For a detailed list of available functions see the <a rel="nofollow" class="external text" href="http://sumo-sim.org/daily/pydoc/traci.html">pydoc generated documentation</a>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#importing_traci_in_a_script"><span class="tocnumber">1</span> <span class="toctext">importing <b>traci</b> in a script</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#First_Steps"><span class="tocnumber">2</span> <span class="toctext">First Steps</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Subscriptions"><span class="tocnumber">3</span> <span class="toctext">Subscriptions</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Embedded_Python"><span class="tocnumber">4</span> <span class="toctext">Embedded Python</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Linux"><span class="tocnumber">4.1</span> <span class="toctext">Linux</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Windows"><span class="tocnumber">4.2</span> <span class="toctext">Windows</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Pitfalls_and_Solutions"><span class="tocnumber">5</span> <span class="toctext">Pitfalls and Solutions</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="importing_traci_in_a_script"> importing <b>traci</b> in a script </span></h2>
+<p>To use the library, the <i><b>&lt;SUMO_HOME&gt;</b></i>/tools directory must be on the python load path. This is typically done with a stanza like this:
+</p>
+<pre> import os, sys
+ if 'SUMO_HOME' in os.environ:
+     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
+     sys.path.append(tools)
+ else:   
+     sys.exit("please declare environment variable 'SUMO_HOME'")
+</pre>
+<h2> <span class="mw-headline" id="First_Steps"> First Steps </span></h2>
+<p>In general it is very easy to interface with SUMO from Python (the following example is a modification of <a href="../Tutorials/TraCI4Traffic_Lights.html" title="Tutorials/TraCI4Traffic Lights">tutorial/traci_tls</a>):
+</p>
+<pre>import traci
+
+PORT = 8813
+traci.init(PORT) 
+step = 0
+while step &lt; 1000:
+   traci.simulationStep()
+   no = traci.inductionloop.getLastStepVehicleNumber("0")
+   traci.trafficlights.setRedYellowGreenState("0", "GrGr")
+   step += 1
+
+traci.close()
+</pre>
+<p>After opening the connection to the port which was given to sumo as the --remote-port Option,
+you can emit various commands and execute simulation steps until you want to finish by
+closing the connection.
+</p>
+<h2> <span class="mw-headline" id="Subscriptions"> Subscriptions </span></h2>
+<p>Subscriptions can be thought of as a batch mode for retrieving variables. Instead of asking for the same variables over and over again, you can retrieve the values of interest automatically after each time step.
+TraCI subscriptions are handled on a per module basis. That is you can ask for the module for the result of all current subscriptions after each time step. In order to subscribe for variables you need to know their variable ids which can be looked up in the traci/constants.py file.
+</p>
+<pre>import traci
+import traci.constants as tc
+
+PORT = 8813
+traci.init(PORT) 
+traci.vehicle.subscribe(vehID, (tc.VAR_ROAD_ID, tc.VAR_LANEPOSITION))
+print traci.vehicle.getSubscriptionResults(vehID)
+for step in range(3):
+   print "step", step
+   traci.simulationStep()
+   print traci.vehicle.getSubscriptionResults(vehID)
+traci.close()
+</pre>
+<p>The values retrieved are always the ones from the last time step, it is not possible to retrieve older values.
+</p>
+<h2> <span class="mw-headline" id="Embedded_Python"> Embedded Python </span></h2>
+<p>As an experimental feature, it is also possible to link SUMO with python directly and have the scripts executed in SUMO. The syntax is completely
+the same, except that you leave out the calls to init and close and you need to start sumo with the option --python-script. This feature does currently <i>not</i> work with the GUI version of sumo.
+</p><p>Since the feature is not well tested yet, you need to enable embedded python explicitly when building SUMO (it is <i>not</i> enabled in the release versions and the nightly build). In order to do so, follow the instructions below
+</p>
+<h3> <span class="mw-headline" id="Linux"> Linux </span></h3>
+<ul><li> install the python devel package files
+</li><li> call configure using the --with-python option
+</li><li> make &amp;&amp; make install as usual
+</li></ul>
+<h3> <span class="mw-headline" id="Windows"> Windows </span></h3>
+<ul><li> make sure python is installed and is in your PATH
+</li><li> call tools/build/pythonPropsMSVC.py to generate a python.props file
+</li><li> enable the inclusion of python.props by uncommenting the relevant line in build/msvc10/Win32.props
+</li><li> build the Win32 Release version as usual
+</li><li> the debug build is somewhat more involved (<a rel="nofollow" class="external text" href="http://upp-mirror.googlecode.com/svn-history/r3552/trunk/bazaar/Py/install.txt">taken from here</a>)
+<ul><li> download the python source package fitting your python version 
+</li><li> open the pcbuild.sln in the PCbuild subdir with Visual Studio
+</li><li> do the Win32 Debug build for python, it will have lots of errors but the main parts (hopefully) succeed
+</li><li> from the PCbuild dir copy
+<ul><li> python27_d.dll to the Python dir (something like C:\Python27)
+</li><li> python27_d.lib, python27_d.pdb, python27_d.exp to the libs dir (C:\Python27\libs)
+</li><li> every *_d.pyd to the DLLs dir (C:\Python27\DLLs)
+</li></ul>
+</li><li> now you can do the Win32 Debug build for SUMO
+</li></ul>
+</li></ul>
+<p>Earlier versions of Visual Studio and 64bit build are currently not directly supported (but the interested programmer should be able to modify the files accordingly).
+</p>
+<h2> <span class="mw-headline" id="Pitfalls_and_Solutions"> Pitfalls and Solutions </span></h2>
+<ul><li> Note that strings, if exchanged, have to be ASCII-encoded.
+</li><li> If you start sumo from within your python script using subprocess.Popen, be sure to call wait() on the resulting process object before quitting your script. You might loose output otherwise.
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 31/1000000
+Preprocessor generated node count: 42/1000000
+Post‐expand include size: 21/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:289-0!*!0!!en!*!* and timestamp 20150330202713 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 28 February 2014, at 09:17.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

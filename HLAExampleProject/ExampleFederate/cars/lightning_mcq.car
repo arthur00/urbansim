@@ -1,0 +1,8 @@
+// config file for car
+Name=Lightning McQ
+LicensePlate=MCQ-095
+FuelType=NaturalGas
+NormalSpeed=150
+LitersPer100km1=25
+LitersPer100km2=15
+LitersPer100km3=16

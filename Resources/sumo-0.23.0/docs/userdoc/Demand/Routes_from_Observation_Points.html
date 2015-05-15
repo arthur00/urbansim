@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Demand/Routes_from_Observation_Points - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Demand/Routes from Observation Points</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.895669 from <a href="http://sumo.dlr.de/wiki/Demand/Routes_from_Observation_Points">the wiki page for Demand/Routes_from_Observation_Points</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Since version 0.9.5, the SUMO-package contains a routing module named <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a>. The idea behind this router is that nowadays, most highways are well equipped with induction loops, measuring each of the highways' entering and leaving flows. Given this information one may assume that the flows on the highway are completely known. <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> uses directly the information collected from induction loops to rebuild the vehicle amounts and routes. This is done in several steps, being mainly:
+</p>
+<ol><li> Computing (and optionally saving) the detector types in the means that each induction is set to be a source detector, a sink detector or an in-between detector
+</li><li> Computing (and optionally saving) the routes between the detectors
+</li><li> Computing the flow amounts between the detectors
+</li><li> Saving the flow amounts and further control structures
+</li></ol>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Computing_Detector_Types"><span class="tocnumber">1</span> <span class="toctext">Computing Detector Types</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Computing_Routes"><span class="tocnumber">2</span> <span class="toctext">Computing Routes</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Computing_Flows"><span class="tocnumber">3</span> <span class="toctext">Computing Flows</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Saving_Flows_and_other_Values"><span class="tocnumber">4</span> <span class="toctext">Saving Flows and other Values</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#How_to_include_the_files"><span class="tocnumber">5</span> <span class="toctext">How to include the files</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Computing_Detector_Types">Computing Detector Types</span></h2>
+<p>The idea behind the <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> assumes that a network is completely covered by detectors, meaning that all off- and on-ramps have an induction loop placed on them. Such an information whether an induction loop is a pure source or sink or whether it is placed between such is but not given initially. It must be computed. To do this, the <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> needs the underlying network as well as a list of detector definitions where each describes the position of an induction loop. The network, being a previously built SUMO-network, is supplied to the <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> as usual using the <span style="color: #111144; font-weight: bold; white-space: pre;">--net-file &lt;SUMO_NET_FILE&gt;</span> (<span style="color: #111144; font-weight: bold; white-space: pre;">-n</span>) option, the list of induction loops using <span style="color: #111144; font-weight: bold; white-space: pre;">--detector-files &lt;DETECTOR_FILE&gt;[,&lt;DETECTOR_FILE&gt;]+</span> (<span style="color: #111144; font-weight: bold; white-space: pre;">-d</span> for short). A detector file should look as follows:
+</p>
+<pre class="xml">
+&lt;detectors&gt;
+   &lt;detectorDefinition id=&quot;&lt;DETECTOR_ID&gt;&quot; lane=&quot;&lt;LANE_ID&gt;&quot; pos=&quot;&lt;POS&gt;&quot;/&gt;
+... further detectors ...
+&lt;/detectors&gt;
+</pre>
+<p>This means that each detector is initially described using its id, a lane it is placed on, and a position on the lane. To be exact:
+</p>
+<ul><li> id: A string holding the id of the detector
+</li><li> lane: The id of the lane the detector lies on. Must be a lane within the network.
+</li><li> pos: The position on the lane the detector shall be laid on in meters. The position must be a value between -1*lane's length and the lane's length. In the case of a negative value, the position will be computed backward from the lane's end (the position the vehicles drive towards).
+</li></ul>
+<p>Given a network and the list of detectors, <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> assigns types to detectors and saves the so extended list into a file if the option <span style="color: #111144; font-weight: bold; white-space: pre;">--detectors-output &lt;DETECTOR_OUTPUT_FILE&gt;</span> is given. This list looks like the input described above except that an aditional attribute is given for each detector, "type", which may have one of the following values: "source", "sink", "between", and "discarded". You can also generate a list of points of interests (POIs) which can be read by <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> where each POI represents a detector and is colored by the detector type: green for source detectors, red for sink detectors, blue for in-between detectors, and black for discarded detectors. To force <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> to do this, use <span style="color: #111144; font-weight: bold; white-space: pre;">--detectors-poi-output &lt;POI_FILENAME&gt;</span>.
+</p><p>When wished, if for example other parameters chage, the extended &lt;DETECTOR_OUTPUT_FILE&gt; can be fed back again into <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> instead of the previous &lt;DETECTOR_FILE&gt;. In this case the detector types do not have to be computed again. To force <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> to recompute the types, use <span style="color: #111144; font-weight: bold; white-space: pre;">--revalidate-detectors</span>.
+</p>
+<h2> <span class="mw-headline" id="Computing_Routes">Computing Routes</span></h2>
+<p>Now that we do know where vehicles enter and where they leave the network, we may compute routes for each of the pairs. The <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> is told to build and save routes using <span style="color: #111144; font-weight: bold; white-space: pre;">--routes-output &lt;ROUTE_OUTPUT_FILE&gt;</span> where &lt;ROUTE_OUTPUT_FILE&gt; is the name of the file the computed routes shall be written to. The generated file only contains routes, no vehicle type definitions and no vehicles. 
+</p><p>Normally, only routes starting at source detectors and ending at sink detectors are computed. Using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--routes-for-all</span> you can force <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> to also build routes that start at in-between detectors. The option <span style="color: #111144; font-weight: bold; white-space: pre;">--all-end-follower</span> will make the routes not end at the edge the source detector is placed on, but on all edges that follow this edge. <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-unfinished-routes</span> will also keep those routes where a sink detector could not be found for what may be the case if the network is not completely covered with induction loops.
+</p>
+<h2> <span class="mw-headline" id="Computing_Flows">Computing Flows</span></h2>
+<p>The next step is to use the computed routes and flow amounts from the real-world detectors to compute flows across the modelled network. The flows are given to DFROUTER using <span style="color: #111144; font-weight: bold; white-space: pre;">--measure-files <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-f &lt;DETECTOR_FLOWS&gt;[,&lt;DETECTOR_FLOWS&gt;]+</span>. They are assumed to be stored in CSV-format using ';' as dividing character. The file should look as follows:
+</p>
+<pre>Detector;Time;qPKW;qLKW;vPKW;vLKW
+myDet1;0;10;2;100;80
+... further entries ...
+</pre>
+<p>This means the first time has to name the entries (columns). Their order is not of importance, but at least the following columns must be included:
+</p>
+<ul><li> Detector: A string holding the id of the detector this line describes; should be one of the ids used in &lt;DETECTOR_FILE&gt;
+</li><li> Time: The time period begin that this entry describes (in minutes)
+</li><li> qPKW: The number of passenger cars that drove over the detector within this time period
+</li><li> vPKW: The average speed of passenger cars that drove over the detector within this time period in km/h
+</li></ul>
+<p>The following columns may optionally be included:
+</p>
+<ul><li> qLKW: The number of transport vehicles that drove over the detector within this time period
+</li><li> vLKW: The average speed of transport vehicles that drove over the detector within this time period in km/h
+</li></ul>
+<p>These are not quite the values to be found in induction loop output. We had to constrain the &lt;DETECTOR_FLOWS&gt; files this way because DFROUTER is meant to read very many of such definitions and to do this as fast as possible.
+</p><p>Because in some cases one reads detector flow definitions starting at a certain time but wants the simulation to begin at another, it is possible to add a time offset using <span style="color: #111144; font-weight: bold; white-space: pre;">--time-offset <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span> which is the number of seconds to subtracted from the read times.
+</p>
+<h2> <span class="mw-headline" id="Saving_Flows_and_other_Values">Saving Flows and other Values</span></h2>
+<p>If flow definitions were supplied, we can let the DFROUTER save the computed vehicles together with their routes. Vehicles will be generated at the source detectors which are placed at certain positions of the networks' lanes. Prior to version 0.12.3, emitters (see "Emitter") are used to insert those vehicles into the network. In these versions, DFROUTER can be forced to generate such emitters using <span style="color: #111144; font-weight: bold; white-space: pre;">--emitters-output &lt;EMITTER_OUTPUT_FILE&gt;</span>. This file will contain emitter declarations for each of the source detectors. If no value is given, emitters will not be written. Accompanying, there will be emitter definitions written named "emitter_&lt;DETECTOR_ID&gt;.def.xml" where &lt;DETECTOR_ID&gt; is the id of the according source detector. These definitions are called within the &lt;EMITTER_OUTPUT_FILE&gt; and contain vehicles which depart the emitter in accordance to the read flows and have routes computed using the flows.
+</p><p>Since version 0.12.3, vehicles are generated as part of the route definitions as is standard in the rest of the SUMO suite of applications. In future releases, the use of emitters will not be supported at all.
+</p><p>As some approaches use a speed limit to avoid open-end boundary problems, the DFROUTER can generate a list of speed triggers (see "Variable Speed Signs (VSS)") placed on the positions of sink detectors. The name to save the declaration of these speed triggers into is given using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--variable-speed-sign-output &lt;VSS_OUTPUT_FILE&gt;</span>. The according variable speed sign definitions will be written into files named "vss_&lt;DETECTOR_ID&gt;.def.xml" where &lt;DETECTOR_ID&gt; is the name of the according sink detector.
+</p><p>In order not to end vehicle routes on off-ramps, it is possible to place rerouters (see "Rerouter") at the positions of the sink detectors, too. Giving the option <span style="color: #111144; font-weight: bold; white-space: pre;">--end-reroute-output &lt;REROUTER_OUTPUT_FILE&gt;</span> will generate a list of rerouter declarations. Please remark that in this case, no rerouter definitions are written, because the DFROUTER has no further information about possible routes beyond the area covered by the detectors.
+</p><p>It's quite nice to have the possibility to check whether the simulation does what one wants. To validate whether the same flows are found within the simulation as within the reality, the option <span style="color: #111144; font-weight: bold; white-space: pre;">--validation-output &lt;SUMO_DETECTORS_OUTPUT&gt;</span> may be helpful. It generates a list of detector definitions (see "<a href="../Simulation/Output/Induction_Loops_Detectors_(E1).html" title="Simulation/Output/Induction Loops Detectors (E1)">inductive loop detectors</a>") placed at the positions of sink and in-between detectors. Their output will be saved into files named "validation_det_&lt;DETECTOR_ID&gt;.xml" and should be easily comparable to the detector flows previously fed to the router. The option <span style="color: #111144; font-weight: bold; white-space: pre;">--validation-output.add-sources</span> will let DFROUTER also build inductive loop detectors for source detectors which are place 1m behind the real-life detector's position.
+</p>
+<h2> <span class="mw-headline" id="How_to_include_the_files">How to include the files </span></h2>
+<p>The <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> is unique among the <b>SUMO</b>-routing applications in that it outputs routes and vehicles separately. <a href="../SUMO.html#Loading_order_of_input_files" title="SUMO">You need to make sure that the list of input files is in the correct order for resolving references</a>. Furthermore, <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> currently returns unsorted vehicles in its emitters-output. Assuming that <a href="../DFROUTER.html" title="DFROUTER">DFROUTER</a> was called with the options
+</p>
+<pre>dfrouter --net-file net.net.xml --routes-output routes.rou.xml --emitters-output vehicles.xml ...
+</pre>
+<p>SUMO must be called in the following way:
+</p>
+<pre> sumo --net-file net.net.xml --additional-files routes.rou.xml,emitters.rou.xml
+</pre>
+<p>If you run the tool <a href="../Tools/Routes.html#sort_routes.py" title="Tools/Routes">Tools/Routes#sort_routes.py</a> to sort the emitters, either of the following will work:
+</p>
+<pre> sumo --net-file net.net.xml --route-files routes.rou.xml,sorted_emitters.rou.xml
+ sumo --net-file net.net.xml --route-files sorted_emitters.rou.xml --additional-files routes.rou.xml
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 165/1000000
+Preprocessor generated node count: 450/1000000
+Post‐expand include size: 2161/2097152 bytes
+Template argument size: 650/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:230-0!*!0!!en!*!* and timestamp 20150330202558 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 19 February 2014, at 08:38.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

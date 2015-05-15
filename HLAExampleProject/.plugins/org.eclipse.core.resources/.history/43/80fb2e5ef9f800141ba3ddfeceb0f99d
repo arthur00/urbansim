@@ -1,0 +1,6 @@
+localSettingsDesignator=Tutorial
+federationName=HLA Tutorial
+federateName=Master
+
+scenarioDir=../../../scenario
+fom=../../../fom/FuelEconomyBase.xml

@@ -1,0 +1,87 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module sumolib.net.lane</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="sumolib.html"><font color="#ffffff">sumolib</font></a>.<a href="sumolib.net.html"><font color="#ffffff">net</font></a>.lane</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/sumolib/net/lane.py">/home/behr_mi/sumo/tools/sumolib/net/lane.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;lane.py<br>
+@author&nbsp;&nbsp;Daniel&nbsp;Krajzewicz<br>
+@author&nbsp;&nbsp;Laura&nbsp;Bieker<br>
+@author&nbsp;&nbsp;Karol&nbsp;Stosiek<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@author&nbsp;&nbsp;Jakob&nbsp;Erdmann<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2011-11-28<br>
+@version&nbsp;$Id:&nbsp;lane.py&nbsp;18096&nbsp;2015-03-17&nbsp;09:50:59Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;contains&nbsp;a&nbsp;Python-representation&nbsp;of&nbsp;a&nbsp;single&nbsp;lane.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2011-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="sumolib.net.lane.html#Lane">Lane</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Lane">class <strong>Lane</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Lanes&nbsp;from&nbsp;a&nbsp;sumo&nbsp;network<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Lane-__init__"><strong>__init__</strong></a>(self, edge, speed, length, allow, disallow)</dt></dl>
+
+<dl><dt><a name="Lane-addOutgoing"><strong>addOutgoing</strong></a>(self, conn)</dt></dl>
+
+<dl><dt><a name="Lane-getBoundingBox"><strong>getBoundingBox</strong></a>(self, includeJunctions<font color="#909090">=True</font>)</dt></dl>
+
+<dl><dt><a name="Lane-getEdge"><strong>getEdge</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Lane-getID"><strong>getID</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Lane-getIndex"><strong>getIndex</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Lane-getLength"><strong>getLength</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Lane-getShape"><strong>getShape</strong></a>(self, includeJunctions<font color="#909090">=False</font>)</dt></dl>
+
+<dl><dt><a name="Lane-getSpeed"><strong>getSpeed</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Lane-setShape"><strong>setShape</strong></a>(self, shape)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-get_allowed"><strong>get_allowed</strong></a>(allow, disallow)</dt><dd><tt>Normalize&nbsp;the&nbsp;given&nbsp;string&nbsp;attributes&nbsp;as&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;allowed&nbsp;vClasses.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>SUMO_VEHICLE_CLASSES</strong> = ('public_emergency', 'public_authority', 'public_army', 'public_transport', 'transport', 'lightrail', 'cityrail', 'rail_slow', 'rail_fast', 'private', 'emergency', 'authority', 'army', 'vip', 'passenger', 'hov', 'taxi', 'bus', 'coach', 'delivery', ...)</td></tr></table>
+</body></html>

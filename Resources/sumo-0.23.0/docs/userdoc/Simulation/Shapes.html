@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Simulation/Shapes - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Simulation/Shapes</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.031010 from <a href="http://sumo.dlr.de/wiki/Simulation/Shapes">the wiki page for Simulation/Shapes</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Using_additional_Polygons_and_POIs_within_the_Simulation"><span class="tocnumber">1</span> <span class="toctext">Using additional Polygons and POIs within the Simulation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Definitions"><span class="tocnumber">2</span> <span class="toctext">Definitions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Polygon_Definitions"><span class="tocnumber">2.1</span> <span class="toctext">Polygon Definitions</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#POI_.28Point_of_interest.29_Definitions"><span class="tocnumber">2.2</span> <span class="toctext">POI (Point of interest) Definitions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#See_Also"><span class="tocnumber">3</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Using_additional_Polygons_and_POIs_within_the_Simulation">Using additional Polygons and POIs within the Simulation</span></h1>
+<div class="thumb tleft"><div class="thumbinner" style="width:182px;"><a href="../images/Tol1_with_polys.gif" class="image"><img alt="" src="../images/Tol1_with_polys.gif" width="180" height="100" class="thumbimage" srcset="/w/images/thumb/8/85/Tol1_with_polys.gif/270px-Tol1_with_polys.gif 1.5x, /w/images/thumb/8/85/Tol1_with_polys.gif/360px-Tol1_with_polys.gif 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../images/Tol1_with_polys.gif" class="internal" title="Enlarge"><img src="../images//magnify-clip.png" width="15" height="11" alt="" /></a></div>Example of using polygons and POIs; from Traffic Online, area#1</div></div></div>
+<p>Definitions of colored polygons and POIs (points of interest) can be loafed within an <a href="../SUMO.html#Format_of_additional_files" title="SUMO"><i>additional-file</i></a>. These shapes are currently meant to improve a simulation's appearence and to allow an easier debugging. No special interaction with them is implemented, yet.
+</p><p>Both polygons and points of interest may be located within a "layer". Shapes with lowest layer values are below those with a higher layer number. The network itself is drawn as layer 0. An additional file may contain definitions for both points of interest and polygons.
+</p><p>Geometrical objects may either be defined "by hand" or imported using <a href="../POLYCONVERT.html" title="POLYCONVERT">POLYCONVERT</a>. A valid geometry-file can be given to <a href="../SUMO.html" title="SUMO">SUMO</a> as one of the additional files (option: <b>--additional-files <i>&lt;FILE&gt;</i></b>). For usage within <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a>, you have to add it to the list of additional files to load within the used <a href="../SUMO.html" title="SUMO">SUMO</a> <a href="../Basics/Using_the_Command_Line_Applications.html#Configuration_Files" title="Basics/Using the Command Line Applications">configuration file</a>.
+</p>
+<h1> <span class="mw-headline" id="Definitions">Definitions</span></h1>
+<p>The geometrical objects (POIs, polygons) are stored one by one into an "additional file". Currently, the root element may arbitary.
+</p><p><br />
+</p>
+<h2> <span class="mw-headline" id="Polygon_Definitions">Polygon Definitions</span></h2>
+<p>A polygon is defined as following: <span class="inlxml">&lt;poly id="<i>&lt;POLYGON_ID&gt;</i>" type="<i>&lt;TYPENAME&gt;</i>" color="<a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;COLOR&gt;</i></a>" fill="<i>&lt;FILL_OPTION&gt;</i>" layer="<i>&lt;LAYER_NO&gt;</i>" shape="<i>&lt;2D-POSITION&gt;</i>[ <i>&lt;2D-POSITION&gt;</i>]*"/&gt;</span>
+</p><p>These attributes have the following meanings:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> id (string)
+</td>
+<td> The id (a unique name) of the polygon
+</td></tr>
+<tr>
+<td class="inlxml"> <b>color</b>
+</td>
+<td> color
+</td>
+<td> The RGBA color with which the polygon shall be displayed; see <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;COLOR&gt;</i></a> for details
+</td></tr>
+<tr>
+<td class="inlxml"> <b>shape</b>
+</td>
+<td> 2D position list
+</td>
+<td> The shape of the polygon
+</td></tr>
+<tr>
+<td class="inlxml"> fill
+</td>
+<td> bool
+</td>
+<td> An information whether the polygon shall be filled; optional bool, <i>default: false</i>
+</td></tr>
+<tr>
+<td class="inlxml"> layer
+</td>
+<td> float
+</td>
+<td> The layer in which the polygon lies; optional
+</td></tr>
+<tr>
+<td class="inlxml"> type
+</td>
+<td> string
+</td>
+<td> A typename for the polygon.
+</td></tr>
+<tr>
+<td class="inlxml"> imgFile
+</td>
+<td> string
+</td>
+<td> A bitmap to use for rendering this polygon
+</td></tr></table>
+<h2> <span class="mw-headline" id="POI_.28Point_of_interest.29_Definitions">POI (Point of interest) Definitions</span></h2>
+<p>A point-of-interest is defined as following: <span class="inlxml">&lt;poi id="<i>&lt;POLYGON_ID&gt;</i>" type="<i>&lt;TYPENAME&gt;</i>" color="<i>&lt;RED&gt;</i>,<i>&lt;GREEN&gt;</i>,<i>&lt;BLUE&gt;</i>" layer="<i>&lt;LAYER_NO&gt;</i>" [(x="<i>&lt;X_POS&gt;</i>" y="<i>&lt;Y_POS&gt;</i>") | (lane="<i>&lt;LANE_ID&gt;</i>" pos="<i>&lt;LANE_POS&gt;</i>")]/&gt;</span>
+</p><p>It means that the position a point-of-interest is located at may be given either using explicite x/y-coordinates or a lane name and a position on this lane. So, the attributes have the following meanings:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> id (string)
+</td>
+<td> The id (a unique name) of the polygon
+</td></tr>
+<tr>
+<td class="inlxml"> <b>color</b>
+</td>
+<td> color
+</td>
+<td> The color with which the poi shall be displayed; <i>&lt;RED&gt;</i>, <i>&lt;GREEN&gt;</i>, and <i>&lt;BLUE&gt;</i> must be floating point numbers between 0 and 1. They are devided using a ',' (no space); optional, <i>default "1,0,0"</i>
+</td></tr>
+<tr>
+<td class="inlxml"> x<sup>(*)</sup>
+</td>
+<td> float
+</td>
+<td> The position of the poi along the x-axis in meters
+</td></tr>
+<tr>
+<td class="inlxml"> y<sup>(*)</sup>
+</td>
+<td> float
+</td>
+<td> The position of the poi along the y-axis in meters
+</td></tr>
+<tr>
+<td class="inlxml"> lane<sup>(*)</sup>
+</td>
+<td> id (string)
+</td>
+<td> The name of the lane the poi is located at; the lane must be a part of the loaded network
+</td></tr>
+<tr>
+<td class="inlxml"> pos<sup>(*)</sup>
+</td>
+<td> float
+</td>
+<td> The position on the named lane at which the poi is located at
+</td></tr>
+<tr>
+<td class="inlxml"> lon<sup>(*)</sup>
+</td>
+<td> float
+</td>
+<td> The geo-position of the poi along the east-west axis in degrees
+</td></tr>
+<tr>
+<td class="inlxml"> lat<sup>(*)</sup>
+</td>
+<td> float
+</td>
+<td> The geo-position of the poi along the north-south axis in degrees
+</td></tr>
+<tr>
+<td class="inlxml"> fill
+</td>
+<td> bool
+</td>
+<td> An information whether the polygon shall be filled; <i>default: false</i>
+</td></tr>
+<tr>
+<td class="inlxml"> type
+</td>
+<td> string
+</td>
+<td> A typename for the poi.
+</td></tr>
+<tr>
+<td class="inlxml"> layer
+</td>
+<td> float
+</td>
+<td> the layer of the poi for drawing and selecting.
+</td></tr>
+<tr>
+<td class="inlxml"> imgFile
+</td>
+<td> string
+</td>
+<td> A bitmap to use for rendering this poi
+</td></tr>
+<tr>
+<td class="inlxml"> width
+</td>
+<td> float
+</td>
+<td> width of rendered image in meters
+</td></tr>
+<tr>
+<td class="inlxml"> height
+</td>
+<td> float
+</td>
+<td> height of rendered image in meters
+</td></tr>
+<tr>
+<td class="inlxml"> angle
+</td>
+<td> float
+</td>
+<td> angle of rendered image in degree
+</td></tr></table>
+<p><sup>(*)</sup> Either <span class="inlxml">x</span>/<span class="inlxml">y</span> or <span class="inlxml">lane</span>/<span class="inlxml">pos</span> or <span class="inlxml">lon</span>/<span class="inlxml">lat</span> must be given
+</p>
+<h1> <span class="mw-headline" id="See_Also">See Also</span></h1>
+<ul><li> See the description of <a href="../POLYCONVERT.html" title="POLYCONVERT">POLYCONVERT</a> in order to know how polygons/POIs can be imported from other sources
+</li><li> <a href="../Developer/Implementation_Notes/Drawing_in_sumo-gui.html" title="Developer/Implementation Notes/Drawing in sumo-gui">Developer/Implementation Notes/Drawing in sumo-gui</a> describes how <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> renders loaded structures (for developers)
+</li><li> You can <a href="../TraCI/POI_Value_Retrieval.html" title="TraCI/POI Value Retrieval">read variables of loaded PoIs</a> and <a href="../TraCI/Polygon_Value_Retrieval.html" title="TraCI/Polygon Value Retrieval">read variables of loaded polygons</a> via <a href="../TraCI.html" title="TraCI">TraCI</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 37/1000000
+Preprocessor generated node count: 68/1000000
+Post‐expand include size: 161/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:93-0!*!0!!en!2!* and timestamp 20150331082843 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 25 July 2014, at 10:17.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Master" default="MasterJar">
+
+    <property environment="env"/>
+
+    <condition property="jdk.home.1.6" value="${env.JDK16_HOME}">
+        <not>
+            <equals arg1="${env.JDK16_HOME}" arg2="$${env.JDK16_HOME}"/>
+        </not>
+    </condition>
+
+    <property name="src_dir" value="src"/>
+    <property name="build_dir" value="build"/>
+    <property name="dist_dir" value="dist"/>
+	
+	<property name="rti.jar" value="${env.PRTI1516E_HOME}/lib/prti1516e.jar" />
+
+    <path id="classpath">
+        <pathelement location="${rti.jar}"/>
+    </path>
+
+    <target name="init">
+        <mkdir dir="${build_dir}"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src_dir}" destdir="${build_dir}" classpathref="classpath" />
+    </target>
+
+    <target name="MasterJar" depends="compile">
+        <mkdir dir="${dist_dir}"/>
+
+        <jar jarfile="${dist_dir}/master.jar" basedir="${build_dir}">
+            <fileset dir="${src_dir}"/>
+        </jar>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build_dir}"/>
+        <delete dir="${dist_dir}"/>
+    </target>
+</project>

@@ -1,0 +1,317 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module traci.vehicle</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="traci.html"><font color="#ffffff">traci</font></a>.vehicle</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/traci/vehicle.py">/home/behr_mi/sumo/tools/traci/vehicle.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;vehicle.py<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@author&nbsp;&nbsp;Lena&nbsp;Kalleske<br>
+@author&nbsp;&nbsp;Mario&nbsp;Krumnow<br>
+@author&nbsp;&nbsp;Lena&nbsp;Kalleske<br>
+@author&nbsp;&nbsp;Jakob&nbsp;Erdmann<br>
+@author&nbsp;&nbsp;Laura&nbsp;Bieker<br>
+@author&nbsp;&nbsp;Daniel&nbsp;Krajzewicz<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2011-03-09<br>
+@version&nbsp;$Id:&nbsp;vehicle.py&nbsp;18106&nbsp;2015-03-19&nbsp;08:08:16Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;TraCI&nbsp;interface.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2011-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top><a href="traci.constants.html">traci.constants</a><br>
+</td><td width="25%" valign=top><a href="traci.html">traci</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-add"><strong>add</strong></a>(vehID, routeID, depart<font color="#909090">=-2</font>, pos<font color="#909090">=0</font>, speed<font color="#909090">=0</font>, lane<font color="#909090">=0</font>, typeID<font color="#909090">='DEFAULT_VEHTYPE'</font>)</dt></dl>
+ <dl><dt><a name="-addFull"><strong>addFull</strong></a>(vehID, routeID, typeID<font color="#909090">='DEFAULT_VEHTYPE'</font>, depart<font color="#909090">=None</font>, departLane<font color="#909090">='0'</font>, departPos<font color="#909090">='base'</font>, departSpeed<font color="#909090">='0'</font>, arrivalLane<font color="#909090">='current'</font>, arrivalPos<font color="#909090">='max'</font>, arrivalSpeed<font color="#909090">='current'</font>, fromTaz<font color="#909090">=''</font>, toTaz<font color="#909090">=''</font>, line<font color="#909090">=''</font>, personCapacity<font color="#909090">=0</font>, personNumber<font color="#909090">=0</font>)</dt></dl>
+ <dl><dt><a name="-changeLane"><strong>changeLane</strong></a>(vehID, laneIndex, duration)</dt></dl>
+ <dl><dt><a name="-changeTarget"><strong>changeTarget</strong></a>(vehID, edgeID)</dt></dl>
+ <dl><dt><a name="-getAccel"><strong>getAccel</strong></a>(vehID)</dt><dd><tt><a href="#-getAccel">getAccel</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;maximum&nbsp;acceleration&nbsp;possibility&nbsp;in&nbsp;m/s^2&nbsp;of&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getAdaptedTraveltime"><strong>getAdaptedTraveltime</strong></a>(vehID, time, edgeID)</dt><dd><tt><a href="#-getAdaptedTraveltime">getAdaptedTraveltime</a>(string,&nbsp;double,&nbsp;string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getAllowedSpeed"><strong>getAllowedSpeed</strong></a>(vehID)</dt><dd><tt><a href="#-getAllowedSpeed">getAllowedSpeed</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;maximum&nbsp;allowed&nbsp;speed&nbsp;on&nbsp;the&nbsp;current&nbsp;lane&nbsp;regarding&nbsp;speed&nbsp;factor&nbsp;in&nbsp;m/s&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getAngle"><strong>getAngle</strong></a>(vehID)</dt><dd><tt><a href="#-getAngle">getAngle</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;angle&nbsp;in&nbsp;degrees&nbsp;of&nbsp;the&nbsp;named&nbsp;vehicle&nbsp;within&nbsp;the&nbsp;last&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getBestLanes"><strong>getBestLanes</strong></a>(vehID)</dt><dd><tt><a href="#-getBestLanes">getBestLanes</a>(string)&nbsp;-&gt;&nbsp;<br>
+&nbsp;<br>
+Information&nbsp;about&nbsp;the&nbsp;wish&nbsp;to&nbsp;use&nbsp;subsequent&nbsp;edges'&nbsp;lanes.</tt></dd></dl>
+ <dl><dt><a name="-getCO2Emission"><strong>getCO2Emission</strong></a>(vehID)</dt><dd><tt><a href="#-getCO2Emission">getCO2Emission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;CO2&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getCOEmission"><strong>getCOEmission</strong></a>(vehID)</dt><dd><tt><a href="#-getCOEmission">getCOEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;CO&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getColor"><strong>getColor</strong></a>(vehID)</dt><dd><tt><a href="#-getColor">getColor</a>(string)&nbsp;-&gt;&nbsp;(integer,&nbsp;integer,&nbsp;integer,&nbsp;integer)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;vehicle's&nbsp;rgba&nbsp;color.</tt></dd></dl>
+ <dl><dt><a name="-getContextSubscriptionResults"><strong>getContextSubscriptionResults</strong></a>(vehID<font color="#909090">=None</font>)</dt></dl>
+ <dl><dt><a name="-getDecel"><strong>getDecel</strong></a>(vehID)</dt><dd><tt><a href="#-getDecel">getDecel</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;maximum&nbsp;deceleration&nbsp;possibility&nbsp;in&nbsp;m/s^2&nbsp;of&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getDistance"><strong>getDistance</strong></a>(vehID)</dt><dd><tt><a href="#-getDistance">getDistance</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;distance&nbsp;to&nbsp;the&nbsp;starting&nbsp;point&nbsp;like&nbsp;an&nbsp;odometer</tt></dd></dl>
+ <dl><dt><a name="-getDrivingDistance"><strong>getDrivingDistance</strong></a>(vehID, edgeID, pos, laneID<font color="#909090">=0</font>)</dt><dd><tt><a href="#-getDrivingDistance">getDrivingDistance</a>(string,&nbsp;string,&nbsp;double,&nbsp;integer)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getDrivingDistance2D"><strong>getDrivingDistance2D</strong></a>(vehID, x, y)</dt><dd><tt><a href="#-getDrivingDistance2D">getDrivingDistance2D</a>(string,&nbsp;double,&nbsp;double)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getEffort"><strong>getEffort</strong></a>(vehID, time, edgeID)</dt><dd><tt><a href="#-getEffort">getEffort</a>(string,&nbsp;double,&nbsp;string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getEmissionClass"><strong>getEmissionClass</strong></a>(vehID)</dt><dd><tt><a href="#-getEmissionClass">getEmissionClass</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;emission&nbsp;class&nbsp;of&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getFuelConsumption"><strong>getFuelConsumption</strong></a>(vehID)</dt><dd><tt><a href="#-getFuelConsumption">getFuelConsumption</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;fuel&nbsp;consumption&nbsp;in&nbsp;ml&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getHCEmission"><strong>getHCEmission</strong></a>(vehID)</dt><dd><tt><a href="#-getHCEmission">getHCEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;HC&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getIDCount"><strong>getIDCount</strong></a>()</dt><dd><tt><a href="#-getIDCount">getIDCount</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;vehicle&nbsp;in&nbsp;the&nbsp;network.</tt></dd></dl>
+ <dl><dt><a name="-getIDList"><strong>getIDList</strong></a>()</dt><dd><tt><a href="#-getIDList">getIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;ids&nbsp;of&nbsp;all&nbsp;vehicles&nbsp;currently&nbsp;running&nbsp;within&nbsp;the&nbsp;scenario.</tt></dd></dl>
+ <dl><dt><a name="-getImperfection"><strong>getImperfection</strong></a>(vehID)</dt><dd><tt><a href="#-getImperfection">getImperfection</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getLaneID"><strong>getLaneID</strong></a>(vehID)</dt><dd><tt><a href="#-getLaneID">getLaneID</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;lane&nbsp;the&nbsp;named&nbsp;vehicle&nbsp;was&nbsp;at&nbsp;within&nbsp;the&nbsp;last&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getLaneIndex"><strong>getLaneIndex</strong></a>(vehID)</dt><dd><tt><a href="#-getLaneIndex">getLaneIndex</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;index&nbsp;of&nbsp;the&nbsp;lane&nbsp;the&nbsp;named&nbsp;vehicle&nbsp;was&nbsp;at&nbsp;within&nbsp;the&nbsp;last&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getLanePosition"><strong>getLanePosition</strong></a>(vehID)</dt><dd><tt><a href="#-getLanePosition">getLanePosition</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+The&nbsp;position&nbsp;of&nbsp;the&nbsp;vehicle&nbsp;along&nbsp;the&nbsp;lane&nbsp;measured&nbsp;in&nbsp;m.</tt></dd></dl>
+ <dl><dt><a name="-getLeader"><strong>getLeader</strong></a>(vehID, dist<font color="#909090">=0.0</font>)</dt><dd><tt><a href="#-getLeader">getLeader</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;(string,&nbsp;double)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;leading&nbsp;vehicle&nbsp;id&nbsp;together&nbsp;with&nbsp;the&nbsp;distance.<br>
+The&nbsp;dist&nbsp;parameter&nbsp;defines&nbsp;the&nbsp;maximum&nbsp;lookahead,&nbsp;0&nbsp;calculates&nbsp;a&nbsp;lookahead&nbsp;from&nbsp;the&nbsp;brake&nbsp;gap.</tt></dd></dl>
+ <dl><dt><a name="-getLength"><strong>getLength</strong></a>(vehID)</dt><dd><tt><a href="#-getLength">getLength</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;length&nbsp;in&nbsp;m&nbsp;of&nbsp;the&nbsp;given&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getMaxSpeed"><strong>getMaxSpeed</strong></a>(vehID)</dt><dd><tt><a href="#-getMaxSpeed">getMaxSpeed</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;maximum&nbsp;speed&nbsp;in&nbsp;m/s&nbsp;of&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getMinGap"><strong>getMinGap</strong></a>(vehID)</dt><dd><tt><a href="#-getMinGap">getMinGap</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;offset&nbsp;(gap&nbsp;to&nbsp;front&nbsp;vehicle&nbsp;if&nbsp;halting)&nbsp;of&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getNOxEmission"><strong>getNOxEmission</strong></a>(vehID)</dt><dd><tt><a href="#-getNOxEmission">getNOxEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;NOx&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getNoiseEmission"><strong>getNoiseEmission</strong></a>(vehID)</dt><dd><tt><a href="#-getNoiseEmission">getNoiseEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;noise&nbsp;emission&nbsp;in&nbsp;db&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getPMxEmission"><strong>getPMxEmission</strong></a>(vehID)</dt><dd><tt><a href="#-getPMxEmission">getPMxEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;particular&nbsp;matter&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getPersonNumber"><strong>getPersonNumber</strong></a>(vehID)</dt><dd><tt><a href="#-getPersonNumber">getPersonNumber</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getPosition"><strong>getPosition</strong></a>(vehID)</dt><dd><tt><a href="#-getPosition">getPosition</a>(string)&nbsp;-&gt;&nbsp;(double,&nbsp;double)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;position&nbsp;of&nbsp;the&nbsp;named&nbsp;vehicle&nbsp;within&nbsp;the&nbsp;last&nbsp;step&nbsp;[m,m].</tt></dd></dl>
+ <dl><dt><a name="-getRoadID"><strong>getRoadID</strong></a>(vehID)</dt><dd><tt><a href="#-getRoadID">getRoadID</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;edge&nbsp;the&nbsp;named&nbsp;vehicle&nbsp;was&nbsp;at&nbsp;within&nbsp;the&nbsp;last&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getRoute"><strong>getRoute</strong></a>(vehID)</dt><dd><tt><a href="#-getRoute">getRoute</a>(string)&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;ids&nbsp;of&nbsp;the&nbsp;edges&nbsp;the&nbsp;vehicle's&nbsp;route&nbsp;is&nbsp;made&nbsp;of.</tt></dd></dl>
+ <dl><dt><a name="-getRouteID"><strong>getRouteID</strong></a>(vehID)</dt><dd><tt><a href="#-getRouteID">getRouteID</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;route&nbsp;of&nbsp;the&nbsp;named&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getShapeClass"><strong>getShapeClass</strong></a>(vehID)</dt><dd><tt><a href="#-getShapeClass">getShapeClass</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;shape&nbsp;class&nbsp;of&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getSignals"><strong>getSignals</strong></a>(vehID)</dt><dd><tt><a href="#-getSignals">getSignals</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;an&nbsp;integer&nbsp;encoding&nbsp;the&nbsp;state&nbsp;of&nbsp;a&nbsp;vehicle's&nbsp;signals.</tt></dd></dl>
+ <dl><dt><a name="-getSpeed"><strong>getSpeed</strong></a>(vehID)</dt><dd><tt><a href="#-getSpeed">getSpeed</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;speed&nbsp;in&nbsp;m/s&nbsp;of&nbsp;the&nbsp;named&nbsp;vehicle&nbsp;within&nbsp;the&nbsp;last&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getSpeedDeviation"><strong>getSpeedDeviation</strong></a>(vehID)</dt><dd><tt><a href="#-getSpeedDeviation">getSpeedDeviation</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;maximum&nbsp;speed&nbsp;deviation&nbsp;of&nbsp;the&nbsp;vehicle&nbsp;type.</tt></dd></dl>
+ <dl><dt><a name="-getSpeedFactor"><strong>getSpeedFactor</strong></a>(vehID)</dt><dd><tt><a href="#-getSpeedFactor">getSpeedFactor</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;chosen&nbsp;speed&nbsp;factor&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getSpeedWithoutTraCI"><strong>getSpeedWithoutTraCI</strong></a>(vehID)</dt><dd><tt><a href="#-getSpeedWithoutTraCI">getSpeedWithoutTraCI</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getSubscriptionResults"><strong>getSubscriptionResults</strong></a>(vehID<font color="#909090">=None</font>)</dt><dd><tt><a href="#-getSubscriptionResults">getSubscriptionResults</a>(string)&nbsp;-&gt;&nbsp;dict(integer:&nbsp;&lt;value_type&gt;)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;subscription&nbsp;results&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;and&nbsp;the&nbsp;given&nbsp;vehicle.<br>
+If&nbsp;no&nbsp;vehicle&nbsp;id&nbsp;is&nbsp;given,&nbsp;all&nbsp;subscription&nbsp;results&nbsp;are&nbsp;returned&nbsp;in&nbsp;a&nbsp;dict.<br>
+If&nbsp;the&nbsp;vehicle&nbsp;id&nbsp;is&nbsp;unknown&nbsp;or&nbsp;the&nbsp;subscription&nbsp;did&nbsp;for&nbsp;any&nbsp;reason&nbsp;return&nbsp;no&nbsp;data,<br>
+'None'&nbsp;is&nbsp;returned.<br>
+It&nbsp;is&nbsp;not&nbsp;possible&nbsp;to&nbsp;retrieve&nbsp;older&nbsp;subscription&nbsp;results&nbsp;than&nbsp;the&nbsp;ones<br>
+from&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getTau"><strong>getTau</strong></a>(vehID)</dt><dd><tt><a href="#-getTau">getTau</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;driver's&nbsp;reaction&nbsp;time&nbsp;in&nbsp;s&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getTypeID"><strong>getTypeID</strong></a>(vehID)</dt><dd><tt><a href="#-getTypeID">getTypeID</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;type&nbsp;of&nbsp;the&nbsp;named&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getVehicleClass"><strong>getVehicleClass</strong></a>(vehID)</dt><dd><tt><a href="#-getVehicleClass">getVehicleClass</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;vehicle&nbsp;class&nbsp;of&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-getWaitingTime"><strong>getWaitingTime</strong></a>(vehID)</dt><dd><tt><a href="#-getWaitingTime">getWaitingTime</a>()&nbsp;-&gt;&nbsp;double<br>
+The&nbsp;waiting&nbsp;time&nbsp;of&nbsp;a&nbsp;vehicle&nbsp;is&nbsp;defined&nbsp;as&nbsp;the&nbsp;time&nbsp;(in&nbsp;seconds)&nbsp;spent&nbsp;with&nbsp;a<br>
+speed&nbsp;below&nbsp;0.1m/s&nbsp;since&nbsp;the&nbsp;last&nbsp;time&nbsp;it&nbsp;was&nbsp;faster&nbsp;than&nbsp;0.1m/s.<br>
+(basically,&nbsp;the&nbsp;waiting&nbsp;time&nbsp;of&nbsp;a&nbsp;vehicle&nbsp;is&nbsp;reset&nbsp;to&nbsp;0&nbsp;every&nbsp;time&nbsp;it&nbsp;moves).</tt></dd></dl>
+ <dl><dt><a name="-getWidth"><strong>getWidth</strong></a>(vehID)</dt><dd><tt><a href="#-getWidth">getWidth</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;width&nbsp;in&nbsp;m&nbsp;of&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-isRouteValid"><strong>isRouteValid</strong></a>(vehID)</dt></dl>
+ <dl><dt><a name="-moveTo"><strong>moveTo</strong></a>(vehID, laneID, pos)</dt></dl>
+ <dl><dt><a name="-moveToVTD"><strong>moveToVTD</strong></a>(vehID, edgeID, lane, x, y)</dt></dl>
+ <dl><dt><a name="-remove"><strong>remove</strong></a>(vehID, reason<font color="#909090">=3</font>)</dt><dd><tt>Remove&nbsp;vehicle&nbsp;with&nbsp;the&nbsp;given&nbsp;ID&nbsp;for&nbsp;the&nbsp;give&nbsp;reason.&nbsp;<br>
+Reasons&nbsp;are&nbsp;defined&nbsp;in&nbsp;module&nbsp;constants&nbsp;and&nbsp;start&nbsp;with&nbsp;REMOVE_</tt></dd></dl>
+ <dl><dt><a name="-rerouteEffort"><strong>rerouteEffort</strong></a>(vehID)</dt></dl>
+ <dl><dt><a name="-rerouteTraveltime"><strong>rerouteTraveltime</strong></a>(vehID, currentTravelTimes<font color="#909090">=True</font>)</dt><dd><tt><a href="#-rerouteTraveltime">rerouteTraveltime</a>(string,&nbsp;bool)&nbsp;-&gt;&nbsp;None&nbsp;Reroutes&nbsp;a&nbsp;vehicle.&nbsp;If<br>
+currentTravelTimes&nbsp;is&nbsp;True&nbsp;(default)&nbsp;then&nbsp;the&nbsp;current&nbsp;traveltime&nbsp;of&nbsp;the<br>
+edges&nbsp;is&nbsp;loaded&nbsp;and&nbsp;used&nbsp;for&nbsp;rerouting.&nbsp;If&nbsp;currentTravelTimes&nbsp;is&nbsp;False,<br>
+travel&nbsp;times&nbsp;loaded&nbsp;from&nbsp;a&nbsp;weight&nbsp;file&nbsp;are&nbsp;used.&nbsp;In&nbsp;the&nbsp;absence&nbsp;of&nbsp;loaded<br>
+weights,&nbsp;the&nbsp;minimum&nbsp;travel&nbsp;time&nbsp;is&nbsp;used&nbsp;(speed&nbsp;limit).</tt></dd></dl>
+ <dl><dt><a name="-resume"><strong>resume</strong></a>(vehID)</dt><dd><tt><a href="#-resume">resume</a>(string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Resumes&nbsp;the&nbsp;vehicle&nbsp;from&nbsp;the&nbsp;current&nbsp;stop&nbsp;(throws&nbsp;an&nbsp;error&nbsp;if&nbsp;the&nbsp;vehicle&nbsp;is&nbsp;not&nbsp;stopped).</tt></dd></dl>
+ <dl><dt><a name="-setAccel"><strong>setAccel</strong></a>(vehID, accel)</dt><dd><tt><a href="#-setAccel">setAccel</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;maximum&nbsp;acceleration&nbsp;in&nbsp;m/s^2&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setAdaptedTraveltime"><strong>setAdaptedTraveltime</strong></a>(vehID, begTime, endTime, edgeID, time)</dt><dd><tt><a href="#-setAdaptedTraveltime">setAdaptedTraveltime</a>(string,&nbsp;double,&nbsp;string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-setColor"><strong>setColor</strong></a>(vehID, color)</dt><dd><tt><a href="#-setColor">setColor</a>(string,&nbsp;(integer,&nbsp;integer,&nbsp;integer,&nbsp;integer))<br>
+sets&nbsp;color&nbsp;for&nbsp;vehicle&nbsp;with&nbsp;the&nbsp;given&nbsp;ID.<br>
+i.e.&nbsp;(255,0,0,0)&nbsp;for&nbsp;the&nbsp;color&nbsp;red.&nbsp;<br>
+The&nbsp;fourth&nbsp;integer&nbsp;(alpha)&nbsp;is&nbsp;only&nbsp;used&nbsp;when&nbsp;drawing&nbsp;vehicles&nbsp;with&nbsp;raster&nbsp;images</tt></dd></dl>
+ <dl><dt><a name="-setDecel"><strong>setDecel</strong></a>(vehID, decel)</dt><dd><tt><a href="#-setDecel">setDecel</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;maximum&nbsp;deceleration&nbsp;in&nbsp;m/s^2&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setEffort"><strong>setEffort</strong></a>(vehID, begTime, endTime, edgeID, effort)</dt><dd><tt><a href="#-setEffort">setEffort</a>(string,&nbsp;double,&nbsp;string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-setEmissionClass"><strong>setEmissionClass</strong></a>(vehID, clazz)</dt><dd><tt><a href="#-setEmissionClass">setEmissionClass</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;emission&nbsp;class&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setImperfection"><strong>setImperfection</strong></a>(vehID, imperfection)</dt><dd><tt><a href="#-setImperfection">setImperfection</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-setLaneChangeMode"><strong>setLaneChangeMode</strong></a>(vehID, lcm)</dt><dd><tt><a href="#-setLaneChangeMode">setLaneChangeMode</a>(string,&nbsp;integer)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;vehicle's&nbsp;lane&nbsp;change&nbsp;mode&nbsp;as&nbsp;a&nbsp;bitset.</tt></dd></dl>
+ <dl><dt><a name="-setLength"><strong>setLength</strong></a>(vehID, length)</dt><dd><tt><a href="#-setLength">setLength</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;length&nbsp;in&nbsp;m&nbsp;for&nbsp;the&nbsp;given&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setMaxSpeed"><strong>setMaxSpeed</strong></a>(vehID, speed)</dt><dd><tt><a href="#-setMaxSpeed">setMaxSpeed</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;maximum&nbsp;speed&nbsp;in&nbsp;m/s&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setMinGap"><strong>setMinGap</strong></a>(vehID, minGap)</dt><dd><tt><a href="#-setMinGap">setMinGap</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;offset&nbsp;(gap&nbsp;to&nbsp;front&nbsp;vehicle&nbsp;if&nbsp;halting)&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setRoute"><strong>setRoute</strong></a>(vehID, edgeList)</dt><dd><tt><a href="#-setRoute">setRoute</a>(string,&nbsp;list)&nbsp;-&gt;&nbsp;&nbsp;None<br>
+&nbsp;<br>
+changes&nbsp;the&nbsp;vehicle&nbsp;route&nbsp;to&nbsp;given&nbsp;edges&nbsp;list.<br>
+The&nbsp;first&nbsp;edge&nbsp;in&nbsp;the&nbsp;list&nbsp;has&nbsp;to&nbsp;be&nbsp;the&nbsp;one&nbsp;that&nbsp;the&nbsp;vehicle&nbsp;is&nbsp;at&nbsp;at&nbsp;the&nbsp;moment.<br>
+&nbsp;<br>
+example&nbsp;usage:<br>
+<a href="#-setRoute">setRoute</a>('1',&nbsp;['1',&nbsp;'2',&nbsp;'4',&nbsp;'6',&nbsp;'7'])<br>
+&nbsp;<br>
+this&nbsp;changes&nbsp;route&nbsp;for&nbsp;vehicle&nbsp;id&nbsp;1&nbsp;to&nbsp;edges&nbsp;1-2-4-6-7</tt></dd></dl>
+ <dl><dt><a name="-setRouteID"><strong>setRouteID</strong></a>(vehID, routeID)</dt><dd><tt><a href="#-setRouteID">setRouteID</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;route&nbsp;for&nbsp;the&nbsp;named&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setShapeClass"><strong>setShapeClass</strong></a>(vehID, clazz)</dt><dd><tt><a href="#-setShapeClass">setShapeClass</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;shape&nbsp;class&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setSignals"><strong>setSignals</strong></a>(vehID, signals)</dt><dd><tt><a href="#-setSignals">setSignals</a>(string,&nbsp;integer)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;an&nbsp;integer&nbsp;encoding&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;vehicle's&nbsp;signals.</tt></dd></dl>
+ <dl><dt><a name="-setSpeed"><strong>setSpeed</strong></a>(vehID, speed)</dt><dd><tt><a href="#-setSpeed">setSpeed</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;speed&nbsp;in&nbsp;m/s&nbsp;for&nbsp;the&nbsp;named&nbsp;vehicle&nbsp;within&nbsp;the&nbsp;last&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-setSpeedDeviation"><strong>setSpeedDeviation</strong></a>(vehID, deviation)</dt><dd><tt><a href="#-setSpeedDeviation">setSpeedDeviation</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;maximum&nbsp;speed&nbsp;deviation&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setSpeedFactor"><strong>setSpeedFactor</strong></a>(vehID, factor)</dt><dd><tt><a href="#-setSpeedFactor">setSpeedFactor</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-setSpeedMode"><strong>setSpeedMode</strong></a>(vehID, sm)</dt><dd><tt><a href="#-setLaneChangeMode">setLaneChangeMode</a>(string,&nbsp;integer)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;vehicle's&nbsp;speed&nbsp;mode&nbsp;as&nbsp;a&nbsp;bitset.</tt></dd></dl>
+ <dl><dt><a name="-setStop"><strong>setStop</strong></a>(vehID, edgeID, pos<font color="#909090">=1.0</font>, laneIndex<font color="#909090">=0</font>, duration<font color="#909090">=2147483647</font>, flags<font color="#909090">=0</font>)</dt><dd><tt><a href="#-setStop">setStop</a>(string,&nbsp;string,&nbsp;double,&nbsp;integer,&nbsp;integer,&nbsp;integer)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Adds&nbsp;or&nbsp;modifies&nbsp;a&nbsp;stop&nbsp;with&nbsp;the&nbsp;given&nbsp;parameters.&nbsp;The&nbsp;duration&nbsp;attribute&nbsp;is<br>
+in&nbsp;milliseconds.</tt></dd></dl>
+ <dl><dt><a name="-setTau"><strong>setTau</strong></a>(vehID, tau)</dt><dd><tt><a href="#-setTau">setTau</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;driver's&nbsp;reaction&nbsp;time&nbsp;in&nbsp;s&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setType"><strong>setType</strong></a>(vehID, typeID)</dt><dd><tt><a href="#-setType">setType</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;type&nbsp;for&nbsp;the&nbsp;named&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setVehicleClass"><strong>setVehicleClass</strong></a>(vehID, clazz)</dt><dd><tt><a href="#-setVehicleClass">setVehicleClass</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;vehicle&nbsp;class&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-setWidth"><strong>setWidth</strong></a>(vehID, width)</dt><dd><tt><a href="#-setWidth">setWidth</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;width&nbsp;in&nbsp;m&nbsp;for&nbsp;this&nbsp;vehicle.</tt></dd></dl>
+ <dl><dt><a name="-slowDown"><strong>slowDown</strong></a>(vehID, speed, duration)</dt></dl>
+ <dl><dt><a name="-subscribe"><strong>subscribe</strong></a>(vehID, varIDs<font color="#909090">=(80, 86)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt><dd><tt><a href="#-subscribe">subscribe</a>(string,&nbsp;list(integer),&nbsp;double,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Subscribe&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;vehicle&nbsp;values&nbsp;for&nbsp;the&nbsp;given&nbsp;interval.</tt></dd></dl>
+ <dl><dt><a name="-subscribeContext"><strong>subscribeContext</strong></a>(vehID, domain, dist, varIDs<font color="#909090">=(80, 86)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt></dl>
+ <dl><dt><a name="-subscribeLeader"><strong>subscribeLeader</strong></a>(vehID, dist<font color="#909090">=0.0</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt><dd><tt><a href="#-subscribeLeader">subscribeLeader</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Subscribe&nbsp;for&nbsp;the&nbsp;leading&nbsp;vehicle&nbsp;id&nbsp;together&nbsp;with&nbsp;the&nbsp;distance.<br>
+The&nbsp;dist&nbsp;parameter&nbsp;defines&nbsp;the&nbsp;maximum&nbsp;lookahead,&nbsp;0&nbsp;calculates&nbsp;a&nbsp;lookahead&nbsp;from&nbsp;the&nbsp;brake&nbsp;gap.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DEPART_MAX</strong> = -3<br>
+<strong>DEPART_NOW</strong> = -2<br>
+<strong>DEPART_TRIGGERED</strong> = -1<br>
+<strong>STOP_DEFAULT</strong> = 0<br>
+<strong>STOP_PARKING</strong> = 1<br>
+<strong>STOP_TRIGGERED</strong> = 2<br>
+<strong>subscriptionResults</strong> = &lt;{}, {}&gt;</td></tr></table>
+</body></html>

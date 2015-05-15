@@ -1,0 +1,60 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module sumolib.geomhelper</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="sumolib.html"><font color="#ffffff">sumolib</font></a>.geomhelper</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/sumolib/geomhelper.py">/home/behr_mi/sumo/tools/sumolib/geomhelper.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;geomhelper.py<br>
+@author&nbsp;&nbsp;Daniel&nbsp;Krajzewicz<br>
+@author&nbsp;&nbsp;Jakob&nbsp;Erdmann<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2013-02-25<br>
+@version&nbsp;$Id:&nbsp;geomhelper.py&nbsp;18096&nbsp;2015-03-17&nbsp;09:50:59Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Some&nbsp;helper&nbsp;functions&nbsp;for&nbsp;geometrical&nbsp;computations.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2013-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-distance"><strong>distance</strong></a>(p1, p2)</dt></dl>
+ <dl><dt><a name="-distancePointToLine"><strong>distancePointToLine</strong></a>(point, line_start, line_end, perpendicular<font color="#909090">=False</font>)</dt><dd><tt>Return&nbsp;the&nbsp;minimum&nbsp;distance&nbsp;between&nbsp;point&nbsp;and&nbsp;the&nbsp;line&nbsp;(line_start,&nbsp;line_end)</tt></dd></dl>
+ <dl><dt><a name="-distancePointToPolygon"><strong>distancePointToPolygon</strong></a>(point, polygon, perpendicular<font color="#909090">=False</font>)</dt><dd><tt>Return&nbsp;the&nbsp;minimum&nbsp;distance&nbsp;between&nbsp;point&nbsp;and&nbsp;polygon</tt></dd></dl>
+ <dl><dt><a name="-lineOffsetWithMinimumDistanceToPoint"><strong>lineOffsetWithMinimumDistanceToPoint</strong></a>(point, line_start, line_end, perpendicular<font color="#909090">=False</font>)</dt><dd><tt>Return&nbsp;the&nbsp;offset&nbsp;from&nbsp;line&nbsp;(line_start,&nbsp;line_end)&nbsp;where&nbsp;the&nbsp;distance&nbsp;to<br>
+point&nbsp;is&nbsp;minimal</tt></dd></dl>
+ <dl><dt><a name="-polygonOffsetWithMinimumDistanceToPoint"><strong>polygonOffsetWithMinimumDistanceToPoint</strong></a>(point, polygon, perpendicular<font color="#909090">=False</font>)</dt><dd><tt>Return&nbsp;the&nbsp;offset&nbsp;from&nbsp;the&nbsp;polygon&nbsp;start&nbsp;where&nbsp;the&nbsp;distance&nbsp;to&nbsp;point&nbsp;is&nbsp;minimal</tt></dd></dl>
+ <dl><dt><a name="-positionAtOffset"><strong>positionAtOffset</strong></a>(p1, p2, offset)</dt></dl>
+ <dl><dt><a name="-positionAtShapeOffset"><strong>positionAtShapeOffset</strong></a>(shape, offset)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>INVALID_DISTANCE</strong> = -1</td></tr></table>
+</body></html>

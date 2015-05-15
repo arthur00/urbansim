@@ -1,0 +1,8 @@
+// config file for car
+Name=Quantum
+LicensePlate=SCP-344
+FuelType=Diesel
+NormalSpeed=100
+LitersPer100km1=20
+LitersPer100km2=15
+LitersPer100km3=8

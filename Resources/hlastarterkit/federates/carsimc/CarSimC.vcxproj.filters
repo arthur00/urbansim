@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\HLA">
+      <UniqueIdentifier>{831795fa-8a79-43fe-8e9b-7a99ad0a4aff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Util">
+      <UniqueIdentifier>{7f351473-96bc-42fd-a991-3738accaad53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Car">
+      <UniqueIdentifier>{f451800e-5e98-41e5-a466-236a6f6774c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Controller">
+      <UniqueIdentifier>{78caaf4d-99be-4095-85f0-33650f412bf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Simulator">
+      <UniqueIdentifier>{048e77c8-55c9-436d-8eb5-2635106d9632}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HLA">
+      <UniqueIdentifier>{539204e9-6813-4792-97ec-cc0afc383fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Car">
+      <UniqueIdentifier>{50be2230-55a7-49b3-910c-a5f35c401953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Controller">
+      <UniqueIdentifier>{501e2f77-fbf5-4032-98b0-284ee391a13e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Simulator">
+      <UniqueIdentifier>{9b4fee6b-17a8-49c0-92e1-597d8cf5ec7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util">
+      <UniqueIdentifier>{4a7c9329-7c25-48d7-82ca-64a0e517fc72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)/src/SimulatorListener.h">
+      <Filter>Header Files\Simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/SimulatorConfig.h">
+      <Filter>Header Files\Simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/Simulator.h">
+      <Filter>Header Files\Simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/CarFactory.h">
+      <Filter>Header Files\Car</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/Car.h">
+      <Filter>Header Files\Car</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/CarProperties.h">
+      <Filter>Header Files\Car</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/Controller.h">
+      <Filter>Header Files\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/RunningState.h">
+      <Filter>Header Files\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/State.h">
+      <Filter>Header Files\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/ScenarioLoadedState.h">
+      <Filter>Header Files\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/NoScenarioState.h">
+      <Filter>Header Files\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/HLAfuelType.h">
+      <Filter>Header Files\HLA</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/HLAmodule.h">
+      <Filter>Header Files\HLA</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/HLAposition.h">
+      <Filter>Header Files\HLA</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/LatLongHelper.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/StringUtils.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/FuelType.h">
+      <Filter>Header Files\Car</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/InteractionListener.h">
+      <Filter>Header Files\HLA</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/Scenario.h">
+      <Filter>Header Files\Simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/Position.h">
+      <Filter>Header Files\Car</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)/src/Properties.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)/src/CarSimC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/HLAposition.cpp">
+      <Filter>Source Files\HLA</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/HLAfuelType.cpp">
+      <Filter>Source Files\HLA</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/HLAmodule.cpp">
+      <Filter>Source Files\HLA</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/Controller.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/NoScenarioState.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/RunningState.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/ScenarioLoadedState.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/State.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/Car.cpp">
+      <Filter>Source Files\Car</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/CarFactory.cpp">
+      <Filter>Source Files\Car</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/CarProperties.cpp">
+      <Filter>Source Files\Car</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/LatLongHelper.cpp">
+      <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/StringUtils.cpp">
+      <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/SimulatorConfig.cpp">
+      <Filter>Source Files\Simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/Simulator.cpp">
+      <Filter>Source Files\Simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/FuelType.cpp">
+      <Filter>Source Files\Car</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/Position.cpp">
+      <Filter>Source Files\Car</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/Scenario.cpp">
+      <Filter>Source Files\Simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)/src/Properties.cpp">
+      <Filter>Source Files\Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

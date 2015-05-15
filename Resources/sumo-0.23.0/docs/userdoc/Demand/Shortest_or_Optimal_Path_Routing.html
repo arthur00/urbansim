@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Demand/Shortest_or_Optimal_Path_Routing - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Demand/Shortest or Optimal Path Routing</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.896589 from <a href="http://sumo.dlr.de/wiki/Demand/Shortest_or_Optimal_Path_Routing">the wiki page for Demand/Shortest_or_Optimal_Path_Routing</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Trip_Definitions"><span class="tocnumber">2</span> <span class="toctext">Trip Definitions</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Flow_Definitions"><span class="tocnumber">3</span> <span class="toctext">Flow Definitions</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Custom_edge_weights"><span class="tocnumber">4</span> <span class="toctext">Custom edge weights</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Usage_Examples"><span class="tocnumber">5</span> <span class="toctext">Usage Examples</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Dealing_with_Errors_During_Routing"><span class="tocnumber">6</span> <span class="toctext">Dealing with Errors During Routing</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Introduction">Introduction</span></h1>
+<p><a href="../DUAROUTER.html" title="DUAROUTER">DUAROUTER</a> can be used to import demand data given by source and destination edges (so called <i>trips</i> and <i>flows </i>). 
+Furthermore, it can be used to repair an existing <i>route</i>-file i.e. if a given route has an unconnected edge list. To achieve dynamic user assignment, <a href="../DUAROUTER.html" title="DUAROUTER">DUAROUTER</a> and <a href="../SUMO.html" title="SUMO">SUMO</a> must be called iteratively. This is described in <a href="../Demand/Dynamic_User_Assignment.html" title="Demand/Dynamic User Assignment">Demand/Dynamic User Assignment</a>.
+</p><p><br />
+</p>
+<h1> <span class="mw-headline" id="Trip_Definitions">Trip Definitions</span></h1>
+<p>Trip definitions that can be laid into the network may be supplied to the router using an XML-file. The syntax of a single trip definition is: <span class="inlxml">&lt;trip id="&lt;ID&gt;" depart="<time>" from="&lt;ORIGIN_EDGE_ID&gt;" to="&lt;DESTINATION_EDGE_ID&gt;" [type="&lt;VEHICLE_TYPE&gt;"] [period="&lt;INT&gt;" repno="&lt;INT&gt;"] [color="&lt;COLOR&gt;"]/&gt;&lt;/span&gt;. 
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> id
+</td>
+<td> id (string)
+</td>
+<td> The name of vehicles that will be generated using this trip definition (a running number if not given)
+</td></tr>
+<tr>
+<td class="inlxml"> <b>depart</b>
+</td>
+<td> int
+</td>
+<td> The departure time of the (first) vehicle which is generated using this trip definition
+</td></tr>
+<tr>
+<td class="inlxml"> from
+</td>
+<td> edge id
+</td>
+<td> The name of the edge the route starts at; the edge must be a part of the used network
+</td></tr>
+<tr>
+<td class="inlxml"> to
+</td>
+<td> edge id
+</td>
+<td> The name of the edge the route ends at; the edge must be a part of the used network
+</td></tr>
+<tr>
+<td class="inlxml"> via
+</td>
+<td> edge ids
+</td>
+<td> List of intermediate edge ids which shall be part of the route; the edges must be a part of the used network
+</td></tr>
+<tr>
+<td class="inlxml"> fromTaz
+</td>
+<td> district id
+</td>
+<td> The name of the district the route starts at
+</td></tr>
+<tr>
+<td class="inlxml"> toTaz
+</td>
+<td> district id
+</td>
+<td> The name of the district the route ends at
+</td></tr>
+<tr>
+<td class="inlxml"> period
+</td>
+<td> int
+</td>
+<td> The time after which another vehicle with the same route shall be inserted (optional)
+</td></tr>
+<tr>
+<td class="inlxml"> repno
+</td>
+<td> int
+</td>
+<td> The number of vehicles to insert which share the same route (optional)
+</td></tr>
+<tr>
+<td class="inlxml"> color
+</td>
+<td> color
+</td>
+<td> This generated vehicle's color
+</td></tr>
+<tr>
+<td class="inlxml"> departLane
+</td>
+<td> int/string (&#8805;0,"random","free","departlane")
+</td>
+<td> The lane on which the vehicle shall be inserted
+</td></tr>
+<tr>
+<td class="inlxml"> departPos
+</td>
+<td> float(m)/string ("random","free","random_free","base")
+</td>
+<td> The position at which the vehicle shall enter the net; "free" means the point closest to the start of the departlane where it is possible to insert the vehicle. "random_free" tries forcefully to find a free random position and if that fails, places the vehicle at the next "free" position. "base" sets the vehicle's depart position to the vehicle's length + eps (eps=.1m), this means the vehicle is completely at the begin of the depart lane.
+</td></tr>
+<tr>
+<td class="inlxml"> departSpeed
+</td>
+<td> float(m/s)/string (&#8805;0,"random","max")
+</td>
+<td> The speed with which the vehicle shall enter the network.
+</td></tr>
+<tr>
+<td class="inlxml"> arrivalLane
+</td>
+<td> int/string (&#8805;0,"current")
+</td>
+<td> The lane at which the vehicle shall leave the network <div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />see <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">Definition of Vehicles, Vehicle Types, and Routes#Vehicles and Routes</a></div>
+</td></tr>
+<tr>
+<td class="inlxml"> arrivalPos
+</td>
+<td> float(m)/string (&#8805;0<sup>(1)</sup>,"random","max")
+</td>
+<td> The position at which the vehicle shall leave the network <div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />see <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">Definition of Vehicles, Vehicle Types, and Routes#Vehicles and Routes</a></div>
+</td></tr>
+<tr>
+<td class="inlxml"> arrivalSpeed
+</td>
+<td> float(m/s)/string (&#8805;0,"current")
+</td>
+<td> The speed with which the vehicle shall leave the network <div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />see <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">Definition of Vehicles, Vehicle Types, and Routes#Vehicles and Routes</a></div>
+</td></tr></table>
+<p>If any trips use the <span class="inlxml">type</span> attribute, the referenced <span class="inlxml">vType</span> element must be put into the <i>trip.xml</i> file or into an additionally loaded <i>rou.xml</i>-file or into an <a href="../SUMO.html#Format_of_additional_files" title="SUMO"><i>additional-file</i></a>. 
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />By default, <a href="../DUAROUTER.html" title="DUAROUTER">DUAROUTER</a> will write <span class="inlxml">vType</span> definitions into the output route file ahead of the first vehicle using that type. By using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--vtype-output</span> these definitions can be put into another file.</div>
+<h1> <span class="mw-headline" id="Flow_Definitions">Flow Definitions</span></h1>
+<p>Flow amounts share most of the parameter with trip definitions. The syntax is: <span class="inlxml">&lt;flow id="&lt;ID&gt;" from="&lt;ORIGIN_EDGE_ID&gt;" to="&lt;DESTINATION_EDGE_ID&gt;" begin="&lt;INTERVAL_BEGIN&gt;" end="&lt;INTERVAL_END&gt;" number="&lt;VEHICLES_TO_INSERT&gt;" [type="&lt;VEHICLE_TYPE&gt;"] [color="&lt;COLOR&gt;"]/&gt;</span>. Notice the following differences: the vehicle does not take a certain departure time as not only one vehicle is described by this parameter, but a set of, given within the attribute "number". The departure times are spread uniformly within the time interval described by &lt;INTERVAL_BEGIN&gt; and &lt;INTERVAL_END&gt;. All these three attributes must be integer values. The values "period" and "repno" are not used herein. Flow definitions can also be embedded into an interval tag. In this case one can (but does not have to) leave the tags <span class="inlxml">begin</span> and <span class="inlxml">end</span> out. So the following two snipples mean the same:
+</p>
+<pre class="xml">
+&lt;flows&gt;
+    &lt;flow id=&quot;0&quot; from=&quot;edge0&quot; to=&quot;edge1&quot; begin=&quot;0&quot; end=&quot;3600&quot; number=&quot;100&quot;/&gt;
+&lt;/flows&gt;
+</pre>
+<p>and
+</p>
+<pre class="xml">
+&lt;flows&gt;
+    &lt;interval begin=&quot;0&quot; end=&quot;3600&quot;&gt;
+        &lt;flow id=&quot;0&quot; from=&quot;edge0&quot; to=&quot;edge1&quot; number=&quot;100&quot;/&gt;
+    &lt;/interval&gt;
+&lt;/flows&gt;
+</pre>
+<p>Let's review flow parameter:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> id (string)
+</td>
+<td> The name of vehicles that will be generated using this trip definition; vehicles and routes will be named "&lt;id&gt;_&lt;RUNNING&gt;" where &lt;RUNNING&gt; is a number starting at 0 and increased for each vehicle.
+</td></tr>
+<tr>
+<td class="inlxml"> from
+</td>
+<td> edge id
+</td>
+<td> The name of the edge the routes start at; the edge must be a part of the used network
+</td></tr>
+<tr>
+<td class="inlxml"> to<sup>(1)</sup>
+</td>
+<td> edge id
+</td>
+<td> The name of an the edge the routes end at; the edge must be a part of the used network
+</td></tr>
+<tr>
+<td class="inlxml"> via
+</td>
+<td> edge ids
+</td>
+<td> List of intermediate edge ids which shall be part of the route; the edges must be a part of the used network
+</td></tr>
+<tr>
+<td class="inlxml"> type
+</td>
+<td> type id
+</td>
+<td> The type id of the vehicles to generate
+</td></tr>
+<tr>
+<td class="inlxml"> <b>begin</b>
+</td>
+<td> int
+</td>
+<td> The begin time for the described interval
+</td></tr>
+<tr>
+<td class="inlxml"> end
+</td>
+<td> int
+</td>
+<td> The end time for the interval; must be greater than &lt;begin&gt;; vehicles will be inserted between &lt;begin&gt; and &lt;end&gt;-1
+</td></tr>
+<tr>
+<td class="inlxml"> number
+</td>
+<td> int
+</td>
+<td> The number of vehicles that shall be inserted during this interval
+</td></tr>
+<tr>
+<td class="inlxml"> color
+</td>
+<td> color
+</td>
+<td> Defines the color of the vehicles and their routes
+</td></tr>
+<tr>
+<td class="inlxml"> departLane
+</td>
+<td> int/string (&#8805;0,"random","free","departlane")
+</td>
+<td> The lane on which the vehicle shall be inserted
+</td></tr>
+<tr>
+<td class="inlxml"> departPos
+</td>
+<td> float(m)/string ("random","free","random_free","base")
+</td>
+<td> The position at which the vehicle shall enter the net; "free" means the point closest to the start of the departlane where it is possible to insert the vehicle. "random_free" tries forcefully to find a free random position and if that fails, places the vehicle at the next "free" position. "base" sets the vehicle's depart position to the vehicle's length + eps (eps=.1m), this means the vehicle is completely at the begin of the depart lane.
+</td></tr>
+<tr>
+<td class="inlxml"> departSpeed
+</td>
+<td> float(m/s)/string (&#8805;0,"random","max")
+</td>
+<td> The speed with which the vehicle shall enter the network.
+</td></tr>
+<tr>
+<td class="inlxml"> arrivalLane
+</td>
+<td> int/string (&#8805;0,"current")
+</td>
+<td> The lane at which the vehicle shall leave the network <div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />see <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">Definition of Vehicles, Vehicle Types, and Routes#Vehicles and Routes</a></div>
+</td></tr>
+<tr>
+<td class="inlxml"> arrivalPos
+</td>
+<td> float(m)/string (&#8805;0<sup>(1)</sup>,"random","max")
+</td>
+<td> The position at which the vehicle shall leave the network <div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />see <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">Definition of Vehicles, Vehicle Types, and Routes#Vehicles and Routes</a></div>
+</td></tr>
+<tr>
+<td class="inlxml"> arrivalSpeed
+</td>
+<td> float(m/s)/string (&#8805;0,"current")
+</td>
+<td> The speed with which the vehicle shall leave the network <div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />see <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">Definition of Vehicles, Vehicle Types, and Routes#Vehicles and Routes</a></div>
+</td></tr></table>
+<p><sup>(1)</sup> <a href="../JTRROUTER.html" title="JTRROUTER">JTRROUTER</a> does not need this parameter, <a href="../DUAROUTER.html" title="DUAROUTER">DUAROUTER</a> requires it
+</p>
+<h1> <span class="mw-headline" id="Custom_edge_weights">Custom edge weights</span></h1>
+<p>The option <span style="color: #111144; font-weight: bold; white-space: pre;">--weight-files <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> can be used to affect the weights used during routing. The input format conforms to the output format of the <a href="../Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html" title="Simulation/Output/Lane- or Edge-based Traffic Measures"> edge based traffic measures</a>. By default this uses the <b>traveltime</b> attribute of edges. The option <span style="color: #111144; font-weight: bold; white-space: pre;">--weight-attribute <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span> can be used to use other attributes for routing. Weight files that only contain some of the network edges are permitted. If undefined, the traveltime of an edge defaults to the free-flow traveltime. Also, only the <i>weight-attribute</i> must be defined:
+</p>
+<pre class="xml">
+&lt;meandata&gt;
+   &lt;interval begin=&quot;0&quot; end=&quot;3600&quot; id=&quot;whatever&quot;&gt;
+      &lt;edge id=&quot;edgeID1&quot; traveltime=&quot;23&quot;/&gt;
+      &lt;edge id=&quot;edgeID2&quot; traveltime=&quot;1000&quot;/&gt;
+   &lt;/interval&gt;
+&lt;/meandata&gt;
+</pre>
+<h1> <span class="mw-headline" id="Usage_Examples">Usage Examples</span></h1>
+<p><code>duarouter --trip-files trips.xml --net-file road.net.xml --output-file result.rou.xml</code>
+</p><p>the file <i>trips.xml </i> given below must contain edges contained in the network
+file <i>road.net.xml </i>. 
+</p>
+<pre class="xml">
+    &lt;trips&gt;
+        &lt;trip id=&quot;1625993_25&quot; depart=&quot;25&quot; from=&quot;-15229224#3&quot; to=&quot;4474184&quot;/&gt;
+        &lt;trip id=&quot;1542480_35&quot; depart=&quot;35&quot; from=&quot;-46771582&quot;   to=&quot;-24038909#1&quot;/&gt;
+        &lt;trip id=&quot;1544282_35&quot; depart=&quot;35&quot; from=&quot;20554351#2&quot;  to=&quot;-4876083#5&quot;/&gt;
+        &lt;trip id=&quot;1565407_35&quot; depart=&quot;35&quot; from=&quot;-25771472#1&quot; to=&quot;-25160470#0&quot;/&gt;
+        &lt;trip id=&quot;1620115_45&quot; depart=&quot;45&quot; from=&quot;11279351#3&quot;  to=&quot;5198584#1&quot;/&gt;
+        &lt;trip id=&quot;1647560_45&quot; depart=&quot;45&quot; from=&quot;54048879#0&quot;  to=&quot;-52105434#0&quot;/&gt;
+        &lt;trip id=&quot;3761248_45&quot; depart=&quot;45&quot; from=&quot;-31928311&quot;   to=&quot;23792451#7&quot;/&gt;
+    &lt;/trips&gt;
+</pre>
+<p><br />
+Trips may contain source and destination districts as well as edges. If the
+districts shall be used for routing this has to be specified using the option "--with-taz". Furthermore (if the net does not contain the districts) a districts file needs to be provided:
+</p>
+<pre>duarouter --trip-files=&lt;TRIP_DEFS&gt; --net-file=&lt;SUMO_NET&gt; \
+  --output-file=MySUMORoutes.rou.xml --taz-files=&lt;DISTRICTS&gt; --with-taz
+</pre>
+<p><br />
+</p><p>As we have to read in the flow definitions completely into the memory - something we do not have to do necessarily with trips, an extra parameter (-f or --flows) is used to make them known by the router:
+</p>
+<pre>duarouter --flows=&lt;FLOW_DEFS&gt; --net=&lt;SUMO_NET&gt; \
+  --output-file=MySUMORoutes.rou.xml -b &lt;UINT&gt; -e &lt;UINT&gt;
+</pre>
+<p>Remind that one can not insert flow descriptions into a trip definitions file. The opposite (some trip definitions within a flow descriptions file) is possible. You also can give both files at the input file, for example:
+</p>
+<pre>duarouter --flows=&lt;FLOW_DEFS&gt; --trip-files=&lt;TRIP_DEFS&gt; --net=&lt;SUMO_NET&gt; \
+  --output-file=MySUMORoutes.rou.xml -b &lt;UINT&gt; -e &lt;UINT&gt;
+</pre>
+<h1> <span class="mw-headline" id="Dealing_with_Errors_During_Routing">Dealing with Errors During Routing</span></h1>
+<p>When running <a href="../DUAROUTER.html" title="DUAROUTER">DUAROUTER</a> you may encounter errors of the type
+</p>
+<pre>Error: No connection between 'edge1' and 'edge2' found
+</pre>
+<p>This is caused be an unconnected network. If your network has vehicle class restrictions it may be that the connectivity is only lacking for particular vehicle classes which is less obvious from the GUI.
+You can ignore these routes using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-errors</span>. However, if a large proportion of your routes cause this error you should definitely investigate your network file for problems.
+The tool <a href="../Tools/Net.html#netcheck.py" title="Tools/Net">Tools/Net#netcheck.py</a> can be used to pin down the connectivity gaps in your network.</time>
+</span>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 150/1000000
+Preprocessor generated node count: 408/1000000
+Post‐expand include size: 2383/2097152 bytes
+Template argument size: 946/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:351-0!*!0!!en!*!* and timestamp 20150331082747 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 4 January 2015, at 23:08.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+INSTUPmobdat.simulator.EventRouter
+C:\Users\Arthur Valadares\Copy\Projects\mobdat\mobdat\simulator\EventRouter.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5&&3|8|2|5&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1&&2|13|2|1&&2|14|2|1
+HandleSubscribeEvent=13
+_Logger=8
+Subscriptions=7
+RouteEvents=10
+RegisterHandler=9
+EventRouter=1
+RouterRegistry=6
+RouteEventsLoop=11
+mobdat.simulator.EventRouter=2
+RouterQueue=4
+RouteEvent=12
+__init__=3
+EventRouter.__init__=5
+HandleUnsubscribeEvent=14

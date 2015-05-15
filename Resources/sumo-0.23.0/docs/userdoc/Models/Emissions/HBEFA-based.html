@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Models/Emissions/HBEFA-based - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../../Installing.html">Installing SUMO</a></li>
+  <li><a href="../../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../../FAQ.html">FAQ</a></li>
+  <li><a href="../../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../SUMO.html">SUMO</a></li>
+   <li><a href="../../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Models/Emissions/HBEFA-based</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.969787 from <a href="http://sumo.dlr.de/wiki/Models/Emissions/HBEFA-based">the wiki page for Models/Emissions/HBEFA-based</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><i>"The <a rel="nofollow" class="external text" href="http://www.hbefa.net/">Handbook Emission Factors for Road Transport (HBEFA)</a> provides emission factors for all current vehicle categories (PC, LDV, HDV and motor cycles), each divided into different categories, for a wide variety of traffic situations."</i> (from <a rel="nofollow" class="external free" href="http://www.hbefa.net/">http://www.hbefa.net/</a>, 30.01.2008). Since version 0.10.2, SUMO is able to simulate vehicular pollutant emissions based on this database application. Though HBEFA contains information about other pollutants, we decided to implement only the following, major ones:
+</p>
+<ul><li> CO<sub>2</sub>
+</li><li> CO
+</li><li> HC
+</li><li> NO<sub>x</sub>
+</li><li> PM<sub>x</sub>
+</li><li> fuel consumption
+</li></ul>
+<p>We have remodeled <a rel="nofollow" class="external text" href="http://www.hbefa.net/">HBEFA</a> data for the following reasons:
+</p>
+<ol><li>The goal was to have an emission model be directly embedded in SUMO, <a rel="nofollow" class="external text" href="http://www.hbefa.net/">HBEFA</a> is a database application for itself
+</li><li>To allow computation of vehicular emissions on a continuous range as the original <a rel="nofollow" class="external text" href="http://www.hbefa.net/">HBEFA</a> data cover certain speeds only
+</li><li>To avoid having the need to deal with all of <a rel="nofollow" class="external text" href="http://www.hbefa.net/">HBEFA</a>'s emission classes
+</li></ol>
+<h1> <span class="mw-headline" id="Vehicle_Emission_Classes">Vehicle Emission Classes</span></h1>
+<p>The original vehicle classes supplied by <a rel="nofollow" class="external text" href="http://www.hbefa.net/">HBEFA</a> have been clustered. In order to improve the quality, passengers and light delivery vehicles have been clustered independent to heavy duty vehicles. For the first set (passenger and light delivery vehicles), two different sets have been computed, one with 7 classes, one with 14 classes. For the heavy duty vehicles, three sets have been computed, with respectively 3, 6, and 12 classes. Choosing the proper set is not easy - on the one hand, more classes mean a better fit of each of these, on the other hand, the vehicle population mix is more complicated to be generated.
+</p>
+<h2> <span class="mw-headline" id="Normal_Classes"> Normal Classes </span></h2>
+<p>The following tables give the emissionClass strings to use in the definition of vehicle types. 
+</p><p><b>Table 1.1 HBEFA heavy duty vehicle types and their clusters in dependence to the class number/cluster</b>
+</p>
+<table cellspacing="0" border="1">
+
+<tr>
+<th style="background:#ffdead;"> vehClass
+</th>
+<th style="background:#ffdead;"> k = 3
+</th>
+<th style="background:#ffdead;"> k = 6
+</th>
+<th style="background:#ffdead;"> k = 12
+</th></tr>
+<tr>
+<td> SMW80er Jahre 12-14t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_8
+</td></tr>
+<tr>
+<td> SMW80er Jahre 14-20t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_8
+</td></tr>
+<tr>
+<td> SMW80er Jahre 20-26t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_4
+</td>
+<td> HDV_12_4
+</td></tr>
+<tr>
+<td> SMW80er Jahre 28-32t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_4
+</td>
+<td> HDV_12_4
+</td></tr>
+<tr>
+<td> SMW80er Jahre 28-34t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_4
+</td>
+<td> HDV_12_4
+</td></tr>
+<tr>
+<td> SMW80er Jahre 7.5-12t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_7
+</td></tr>
+<tr>
+<td> SMW80er Jahre bigger18t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_5
+</td>
+<td> HDV_12_9
+</td></tr>
+<tr>
+<td> SMW80er Jahre bigger32t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_4
+</td>
+<td> HDV_12_4
+</td></tr>
+<tr>
+<td> SMW80er Jahre bigger34-40t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_4
+</td>
+<td> HDV_12_4
+</td></tr>
+<tr>
+<td> SMW80er Jahre smaller18t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_4
+</td>
+<td> HDV_12_12
+</td></tr>
+<tr>
+<td> SMW80er Jahre smaller28t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_8
+</td></tr>
+<tr>
+<td> SMW80er Jahre smaller7.5t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_7
+</td></tr>
+<tr>
+<td> SMWEuro1 12-14t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_3
+</td></tr>
+<tr>
+<td> SMWEuro1 14-20t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_3
+</td></tr>
+<tr>
+<td> SMWEuro1 20-26t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_3
+</td></tr>
+<tr>
+<td> SMWEuro1 28-32t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_6
+</td></tr>
+<tr>
+<td> SMWEuro1 28-34t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_6
+</td></tr>
+<tr>
+<td> SMWEuro1 7.5-12t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_2
+</td></tr>
+<tr>
+<td> SMWEuro1 bigger18t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_3
+</td>
+<td> HDV_12_11
+</td></tr>
+<tr>
+<td> SMWEuro1 bigger32t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_6
+</td></tr>
+<tr>
+<td> SMWEuro1 bigger34-40t
+</td>
+<td> HDV_3_2
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_6
+</td></tr>
+<tr>
+<td> SMWEuro1 smaller18t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_3
+</td></tr>
+<tr>
+<td> SMWEuro1 smaller28t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_6
+</td>
+<td> HDV_12_3
+</td></tr>
+<tr>
+<td> SMWEuro1 smaller7.5t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_2
+</td></tr>
+<tr>
+<td> SMWEuro2 12-14t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_1
+</td></tr>
+<tr>
+<td> SMWEuro2 14-20t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_1
+</td></tr>
+<tr>
+<td> SMWEuro2 20-26t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_5
+</td></tr>
+<tr>
+<td> SMWEuro2 28-32t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_5
+</td></tr>
+<tr>
+<td> SMWEuro2 28-34t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_5
+</td></tr>
+<tr>
+<td> SMWEuro2 7.5-12t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_2
+</td></tr>
+<tr>
+<td> SMWEuro2 bigger18t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_3
+</td>
+<td> HDV_12_11
+</td></tr>
+<tr>
+<td> SMWEuro2 bigger32t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_5
+</td></tr>
+<tr>
+<td> SMWEuro2 bigger34-40t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_5
+</td></tr>
+<tr>
+<td> SMWEuro2 smaller18t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_12
+</td></tr>
+<tr>
+<td> SMWEuro2 smaller28t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_1
+</td></tr>
+<tr>
+<td> SMWEuro2 smaller7.5t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_2
+</td></tr>
+<tr>
+<td> SMWEuro3 12-14t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_1
+</td></tr>
+<tr>
+<td> SMWEuro3 28-32t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_10
+</td></tr>
+<tr>
+<td> SMWEuro3 28-34t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_10
+</td></tr>
+<tr>
+<td> SMWEuro3 7.5-12t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_2
+</td></tr>
+<tr>
+<td> SMWEuro3 bigger18t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_3
+</td>
+<td> HDV_12_11
+</td></tr>
+<tr>
+<td> SMWEuro3 bigger32t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_10
+</td></tr>
+<tr>
+<td> SMWEuro3 bigger34-40t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_10
+</td></tr>
+<tr>
+<td> SMWEuro3 smaller18t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_12
+</td></tr>
+<tr>
+<td> SMWEuro3 smaller28t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_1
+</td></tr>
+<tr>
+<td> SMWEuro3 smaller7.5t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_2
+</td></tr>
+<tr>
+<td> SMWEuro4 28-34t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_10
+</td></tr>
+<tr>
+<td> SMWEuro4 bigger34-40t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_10
+</td></tr>
+<tr>
+<td> SMWEuro4 smaller18t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_12
+</td></tr>
+<tr>
+<td> SMWEuro5 28-34t
+</td>
+<td> HDV_3_3
+</td>
+<td> HDV_6_2
+</td>
+<td> HDV_12_10
+</td></tr>
+<tr>
+<td> SMWEuro5 smaller18t
+</td>
+<td> HDV_3_1
+</td>
+<td> HDV_6_1
+</td>
+<td> HDV_12_12
+</td></tr></table>
+<p><br />
+<b>Table 1.2 HBEFA passenger and light delivery vehicle types and their clusters in dependence to the class number/cluster</b>
+</p>
+<table cellspacing="0" border="1">
+
+<tr>
+<th style="background:#ffdead;"> vehClass
+</th>
+<th style="background:#ffdead;"> k = 7
+</th>
+<th style="background:#ffdead;"> k = 14
+</th></tr>
+<tr>
+<td> LNFBEuro2 M+N1-I
+</td>
+<td> P_7_7
+</td>
+<td> P_14_9
+</td></tr>
+<tr>
+<td> LNFBEuro2 N1-II
+</td>
+<td> P_7_2
+</td>
+<td> P_14_1
+</td></tr>
+<tr>
+<td> LNFBEuro3 M+N1-I
+</td>
+<td> P_7_7
+</td>
+<td> P_14_9
+</td></tr>
+<tr>
+<td> LNFBEuro4 M+N1-I
+</td>
+<td> P_7_7
+</td>
+<td> P_14_9
+</td></tr>
+<tr>
+<td> LNFBGKatsmaller91 M+N1-I
+</td>
+<td> P_7_3
+</td>
+<td> P_14_7
+</td></tr>
+<tr>
+<td> LNFBGKatsmaller91 N1-II
+</td>
+<td> P_7_2
+</td>
+<td> P_14_3
+</td></tr>
+<tr>
+<td> LNFBKonv M+N1-I
+</td>
+<td> P_7_4
+</td>
+<td> P_14_12
+</td></tr>
+<tr>
+<td> LNFBKonv N1-II
+</td>
+<td> P_7_1
+</td>
+<td> P_14_2
+</td></tr>
+<tr>
+<td> LNFDEuro1FAV1 M+N1-I
+</td>
+<td> P_7_5
+</td>
+<td> P_14_10
+</td></tr>
+<tr>
+<td> LNFDEuro1FAV1 N1-II
+</td>
+<td> P_7_6
+</td>
+<td> P_14_6
+</td></tr>
+<tr>
+<td> LNFDEuro2 M+N1-I
+</td>
+<td> P_7_7
+</td>
+<td> P_14_8
+</td></tr>
+<tr>
+<td> LNFDEuro2 N1-II
+</td>
+<td> P_7_6
+</td>
+<td> P_14_6
+</td></tr>
+<tr>
+<td> LNFDEuro3 M+N1-I
+</td>
+<td> P_7_7
+</td>
+<td> P_14_8
+</td></tr>
+<tr>
+<td> LNFDEuro3 N1-II
+</td>
+<td> P_7_6
+</td>
+<td> P_14_5
+</td></tr>
+<tr>
+<td> LNFDEuro4 M+N1-I
+</td>
+<td> P_7_7
+</td>
+<td> P_14_8
+</td></tr>
+<tr>
+<td> LNFDEuro4 N1-II
+</td>
+<td> P_7_5
+</td>
+<td> P_14_5
+</td></tr>
+<tr>
+<td> LNFDkonv M+N1-I
+</td>
+<td> P_7_5
+</td>
+<td> P_14_10
+</td></tr>
+<tr>
+<td> LNFDkonv N1-II
+</td>
+<td> P_7_6
+</td>
+<td> P_14_6
+</td></tr>
+<tr>
+<td> PKWBEuro1FAV1 1.4-2L
+</td>
+<td> P_7_3
+</td>
+<td> P_14_14
+</td></tr>
+<tr>
+<td> PKWBEuro1FAV1 bigger2L
+</td>
+<td> P_7_3
+</td>
+<td> P_14_14
+</td></tr>
+<tr>
+<td> PKWBEuro1FAV1 smaller1.4L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_14
+</td></tr>
+<tr>
+<td> PKWBEuro2 1.4-2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_9
+</td></tr>
+<tr>
+<td> PKWBEuro2 bigger2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_13
+</td></tr>
+<tr>
+<td> PKWBEuro2 smaller1.4L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_9
+</td></tr>
+<tr>
+<td> PKWBEuro3 1.4-2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_9
+</td></tr>
+<tr>
+<td> PKWBEuro3 bigger2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_13
+</td></tr>
+<tr>
+<td> PKWBEuro4 1.4-2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_9
+</td></tr>
+<tr>
+<td> PKWBEuro4 bigger2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_13
+</td></tr>
+<tr>
+<td> PKWBGKatsmaller91 1.4-2L
+</td>
+<td> P_7_3
+</td>
+<td> P_14_7
+</td></tr>
+<tr>
+<td> PKWBGKatsmaller91 bigger2L
+</td>
+<td> P_7_3
+</td>
+<td> P_14_7
+</td></tr>
+<tr>
+<td> PKWBGKatsmaller91 smaller1.4L
+</td>
+<td> P_7_3
+</td>
+<td> P_14_7
+</td></tr>
+<tr>
+<td> PKWBKonv 1.4-2L
+</td>
+<td> P_7_3
+</td>
+<td> P_14_11
+</td></tr>
+<tr>
+<td> PKWBKonv bigger2L
+</td>
+<td> P_7_4
+</td>
+<td> P_14_12
+</td></tr>
+<tr>
+<td> PKWBKonv smaller1.4L
+</td>
+<td> P_7_3
+</td>
+<td> P_14_11
+</td></tr>
+<tr>
+<td> PKWDEuro2 1.4-2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_8
+</td></tr>
+<tr>
+<td> PKWDEuro2 bigger2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_4
+</td></tr>
+<tr>
+<td> PKWDEuro3 1.4-2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_8
+</td></tr>
+<tr>
+<td> PKWDEuro3 bigger2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_4
+</td></tr>
+<tr>
+<td> PKWDEuro4 1.4-2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_8
+</td></tr>
+<tr>
+<td> PKWDEuro4 bigger2L
+</td>
+<td> P_7_7
+</td>
+<td> P_14_8
+</td></tr>
+<tr>
+<td> PKWDXXIIIFAV1 1.4-2L
+</td>
+<td> P_7_5
+</td>
+<td> P_14_10
+</td></tr>
+<tr>
+<td> PKWDXXIIIFAV1 bigger2L
+</td>
+<td> P_7_5
+</td>
+<td> P_14_10
+</td></tr></table>
+<p><br />
+</p>
+<h2> <span class="mw-headline" id="Special_Classes"> Special Classes </span></h2>
+<p>In addition to the these strings, it is also possible to add the code <span class="inlxml">A0</span> in order to get emission models which ignore vehicle acceleration. 
+</p>
+<pre> emissionClass="P_A0_7_7"
+ emissionClass="HDV_A0_3_2"
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 16/1000000
+Preprocessor generated node count: 42/1000000
+Post‐expand include size: 30/2097152 bytes
+Template argument size: 2/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:148-0!*!*!!*!*!* and timestamp 20150331050941 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 21 November 2014, at 16:47.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

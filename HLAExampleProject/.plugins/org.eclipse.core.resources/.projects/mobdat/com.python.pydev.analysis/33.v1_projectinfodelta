@@ -1,0 +1,13 @@
+INSTUPmobdat.common.Utilities
+C:\Users\Arthur Valadares\Copy\Projects\mobdat\mobdat\common\Utilities.py
+INFOS:&&3|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0&&2|8|2|0&&2|9|2|0&&2|10|2|0
+GetSceneFromCoordinates=7
+CalculateOSCoordinatesFromScene=9
+AuthByUserName=3
+_NameCounts=1
+mobdat.common.Utilities=2
+GenCoordinateMap=4
+CalculateOSCoordinates=8
+CalculateOSCoordinatesFromOrigin=10
+GenNameFromCoordinates=6
+GenName=5

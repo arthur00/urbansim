@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Developer/HowToRelease - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Developer/HowToRelease</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.906812 from <a href="http://sumo.dlr.de/wiki/Developer/HowToRelease">the wiki page for Developer/HowToRelease</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Packages"><span class="tocnumber">1</span> <span class="toctext">Packages</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Release_steps"><span class="tocnumber">2</span> <span class="toctext">Release steps</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Merge_phase"><span class="tocnumber">2.1</span> <span class="toctext">Merge phase</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Freeze_phase_.28Release_day_-_7.29"><span class="tocnumber">2.2</span> <span class="toctext">Freeze phase (Release day - 7)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Release_day_-_1"><span class="tocnumber">2.3</span> <span class="toctext">Release day - 1</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Release_day"><span class="tocnumber">2.4</span> <span class="toctext">Release day</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#After-release_cleanup"><span class="tocnumber">2.5</span> <span class="toctext">After-release cleanup</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Packages">Packages</span></h2>
+<p>for an overview of created packages and contents see <a href="../Downloads.html" title="Downloads">Downloads</a>.
+</p>
+<h2> <span class="mw-headline" id="Release_steps">Release steps</span></h2>
+<p>Below, a list of steps that should be done in order to publish a new release is given. All necessary commits which have no ticket of their own may refer to <a rel="nofollow" class="external text" href="http://sumo-sim.org/trac.wsgi/ticket/563">ticket #563</a>.
+</p>
+<h3> <span class="mw-headline" id="Merge_phase"> Merge phase </span></h3>
+<p>Major changes to the SUMO trunk should end about two weeks before the release data. This refers especially to merges of project branches into the trunk.
+</p>
+<h3> <span class="mw-headline" id="Freeze_phase_.28Release_day_-_7.29"> Freeze phase (Release day - 7)</span></h3>
+<ul><li> check the sources
+<ul><li> compile, try to remove warnings and commit the patches
+</li><li> run <a href="../Developer/CodeStyle.html" title="Developer/CodeStyle">AStyle</a> and commit changed files
+</li><li> check the calendar to update copyright statements
+</li><li> check whether traci version <a href="../TraCI/Control-related_commands.html#Response_0x00:_Version" title="TraCI/Control-related commands">needs to be incremented</a> and rebuild traci constants in python (tools/traci/rebuildConstants.py)
+</li><li> update author information
+</li></ul>
+</li><li> check the regular tests
+<ul><li> put special attention to the tests which serve as examples, see tests/examples.txt!
+</li><li> Win32 and gcc4_64 should have no failing tests, the other platforms are less important
+</li><li> If there are failing tests, which are not flagged as known bugs, save them after careful checking or open a ticket and assign a known bug.
+</li><li> recheck/rebuild the test networks (if necessary due to netconvert changes)
+</li><li> check the tests again
+</li></ul>
+</li><li> check the documentation
+<ul><li> update the <a href="../ChangeLog.html" title="ChangeLog">change log</a>
+</li><li> generate options docu from config templates using tools/build/configTemplateToWiki.py
+</li><li> recheck/rebuild the configuration schemata (if options were added) using tools/xml/rebuildSchemata.py (use the internal build to include all options)
+</li></ul>
+</li><li> check the internal tests (same procedure as above) and the Planet SUMO scenarios
+</li><li> trac
+<ul><li> add new <a rel="nofollow" class="external text" href="http://sumo-sim.org/trac/roadmap">trac milestone</a> if necessary
+</li><li> check all remaining tickets and assign them to later milestones or to persons.
+</li></ul>
+</li></ul>
+<p>The trunk is now frozen. All commits which do not refer to an open ticket for the upcoming release need to be made to a separate branch.
+The freeze phase should not last longer than one week. The goal is to fix all scenarios and have all failing tests fixed, which are not assigned to a later milestone.
+</p>
+<h3> <span class="mw-headline" id="Release_day_-_1"> Release day - 1 </span></h3>
+<p>All scenarios should be fixed by now.
+</p>
+<ul><li> patch the version information
+<ul><li> in windows_config.h, also disable the HAVE_VERSION_H macro
+</li><li> in configure.ac and build/sumo.wxs
+</li><li> commit the changes
+</li></ul>
+</li><li> check the documentation
+<ul><li> update the <a href="../ChangeLog.html" title="ChangeLog">change log</a> again if necessary
+</li><li> modify the <a href="../Template:Version.html" title="Template:Version"> Version Template</a> to update <a href="../Downloads.html" title="Downloads">download links</a> and <a href="../Main_Page.html" title="Main Page">main page</a>.
+</li></ul>
+</li></ul>
+<h3> <span class="mw-headline" id="Release_day"> Release day </span></h3>
+<p>The nightly build should have generated all releasable packages. If not, delay the release.
+(The complete documentation, tests and source distribution build can be achieved via "make dist-complete".)
+The following things need to be there:
+</p>
+<ul><li> the platform independent part of the distribution; 
+<ul><li> source distributions (.tar.gz, .zip) ("make dist", rename)
+</li><li> tests distributions (.tar.gz) ("make dist-tests")
+</li><li> docs distributions (.tar.gz) ("make dist-doc")
+</li></ul>
+</li><li> the binary part of the distribution
+<ul><li> windows binary distribution (zip, includes docs)
+</li><li> windows installer (msi, Win32 and x64, includes docs)
+</li><li> check presence of RPMs on <a rel="nofollow" class="external free" href="https://build.opensuse.org/package/show/home:behrisch/sumo">https://build.opensuse.org/package/show/home:behrisch/sumo</a>
+</li></ul>
+</li></ul>
+<p>If everything is fine:
+</p>
+<ul><li> make a new folder in O:\Daten\Sumo\Releases
+</li><li> make new sourceforge-release
+<ul><li> make a new release within the sumo package (named "version x.y.z")
+</li><li> add files to the release
+</li><li> update files at the <a rel="nofollow" class="external text" href="https://build.opensuse.org/package/show?package=sumo&amp;project=home%3Abehrisch">opensuse build service</a>
+</li></ul>
+</li><li> ~~unpack the doc.tar.gz into the "doc" folder on the web space~~
+<ul><li> ~~change the current link for the docs~~
+</li></ul>
+</li><li> inform the users about the new release
+<ul><li> post information about the release to sumo-user@lists.sourceforge.net and sumo-announce@lists.sourceforge.net
+</li><li> ~~post information about the release to news~~
+</li><li> ~~post information into the <a rel="nofollow" class="external text" href="http://sumo-sim.org/blog">blog</a>~~
+</li><li> patch the <a href="../Downloads.html" title="Downloads">Downloads</a> information also at <a href="../Main_Page.html#Downloads" title="Main Page">Main_Page#Downloads</a> and at the main index.html
+</li><li> trigger update of main website at <a rel="nofollow" class="external free" href="http://sumo.dlr.de">http://sumo.dlr.de</a>
+</li></ul>
+</li><li> tag all in the svn with a new version tag (includes fixing of externals revision), as follows
+</li></ul>
+<pre>&gt; svn propedit svn:externals src/foreign/
+&gt; svn propedit svn:externals tools/contributed/
+</pre>
+<p>change to something like "tcpip -r123 <a rel="nofollow" class="external free" href="https://shawn.svn.sourceforge.net/svnroot/shawn/src/apps/tcpip">https://shawn.svn.sourceforge.net/svnroot/shawn/src/apps/tcpip</a>"
+</p>
+<pre>&gt; svn commit -m "external revisions fixed for 0.13.7 tagging" src/foreign/ tools/contributed/
+&gt; svn cp -m "tagging release 0.13.7"  <a rel="nofollow" class="external free" href="https://svn.code.sf.net/p/sumo/code/trunk">https://svn.code.sf.net/p/sumo/code/trunk</a> <a rel="nofollow" class="external free" href="https://svn.code.sf.net/p/sumo/code/tags/v0_13_7">https://svn.code.sf.net/p/sumo/code/tags/v0_13_7</a>
+</pre>
+<ul><li> trac
+<ul><li> add new <a rel="nofollow" class="external text" href="http://sumo-sim.org/trac/admin/ticket/versions">version to trac</a>
+</li><li> close <a rel="nofollow" class="external text" href="http://sumo-sim.org/trac/roadmap">trac milestone</a> retargeting open tickets
+</li></ul>
+</li></ul>
+<h3> <span class="mw-headline" id="After-release_cleanup">After-release cleanup</span></h3>
+<p>The trunk is now open for changes again.
+</p>
+<ul><li> unfix tcpip revison, by removing the "-r" tag as mentioned above
+</li><li> reenable HAVE_VERSION_H in windows_config.h
+</li><li> rename version to "svn" in configure.ac
+</li><li> commit changes
+</li><li> drink your favorite beverage
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 26/1000000
+Preprocessor generated node count: 32/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:15-0!*!0!!en!*!* and timestamp 20150331080320 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 31 March 2015, at 10:03.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

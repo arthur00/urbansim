@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Specification/Persons - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Specification/Persons</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.103570 from <a href="http://sumo.dlr.de/wiki/Specification/Persons">the wiki page for Specification/Persons</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Persons"><span class="tocnumber">1</span> <span class="toctext">Persons</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Visualization"><span class="tocnumber">1.1</span> <span class="toctext">Visualization</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Simulation_input"><span class="tocnumber">2</span> <span class="toctext">Simulation input</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Rides"><span class="tocnumber">2.1</span> <span class="toctext">Rides</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Walks"><span class="tocnumber">2.2</span> <span class="toctext">Walks</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Stops"><span class="tocnumber">2.3</span> <span class="toctext">Stops</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Simulation_behavior"><span class="tocnumber">3</span> <span class="toctext">Simulation behavior</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Riding"><span class="tocnumber">3.1</span> <span class="toctext">Riding</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Walking"><span class="tocnumber">3.2</span> <span class="toctext">Walking</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Stopping"><span class="tocnumber">3.3</span> <span class="toctext">Stopping</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Example"><span class="tocnumber">4</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Planned_featues"><span class="tocnumber">5</span> <span class="toctext">Planned featues</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Plan"><span class="tocnumber">5.1</span> <span class="toctext">Plan</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#PersonFlow"><span class="tocnumber">5.2</span> <span class="toctext">PersonFlow</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Intermodal_Routing"><span class="tocnumber">5.3</span> <span class="toctext">Intermodal Routing</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Trips"><span class="tocnumber">5.3.1</span> <span class="toctext">Trips</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Persons">Persons</span></h1>
+<p>A person moves through the net by walking or using vehicles. The walking behavior is customizable by selecting a <a href="../Simulation/Pedestrians.html#Pedestrian_Models" title="Simulation/Pedestrians">pedestrian model</a>. A person element has child elements defining stages of its plan. The stages are a connected sequence of <a href="../Specification/Persons.html#Rides" title="Specification/Persons">ride</a>, <a href="../Specification/Persons.html#Walks" title="Specification/Persons">walk</a> and <a href="../Specification/Persons.html#Stops" title="Specification/Persons">stop</a> elements as described below. Each person must have at least one stage in its plan.
+</p>
+<pre>&lt;person id="foo" depart="0"&gt;
+    &lt;walk edges="a b c"/&gt;
+    &lt;ride ../&gt;
+    &lt;ride ../&gt;
+    &lt;walk ../&gt;
+    &lt;stop ../&gt;
+&lt;/person&gt;
+</pre>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+<th>Attribute </th>
+<th>Type      </th>
+<th>Range        </th>
+<th>Default</th>
+<th>Remark
+</th></tr>
+<tr>
+<td>id        </td>
+<td>string    </td>
+<td>valid XML ids</td>
+<td>-</td>
+<td>
+</td></tr>
+<tr>
+<td>depart    </td>
+<td>float(s)  </td>
+<td>&#8805;0        </td>
+<td>-      </td>
+<td>
+</td></tr>
+<tr>
+<td>type </td>
+<td> string  </td>
+<td> any decelared vType </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td>color</td>
+<td> rgb color  </td>
+<td>  </td>
+<td> </td>
+<td>
+</td></tr></table>
+<p>When specifying a <span class="inlxml">type</span>, the set of attributes which are in effect during simulation depend on the selected <a href="../Simulation/Pedestrians.html#Pedestrian_Models" title="Simulation/Pedestrians">pedestrian model</a>. Attributes such as <span class="inlxml">width</span>, <span class="inlxml">length</span>, <span class="inlxml">imgFile</span> and <span class="inlxml">color</span> are always used always used for visualization. 
+</p>
+<h2> <span class="mw-headline" id="Visualization">Visualization</span></h2>
+<p>Persons are rendered in the GUI with the configured detail-level. When assigning a type with attribute <i>imgFile</i>, the person may be rendered with an image. By default, the image will not be rotated (suitable for abstract icons). However, when setting the types <i>guiShape</i>="pedestrian" the image will be rotated according to the persons location and stage.
+</p>
+<h1> <span class="mw-headline" id="Simulation_input"> Simulation input </span></h1>
+<h2> <span class="mw-headline" id="Rides">Rides</span></h2>
+<p>Rides define the start and end point of a movement with a single mode of transport (e.g. a car or a bus).
+They are child elements of plan definitions.
+</p>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+<th>Attribute </th>
+<th>Type      </th>
+<th>Range        </th>
+<th>Default</th>
+<th>Remark
+</th></tr>
+<tr>
+<td>from      </td>
+<td>string    </td>
+<td>valid edge ids</td>
+<td>-</td>
+<td>id of the start edge
+</td></tr>
+<tr>
+<td>to        </td>
+<td>string    </td>
+<td>valid edge ids</td>
+<td>-</td>
+<td>id of the destination edge
+</td></tr>
+<tr>
+<td>lines     </td>
+<td>list      </td>
+<td>valid line or vehicle ids</td>
+<td>-</td>
+<td>list of vehicle alternatives to take for the ride
+</td></tr></table>
+<p>the route to take is defined by the vehicle.
+</p>
+<h2> <span class="mw-headline" id="Walks">Walks</span></h2>
+<p>Walks define a pedestrian movement. They are child elements of plan definitions.
+</p>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+<th>Attribute </th>
+<th>Type      </th>
+<th>Range        </th>
+<th>Default</th>
+<th>Remark
+</th></tr>
+<tr>
+<td>edges     </td>
+<td>list      </td>
+<td>valid edge ids</td>
+<td>-</td>
+<td>id of the edges to walk
+</td></tr>
+<tr>
+<td>from      </td>
+<td>string    </td>
+<td>valid edge ids</td>
+<td>-</td>
+<td>id of the start edge
+</td></tr>
+<tr>
+<td>to        </td>
+<td>string    </td>
+<td>valid edge ids</td>
+<td>-</td>
+<td>id of the destination edge
+</td></tr>
+<tr>
+<td>duration  </td>
+<td>float(s)  </td>
+<td>&gt;0        </td>
+<td>-</td>
+<td>
+</td></tr>
+<tr>
+<td>speed     </td>
+<td>float(m/s)</td>
+<td>&gt;0        </td>
+<td>-</td>
+<td>
+</td></tr>
+<tr>
+<td>departPos     </td>
+<td>float(m)</td>
+<td>        </td>
+<td>0</td>
+<td> initial position on the starting edge
+</td></tr>
+<tr>
+<td>arrivalPos     </td>
+<td>float(m)</td>
+<td>        </td>
+<td>-1</td>
+<td> arrival position o the destination edge
+</td></tr></table>
+<p>You can define either a list of "edges" to travel or a "from" and a "to" edge.
+In the former case the "edges" are traveled in the listed order. They do not need to be joined in the net. In the latter case a shortest path calculation is performed and it is an error if there is no path connecting "from" and "to".
+At least one attribute of "speed" and "duration" has to be given. If both are given, the walk will
+last at least "duration" but it may take longer if the "speed" is low.
+</p><p>When given as router input input using a attributes <span class="inlxml">from</span> and <span class="inlxml">to</span> will be transformed into a walk using the attribute <span class="inlxml">edges</span> by routing along edges permissible for pedestrian (i.e. sidewalks).
+</p>
+<h2> <span class="mw-headline" id="Stops">Stops</span></h2>
+<p>Stops define a delay until the next element of a plan is started. They can be used to model activities such as working or shopping. Stops for persons follow the specification at <a href="../Specification.html#Stops" title="Specification">Specification#Stops</a>. However, only the attributes <i>lane</i>, <i>duration</i> and <i>until</i> are evaluated. Using these attributes it is possible to model activities with a fixed duration as well as those with a fixed end time.
+</p>
+<h1> <span class="mw-headline" id="Simulation_behavior">Simulation behavior</span></h1>
+<p>A person is starting her life at her depart time on the source (resp. first) edge of the first walk, ride or stop. She tries to start the next step of her plan.
+</p>
+<h2> <span class="mw-headline" id="Riding">Riding</span></h2>
+<p>The person checks whether a vehicle with a line from the given list is stopping at the given edge. If such a vehicle exists and the person is positioned between the start and end position of the vehicle's stop, the person will enter the vehicle and start its ride. If such a vehicle exists but the person is not positioned between the start and end position of the vehicle's stop, the person will still enter if the vehicle is triggered by the a person and the distance between person and vehicle is at most 10 metres. It does not check whether the vehicle has the aspired destination on the current route. The first time the vehicle stops (on a well defined stop) at the destination edge, the ride is finished and the person proceeds with the next step in the plan.
+</p>
+<h2> <span class="mw-headline" id="Walking">Walking</span></h2>
+<p>The walking behavior of a person depends on the selected <a href="../Simulation/Pedestrians.html#Pedestrian_Models" title="Simulation/Pedestrians">pedestrian model</a>. Generally, the person follows the given sequence of edges with a speed bounded by the <span class="inlxml">maxSpeed</span> attribute of the persons type. It starts either at the position from the previous stage of its plan or at the specified <span class="inlxml">departPos</span> if no previous stage exists. The walk concludes at the specified <span class="inlxml">arrivalPos</span> which defaults to the end of the final edge.
+</p>
+<h2> <span class="mw-headline" id="Stopping">Stopping</span></h2>
+<p>The person stops for the maximum of <i>currentTime+duration</i> and <i>until</i>.
+</p>
+<h1> <span class="mw-headline" id="Example">Example</span></h1>
+<p>The following is an example for a  person who walks to a train station, rides the train, alights and walks for a bit, then stops for an activity and finally gets into a car and drives away.
+</p>
+<pre class="xml">
+&lt;routes&gt;
+    &lt;person id=&quot;person0&quot; depart=&quot;0&quot;&gt;
+        &lt;walk from=&quot;2/3to1/3&quot; to=&quot;1/3to0/3&quot; departPos=&quot;80&quot; arrivalPos=&quot;55&quot;/&gt;
+        &lt;ride from=&quot;1/3to0/3&quot; to=&quot;0/4to1/4&quot; lines=&quot;train0&quot;/&gt;
+        &lt;walk from=&quot;0/4to1/4&quot; to=&quot;1/4to2/4&quot; arrivalPos=&quot;30&quot;/&gt;
+        &lt;stop lane=&quot;1/4to2/4_0&quot; duration=&quot;20&quot; startPos=&quot;40&quot; actType=&quot;singing&quot;/&gt;
+        &lt;ride from=&quot;1/4to2/4&quot; to=&quot;3/4to4/4&quot; lines=&quot;car0&quot;/&gt;
+    &lt;/person&gt;
+
+    &lt;vehicle id=&quot;train0&quot; depart=&quot;50&quot;&gt;
+        &lt;route edges=&quot;1/4to1/3 1/3to0/3 0/3to0/4 0/4to1/4 1/4to1/3&quot;/&gt;
+        &lt;stop busStop=&quot;busStop0&quot; until=&quot;120&quot; duration=&quot;10&quot;/&gt;
+        &lt;stop busStop=&quot;busStop1&quot; until=&quot;180&quot; duration=&quot;10&quot;/&gt;
+    &lt;/vehicle&gt;
+
+    &lt;vehicle id=&quot;car0&quot; depart=&quot;triggered&quot;&gt;
+        &lt;route edges=&quot;1/4to2/4 2/4to3/4 3/4to4/4&quot; departPos=&quot;30&quot;/&gt;
+        &lt;stop lane=&quot;1/4to2/4_0&quot; duration=&quot;20&quot; startPos=&quot;40&quot; endPos=&quot;60&quot;/&gt;
+    &lt;/vehicle&gt;
+
+&lt;/routes&gt;
+</pre>
+<h1> <span class="mw-headline" id="Planned_featues">Planned featues</span></h1>
+<p>The following features are not yet implemented.
+</p>
+<h2> <span class="mw-headline" id="Plan">Plan</span></h2>
+<p>A persons plan has the same role has a vehicles route: A person may reference a plan or a distribution of plans using the attribute <span class="inlxml">plan</span>. Likewise a person may include a plan or a distribution of plans as a child element.
+A plan is a sequence of stages (rides, walks and <a href="../Specification.html#Stops" title="Specification">stops</a>).
+</p>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+<th>Attribute </th>
+<th>Type      </th>
+<th>Range        </th>
+<th>Default</th>
+<th>Remark
+</th></tr>
+<tr>
+<td>probability</td>
+<td>float  </td>
+<td>&#8805;0          </td>
+<td>1      </td>
+<td>this is only evaluated if a person has multiple plans, the probability values of all plans do not have to add to 1, they are scaled accordingly before choosing
+</td></tr></table>
+<h2> <span class="mw-headline" id="PersonFlow">PersonFlow</span></h2>
+<p>A personFlow has the same role as a flow. It allows to specify a sequence of persons with the same plan (or distribution of plans) with a single input element.
+</p>
+<h2> <span class="mw-headline" id="Intermodal_Routing">Intermodal Routing</span></h2>
+<p>The router input is still not completely defined. There has to be a possibility to define for the trips which vehicles / public transport lines may be used at all and for which vehicles the route can be defined / changed by the person.
+</p>
+<h3> <span class="mw-headline" id="Trips">Trips</span></h3>
+<p>Trips define the start and end point of a movement with optional changes in mode.
+</p><p>In definition they are identical to <a href="../Specification.html#Vehicles" title="Specification">vehicles</a> except for the missing route information
+(no route attribute and no route child is allowed). Instead they have the following attributes
+</p>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+<th>Attribute </th>
+<th>Type      </th>
+<th>Range        </th>
+<th>Default</th>
+<th>Remark
+</th></tr>
+<tr>
+<td>from      </td>
+<td>string    </td>
+<td>valid edge ids</td>
+<td>-</td>
+<td>id of the start edge
+</td></tr>
+<tr>
+<td>to        </td>
+<td>string    </td>
+<td>valid edge ids</td>
+<td>-</td>
+<td>id of the destination edge
+</td></tr></table>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />It is an error for subsequent trips to be unconnected.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 130/1000000
+Preprocessor generated node count: 270/1000000
+Post‐expand include size: 420/2097152 bytes
+Template argument size: 88/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:319-0!*!0!!en!*!* and timestamp 20150331063353 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 20 March 2015, at 15:38.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+// config file for car
+Name=Falcon
+LicensePlate=ASA-322
+FuelType=EthanolFlexibleFuel
+NormalSpeed=90
+LitersPer100km1=18
+LitersPer100km2=10
+LitersPer100km3=6

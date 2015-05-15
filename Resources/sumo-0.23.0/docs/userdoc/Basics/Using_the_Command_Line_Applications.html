@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Basics/Using_the_Command_Line_Applications - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Basics/Using the Command Line Applications</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.882729 from <a href="http://sumo.dlr.de/wiki/Basics/Using_the_Command_Line_Applications">the wiki page for Basics/Using_the_Command_Line_Applications</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Most of the applications from the SUMO package are command line tools. Currently, only <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> is not. If you do not know what a "command line" is, we refer you to the page about <a href="../Basics/Basic_Computer_Skills.html#Running_Programs_from_the_Command_Line" title="Basics/Basic Computer Skills">basic computer skills</a>.
+</p><p>The following presents some peculiarities of the SUMO-suite applications.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Using_SUMO_Applications_from_the_Command_Line"><span class="tocnumber">1</span> <span class="toctext">Using SUMO Applications from the Command Line</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Options"><span class="tocnumber">2</span> <span class="toctext">Options</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Setting_Options_on_the_Command_Line"><span class="tocnumber">2.1</span> <span class="toctext">Setting Options on the Command Line</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Option_Value_Types"><span class="tocnumber">2.2</span> <span class="toctext">Option Value Types</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Configuration_Files"><span class="tocnumber">3</span> <span class="toctext">Configuration Files</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Naming_Conventions_for_Configuration_Files"><span class="tocnumber">3.1</span> <span class="toctext">Naming Conventions for Configuration Files</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Configuration_Files_vs._Command_Line_Parameter"><span class="tocnumber">3.2</span> <span class="toctext">Configuration Files vs. Command Line Parameter</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Generating_Configuration_Files.2C_Templates_and_Schemata"><span class="tocnumber">3.3</span> <span class="toctext">Generating Configuration Files, Templates and Schemata</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Common_Options"><span class="tocnumber">4</span> <span class="toctext">Common Options</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Reporting_Options"><span class="tocnumber">4.1</span> <span class="toctext">Reporting Options</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Random_Number_Options"><span class="tocnumber">4.2</span> <span class="toctext">Random Number Options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Generating_and_Reading_Files"><span class="tocnumber">5</span> <span class="toctext">Generating and Reading Files</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Hints_on_using_XML"><span class="tocnumber">5.1</span> <span class="toctext">Hints on using XML</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Writing_files"><span class="tocnumber">6</span> <span class="toctext">Writing files</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Using_SUMO_Applications_from_the_Command_Line">Using SUMO Applications from the Command Line</span></h1>
+<p>SUMO applications are plain executables. You just start them by typing their name from the command line; for example <a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a> is called by
+</p>
+<pre>netgenerate.exe
+</pre>
+<p>under Windows and by
+</p>
+<pre>netgenerate
+</pre>
+<p>under Linux.
+</p><p>This simply starts the application (<a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a> in this case). As no parameter has been given, the application does not know what to do and prints only an information about itself:
+</p>
+<pre>SUMO netgenerate Version dev-SVN-r9983
+ Copyright (C) 2001-2011 DLR and contributors; <a rel="nofollow" class="external free" href="http://sumo.sourceforge.net">http://sumo.sourceforge.net</a>
+ License GPLv3+: GNU GPL Version 3 or later &lt;<a rel="nofollow" class="external free" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;
+ Use --help to get the list of options.
+</pre>
+<h1> <span class="mw-headline" id="Options">Options</span></h1>
+<p>Each application has a set of options which define which files shall be processed or generated, or which define the application's behaviour. Normally, an application needs at least two parameter - an input file and an output file - but almost always more parameter are used for a fine-grained control. Each application's options are described within the application's description. In the following, it is described how options are set.
+</p>
+<h2> <span class="mw-headline" id="Setting_Options_on_the_Command_Line">Setting Options on the Command Line</span></h2>
+<p>There are two kinds of options: boolean options which do not require an argument and are set to true if - and only if - the option is present and options with an argument. Setting an option with an argument on the command line consists of two parts - the option name and the option's value. For example, if one wants the simulation to load a certain road network, "mynet.net.xml", the following must be written:
+</p>
+<pre>--net mynet.net.xml
+</pre>
+<p>The '--' in front indicates that the option's long name is following ("net") in this case. After a whitespace the option's value must be given. It is also possible to use a '=' instead of the whitespace:
+</p>
+<pre>--net=mynet.net.xml
+</pre>
+<p>Some often used options can be abbreviated. The abbreviation for the <span style="color: #111144; font-weight: bold; white-space: pre;">--net</span>-option is <span style="color: #111144; font-weight: bold; white-space: pre;">-n</span>. The following has the same effect as the two examples above:
+</p>
+<pre>-n mynet.net.xml
+</pre>
+<p>Please note that an abbreviation is indicated using a single '-'.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />Not all abbreviations have the same meaning across the applications from the SUMO-suite.</div>
+<h2> <span class="mw-headline" id="Option_Value_Types">Option Value Types</span></h2>
+<p>The SUMO applications know what kind of a value they expect to be set. For example, <a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a> allows you to set the default number of lanes, which of course must be an integer value. In the case, a string or something else is given, this is recognized and the application answers with an error message on startup. Please note that the decimal point in a float is encoded using a dot (".").
+</p><p>A special case of value types are lists, for example the list of additional files to load into a simulation. When giving more than a single file, the files must be divided using ','. This also counts for lists of other value types, as integers or floating point numbers.
+</p>
+<h1> <span class="mw-headline" id="Configuration_Files">Configuration Files</span></h1>
+<p>Because the list of options may get very long, configuration files were introduced. You can set up a configuration file which contains all the parameter you want to start the application with. Moreover, you have to start the application with only this configuration file given.
+</p><p>A configuration file is an XML-file that has a root element named <span class="inlxml">configuration</span>.
+The options are written as element names, with the wanted value being stored in the attribute <span class="inlxml">value</span> (or <span class="inlxml">v</span>); the option <span style="color: #111144; font-weight: bold; white-space: pre;">--net-file <i>test.net.xml</i></span> given on the command line would become <span class="inlxml">&lt;net-file value="test.net.xml"/&gt;</span> within the configuration file. For the boolean options the value should be either "true", "on", "yes", "1", or "x" for the activation and "false", "off", "no", or "0" for deactivating the option (case does not matter here).
+</p><p>For the example above, the configuration file (let's save it under "test.sumocfg", see below) would look like:
+</p>
+<pre class="xml">
+&lt;configuration&gt;
+    &lt;input&gt;
+        &lt;net-file value=&quot;test.net.xml&quot;/&gt;
+        &lt;route-files value=&quot;test.rou.xml&quot;/&gt;
+        &lt;additional-files value=&quot;test.add.xml&quot;/&gt;
+    &lt;/input&gt;
+&lt;/configuration&gt;
+</pre>
+<p>The section <span class="inlxml">input</span> given above has only documentation purposes and no functional meaning.
+</p><p>A less verbose but equivalent version would look like:
+</p>
+<pre class="xml">
+&lt;configuration&gt;
+    &lt;n v=&quot;test.net.xml&quot;/&gt;
+    &lt;r v=&quot;test.rou.xml&quot;/&gt;
+    &lt;a v=&quot;test.add.xml&quot;/&gt;
+&lt;/configuration&gt;
+</pre>
+<p>The according <a href="../SUMO.html" title="SUMO">SUMO</a> execution call - working with both configuration versions - would be:
+</p>
+<pre>sumo.exe -c test.sumocfg
+</pre>
+<p>This means that instead of the parameters, we only give the name of the configuration file using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--configuration-file <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> or <span style="color: #111144; font-weight: bold; white-space: pre;">-c <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>. If you want to give no further options on the command line it is possible to leave out the "-c" as well:
+</p>
+<pre>sumo.exe test.sumocfg
+</pre>
+<h2> <span class="mw-headline" id="Naming_Conventions_for_Configuration_Files">Naming Conventions for Configuration Files</span></h2>
+<p>Depending on the targetted application, the configuration files have different extensions. It is highly recommended to follow this convention. For using simulation configurations with <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> this is even required - <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> can only read simulation configurations named "*.sumocfg".
+</p><p>All conventions for configuration extensions can be found on the page on <a href="../Other/File_Extensions.html" title="Other/File Extensions">used file extensions</a>.
+</p>
+<h2> <span class="mw-headline" id="Configuration_Files_vs._Command_Line_Parameter">Configuration Files vs. Command Line Parameter</span></h2>
+<p>In addition to a configuration file, further command line parameter can also be given on the command line. Note that this is not true for the simulation GUI <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> which needs all parameters inside the configuration file. If a parameter is set within the named configuration file as well as given on the command line, the value given on the command line is used (overwrites the one within the configuration file).
+</p>
+<h2> <span class="mw-headline" id="Generating_Configuration_Files.2C_Templates_and_Schemata">Generating Configuration Files, Templates and Schemata</span></h2>
+<p>The applications of the SUMO package allow you to generate configuration file templates. It is possible to save an empty configuration - a configuration template. This can be done by using the <span style="color: #111144; font-weight: bold; white-space: pre;">--save-template <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>. In this case, the configuration will only contain the parameters filled with their default values.
+</p><p>Also it is possible to save a configuration file which contains the currently set values. An application can be forced to do this using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--save-configuration <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>.
+</p><p>Last but not least one can generate an <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/XML_Schema_%28W3C%29">XML schema</a> (using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--save-schema <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>) to validate configuration files against. For the SUMO application this schema should be equivalent to the one found at <a rel="nofollow" class="external free" href="http://sumo-sim.org/xsd/sumoConfiguration.xsd">http://sumo-sim.org/xsd/sumoConfiguration.xsd</a> (respectively for the other executables). Please note that the schema is more strict than the SUMO options parser since it only validates the verbose version given above.
+</p><p>In either case, if further information on the parameters is wanted, one can also pass the option <span style="color: #111144; font-weight: bold; white-space: pre;">--save-commented</span>. Then, some further comments on each parameter are generated.
+</p>
+<h1> <span class="mw-headline" id="Common_Options">Common Options</span></h1>
+<p>The applications from the SUMO suite share several options. They are given in the following.
+</p>
+<h2> <span class="mw-headline" id="Reporting_Options">Reporting Options</span></h2>
+<table cellspacing="0" border="1" width="90%" align="center">
+
+<tr>
+<th style="background:#ddffdd;"> Option
+</th>
+<th style="background:#ddffdd;"> Description
+</th></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--verbose</span><br /><span style="color: #111144; font-weight: bold; white-space: pre;">-v</span>
+</td>
+<td valign="top"> The application is more verbose on the console in reporting what it is doing
+</td></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-warnings</span><br /><span style="color: #111144; font-weight: bold; white-space: pre;">-W</span>
+</td>
+<td valign="top"> Warnings will not be written to the console
+</td></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--print-options</span><br /><span style="color: #111144; font-weight: bold; white-space: pre;">-p</span>
+</td>
+<td valign="top"> The options are printed giving the currently set values
+</td></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--help</span><br /><span style="color: #111144; font-weight: bold; white-space: pre;">-?</span>
+</td>
+<td valign="top"> The application's help screen is printed
+</td></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--version</span><br /><span style="color: #111144; font-weight: bold; white-space: pre;">-V</span>
+</td>
+<td valign="top"> The version number and license notice are printed
+</td></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--log <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /><span style="color: #111144; font-weight: bold; white-space: pre;">-l</span>
+</td>
+<td valign="top"> All outputs are written into the given file
+</td></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--message-log <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td valign="top"> All informational outputs (no errors and warnings) are written into the given file
+</td></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--error-log <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td valign="top"> All errors and warnings are written into the given file
+</td></tr>
+</table>
+<p>The logging options <span style="color: #111144; font-weight: bold; white-space: pre;">--log</span> and <span style="color: #111144; font-weight: bold; white-space: pre;">--message-log</span> also enable the verbose output but only into the given file (unless <span style="color: #111144; font-weight: bold; white-space: pre;">--verbose</span> was given as well). Errors get always printed to the console (in addition to a possible log-file).
+</p>
+<h2> <span class="mw-headline" id="Random_Number_Options">Random Number Options</span></h2>
+<p>These options configure how the seed of the random number generator is determined. The same seed leads to the same sequence of generated random numbers.
+</p><p>By default the seed is a hard-coded fixed value. So, as long as all configuration settings keep the same the outputs of several simulation runs will be exactly the same. To change this, use one of the following options.
+</p>
+<table cellspacing="0" border="1" width="90%" align="center">
+
+<tr>
+<th style="background:#ddffdd;"> Option
+</th>
+<th style="background:#ddffdd;"> Description
+</th></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--seed <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td valign="top"> Set a particular seed for the random number generator. By using different values you can have different but still reproducible simulation runs.
+</td></tr>
+<tr>
+<td valign="top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--random</span>
+</td>
+<td valign="top"> Make SUMO choose a seed. If available the seed will be based on output of /dev/urandom otherwise the seed will be derived from current system time. This option has <b>precedence</b> over option <span style="color: #111144; font-weight: bold; white-space: pre;">--seed <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>.
+</td></tr>
+</table>
+<p><b>Attention</b>: The precedence of  <span style="color: #111144; font-weight: bold; white-space: pre;">--random</span> over <span style="color: #111144; font-weight: bold; white-space: pre;">--seed <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span> means that it is <b>impossible</b> to set <span style="color: #111144; font-weight: bold; white-space: pre;">--random</span> in a configuration file and overwrite it by <span style="color: #111144; font-weight: bold; white-space: pre;">--seed <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span> in the command line. There might be a solution in future.
+</p>
+<h1> <span class="mw-headline" id="Generating_and_Reading_Files">Generating and Reading Files</span></h1>
+<p>Almost every file the tools from the SUMO package read or generate are written in XML. You should get familiar with <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/XML">XML</a> before starting to work with SUMO. SUMO allows you to import files from different sources, but "native" SUMO files - road network descriptions, route and/or demand descriptions, infrastructure descriptions, etc. - are SUMO-specific, not following any standard. XML files can be read and written using a simple text editor and we usually do this. Nonetheless, several other tools exist and may be reused.
+</p><p>For some of the file types used by SUMO, a xsd (XML Schema Definition) exists. Please consult the page on <a href="../Other/File_Extensions.html" title="Other/File Extensions">file extensions</a> for a list of described file formats.
+</p>
+<h2> <span class="mw-headline" id="Hints_on_using_XML">Hints on using XML</span></h2>
+<ul><li> The default viewer for XML files on Windows is the Internet Explorer. It may be used for validating your XML files. The syntax of an XML file should be valid if the Internet Explorer can completely load it.
+</li><li> <a rel="nofollow" class="external text" href="http://www.eclipse.org/">Eclipse</a> allows to write XML documents following a given <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/XML_Schema_%28W3C%29">xsd (XML Schema Definition)</a>.
+</li></ul>
+<h1> <span class="mw-headline" id="Writing_files">Writing files</span></h1>
+<p>Several options expect a file name (<a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a>) to write into as parameter. When being given at the command line, the given path is assumed to be relative to the current working directory. When being given in a configuration file, the file path is assumed to be relative to the configuration file's path. Absolute paths are of course also allowed.
+</p><p>Usually, existing files with the same name are overwritten without a warning. The directory must exist, where the output file shall be written.
+</p><p>Besides writing to a file, further special notations allow to:
+</p>
+<ul><li> write into the null-device (no output at all): use "NUL" or "/dev/null" for file name (both notations work platform independent)
+</li><li> write into a socket: use "&lt;HOST&gt;:&lt;PORT&gt;" for file name
+</li><li> write to stdout (print on command line): use "stdout" or "-" for file name
+</li><li> write to stderr: use "stderr" for file name
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 331/1000000
+Preprocessor generated node count: 910/1000000
+Post‐expand include size: 4258/2097152 bytes
+Template argument size: 1008/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:236-0!*!0!!en!*!* and timestamp 20150330192423 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 12 March 2014, at 17:04.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>GSOC2012_Application - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="Installing.html">Installing SUMO</a></li>
+  <li><a href="Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="Simulation/Output.html">Simulation output</a></li>
+  <li><a href="TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="Models/Emissions.html">Emissions</a></li>
+  <li><a href="Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Other/Glossary.html">Glossary</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+  <li><a href="Tools/Main.html">Additional Tools</a></li>
+  <li><a href="Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="SUMO.html">SUMO</a></li>
+   <li><a href="SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="DFROUTER.html">DFROUTER</a></li>
+   <li><a href="MAROUTER.html">MAROUTER</a></li>
+   <li><a href="POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">GSOC2012 Application</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.927754 from <a href="http://sumo.dlr.de/wiki/GSOC2012_Application">the wiki page for GSOC2012_Application</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>This is the Application for the SUMO project by the Core Developement team of the DLR.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Describe_your_organization."><span class="tocnumber">1</span> <span class="toctext">Describe your organization.</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Why_is_your_organization_applying_to_participate_in_Google_Summer_of_Code_2012.3F_What_do_you_hope_to_gain_by_participating.3F"><span class="tocnumber">2</span> <span class="toctext">Why is your organization applying to participate in Google Summer of Code 2012? What do you hope to gain by participating?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Did_your_organization_participate_in_past_Google_Summer_of_Codes.3F_If_so.2C_please_summarize_your_involvement_and_the_successes_and_challenges_of_your_participation."><span class="tocnumber">3</span> <span class="toctext">Did your organization participate in past Google Summer of Codes? If so, please summarize your involvement and the successes and challenges of your participation.</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#What_license.28s.29_does_your_project_use.3F"><span class="tocnumber">4</span> <span class="toctext">What license(s) does your project use?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#What_is_the_URL_for_your_Ideas_page.3F"><span class="tocnumber">5</span> <span class="toctext">What is the URL for your Ideas page?</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#What_is_the_main_development_mailing_list_for_your_organization.3F"><span class="tocnumber">6</span> <span class="toctext">What is the main development mailing list for your organization?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#What_is_the_main_IRC_channel_for_your_organization.3F"><span class="tocnumber">7</span> <span class="toctext">What is the main IRC channel for your organization?</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Does_your_organization_have_an_application_template_you_would_like_to_see_students_use.3F_If_so.2C_please_provide_it_now."><span class="tocnumber">8</span> <span class="toctext">Does your organization have an application template you would like to see students use? If so, please provide it now.</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Who_will_be_your_backup_organization_administrator.3F"><span class="tocnumber">9</span> <span class="toctext">Who will be your backup organization administrator?</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#What_criteria_did_you_use_to_select_the_individuals_who_will_act_as_mentors_for_your_organization.3F_Please_be_as_specific_as_possible."><span class="tocnumber">10</span> <span class="toctext">What criteria did you use to select the individuals who will act as mentors for your organization? Please be as specific as possible.</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#What_is_your_plan_for_dealing_with_disappearing_students.3F"><span class="tocnumber">11</span> <span class="toctext">What is your plan for dealing with disappearing students?</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#What_is_your_plan_for_dealing_with_disappearing_mentors.3F"><span class="tocnumber">12</span> <span class="toctext">What is your plan for dealing with disappearing mentors?</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#What_steps_will_you_take_to_encourage_students_to_interact_with_your_project.27s_community_before.2C_during_and_after_the_program.3F"><span class="tocnumber">13</span> <span class="toctext">What steps will you take to encourage students to interact with your project's community before, during and after the program?</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Describe_your_organization."> Describe your organization. </span></h2>
+<p>SUMO is a highly portable, microscopic road traffic simulation package designed to handle large road networks. It is mainly developed by employees of the Institute of Transportation Systems at the German Aerospace Center. SUMO is open source, licensed under the GNU GPL.
+</p><p>Using SUMO you can simulate how a given traffic demand which consists of single vehicles moves through a given road network. The Application suite consists of tool for preparing the road network, computing route choices and managing various simulation outputs. Thus, a large set of traffic management topics can be adressed <a rel="nofollow" class="external text" href="http://sumo.sourceforge.net/doc/current/docs/userdoc/Sumo_at_a_Glance">(see our one-page overview)</a>.
+</p><p><br />
+Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses. As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. 
+</p>
+<h2> <span class="mw-headline" id="Why_is_your_organization_applying_to_participate_in_Google_Summer_of_Code_2012.3F_What_do_you_hope_to_gain_by_participating.3F"> Why is your organization applying to participate in Google Summer of Code 2012? What do you hope to gain by participating? </span></h2>
+<p>The aim of the SUMO project lies in strengthening the microscop-traffic simulation community. Instead of multiple short-lived projects with low comparability we wish to establish a standard simulation package for everyone to use and improve. While the first goal has been met and SUMO is now widely used, the second goal remains open. There have been only a few contributions to the code base. In participating in the Google Summer of Code, we hope to engage new developers to the benefit of all our users.
+</p>
+<h2> <span class="mw-headline" id="Did_your_organization_participate_in_past_Google_Summer_of_Codes.3F_If_so.2C_please_summarize_your_involvement_and_the_successes_and_challenges_of_your_participation."> Did your organization participate in past Google Summer of Codes? If so, please summarize your involvement and the successes and challenges of your participation. </span></h2>
+<p>No.
+</p>
+<h2> <span class="mw-headline" id="What_license.28s.29_does_your_project_use.3F"> What license(s) does your project use? </span></h2>
+<p>GNU GPLv3
+</p>
+<h2> <span class="mw-headline" id="What_is_the_URL_for_your_Ideas_page.3F"> What is the URL for your Ideas page? </span></h2>
+<p><a href="GSOC2012_ProjectIdeas.html" title="GSOC2012 ProjectIdeas">GSOC2012_ProjectIdeas</a>
+</p>
+<h2> <span class="mw-headline" id="What_is_the_main_development_mailing_list_for_your_organization.3F"> What is the main development mailing list for your organization? </span></h2>
+<p>The main development mailing list is
+[sumo-devel@lists.sourceforge.net]
+For details see <a rel="nofollow" class="external text" href="http://sumo.sourceforge.net/doc/current/docs/userdoc/Contact.html">our contact page</a>
+</p>
+<h2> <span class="mw-headline" id="What_is_the_main_IRC_channel_for_your_organization.3F"> What is the main IRC channel for your organization? </span></h2>
+<p>We do not have an IRC channel
+</p>
+<h2> <span class="mw-headline" id="Does_your_organization_have_an_application_template_you_would_like_to_see_students_use.3F_If_so.2C_please_provide_it_now."> Does your organization have an application template you would like to see students use? If so, please provide it now. </span></h2>
+<pre>
+Contact
+-------
+Student name: 
+Location (Home town, country):
+Email: 
+Phone number: 
+
+Background/Programming Information
+-----------------------------------
+What programming experience do you have so far (languages, operating systems, compilers)?
+Have you worked on an open source project(s) before, and which one(s)?
+What is your connection the the traffic simulation community
+Have you ever built SUMO from source?
+</pre>
+<h2> <span class="mw-headline" id="Who_will_be_your_backup_organization_administrator.3F"> Who will be your backup organization administrator? </span></h2>
+<p>Daniel Krajzewicz
+</p>
+<h2> <span class="mw-headline" id="What_criteria_did_you_use_to_select_the_individuals_who_will_act_as_mentors_for_your_organization.3F_Please_be_as_specific_as_possible."> What criteria did you use to select the individuals who will act as mentors for your organization? Please be as specific as possible. </span></h2>
+<p>Our mentors are members of the core development team. They have in-depth knowledge of the code base and our processes. 
+As experienced developers they all have mentoring experiences.
+Since the core team is small our mentors are self-selected.
+</p>
+<h2> <span class="mw-headline" id="What_is_your_plan_for_dealing_with_disappearing_students.3F"> What is your plan for dealing with disappearing students? </span></h2>
+<p>We are confident that careful initial selection and close communication will prevent students from disappearing.
+</p>
+<h2> <span class="mw-headline" id="What_is_your_plan_for_dealing_with_disappearing_mentors.3F"> What is your plan for dealing with disappearing mentors? </span></h2>
+<p>Our mentors have been given clearance from their employer to mentor during their work hours, thus we expect no disappearances.
+In case of sickness or other emergencies we have backup mentors.
+</p>
+<h2> <span class="mw-headline" id="What_steps_will_you_take_to_encourage_students_to_interact_with_your_project.27s_community_before.2C_during_and_after_the_program.3F"> What steps will you take to encourage students to interact with your project's community before, during and after the program? </span></h2>
+<p>We assume that our students already have some connections to the the traffic simulation community. 
+Before the program we will encourage interested parties to discuss and refine project ideas via our mailing list, blog and personal communication.
+During the program we will seek to build a relationship based on our common interests which continues after the program.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 60/1000000
+Preprocessor generated node count: 76/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:465-0!*!0!!en!*!* and timestamp 20150330202612 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 9 March 2012, at 15:48.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

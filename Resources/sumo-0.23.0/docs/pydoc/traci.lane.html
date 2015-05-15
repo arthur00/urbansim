@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module traci.lane</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="traci.html"><font color="#ffffff">traci</font></a>.lane</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/traci/lane.py">/home/behr_mi/sumo/tools/traci/lane.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;lane.py<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@author&nbsp;&nbsp;Daniel&nbsp;Krajzewicz<br>
+@author&nbsp;&nbsp;Laura&nbsp;Bieker<br>
+@author&nbsp;&nbsp;Jakob&nbsp;Erdmann<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2011-03-17<br>
+@version&nbsp;$Id:&nbsp;lane.py&nbsp;18106&nbsp;2015-03-19&nbsp;08:08:16Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;TraCI&nbsp;interface.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2011-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top><a href="traci.constants.html">traci.constants</a><br>
+</td><td width="25%" valign=top><a href="traci.html">traci</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-getAllowed"><strong>getAllowed</strong></a>(laneID)</dt><dd><tt><a href="#-getAllowed">getAllowed</a>(string)&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;allowed&nbsp;vehicle&nbsp;classes.&nbsp;An&nbsp;empty&nbsp;list&nbsp;means&nbsp;all&nbsp;vehicles&nbsp;are&nbsp;allowed.</tt></dd></dl>
+ <dl><dt><a name="-getCO2Emission"><strong>getCO2Emission</strong></a>(laneID)</dt><dd><tt><a href="#-getCO2Emission">getCO2Emission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;CO2&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getCOEmission"><strong>getCOEmission</strong></a>(laneID)</dt><dd><tt><a href="#-getCOEmission">getCOEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;CO&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getContextSubscriptionResults"><strong>getContextSubscriptionResults</strong></a>(laneID<font color="#909090">=None</font>)</dt></dl>
+ <dl><dt><a name="-getDisallowed"><strong>getDisallowed</strong></a>(laneID)</dt><dd><tt><a href="#-getDisallowed">getDisallowed</a>(string)&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;disallowed&nbsp;vehicle&nbsp;classes.</tt></dd></dl>
+ <dl><dt><a name="-getEdgeID"><strong>getEdgeID</strong></a>(laneID)</dt><dd><tt><a href="#-getEdgeID">getEdgeID</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;edge&nbsp;the&nbsp;lane&nbsp;belongs&nbsp;to.</tt></dd></dl>
+ <dl><dt><a name="-getFuelConsumption"><strong>getFuelConsumption</strong></a>(laneID)</dt><dd><tt><a href="#-getFuelConsumption">getFuelConsumption</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;fuel&nbsp;consumption&nbsp;in&nbsp;ml&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getHCEmission"><strong>getHCEmission</strong></a>(laneID)</dt><dd><tt><a href="#-getHCEmission">getHCEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;HC&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getIDCount"><strong>getIDCount</strong></a>()</dt><dd><tt><a href="#-getIDCount">getIDCount</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;lanes&nbsp;in&nbsp;the&nbsp;network.</tt></dd></dl>
+ <dl><dt><a name="-getIDList"><strong>getIDList</strong></a>()</dt><dd><tt><a href="#-getIDList">getIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;lanes&nbsp;in&nbsp;the&nbsp;network.</tt></dd></dl>
+ <dl><dt><a name="-getLastStepHaltingNumber"><strong>getLastStepHaltingNumber</strong></a>(laneID)</dt><dd><tt><a href="#-getLastStepHaltingNumber">getLastStepHaltingNumber</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;halting&nbsp;vehicles&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.<br>
+A&nbsp;speed&nbsp;of&nbsp;less&nbsp;than&nbsp;0.1&nbsp;m/s&nbsp;is&nbsp;considered&nbsp;a&nbsp;halt.</tt></dd></dl>
+ <dl><dt><a name="-getLastStepLength"><strong>getLastStepLength</strong></a>(laneID)</dt><dd><tt><a href="#-getLastStepLength">getLastStepLength</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;mean&nbsp;vehicle&nbsp;length&nbsp;in&nbsp;m&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getLastStepMeanSpeed"><strong>getLastStepMeanSpeed</strong></a>(laneID)</dt><dd><tt><a href="#-getLastStepMeanSpeed">getLastStepMeanSpeed</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;average&nbsp;speed&nbsp;in&nbsp;m/s&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getLastStepOccupancy"><strong>getLastStepOccupancy</strong></a>(laneID)</dt><dd><tt><a href="#-getLastStepOccupancy">getLastStepOccupancy</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;occupancy&nbsp;in&nbsp;%&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getLastStepVehicleIDs"><strong>getLastStepVehicleIDs</strong></a>(laneID)</dt><dd><tt><a href="#-getLastStepVehicleIDs">getLastStepVehicleIDs</a>(string)&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;ids&nbsp;of&nbsp;the&nbsp;vehicles&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getLastStepVehicleNumber"><strong>getLastStepVehicleNumber</strong></a>(laneID)</dt><dd><tt><a href="#-getLastStepVehicleNumber">getLastStepVehicleNumber</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;vehicles&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getLength"><strong>getLength</strong></a>(laneID)</dt><dd><tt><a href="#-getLength">getLength</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;length&nbsp;in&nbsp;m.</tt></dd></dl>
+ <dl><dt><a name="-getLinkNumber"><strong>getLinkNumber</strong></a>(laneID)</dt><dd><tt><a href="#-getLinkNumber">getLinkNumber</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;connections&nbsp;to&nbsp;successive&nbsp;lanes.</tt></dd></dl>
+ <dl><dt><a name="-getLinks"><strong>getLinks</strong></a>(laneID, extended<font color="#909090">=False</font>)</dt><dd><tt><a href="#-getLinks">getLinks</a>(string)&nbsp;-&gt;&nbsp;list((string,&nbsp;bool,&nbsp;bool,&nbsp;bool))<br>
+A&nbsp;list&nbsp;containing&nbsp;id&nbsp;of&nbsp;successor&nbsp;lane&nbsp;together&nbsp;with&nbsp;priority,&nbsp;open&nbsp;and&nbsp;foe<br>
+for&nbsp;each&nbsp;link.<br>
+if&nbsp;extended=True,&nbsp;each&nbsp;result&nbsp;tuple&nbsp;contains<br>
+(string&nbsp;approachedLane,&nbsp;bool&nbsp;hasPrio,&nbsp;bool&nbsp;isOpen,&nbsp;bool&nbsp;hasFoe,&nbsp;<br>
+string&nbsp;approachedInternal,&nbsp;string&nbsp;state,&nbsp;string&nbsp;direction,&nbsp;float&nbsp;length)</tt></dd></dl>
+ <dl><dt><a name="-getMaxSpeed"><strong>getMaxSpeed</strong></a>(laneID)</dt><dd><tt><a href="#-getMaxSpeed">getMaxSpeed</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;maximum&nbsp;allowed&nbsp;speed&nbsp;on&nbsp;the&nbsp;lane&nbsp;in&nbsp;m/s.</tt></dd></dl>
+ <dl><dt><a name="-getNOxEmission"><strong>getNOxEmission</strong></a>(laneID)</dt><dd><tt><a href="#-getNOxEmission">getNOxEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;NOx&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getNoiseEmission"><strong>getNoiseEmission</strong></a>(laneID)</dt><dd><tt><a href="#-getNoiseEmission">getNoiseEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;noise&nbsp;emission&nbsp;in&nbsp;db&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getPMxEmission"><strong>getPMxEmission</strong></a>(laneID)</dt><dd><tt><a href="#-getPMxEmission">getPMxEmission</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;particular&nbsp;matter&nbsp;emission&nbsp;in&nbsp;mg&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getShape"><strong>getShape</strong></a>(laneID)</dt><dd><tt><a href="#-getShape">getShape</a>(string)&nbsp;-&gt;&nbsp;list((double,&nbsp;double))<br>
+&nbsp;<br>
+List&nbsp;of&nbsp;2D&nbsp;positions&nbsp;(cartesian)&nbsp;describing&nbsp;the&nbsp;geometry.</tt></dd></dl>
+ <dl><dt><a name="-getSubscriptionResults"><strong>getSubscriptionResults</strong></a>(laneID<font color="#909090">=None</font>)</dt><dd><tt><a href="#-getSubscriptionResults">getSubscriptionResults</a>(string)&nbsp;-&gt;&nbsp;dict(integer:&nbsp;&lt;value_type&gt;)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;subscription&nbsp;results&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;and&nbsp;the&nbsp;given&nbsp;lane.<br>
+If&nbsp;no&nbsp;lane&nbsp;id&nbsp;is&nbsp;given,&nbsp;all&nbsp;subscription&nbsp;results&nbsp;are&nbsp;returned&nbsp;in&nbsp;a&nbsp;dict.<br>
+If&nbsp;the&nbsp;lane&nbsp;id&nbsp;is&nbsp;unknown&nbsp;or&nbsp;the&nbsp;subscription&nbsp;did&nbsp;for&nbsp;any&nbsp;reason&nbsp;return&nbsp;no&nbsp;data,<br>
+'None'&nbsp;is&nbsp;returned.<br>
+It&nbsp;is&nbsp;not&nbsp;possible&nbsp;to&nbsp;retrieve&nbsp;older&nbsp;subscription&nbsp;results&nbsp;than&nbsp;the&nbsp;ones<br>
+from&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getTraveltime"><strong>getTraveltime</strong></a>(laneID)</dt><dd><tt><a href="#-getTraveltime">getTraveltime</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;estimated&nbsp;travel&nbsp;time&nbsp;in&nbsp;s&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;on&nbsp;the&nbsp;given&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getWaitingTime"><strong>getWaitingTime</strong></a>(laneID)</dt><dd><tt><a href="#-getWaitingTime">getWaitingTime</a>()&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getWidth"><strong>getWidth</strong></a>(laneID)</dt><dd><tt><a href="#-getWidth">getWidth</a>(string)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;width&nbsp;of&nbsp;the&nbsp;lane&nbsp;in&nbsp;m.</tt></dd></dl>
+ <dl><dt><a name="-setAllowed"><strong>setAllowed</strong></a>(laneID, allowedClasses)</dt><dd><tt><a href="#-setAllowed">setAllowed</a>(string,&nbsp;list)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;a&nbsp;list&nbsp;of&nbsp;allowed&nbsp;vehicle&nbsp;classes.&nbsp;Setting&nbsp;an&nbsp;empty&nbsp;list&nbsp;means&nbsp;all&nbsp;vehicles&nbsp;are&nbsp;allowed.</tt></dd></dl>
+ <dl><dt><a name="-setDisallowed"><strong>setDisallowed</strong></a>(laneID, disallowedClasses)</dt><dd><tt><a href="#-setDisallowed">setDisallowed</a>(string,&nbsp;list)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;a&nbsp;list&nbsp;of&nbsp;disallowed&nbsp;vehicle&nbsp;classes.</tt></dd></dl>
+ <dl><dt><a name="-setLength"><strong>setLength</strong></a>(laneID, length)</dt><dd><tt><a href="#-setLength">setLength</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;lane&nbsp;in&nbsp;m.</tt></dd></dl>
+ <dl><dt><a name="-setMaxSpeed"><strong>setMaxSpeed</strong></a>(laneID, speed)</dt><dd><tt><a href="#-setMaxSpeed">setMaxSpeed</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;a&nbsp;new&nbsp;maximum&nbsp;allowed&nbsp;speed&nbsp;on&nbsp;the&nbsp;lane&nbsp;in&nbsp;m/s.</tt></dd></dl>
+ <dl><dt><a name="-subscribe"><strong>subscribe</strong></a>(laneID, varIDs<font color="#909090">=(16,)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt><dd><tt><a href="#-subscribe">subscribe</a>(string,&nbsp;list(integer),&nbsp;double,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Subscribe&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;lane&nbsp;values&nbsp;for&nbsp;the&nbsp;given&nbsp;interval.</tt></dd></dl>
+ <dl><dt><a name="-subscribeContext"><strong>subscribeContext</strong></a>(laneID, domain, dist, varIDs<font color="#909090">=(16,)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>subscriptionResults</strong> = &lt;{}, {}&gt;</td></tr></table>
+</body></html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Models/Emissions/HBEFA3-based - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../../Installing.html">Installing SUMO</a></li>
+  <li><a href="../../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../../FAQ.html">FAQ</a></li>
+  <li><a href="../../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../SUMO.html">SUMO</a></li>
+   <li><a href="../../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Models/Emissions/HBEFA3-based</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.970370 from <a href="http://sumo.dlr.de/wiki/Models/Emissions/HBEFA3-based">the wiki page for Models/Emissions/HBEFA3-based</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Since version 0.21.0, SUMO is able to simulate vehicular pollutant emissions based on the database application HBEFA in version 3.1. Though HBEFA contains information about other pollutants, we decided to implement only the following, major ones:
+</p>
+<ul><li> CO<sub>2</sub>
+</li><li> CO
+</li><li> HC
+</li><li> NO<sub>x</sub>
+</li><li> PM<sub>x</sub>
+</li><li> fuel consumption
+</li></ul>
+<h2> <span class="mw-headline" id="Vehicle_Emission_Classes">Vehicle Emission Classes</span></h2>
+<p>The vehicle classes below map directly to vehicle classes supplied by <a rel="nofollow" class="external text" href="http://www.hbefa.net/">HBEFA</a>. This is a major difference to the clustering done with <a href="../../Models/Emissions/HBEFA-based.html" title="Models/Emissions/HBEFA-based">HBEFA 2.1</a>. Note, that within HBEFA these classes are aggregates of more specific vehicle classes. To use the emission classes below prepend the class name with the HBEFA3 prefix, e.g. <span class="inlxml">emissionClass="HBEFA3/PC_G_EU4"</span>.
+</p><p>The following tables give the emissionClass strings to use in the definition of vehicle types.
+</p>
+<h3> <span class="mw-headline" id="HBEFA3_heavy_duty_emission_classes">HBEFA3 heavy duty emission classes</span></h3>
+<table cellspacing="0" border="1">
+
+<tr>
+<th style="background:#ffdead;"> emissionClass
+</th>
+<th style="background:#ffdead;"> description
+</th></tr>
+<tr>
+<td> Bus
+</td>
+<td> average urban bus (all fuel types)
+</td></tr>
+<tr>
+<td> Coach
+</td>
+<td> average long distance bus (all fuel types)
+</td></tr>
+<tr>
+<td> HDV
+</td>
+<td> average heavy duty vehicle (all fuel types)
+</td></tr>
+<tr>
+<td> HDV_G
+</td>
+<td> average gasoline driven heavy duty vehicle
+</td></tr>
+<tr>
+<td> HDV_D_EU0
+</td>
+<td> diesel driven heavy duty vehicle Euro norm 0
+</td></tr>
+<tr>
+<td> HDV_D_EU1
+</td>
+<td> diesel driven heavy duty vehicle Euro norm 1
+</td></tr>
+<tr>
+<td> HDV_D_EU2
+</td>
+<td> diesel driven heavy duty vehicle Euro norm 2
+</td></tr>
+<tr>
+<td> HDV_D_EU3
+</td>
+<td> diesel driven heavy duty vehicle Euro norm 3
+</td></tr>
+<tr>
+<td> HDV_D_EU4
+</td>
+<td> diesel driven heavy duty vehicle Euro norm 4
+</td></tr>
+<tr>
+<td> HDV_D_EU5
+</td>
+<td> diesel driven heavy duty vehicle Euro norm 5
+</td></tr>
+<tr>
+<td> HDV_D_EU6
+</td>
+<td> diesel driven heavy duty vehicle Euro norm 6
+</td></tr>
+<tr>
+<td> HDV_D_East
+</td>
+<td>
+</td></tr></table>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id="HBEFA3_passenger_and_light_delivery_emission_classes">HBEFA3 passenger and light delivery emission classes</span></h3>
+<table cellspacing="0" border="1">
+
+<tr>
+<th style="background:#ffdead;"> emissionClass
+</th>
+<th style="background:#ffdead;"> description
+</th></tr>
+<tr>
+<td> zero
+</td>
+<td> zero emission vehicle
+</td></tr>
+<tr>
+<td> LDV
+</td>
+<td> average light duty vehicles (all fuel types)
+</td></tr>
+<tr>
+<td> LDV_G_EU0
+</td>
+<td> gasoline driven light duty vehicle Euro norm 0
+</td></tr>
+<tr>
+<td> LDV_G_EU1
+</td>
+<td> gasoline driven light duty vehicle Euro norm 1
+</td></tr>
+<tr>
+<td> LDV_G_EU2
+</td>
+<td> gasoline driven light duty vehicle Euro norm 2
+</td></tr>
+<tr>
+<td> LDV_G_EU3
+</td>
+<td> gasoline driven light duty vehicle Euro norm 3
+</td></tr>
+<tr>
+<td> LDV_G_EU4
+</td>
+<td> gasoline driven light duty vehicle Euro norm 4
+</td></tr>
+<tr>
+<td> LDV_G_EU5
+</td>
+<td> gasoline driven light duty vehicle Euro norm 5
+</td></tr>
+<tr>
+<td> LDV_G_EU6
+</td>
+<td> gasoline driven light duty vehicle Euro norm 6
+</td></tr>
+<tr>
+<td> LDV_G_East
+</td>
+<td>
+</td></tr>
+<tr>
+<td> LDV_D_EU0
+</td>
+<td> diesel driven light duty vehicle Euro norm 0
+</td></tr>
+<tr>
+<td> LDV_D_EU1
+</td>
+<td> diesel driven light duty vehicle Euro norm 1
+</td></tr>
+<tr>
+<td> LDV_D_EU2
+</td>
+<td> diesel driven light duty vehicle Euro norm 2
+</td></tr>
+<tr>
+<td> LDV_D_EU3
+</td>
+<td> diesel driven light duty vehicle Euro norm 3
+</td></tr>
+<tr>
+<td> LDV_D_EU4
+</td>
+<td> diesel driven light duty vehicle Euro norm 4
+</td></tr>
+<tr>
+<td> LDV_D_EU5
+</td>
+<td> diesel driven light duty vehicle Euro norm 5
+</td></tr>
+<tr>
+<td> LDV_D_EU6
+</td>
+<td> diesel driven light duty vehicle Euro norm 6
+</td></tr>
+<tr>
+<td> PC
+</td>
+<td> average passenger car (all fuel types)
+</td></tr>
+<tr>
+<td> PC_Alternative
+</td>
+<td> passenger car with alternative fuel technology
+</td></tr>
+<tr>
+<td> PC_G_EU0
+</td>
+<td> gasoline driven passenger car Euro norm 0
+</td></tr>
+<tr>
+<td> PC_G_EU1
+</td>
+<td> gasoline driven passenger car Euro norm 1
+</td></tr>
+<tr>
+<td> PC_G_EU2
+</td>
+<td> gasoline driven passenger car Euro norm 2
+</td></tr>
+<tr>
+<td> PC_G_EU3
+</td>
+<td> gasoline driven passenger car Euro norm 3
+</td></tr>
+<tr>
+<td> PC_G_EU4
+</td>
+<td> gasoline driven passenger car Euro norm 4
+</td></tr>
+<tr>
+<td> PC_G_EU5
+</td>
+<td> gasoline driven passenger car Euro norm 5
+</td></tr>
+<tr>
+<td> PC_G_EU6
+</td>
+<td> gasoline driven passenger car Euro norm 6
+</td></tr>
+<tr>
+<td> PC_G_East
+</td>
+<td>
+</td></tr>
+<tr>
+<td> PC_D_EU0
+</td>
+<td> diesel driven passenger car Euro norm 0
+</td></tr>
+<tr>
+<td> PC_D_EU1
+</td>
+<td> diesel driven passenger car Euro norm 1
+</td></tr>
+<tr>
+<td> PC_D_EU2
+</td>
+<td> diesel driven passenger car Euro norm 2
+</td></tr>
+<tr>
+<td> PC_D_EU3
+</td>
+<td> diesel driven passenger car Euro norm 3
+</td></tr>
+<tr>
+<td> PC_D_EU4
+</td>
+<td> diesel driven passenger car Euro norm 4
+</td></tr>
+<tr>
+<td> PC_D_EU5
+</td>
+<td> diesel driven passenger car Euro norm 5
+</td></tr>
+<tr>
+<td> PC_D_EU6
+</td>
+<td> diesel driven passenger car Euro norm 6
+</td></tr></table>
+<p>Not all combinations of emissionClass and pollutant give meaningful results. The following combinations are known to be faulty as of SUMO 0.21.0:
+LDV + NOx, LDV_G_EU0 + NOx, LDV_G_East + NOx, LDV_G_East + PMx, PC_G_EU0 + NOx
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 20/1000000
+Preprocessor generated node count: 54/1000000
+Post‐expand include size: 60/2097152 bytes
+Template argument size: 31/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:560-0!*!0!!*!*!* and timestamp 20150330202618 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 28 January 2015, at 13:32.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

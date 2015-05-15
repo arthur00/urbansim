@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Simulation/Output - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Simulation/Output</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.018269 from <a href="http://sumo.dlr.de/wiki/Simulation/Output">the wiki page for Simulation/Output</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Available_Output_Files"><span class="tocnumber">2</span> <span class="toctext">Available Output Files</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#vehicle-based_information.2C_unaggregated"><span class="tocnumber">2.1</span> <span class="toctext">vehicle-based information, unaggregated</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#simulated_detectors"><span class="tocnumber">2.2</span> <span class="toctext">simulated detectors</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#values_for_edges_or_lanes"><span class="tocnumber">2.3</span> <span class="toctext">values for edges or lanes</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#vehicle-based_information"><span class="tocnumber">2.4</span> <span class="toctext">vehicle-based information</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#simulation.28network.29-based_information"><span class="tocnumber">2.5</span> <span class="toctext">simulation(network)-based information</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#traffic_lights-based_information"><span class="tocnumber">2.6</span> <span class="toctext">traffic lights-based information</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Commandline_Output_.28verbose.29"><span class="tocnumber">3</span> <span class="toctext">Commandline Output (verbose)</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Introduction"> Introduction </span></h1>
+<p><a href="../SUMO.html" title="SUMO">SUMO</a> allows to generate a large number of different measures. All write the values they collect into files or a socket connection following the common rules for <a href="../Basics/Using_the_Command_Line_Applications.html#Writing_files" title="Basics/Using the Command Line Applications">writing files</a>. Per default, all are disabled, and have to be triggered individually. Some of the available outputs (<a href="../Simulation/Output/RawDump.html" title="Simulation/Output/RawDump">raw vehicle positions dump</a>, <a href="../Simulation/Output/TripInfo.html" title="Simulation/Output/TripInfo">trip information</a>, <a href="../Simulation/Output/VehRoutes.html" title="Simulation/Output/VehRoutes">vehicle routes information</a>, and <a href="../Simulation/Output/Summary.html" title="Simulation/Output/Summary">simulation state statistics</a>) are triggered using command line options, the others have to be defined within "additional files".
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br /> All output files written by SUMO are in XML-format by default. However, with the python tool <a href="../Tools/Xml.html#xml2csv.py" title="Tools/Xml">xml2csv.py</a> you can convert any of them to a flat-file (CSV) format which can be opened with most spread-sheet software. If you need a more compressed but still "standardized" binary version, you can use <a href="../Tools/Xml.html#xml2protobuf.py" title="Tools/Xml">xml2protobuf.py</a></div>.
+<h1> <span class="mw-headline" id="Available_Output_Files"> Available Output Files </span></h1>
+<p>Below, the available outputs are listed, joined into groups of topic/aggregation type. Further information about each output can be found by following its link.
+</p>
+<h2> <span class="mw-headline" id="vehicle-based_information.2C_unaggregated"> vehicle-based information, unaggregated </span></h2>
+<ul><li> <a href="../Simulation/Output/RawDump.html" title="Simulation/Output/RawDump">raw vehicle positions dump</a>: all vehicle positions over time<br /><i>contains</i>: positions and speeds for all vehicles for all simulated time steps<br /><i>used for</i>: obtaining movements of nodes (V2V, for ns-2)
+</li><li> <a href="../Simulation/Output/VTypeProbe.html" title="Simulation/Output/VTypeProbe">vehicle type probe</a>: positions of vehicles over time for a certain vehicle type (or all vehicles)
+</li><li> <a href="../Simulation/Output/EmissionOutput.html" title="Simulation/Output/EmissionOutput">emission output</a>: emission values of all vehicles for every simulation step
+</li><li> <a href="../Simulation/Output/FullOutput.html" title="Simulation/Output/FullOutput">full output</a>: various informtations for all edges, lanes and vehicles (good for visualisation purposes)
+</li><li> <a href="../Simulation/Output/VTKOutput.html" title="Simulation/Output/VTKOutput">vtk output</a>: generates Files in the well known <a rel="nofollow" class="external text" href="http://www.vtk.org/">VTK</a> (Visualization Toolkit) format, to show the positions the speed value for every vehicle 
+</li><li> <a href="../Simulation/Output/FCDOutput.html" title="Simulation/Output/FCDOutput">fcd output</a>: Floating Car Data includes name, position, angle and type for every vehicle
+</li><li> <a href="../Simulation/Output/AmitranOutput.html" title="Simulation/Output/AmitranOutput">trajectories output</a>: Trajectory Data following includes name, position, speed and acceleration for every vehicle following the Amitran standard
+</li></ul>
+<h2> <span class="mw-headline" id="simulated_detectors"> simulated detectors </span></h2>
+<ul><li> <a href="../Simulation/Output/Induction_Loops_Detectors_(E1).html" title="Simulation/Output/Induction Loops Detectors (E1)">inductive loop detectors</a>: simulated induction loops
+</li><li> <a href="../Simulation/Output/Instantaneous_Induction_Loops_Detectors.html" title="Simulation/Output/Instantaneous Induction Loops Detectors">instant induction loops</a>: simulated unaggregated induction loops
+</li><li> <a href="../Simulation/Output/Lanearea_Detectors_(E2).html" title="Simulation/Output/Lanearea Detectors (E2)">areal detectors</a>: lanearea detectors - simulated vehicle tracking cameras
+</li><li> <a href="../Simulation/Output/Multi-Entry_Multi-Exit_Detectors_(E3).html" title="Simulation/Output/Multi-Entry Multi-Exit Detectors (E3)">entry/exit detectors</a>: simulated entry/exit detectors
+</li></ul>
+<h2> <span class="mw-headline" id="values_for_edges_or_lanes"> values for edges or lanes </span></h2>
+<ul><li> <a href="../Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html" title="Simulation/Output/Lane- or Edge-based Traffic Measures">edgelane traffic</a>: edge/lane-based network performance measures
+</li><li> <a href="../Simulation/Output/Amitran_Traffic_Measures.html" title="Simulation/Output/Amitran Traffic Measures">aggregated Amitran measures</a>: edge/lane-based network performance measures following the Amitran standard
+</li><li> <a href="../Simulation/Output/Lane-_or_Edge-based_Emissions_Measures.html" title="Simulation/Output/Lane- or Edge-based Emissions Measures">edgelane emissions</a>: edge/lane-based vehicular pollutant emission
+</li><li> <a href="../Simulation/Output/Lane-_or_Edge-based_Noise_Measures.html" title="Simulation/Output/Lane- or Edge-based Noise Measures">edgelane noise</a>: edge/lane-based vehicular noise emission; based on Harmonoise
+</li><li> <a href="../Simulation/Output/QueueOutput.html" title="Simulation/Output/QueueOutput">queue output</a>: lane-based calculation of the actual tailback in front of a junction
+</li></ul>
+<h2> <span class="mw-headline" id="vehicle-based_information"> vehicle-based information </span></h2>
+<ul><li> <a href="../Simulation/Output/TripInfo.html" title="Simulation/Output/TripInfo">trip information</a>: aggregated information about each vehicle's journey
+</li><li> <a href="../Simulation/Output/VehRoutes.html" title="Simulation/Output/VehRoutes">vehicle routes information</a>: information about each vehicle's routes over simulation run
+</li></ul>
+<h2> <span class="mw-headline" id="simulation.28network.29-based_information">  simulation(network)-based information </span></h2>
+<ul><li> <a href="../Simulation/Output/Summary.html" title="Simulation/Output/Summary">simulation state statistics</a>: information about the current state of the simulation
+</li></ul>
+<h2> <span class="mw-headline" id="traffic_lights-based_information"> <a href="../Simulation/Output/Traffic_Lights.html" title="Simulation/Output/Traffic Lights">traffic lights-based information</a> </span></h2>
+<ul><li> <a href="../Simulation/Output/Traffic_Lights.html#TLS_States" title="Simulation/Output/Traffic Lights">traffic light states</a>: information about the state (lights) of a traffic light
+</li><li> <a href="../Simulation/Output/Traffic_Lights.html#TLS_Switches" title="Simulation/Output/Traffic Lights">stream-based traffic light switches</a>: information about the switches of a traffic light signal responsible for a certain link
+</li><li> <a href="../Simulation/Output/Traffic_Lights.html#TLS_Switch_States" title="Simulation/Output/Traffic Lights">traffic light states, by switch</a>: information about the states (lights) of a traffic light signal, written only when changed
+</li><li> <a href="../Simulation/Output/Traffic_Lights.html#Coupled_Areal_Detectors" title="Simulation/Output/Traffic Lights">areal detectors coupled to tls</a>: simulated vehicle tracking cameras triggered by tls
+</li></ul>
+<h1> <span class="mw-headline" id="Commandline_Output_.28verbose.29"> Commandline Output (verbose) </span></h1>
+<ul><li> Inserted: number vehicles that entered the simulation network
+</li><li> Loaded: number of vehicles that were loaded from route files. This may differ from emitted forw two reason:
+<ul><li> Running with option <span style="color: #111144; font-weight: bold; white-space: pre;">--scale</span> with a value less than 1.0
+</li><li> Having a congested network where not all vehicles could be inserted before the simulation time ended
+</li></ul>
+</li><li> Running: number of vehicles currently active in the simulation network
+</li><li> Waiting: number of vehicles which could not yet be inserted into the network due to congestion
+</li><li> Teleports: number of of times that vehicles were teleported for any of the following reasons (These reasons are given whenever a teleport warning is issued)
+<ul><li> Collision: a vehicle violated its minGap requirement in relation to its leader vehicle
+</li><li> Timeout: a vehicle was unable to move for --time-to-teleport seconds (default 300)
+<ul><li> wrong lane: a vehicle was unable to move because it could not continue its route on the current lane and was unable to change to the correct lane
+</li><li> yield: a vehicle was unable to cross an intersection where it did not have priority
+</li><li> jam: a vehicle could not continue because there was no space on the next lane
+</li></ul>
+</li></ul>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 46/1000000
+Preprocessor generated node count: 92/1000000
+Post‐expand include size: 584/2097152 bytes
+Template argument size: 374/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:146-0!*!0!!en!*!* and timestamp 20150330202643 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 30 October 2014, at 11:41.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

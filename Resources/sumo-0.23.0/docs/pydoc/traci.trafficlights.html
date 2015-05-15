@@ -1,0 +1,143 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module traci.trafficlights</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="traci.html"><font color="#ffffff">traci</font></a>.trafficlights</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/traci/trafficlights.py">/home/behr_mi/sumo/tools/traci/trafficlights.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;trafficlights.py<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2011-03-16<br>
+@version&nbsp;$Id:&nbsp;trafficlights.py&nbsp;18106&nbsp;2015-03-19&nbsp;08:08:16Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;TraCI&nbsp;interface.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2011-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top><a href="traci.constants.html">traci.constants</a><br>
+</td><td width="25%" valign=top><a href="traci.html">traci</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="traci.trafficlights.html#Logic">Logic</a>
+</font></dt><dt><font face="helvetica, arial"><a href="traci.trafficlights.html#Phase">Phase</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Logic">class <strong>Logic</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Logic-__init__"><strong>__init__</strong></a>(self, subID, type, subParameter, currentPhaseIndex, phases)</dt></dl>
+
+<dl><dt><a name="Logic-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Phase">class <strong>Phase</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Phase-__init__"><strong>__init__</strong></a>(self, duration, duration1, duration2, phaseDef)</dt></dl>
+
+<dl><dt><a name="Phase-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-getCompleteRedYellowGreenDefinition"><strong>getCompleteRedYellowGreenDefinition</strong></a>(tlsID)</dt><dd><tt><a href="#-getCompleteRedYellowGreenDefinition">getCompleteRedYellowGreenDefinition</a>(string)&nbsp;-&gt;&nbsp;<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getContextSubscriptionResults"><strong>getContextSubscriptionResults</strong></a>(tlsID<font color="#909090">=None</font>)</dt></dl>
+ <dl><dt><a name="-getControlledLanes"><strong>getControlledLanes</strong></a>(tlsID)</dt><dd><tt><a href="#-getControlledLanes">getControlledLanes</a>(string)&nbsp;-&gt;&nbsp;c<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;list&nbsp;of&nbsp;lanes&nbsp;which&nbsp;are&nbsp;controlled&nbsp;by&nbsp;the&nbsp;named&nbsp;traffic&nbsp;light.</tt></dd></dl>
+ <dl><dt><a name="-getControlledLinks"><strong>getControlledLinks</strong></a>(tlsID)</dt><dd><tt><a href="#-getControlledLinks">getControlledLinks</a>(string)&nbsp;-&gt;&nbsp;list(list(list(string)))<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;links&nbsp;controlled&nbsp;by&nbsp;the&nbsp;traffic&nbsp;light,&nbsp;sorted&nbsp;by&nbsp;the&nbsp;signal&nbsp;index&nbsp;and&nbsp;described&nbsp;by&nbsp;giving&nbsp;the&nbsp;incoming,&nbsp;outgoing,&nbsp;and&nbsp;via&nbsp;lane.</tt></dd></dl>
+ <dl><dt><a name="-getIDCount"><strong>getIDCount</strong></a>()</dt><dd><tt><a href="#-getIDCount">getIDCount</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;traffic&nbsp;lights&nbsp;in&nbsp;the&nbsp;network.</tt></dd></dl>
+ <dl><dt><a name="-getIDList"><strong>getIDList</strong></a>()</dt><dd><tt><a href="#-getIDList">getIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;ids&nbsp;of&nbsp;all&nbsp;traffic&nbsp;lights&nbsp;within&nbsp;the&nbsp;scenario.</tt></dd></dl>
+ <dl><dt><a name="-getNextSwitch"><strong>getNextSwitch</strong></a>(tlsID)</dt><dd><tt><a href="#-getNextSwitch">getNextSwitch</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getPhase"><strong>getPhase</strong></a>(tlsID)</dt><dd><tt><a href="#-getPhase">getPhase</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getPhaseDuration"><strong>getPhaseDuration</strong></a>(tlsID)</dt><dd><tt><a href="#-getPhaseDuration">getPhaseDuration</a>(string)&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getProgram"><strong>getProgram</strong></a>(tlsID)</dt><dd><tt><a href="#-getProgram">getProgram</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;current&nbsp;program.</tt></dd></dl>
+ <dl><dt><a name="-getRedYellowGreenState"><strong>getRedYellowGreenState</strong></a>(tlsID)</dt><dd><tt><a href="#-getRedYellowGreenState">getRedYellowGreenState</a>(string)&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;named&nbsp;tl's&nbsp;state&nbsp;as&nbsp;a&nbsp;tuple&nbsp;of&nbsp;light&nbsp;definitions&nbsp;from&nbsp;rRgGyYoO,&nbsp;for&nbsp;red,&nbsp;green,&nbsp;yellow,&nbsp;off,&nbsp;where&nbsp;lower&nbsp;case&nbsp;letters&nbsp;mean&nbsp;that&nbsp;the&nbsp;stream&nbsp;has&nbsp;to&nbsp;decelerate.</tt></dd></dl>
+ <dl><dt><a name="-getSubscriptionResults"><strong>getSubscriptionResults</strong></a>(tlsID<font color="#909090">=None</font>)</dt><dd><tt><a href="#-getSubscriptionResults">getSubscriptionResults</a>(string)&nbsp;-&gt;&nbsp;dict(integer:&nbsp;&lt;value_type&gt;)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;subscription&nbsp;results&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;and&nbsp;the&nbsp;given&nbsp;traffic&nbsp;light.<br>
+If&nbsp;no&nbsp;traffic&nbsp;light&nbsp;id&nbsp;is&nbsp;given,&nbsp;all&nbsp;subscription&nbsp;results&nbsp;are&nbsp;returned&nbsp;in&nbsp;a&nbsp;dict.<br>
+If&nbsp;the&nbsp;traffic&nbsp;light&nbsp;id&nbsp;is&nbsp;unknown&nbsp;or&nbsp;the&nbsp;subscription&nbsp;did&nbsp;for&nbsp;any&nbsp;reason&nbsp;return&nbsp;no&nbsp;data,<br>
+'None'&nbsp;is&nbsp;returned.<br>
+It&nbsp;is&nbsp;not&nbsp;possible&nbsp;to&nbsp;retrieve&nbsp;older&nbsp;subscription&nbsp;results&nbsp;than&nbsp;the&nbsp;ones<br>
+from&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-setCompleteRedYellowGreenDefinition"><strong>setCompleteRedYellowGreenDefinition</strong></a>(tlsID, tls)</dt><dd><tt><a href="#-setCompleteRedYellowGreenDefinition">setCompleteRedYellowGreenDefinition</a>(string,&nbsp;)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-setPhase"><strong>setPhase</strong></a>(tlsID, index)</dt><dd><tt><a href="#-setPhase">setPhase</a>(string,&nbsp;integer)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-setPhaseDuration"><strong>setPhaseDuration</strong></a>(tlsID, phaseDuration)</dt></dl>
+ <dl><dt><a name="-setProgram"><strong>setProgram</strong></a>(tlsID, programID)</dt><dd><tt><a href="#-setProgram">setProgram</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;current&nbsp;program.</tt></dd></dl>
+ <dl><dt><a name="-setRedYellowGreenState"><strong>setRedYellowGreenState</strong></a>(tlsID, state)</dt><dd><tt><a href="#-setRedYellowGreenState">setRedYellowGreenState</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Sets&nbsp;the&nbsp;named&nbsp;tl's&nbsp;state&nbsp;as&nbsp;a&nbsp;tuple&nbsp;of&nbsp;light&nbsp;definitions&nbsp;from&nbsp;rRgGyYoO,&nbsp;for&nbsp;red,&nbsp;green,&nbsp;yellow,&nbsp;off,&nbsp;where&nbsp;lower&nbsp;case&nbsp;letters&nbsp;mean&nbsp;that&nbsp;the&nbsp;stream&nbsp;has&nbsp;to&nbsp;decelerate.</tt></dd></dl>
+ <dl><dt><a name="-subscribe"><strong>subscribe</strong></a>(tlsID, varIDs<font color="#909090">=(40,)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt><dd><tt><a href="#-subscribe">subscribe</a>(string,&nbsp;list(integer),&nbsp;double,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Subscribe&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;traffic&nbsp;light&nbsp;values&nbsp;for&nbsp;the&nbsp;given&nbsp;interval.</tt></dd></dl>
+ <dl><dt><a name="-subscribeContext"><strong>subscribeContext</strong></a>(tlsID, domain, dist, varIDs<font color="#909090">=(40,)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>subscriptionResults</strong> = &lt;{}, {}&gt;</td></tr></table>
+</body></html>

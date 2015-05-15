@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Purgatory/DFROUTER - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Purgatory/DFROUTER</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.004395 from <a href="http://sumo.dlr.de/wiki/Purgatory/DFROUTER">the wiki page for Purgatory/DFROUTER</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Usage"><span class="tocnumber">1</span> <span class="toctext">Usage</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Comments"><span class="tocnumber">2</span> <span class="toctext">Comments</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Why_the_route_distribution_may_be_different_from_what_is_expected"><span class="tocnumber">2.1</span> <span class="toctext">Why the route distribution may be different from what is expected</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Why_variable_speed_signs_show_velocities_of_200m.2Fs"><span class="tocnumber">2.2</span> <span class="toctext">Why variable speed signs show velocities of 200m/s</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Behaviour_to_define"><span class="tocnumber">3</span> <span class="toctext">Behaviour to define</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Tests"><span class="tocnumber">4</span> <span class="toctext">Tests</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#tri_completely_defined"><span class="tocnumber">4.1</span> <span class="toctext">tri_completely_defined</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#tri_no_first"><span class="tocnumber">4.2</span> <span class="toctext">tri_no_first</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#tri_last_only"><span class="tocnumber">4.3</span> <span class="toctext">tri_last_only</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#tri_missing_first_left_values"><span class="tocnumber">4.4</span> <span class="toctext">tri_missing_first_left_values</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#tri_missing_first_left_noempty"><span class="tocnumber">4.5</span> <span class="toctext">tri_missing_first_left_noempty</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Usage">Usage</span></h2>
+<p>See <a href="/w/index.php?title=DfRouterUsage&amp;action=edit&amp;redlink=1" class="new" title="DfRouterUsage (page does not exist)">DfRouterUsage</a> in the <a href="../SUMO_User_Documentation.html" title="SUMO User Documentation">User Documentation</a>.
+</p>
+<h2> <span class="mw-headline" id="Comments">Comments</span></h2>
+<h3> <span class="mw-headline" id="Why_the_route_distribution_may_be_different_from_what_is_expected">Why the route distribution may be different from what is expected</span></h3>
+<ul><li> The time described by the detectors values may end before what shall be generated; if, for example, routes for a whole day shall be generated (b=0, e=86400, the defaults) but the detectors only contain information for one minute, the route distribution is still estimated for the whole day while detector values are missing. In this case, the distribution may differ from what is expected (being the one during the described time).
+</li></ul>
+<h3> <span class="mw-headline" id="Why_variable_speed_signs_show_velocities_of_200m.2Fs">Why variable speed signs show velocities of 200m/s</span></h3>
+<ul><li> If the DFROUTER finds a detector entry with v=0, it sets the allowed velocity in the according vss to 200km/h. The idea is not to set a limit when no valid value exists.
+</li></ul>
+<p><br />
+</p>
+<h2> <span class="mw-headline" id="Behaviour_to_define">Behaviour to define</span></h2>
+<ul><li> What shall be done if a detector value is missing?
+</li></ul>
+<p><br />
+</p>
+<h2> <span class="mw-headline" id="Tests">Tests</span></h2>
+<h3> <span class="mw-headline" id="tri_completely_defined">tri_completely_defined</span></h3>
+<p>Simple network:
+</p><p><a rel="nofollow" class="external free" href="http://sumo.sourceforge.net/wiki_images/dfrouter_tricomplete_net.gif">http://sumo.sourceforge.net/wiki_images/dfrouter_tricomplete_net.gif</a>
+</p><p>All detector values are supplied correctly
+</p>
+<ul><li><ul><li> tri_flows1_1step_straight: the straight direction has 10 vehicles running
+</li><li> tri_flows1_1step_left: the left direction has 10 vehicles running
+</li><li> tri_flows1_1step_right: the right direction has 10 vehicles running
+</li><li> tri_flows1_1step_equal: all directions have 10 vehicles running
+</li><li> tri_flows1_1step_more_straight: the straight direction has 20, left and right have 10 vehicles running
+</li><li> tri_flows1_1step_more_left: the left direction has 20, straight and right have 10 vehicles running
+</li><li> tri_flows1_1step_more_right: the right direction has 20, straight and left have 10 vehicles running
+</li></ul>
+</li></ul>
+<p>Flows from tri_flows1_1step_more_left (the darker the more):
+</p><p><a rel="nofollow" class="external free" href="http://sumo.sourceforge.net/wiki_images/dfrouter_tricomplete_flow_more_left.gif">http://sumo.sourceforge.net/wiki_images/dfrouter_tricomplete_flow_more_left.gif</a>
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id="tri_no_first">tri_no_first</span></h3>
+<p>The first detectors of the left/right arms are missing
+</p><p>This is meant to verify whether a detector may lie on a later edge.
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id="tri_last_only">tri_last_only</span></h3>
+<p>Only the last detectors of the left/right arms exist.
+</p><p>This is meant to verify whether a detector may lie on a later edge.
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id="tri_missing_first_left_values">tri_missing_first_left_values</span></h3>
+<p>All detectors exist (as in tri_completely_defined) but the first detector to left has no value. 
+</p><p>The tests show that:
+</p>
+<ul><li> it is reported that this detector has no value as soon as the option "--report-empty-detectors" is set
+</li><li> the routes change as missing values for the first detector are interpreted as flow=0
+</li></ul>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id="tri_missing_first_left_noempty">tri_missing_first_left_noempty</span></h3>
+<p>Same as (as in tri_missing_first_left_values) but the option "--remove-empty-detectors" is used.
+</p><p>The tests show that:
+</p>
+<ul><li> it is reported that the detector that has no values is removed from the list of known detectors
+</li><li> the original routes are restored (thos from tri_completely_defined) because the subsequent detectors on the left arm have correct flows
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 43/1000000
+Preprocessor generated node count: 48/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:415-0!*!0!!en!*!* and timestamp 20150330202632 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 14 July 2011, at 11:34.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

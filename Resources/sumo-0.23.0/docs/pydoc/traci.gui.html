@@ -1,0 +1,103 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module traci.gui</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="traci.html"><font color="#ffffff">traci</font></a>.gui</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/traci/gui.py">/home/behr_mi/sumo/tools/traci/gui.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;gui.py<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@author&nbsp;&nbsp;Daniel&nbsp;Krajzewicz<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2011-03-09<br>
+@version&nbsp;$Id:&nbsp;gui.py&nbsp;18096&nbsp;2015-03-17&nbsp;09:50:59Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;TraCI&nbsp;interface.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2011-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top><a href="traci.constants.html">traci.constants</a><br>
+</td><td width="25%" valign=top><a href="traci.html">traci</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-getBoundary"><strong>getBoundary</strong></a>(viewID<font color="#909090">='View #0'</font>)</dt><dd><tt><a href="#-getBoundary">getBoundary</a>(string):&nbsp;-&gt;&nbsp;((double,&nbsp;double),&nbsp;(double,&nbsp;double))<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;the&nbsp;lower&nbsp;left&nbsp;and&nbsp;the&nbsp;upper&nbsp;right&nbsp;corner&nbsp;of&nbsp;the&nbsp;currently&nbsp;visible&nbsp;view.</tt></dd></dl>
+ <dl><dt><a name="-getContextSubscriptionResults"><strong>getContextSubscriptionResults</strong></a>(viewID<font color="#909090">=None</font>)</dt></dl>
+ <dl><dt><a name="-getIDList"><strong>getIDList</strong></a>()</dt><dd><tt><a href="#-getIDList">getIDList</a>():&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;list&nbsp;of&nbsp;available&nbsp;views&nbsp;(open&nbsp;windows).</tt></dd></dl>
+ <dl><dt><a name="-getOffset"><strong>getOffset</strong></a>(viewID<font color="#909090">='View #0'</font>)</dt><dd><tt><a href="#-getOffset">getOffset</a>(string):&nbsp;-&gt;&nbsp;(double,&nbsp;double)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;x&nbsp;and&nbsp;y&nbsp;offset&nbsp;of&nbsp;the&nbsp;center&nbsp;of&nbsp;the&nbsp;current&nbsp;view.</tt></dd></dl>
+ <dl><dt><a name="-getSchema"><strong>getSchema</strong></a>(viewID<font color="#909090">='View #0'</font>)</dt><dd><tt><a href="#-getSchema">getSchema</a>(string):&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;current&nbsp;coloring&nbsp;scheme.</tt></dd></dl>
+ <dl><dt><a name="-getSubscriptionResults"><strong>getSubscriptionResults</strong></a>(viewID<font color="#909090">=None</font>)</dt><dd><tt><a href="#-getSubscriptionResults">getSubscriptionResults</a>(string)&nbsp;-&gt;&nbsp;dict(integer:&nbsp;&lt;value_type&gt;)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;subscription&nbsp;results&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step&nbsp;and&nbsp;the&nbsp;given&nbsp;view.<br>
+If&nbsp;no&nbsp;view&nbsp;id&nbsp;is&nbsp;given,&nbsp;all&nbsp;subscription&nbsp;results&nbsp;are&nbsp;returned&nbsp;in&nbsp;a&nbsp;dict.<br>
+If&nbsp;the&nbsp;view&nbsp;id&nbsp;is&nbsp;unknown&nbsp;or&nbsp;the&nbsp;subscription&nbsp;did&nbsp;for&nbsp;any&nbsp;reason&nbsp;return&nbsp;no&nbsp;data,<br>
+'None'&nbsp;is&nbsp;returned.<br>
+It&nbsp;is&nbsp;not&nbsp;possible&nbsp;to&nbsp;retrieve&nbsp;older&nbsp;subscription&nbsp;results&nbsp;than&nbsp;the&nbsp;ones<br>
+from&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getZoom"><strong>getZoom</strong></a>(viewID<font color="#909090">='View #0'</font>)</dt><dd><tt><a href="#-getZoom">getZoom</a>(string):&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;current&nbsp;zoom&nbsp;factor.</tt></dd></dl>
+ <dl><dt><a name="-screenshot"><strong>screenshot</strong></a>(viewID, filename)</dt><dd><tt><a href="#-screenshot">screenshot</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Save&nbsp;a&nbsp;screenshot&nbsp;for&nbsp;the&nbsp;given&nbsp;view&nbsp;to&nbsp;the&nbsp;given&nbsp;filename.<br>
+The&nbsp;fileformat&nbsp;is&nbsp;guessed&nbsp;from&nbsp;the&nbsp;extension,&nbsp;the&nbsp;available&nbsp;<br>
+formats&nbsp;differ&nbsp;from&nbsp;platform&nbsp;to&nbsp;platform&nbsp;but&nbsp;should&nbsp;at&nbsp;least<br>
+include&nbsp;ps,&nbsp;svg&nbsp;and&nbsp;pdf,&nbsp;on&nbsp;linux&nbsp;probably&nbsp;gif,&nbsp;png&nbsp;and&nbsp;jpg&nbsp;as&nbsp;well.</tt></dd></dl>
+ <dl><dt><a name="-setBoundary"><strong>setBoundary</strong></a>(viewID, xmin, ymin, xmax, ymax)</dt><dd><tt><a href="#-setBoundary">setBoundary</a>(string,&nbsp;double,&nbsp;double,&nbsp;double,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;current&nbsp;boundary&nbsp;for&nbsp;the&nbsp;given&nbsp;view&nbsp;(see&nbsp;<a href="#-getBoundary">getBoundary</a>()).</tt></dd></dl>
+ <dl><dt><a name="-setOffset"><strong>setOffset</strong></a>(viewID, x, y)</dt><dd><tt><a href="#-setOffset">setOffset</a>(string,&nbsp;double,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;current&nbsp;offset&nbsp;for&nbsp;the&nbsp;given&nbsp;view.</tt></dd></dl>
+ <dl><dt><a name="-setSchema"><strong>setSchema</strong></a>(viewID, schemeName)</dt><dd><tt><a href="#-setSchema">setSchema</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;current&nbsp;coloring&nbsp;scheme&nbsp;for&nbsp;the&nbsp;given&nbsp;view.</tt></dd></dl>
+ <dl><dt><a name="-setZoom"><strong>setZoom</strong></a>(viewID, zoom)</dt><dd><tt><a href="#-setZoom">setZoom</a>(string,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Set&nbsp;the&nbsp;current&nbsp;zoom&nbsp;factor&nbsp;for&nbsp;the&nbsp;given&nbsp;view.</tt></dd></dl>
+ <dl><dt><a name="-subscribe"><strong>subscribe</strong></a>(viewID, varIDs<font color="#909090">=(161,)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt><dd><tt><a href="#-subscribe">subscribe</a>(string,&nbsp;list(integer),&nbsp;double,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Subscribe&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;gui&nbsp;values&nbsp;for&nbsp;the&nbsp;given&nbsp;interval.</tt></dd></dl>
+ <dl><dt><a name="-subscribeContext"><strong>subscribeContext</strong></a>(viewID, domain, dist, varIDs<font color="#909090">=(161,)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt></dl>
+ <dl><dt><a name="-trackVehicle"><strong>trackVehicle</strong></a>(viewID, vehID)</dt><dd><tt><a href="#-trackVehicle">trackVehicle</a>(string,&nbsp;string)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Start&nbsp;visually&nbsp;tracking&nbsp;the&nbsp;given&nbsp;vehicle&nbsp;on&nbsp;the&nbsp;given&nbsp;view.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DEFAULT_VIEW</strong> = 'View #0'<br>
+<strong>subscriptionResults</strong> = &lt;{}, {}&gt;</td></tr></table>
+</body></html>

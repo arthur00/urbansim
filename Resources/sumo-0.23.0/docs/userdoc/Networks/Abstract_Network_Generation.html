@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Networks/Abstract_Network_Generation - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Networks/Abstract Network Generation</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.972809 from <a href="http://sumo.dlr.de/wiki/Networks/Abstract_Network_Generation">the wiki page for Networks/Abstract_Network_Generation</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a> allows to build three types of abstract networks: grid-networks, spider-networks and random networks.
+</p><p>You always have to supply the name of the network to generate using <span style="color: #111144; font-weight: bold; white-space: pre;">--output</span> <span style="color: #442200; font-style: italic;">&lt;FILENAME&gt;</span> or <span style="color: #111144; font-weight: bold; white-space: pre;">-o</span> <span style="color: #442200; font-style: italic;">&lt;FILENAME&gt;</span> for short and the type of network you want to create. So, exactly one of the following switches must be supported: <span style="color: #111144; font-weight: bold; white-space: pre;">--grid-net</span>, <span style="color: #111144; font-weight: bold; white-space: pre;">--spider-net</span> or <span style="color: #111144; font-weight: bold; white-space: pre;">--random-net</span>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Grid-like_Networks"><span class="tocnumber">1</span> <span class="toctext">Grid-like Networks</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Spider-like_Networks"><span class="tocnumber">2</span> <span class="toctext">Spider-like Networks</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Random_Networks"><span class="tocnumber">3</span> <span class="toctext">Random Networks</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Further_Options"><span class="tocnumber">4</span> <span class="toctext">Further Options</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Grid-like_Networks">Grid-like Networks</span></h2>
+<p>You are able to describe how many junctions in x- and in y-direction you want to be build and how far from each other they should be. The parameter for the number of junctions are <span style="color: #111144; font-weight: bold; white-space: pre;">--grid-x-number</span> and <span style="color: #111144; font-weight: bold; white-space: pre;">--grid-y-number</span>, the ones for the distance between the junctions <span style="color: #111144; font-weight: bold; white-space: pre;">--grid-x-length</span> and <span style="color: #111144; font-weight: bold; white-space: pre;">--grid-y-length</span>. If you want to build networks which have the same values for both axes, use <span style="color: #111144; font-weight: bold; white-space: pre;">--grid-number</span> and <span style="color: #111144; font-weight: bold; white-space: pre;">--grid-length</span>. The lengths are given in meters. It is possible to give another option <span style="color: #111144; font-weight: bold; white-space: pre;">--attach-length</span>, which adds streets of the given length at the boundary of the grid such that all crossings have four streets (It is not yet possible to have different attach lengths for x- and y-direction).
+</p><p>An example usage for building could be:
+</p>
+<pre>netgenerate --grid-net --grid-number=10 --grid-length=400 --output-file=MySUMOFile.net.xml
+</pre>
+<p>Another one:
+</p>
+<pre>netgenerate --grid-net --grid-x-number=20 --grid-y-number=5 \
+ --grid-y-length=40 --grid-x-length=200 --output-file=MySUMOFile.net.xml
+</pre>
+<p>These calls will generate the following networks, respectively:
+</p>
+<ul class="gallery" style="max-width: 486px;_width: 486px;">
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:16.5px auto;"><a href="../images/Netgen_grid1.gif" class="image"><img alt="Netgen grid1.gif" src="../images//Netgen_grid1.gif" width="200" height="197" /></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:77.5px auto;"><a href="../images/Netgen_grid2.gif" class="image"><img alt="Netgen grid2.gif" src="../images/Netgen_grid2.gif" width="200" height="75" /></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+</ul>
+<p><br />
+</p>
+<h2> <span class="mw-headline" id="Spider-like_Networks">Spider-like Networks</span></h2>
+<p>Spider-net networks are defined by the number of axes dividing them (parameter <span style="color: #111144; font-weight: bold; white-space: pre;">--spider-arm-number</span> or <span style="color: #111144; font-weight: bold; white-space: pre;">--arms</span>, default is 13), the number of the circles they are made of (<span style="color: #111144; font-weight: bold; white-space: pre;">--spider-circle-number</span> or <span style="color: #111144; font-weight: bold; white-space: pre;">--circles</span>, default is 20) and the distance between the circles (<span style="color: #111144; font-weight: bold; white-space: pre;">--spider-space-rad</span> or <span style="color: #111144; font-weight: bold; white-space: pre;">--radius</span> in meters, default is 100).
+</p>
+<div style="background: #ffcc44; padding: .5em; border: 1px dashed #ff8800; margin-right:10px; margin-left:10px;"><b>Caution:</b><br />As the number of edges within the middle of the spider net may be quite large, it is often not possible to build a traffic light junction here. Due to this, this junction is always unregulated.</div>
+<p>Optionally you can omit the central junction of the network by specifying <span style="color: #111144; font-weight: bold; white-space: pre;">--spider-omit-center</span> or <span style="color: #111144; font-weight: bold; white-space: pre;">--nocenter</span>. This also gives an easy way of generating a circle network. Using for instance 
+</p>
+<pre>netgenerate --spider-net --spider-omit-center --output-file=MySUMOFile.net.xml
+</pre>
+<p>will create a circle consisting of 13 elements with a radius of 100m.
+</p><p>Two examples of usage:
+</p>
+<pre>netgenerate --spider-net --spider-arm-number=10 --spider-circle-number=10 \
+ --spider-space-rad=100 --output-file=MySUMOFile.net.xml
+</pre>
+<p>and:
+</p>
+<pre>netgenerate --spider-net --spider-arm-number=4 --spider-circle-number=3 \
+ --spider-space-rad=100 --output-file=MySUMOFile.net.xml
+</pre>
+<p>These calls will generate the following networks, respectively:
+</p>
+<ul class="gallery" style="max-width: 486px;_width: 486px;">
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:21px auto;"><a href="../images/Netgen_spider1.gif" class="image"><img alt="Netgen spider1.gif" src="../images//Netgen_spider1.gif" width="200" height="188" /></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:15px auto;"><a href="../images/Netgen_spider2.gif" class="image"><img alt="Netgen spider2.gif" src="../images//Netgen_spider2.gif" width="200" height="200" /></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+</ul>
+<h2> <span class="mw-headline" id="Random_Networks">Random Networks</span></h2>
+<p>The random network generator does just what its name says, it builds random networks. Several settings may be changed:
+</p>
+<ul><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.iterations</span> <span style="color: #442200; font-style: italic;">&lt;INT&gt;</span>:
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.bidi-probability</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>: the probability to build a reverse edge
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.max-distance</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>: the maximum edge length
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.min-distance</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>: the minimum edge length
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.min-angle</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>: the minimum angle between two edges
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.num-tries</span> <span style="color: #442200; font-style: italic;">&lt;INT&gt;</span>:
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.connectivity</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>:
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.neighbor-dist1</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>:
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.neighbor-dist2</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>:
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.neighbor-dist3</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>:
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.neighbor-dist4</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>:
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.neighbor-dist5</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>:
+</li><li> <span style="color: #111144; font-weight: bold; white-space: pre;">--rand.neighbor-dist6</span> <span style="color: #442200; font-style: italic;">&lt;FLOAT&gt;</span>:
+</li></ul>
+<p>An example:
+</p>
+<pre>netgenerate --rand -o MySUMOFile.net.xml --rand.iterations=200
+</pre>
+<p>This call will generate the following network:
+</p>
+<ul class="gallery" style="max-width: 243px;_width: 243px;">
+		<li class="gallerybox" style="width: 235px"><div style="width: 235px">
+			<div class="thumb" style="width: 230px;"><div style="margin:20.5px auto;"><a href="../images/Netgen_random1.gif" class="image"><img alt="Netgen random1.gif" src="../images//Netgen_random1.gif" width="200" height="189" /></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+</ul>
+<h2> <span class="mw-headline" id="Further_Options">Further Options</span></h2>
+<p>All abstract network types share some command line options. As all networks may possess junctions, you are able to set the default type of junctions to build using the <span style="color: #111144; font-weight: bold; white-space: pre;">--default-junction-type-option</span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-j</span> for short). The following junction types are allowed in accordance to the junction types currently known by the simulation: priority, traffic_light.
+</p><p>Further, you can specify the default street type by using the same options as in the <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>-application.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 395/1000000
+Preprocessor generated node count: 1118/1000000
+Post‐expand include size: 4518/2097152 bytes
+Template argument size: 814/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:186-0!*!0!!en!*!* and timestamp 20150330202620 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 11 December 2012, at 00:53.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

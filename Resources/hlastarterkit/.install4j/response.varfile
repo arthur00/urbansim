@@ -1,0 +1,8 @@
+#install4j response file for HLA Starter Kit 1.0.0
+#Tue May 12 15:15:57 PDT 2015
+sys.programGroupAllUsers$Boolean=true
+sys.programGroupDisabled$Boolean=false
+sys.languageId=en
+sys.programGroupName=HLA Starter Kit
+sys.adminRights$Boolean=true
+sys.installationDir=C\:\\Users\\Arthur Valadares\\Copy\\Projects\\hlastarterkit

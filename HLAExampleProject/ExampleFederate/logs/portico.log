@@ -1,0 +1,62 @@
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JCouldNotOpenFED: Error opening fed file from [file:/C:/Users/Arthur%20Valadares/workspace/ExampleFederate/foms/RestaurantProcesses.xml]: C:\Users\Arthur Valadares\workspace\ExampleFederate\foms\RestaurantProcesses.xml (The system cannot find the path specified)
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE destoryFederation [HLA Tutorial]: doesn't exist
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionDoesNotExist: doesn't exist: HLA Tutorial
+ERROR [main] portico.lrc: org.portico.lrc.compat.JCouldNotOpenFED: Error opening fed file from [file:/C:/Users/Arthur%20Valadares/Copy/workspace/ExampleFederate/../../../fom/FuelEconomyBase.xml]: C:\Users\Arthur Valadares\Copy\workspace\ExampleFederate\..\..\..\fom\FuelEconomyBase.xml (The system cannot find the path specified)
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE destoryFederation [HLA Tutorial]: doesn't exist
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionDoesNotExist: doesn't exist: HLA Tutorial
+ERROR [main] portico.lrc: org.jgroups.TimeoutException: TimeoutException
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederateNotExecutionMember: 
+ERROR [main] portico.lrc: org.jgroups.TimeoutException: TimeoutException
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=ExampleFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederateAlreadyExecutionMember: federate name in use: exampleFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1]
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=ExampleFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: SUBSCRIBE-INTERACTION: class not defined: 815
+org.portico.lrc.compat.JInteractionClassNotDefined: SUBSCRIBE-INTERACTION: class not defined: 815
+	at org.portico.lrc.services.object.data.InterestManager.register(InterestManager.java:484)
+	at org.portico.lrc.services.object.data.InterestManager.register(InterestManager.java:443)
+	at org.portico.lrc.services.object.data.InterestManager.subscribeInteractionClass(InterestManager.java:991)
+	at org.portico.lrc.services.pubsub.handlers.incoming.SubscribeInteractionClassIncomingHandler.process(SubscribeInteractionClassIncomingHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.tick(LRC.java:547)
+	at org.portico.impl.hla1516e.Impl1516eHelper.evokeMultiple(Impl1516eHelper.java:157)
+	at org.portico.impl.hla1516e.Rti1516eAmbassador.evokeMultipleCallbacks(Rti1516eAmbassador.java:5402)
+	at ieee1516e.ExampleFederate.runFederate(ExampleFederate.java:265)
+	at ieee1516e.ExampleFederate.main(ExampleFederate.java:560)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: PUBLISH-INTERACTION: class not defined: 812
+org.portico.lrc.compat.JInteractionClassNotDefined: PUBLISH-INTERACTION: class not defined: 812
+	at org.portico.lrc.services.object.data.InterestManager.register(InterestManager.java:484)
+	at org.portico.lrc.services.object.data.InterestManager.register(InterestManager.java:443)
+	at org.portico.lrc.services.object.data.InterestManager.publishInteractionClass(InterestManager.java:945)
+	at org.portico.lrc.services.pubsub.handlers.incoming.PublishInteractionClassIncomingHandler.process(PublishInteractionClassIncomingHandler.java:69)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.tick(LRC.java:556)
+	at org.portico.impl.hla1516e.Impl1516eHelper.evokeMultiple(Impl1516eHelper.java:157)
+	at org.portico.impl.hla1516e.Rti1516eAmbassador.evokeMultipleCallbacks(Rti1516eAmbassador.java:5402)
+	at ieee1516e.ExampleFederate.runFederate(ExampleFederate.java:265)
+	at ieee1516e.ExampleFederate.main(ExampleFederate.java:560)
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE destoryFederation [ExampleFederation]: doesn't exist
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionDoesNotExist: doesn't exist: ExampleFederation
+WARN  [VERIFY_SUSPECT.TimerThread,ExampleFederation,avaladar-62230] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE destoryFederation [ExampleFederation]: doesn't exist
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionDoesNotExist: doesn't exist: ExampleFederation
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE destoryFederation [ExampleFederate]: doesn't exist
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionDoesNotExist: doesn't exist: ExampleFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE destoryFederation [ExampleFederate]: doesn't exist
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionDoesNotExist: doesn't exist: ExampleFederate

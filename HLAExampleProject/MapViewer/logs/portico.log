@@ -1,0 +1,22 @@
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1]
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=ExampleFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+WARN  [AWT-EventQueue-0] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [AWT-EventQueue-0] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [AWT-EventQueue-0] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1]
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1]
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=ExampleFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1]
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=ExampleFederate
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederate
+WARN  [AWT-EventQueue-0] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [AWT-EventQueue-0] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [AWT-EventQueue-0] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1, 3]
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1]
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=ExampleFederate
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederate

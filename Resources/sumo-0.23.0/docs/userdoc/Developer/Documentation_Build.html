@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Developer/Documentation_Build - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Developer/Documentation Build</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.905844 from <a href="http://sumo.dlr.de/wiki/Developer/Documentation_Build">the wiki page for Developer/Documentation_Build</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>When accessing SUMO web space, you will find an index page, and several additional HTML pages. You will also find a link to a wiki, a trac instance, and a blog. In the following, it is described how these documentation parts are build, and mirrored.
+</p><p>After some tries, we decided to work as following:
+</p>
+<ul><li> The documentation is "developed" within the wiki; the wiki refers to the state of the package as-is within the SVN.
+</li><li> The HTML documentation is generated from the wiki
+</li></ul>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Documentation_Parts"><span class="tocnumber">1</span> <span class="toctext">Documentation Parts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Wiki"><span class="tocnumber">1.1</span> <span class="toctext">Wiki</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#HTML_pages"><span class="tocnumber">1.2</span> <span class="toctext">HTML pages</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#WebLog"><span class="tocnumber">1.3</span> <span class="toctext">WebLog</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#trac"><span class="tocnumber">1.4</span> <span class="toctext">trac</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#HTML_pages_generation"><span class="tocnumber">2</span> <span class="toctext">HTML pages generation</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Documentation_Parts">Documentation Parts</span></h1>
+<h2> <span class="mw-headline" id="Wiki">Wiki</span></h2>
+<p><b>scope</b>
+</p>
+<dl><dd>The wiki should include the complete user documentation, as well as finalised developer documents, and any kind of additional documentation as long as it is in a state which can be presented. Incomplete or outdated wiki documents should have the prefix "Purgatory/" and should not be linked from any other documents.
+</dd></dl>
+<p><b>rights</b>
+</p>
+<dl><dd>The rights to edit the wiki are given to known users on request.
+</dd></dl>
+<p><b>backup</b>
+</p>
+<dl><dd><font color="red">Redescribe</font>; Wiki-pages can be mirrored using <i>tools/build/mirrorWiki.py</i>
+</dd></dl>
+<p>There are currently two options for looking up information from wiki versions before 0.13.1
+</p>
+<ul><li> Use the wiki-history for an individual wiki page
+</li><li> Use the <i>sumo-user.pdf</i> included in older releases. This pdf was compiled from the wiki at the time of the release and should contain most of the wiki content.
+</li></ul>
+<h2> <span class="mw-headline" id="HTML_pages">HTML pages</span></h2>
+<p><b>scope</b>
+</p>
+<dl><dd>HTML pages contain all information stored in the wiki at the time of the last release.
+</dd></dl>
+<p><b>rights</b>
+</p>
+<dl><dd>HTML pages are generated and uploaded by SUMO developers which have access to the web space.
+</dd></dl>
+<p><b>backup</b>
+</p>
+<dl><dd>A HTML-backup of the wiki is created as part of the linux build. The file <i><b>&lt;SUMO_HOME&gt;</b></i> <i>/Makefile.am</i> defines the task <i>wikidump</i> which calls the script <i>tools/build/buildHTMLDocs.py</i> to create an offline-browsable mirror (excluding special pages such as history and discussion). The backup is included in the regular release starting at version 0.13.1.
+</dd></dl>
+<h2> <span class="mw-headline" id="WebLog">WebLog</span></h2>
+<p><b>scope</b>
+</p>
+<dl><dd>Should include information about current events.
+</dd></dl>
+<p><b>rights</b>
+</p>
+<dl><dd>SUMO developers are responsible for adding items to the blog.
+</dd></dl>
+<p><b>backup</b>
+</p>
+<dl><dd><font color="red">Missing!!!</font>
+</dd></dl>
+<h2> <span class="mw-headline" id="trac">trac</span></h2>
+<p><b>scope</b>
+</p>
+<dl><dd>trac is used for planning releases and tracking bugs/other work items.
+</dd></dl>
+<p><b>rights</b>
+</p>
+<dl><dd>SUMO developers are allowed to modify trac.
+</dd></dl>
+<p><b>backup</b>
+</p>
+<dl><dd><font color="red">Missing!!!</font>
+</dd></dl>
+<h1> <span class="mw-headline" id="HTML_pages_generation">HTML pages generation</span></h1>
+<p>The HTML documentation pages are built from the wiki. All scripts needed are located in <i><b>&lt;SUMO_HOME&gt;</b></i>/tools/build. <code>buildHTMLDocs.py</code> is used to retrieve the HTML-representation of wiki-pages. If started with a parameter, this parameter is assumed to be the name of the page to retrieve. If no parameter is given, <code>getWikiPages.py</code> retrieves the list of all pages, first, from Special::AllPages.
+</p><p>Each of the pages to retrieve is read from the wiki and stripped so that it contains the article HTML only. Links are patched to match the depth of the folder the page is located in. <code>buildHTMLDocs.py</code> changes the links included in this result and retrieves the embedded images (only the "normal" version, no thumbnails) and saves the resulting HTML with no header/tail into a file located in "mirror" named using the articles' name. The folder "mirror" is generated.
+</p><p>All images found in the read pages are retrieved and stored in "mirror/images".
+</p><p>The HTML template is located in <i><b>&lt;SUMO_HOME&gt;</b></i>/docs/wiki as "index.html". <code>getWikiPages.py</code> reads the wiki-text of "SUMO User Documentation", extracts the content list, parses it into HTML, and embeds it into "index.html" between the comments &lt;!-- nav begins --&gt; and &lt;!-- nav ends --&gt;.
+</p><p>Then, the pages to convert stored in "mirror" are read and their content is inserted into "index.html" between the comments &lt;!-- content begins --&gt; and &lt;!-- content ends --&gt;. The so obtained HTML-pages are stored into "docs". 
+</p><p>The images stored in "mirror/images" are copied to "docs/images".
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 32/1000000
+Preprocessor generated node count: 60/1000000
+Post‐expand include size: 63/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:175-0!*!*!!en!*!* and timestamp 20150330202600 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 22 December 2011, at 10:28.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>SUMO - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="Installing.html">Installing SUMO</a></li>
+  <li><a href="Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="Simulation/Output.html">Simulation output</a></li>
+  <li><a href="TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="Models/Emissions.html">Emissions</a></li>
+  <li><a href="Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Other/Glossary.html">Glossary</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+  <li><a href="Tools/Main.html">Additional Tools</a></li>
+  <li><a href="Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="SUMO.html">SUMO</a></li>
+   <li><a href="SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="DFROUTER.html">DFROUTER</a></li>
+   <li><a href="MAROUTER.html">MAROUTER</a></li>
+   <li><a href="POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">SUMO</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.013679 from <a href="http://sumo.dlr.de/wiki/SUMO">the wiki page for SUMO</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#From_30.000_feet"><span class="tocnumber">1</span> <span class="toctext">From 30.000 feet</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Usage_Description"><span class="tocnumber">2</span> <span class="toctext">Usage Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Options"><span class="tocnumber">2.1</span> <span class="toctext">Options</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Configuration"><span class="tocnumber">2.1.1</span> <span class="toctext">Configuration</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Input"><span class="tocnumber">2.1.2</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Output"><span class="tocnumber">2.1.3</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Time"><span class="tocnumber">2.1.4</span> <span class="toctext">Time</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Processing"><span class="tocnumber">2.1.5</span> <span class="toctext">Processing</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Routing"><span class="tocnumber">2.1.6</span> <span class="toctext">Routing</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Report"><span class="tocnumber">2.1.7</span> <span class="toctext">Report</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Emissions"><span class="tocnumber">2.1.8</span> <span class="toctext">Emissions</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Communication"><span class="tocnumber">2.1.9</span> <span class="toctext">Communication</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Example_Device"><span class="tocnumber">2.1.10</span> <span class="toctext">Example Device</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Traci_Server"><span class="tocnumber">2.1.11</span> <span class="toctext">Traci Server</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Random_Number"><span class="tocnumber">2.1.12</span> <span class="toctext">Random Number</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Gui_Only"><span class="tocnumber">2.1.13</span> <span class="toctext">Gui Only</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Loading_order_of_input_files"><span class="tocnumber">3</span> <span class="toctext">Loading order of input files</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Format_of_additional_files"><span class="tocnumber">4</span> <span class="toctext">Format of additional files</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Insertion_of_vehicles"><span class="tocnumber">5</span> <span class="toctext">Insertion of vehicles</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Subtopics"><span class="tocnumber">6</span> <span class="toctext">Subtopics</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="From_30.000_feet">From 30.000 feet</span></h1>
+<p><b>SUMO</b> is the simulation itself; it is a microscopic, space-continuous, and time-discrete traffic flow simulation.
+</p>
+<dl><dt>
+</dt><dd><b>Purpose:</b> Simulates a defined scenario
+</dd><dd><b>System:</b> portable (Linux/Windows is tested); runs on command line
+<dl><dt><b>Input (mandatory):</b>
+</dt><dd>A) a road network as generated via <a href="NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> or <a href="NETGENERATE.html" title="NETGENERATE">NETGENERATE</a>, see <a href="SUMO_User_Documentation.html#Network_Building" title="SUMO User Documentation">Building Networks</a> 
+</dd><dd>B) a set of routes (as generated by <a href="DUAROUTER.html" title="DUAROUTER">DUAROUTER</a>, <a href="JTRROUTER.html" title="JTRROUTER">JTRROUTER</a>, <a href="DFROUTER.html" title="DFROUTER">DFROUTER</a>, or <a href="ACTIVITYGEN.html" title="ACTIVITYGEN">ACTIVITYGEN</a>, see also <a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html" title="Definition of Vehicles, Vehicle Types, and Routes">Definition of Vehicles, Vehicle Types, and Routes</a>)
+</dd></dl>
+</dd><dd><b>Input (optional):</b> Additional definitions of traffic lights, variable speed signs, output detectors etc.
+</dd><dd><b>Output:</b> SUMO allows to generate a wide set of outputs; visualization is done using <a href="SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a>
+</dd><dd><b>Programming Language:</b> C++
+</dd></dl>
+<h1> <span class="mw-headline" id="Usage_Description">Usage Description</span></h1>
+<h2> <span class="mw-headline" id="Options">Options</span></h2>
+<p>You may use a XML schema definition file for setting up a SUMO configuration: <a rel="nofollow" class="external text" href="http://sumo-sim.org/xsd/sumoConfiguration.xsd">sumoConfiguration.xsd</a>.
+</p>
+<h3> <span class="mw-headline" id="Configuration">Configuration</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-c <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--configuration-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Loads the named config on startup
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-configuration <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Saves current configuration into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-template <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Saves a configuration template (empty) into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-schema <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Saves the configuration schema into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-commented <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Adds comments to saved template, configuration, or schema; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Input">Input</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-n <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--net-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Load road network description from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-r <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--route-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Load routes descriptions from FILE(s)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-a <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--additional-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Load further descriptions from FILE(s)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-w <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--weight-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Load edge/lane weights for online rerouting from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-x <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--weight-attribute <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Name of the xml attribute which gives the edge weight; <i>default: <b>traveltime</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--load-state <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Loads a network state from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--load-state.offset <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Sets the time offset for vehicle segment exit times; <i>default: <b>0</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Output">Output</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--output-prefix <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prefix which is applied to all output files. The special string 'TIME' is replaced by the current time.
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--netstate-dump <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save complete network states into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--netstate-dump.empty-edges <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write also empty edges completely when dumping; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--netstate-dump.precision <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write positions and speeds with the given precision (default 2); <i>default: <b>2</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--emission-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save the emission values of each vehicle
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--fcd-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save the Floating Car Data
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--fcd-output.geo <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save the Floating Car Data using geo-coordinates (lon/lat); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--fcd-output.signals <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Add the vehicle signal state to the FCD output (brake lights etc.); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--full-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save a lot of information for each timestep (very redundant)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--queue-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save the vehicle queues at the junctions (experimental)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vtk-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save complete vehicle positions inclusive speed values in the VTK Format (usage: /path/out will produce /path/out_$TIMESTEP$.vtp files)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--amitran-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save the vehicle trajectories in the Amitran format
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--summary-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save aggregated vehicle departure info into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tripinfo-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save single vehicle trip info into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tripinfo-output.write-unfinished <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write tripinfo output for vehicles which have not arrived at simulation end; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vehroute-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save single vehicle route info into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vehroute-output.exit-times <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write the exit times for all edges; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vehroute-output.last-route <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write the last route only; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vehroute-output.sorted <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Sorts the output by departure time; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vehroute-output.dua <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write the output in the duarouter alternatives style; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vehroute-output.intended-depart <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write the output with the intended instead of the real departure time; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vehroute-output.write-unfinished <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write vehroute output for vehicles which have not arrived at simulation end; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--link-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save links states into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--bt-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save bt visibilities into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-state.times {{DT_INT[]}}</span>
+</td>
+<td style="vertical-align:top"> Use INT[] as times at which a network state written
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-state.prefix <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prefix for network states; <i>default: <b>state</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-state.files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Files for network states
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Time">Time</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-b <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--begin <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Defines the begin time; The simulation starts at this time; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-e <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--end <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Defines the end time; The simulation ends at this time; <i>default: <b>-1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--step-length <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Defines the step duration; <i>default: <b>1</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Processing">Processing</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-s <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--route-steps <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Load routes for the next number of seconds ahead; <i>default: <b>200</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-internal-links <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Disable (junction) internal links; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-junction-blocker <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Ignore vehicles which block the junction after they have been standing for SECONDS (-1 means never ignore); <i>default: <b>-1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-accidents <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Do not check whether accidents occur; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-route-errors <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Do not check whether routes are connected; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--max-num-vehicles <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Quit simulation if this number of vehicles is exceeded; <i>default: <b>-1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--scale <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Scale demand by the given factor (0..1)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--time-to-teleport <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Specify how long a vehicle may wait until being teleported, defaults to 300, non-positive values disable teleporting; <i>default: <b>300</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--time-to-teleport.highways <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The waiting time after which vehicles on a fast road (speed &gt; 69m/s) are teleported if they are on a non-continuing lane; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--max-depart-delay <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> How long vehicles wait for departure before being skipped, defaults to -1 which means vehicles are never skipped; <i>default: <b>-1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--sloppy-insert <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Whether insertion on an edge shall not be repeated in same step once failed; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--eager-insert <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Whether each vehicle is checked separately for insertion on an edge; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--random-depart-offset <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Each vehicle receives a random offset to its depart value drawn uniformly from [0, TIME]; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--lanechange.allow-swap <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Whether blocking vehicles trying to change lanes may be swapped; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--lanechange.duration <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Duration of a lane change maneuver (default 0); <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--lanechange.overtake-right <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Whether overtaking on the right on motorways is permitted; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--pedestrian.model <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Select among pedestrian models ['nonInteracting', 'striping']; <i>default: <b>striping</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--pedestrian.striping.stripe-width <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Width of parallel stripes for segmenting a sidewalk (meters) for use with model 'striping'; <i>default: <b>0.65</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--pedestrian.striping.dawdling <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> factor for random slow-downs [0,1] for use with model 'striping'; <i>default: <b>0.2</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--pedestrian.striping.jamtime <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Time in seconds after which pedestrians start squeezing through a jam when using model 'striping' (non-positive values disable squeezing); <i>default: <b>300</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Routing">Routing</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--routing-algorithm <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Select among routing algorithms ['dijkstra', 'astar', 'CH', 'CHWrapper']; <i>default: <b>dijkstra</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--weights.random-factor <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Edge weights for routing are dynamically disturbed by a random factor between [1,FLOAT]
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.probability <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The probability for a vehicle to have a 'rerouting' device; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.explicit <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Assign a 'rerouting' device to named vehicles
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.deterministic <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The 'rerouting' devices are set deterministic using a fraction of 1000; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.period <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The period with which the vehicle shall be rerouted; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.pre-period <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The rerouting period before depart; <i>default: <b>1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.adaptation-weight <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The weight of prior edge weights; <i>default: <b>0.5</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.adaptation-interval <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The interval for updating the edge weights; <i>default: <b>1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.with-taz <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Use zones (districts) as routing end points; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.init-with-loaded-weights <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Use given weight files for initializing edge weights; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.shortest-path-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Initialize lookup table for astar from the given distance matrix
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.threads <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The number of parallel execution threads used for rerouting; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.rerouting.output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Save adapting weights to FILE
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Report">Report</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-v <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--verbose <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Switches to verbose output; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--print-options <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prints option values before processing; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-? <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--help <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prints this screen; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-V <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--version <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prints the current version; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-X <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--xml-validation <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Set schema validation scheme of XML inputs ("never", "auto" or "always"); <i>default: <b>auto</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--xml-validation.net <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Set schema validation scheme of SUMO network inputs ("never", "auto" or "always"); <i>default: <b>never</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-W <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-warnings <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Disables output of warnings; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-l <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--log <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes all messages to FILE (implies verbose)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--message-log <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes all non-error messages to FILE (implies verbose)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--error-log <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes all warnings and errors to FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-duration-log <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Disable performance reports for individual simulation steps; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-step-log <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Disable console output of current simulation step; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Emissions">Emissions</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--phemlight-path <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Determines where to load PHEMlight definitions from.; <i>default: <b>./PHEMlight/</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.emissions.probability <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The probability for a vehicle to have a 'emissions' device; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.emissions.explicit <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Assign a 'emissions' device to named vehicles
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.emissions.deterministic <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The 'emissions' devices are set deterministic using a fraction of 1000; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Communication">Communication</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btreceiver.probability <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The probability for a vehicle to have a 'btreceiver' device; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btreceiver.explicit <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Assign a 'btreceiver' device to named vehicles
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btreceiver.deterministic <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The 'btreceiver' devices are set deterministic using a fraction of 1000; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btreceiver.range <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The range of the bt receiver; <i>default: <b>300</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btreceiver.all-recognitions <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Whether all recognition point shall be written; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btreceiver.offtime <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The offtime used for calculating detection probability (in seconds); <i>default: <b>0.64</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btsender.probability <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The probability for a vehicle to have a 'btsender' device; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btsender.explicit <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Assign a 'btsender' device to named vehicles
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.btsender.deterministic <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The 'btsender' devices are set deterministic using a fraction of 1000; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Example_Device">Example Device</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.example.explicit <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Assign a device to named vehicles
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--device.example.parameter <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> An exemplary parameter which can be used by all instances of the example device; <i>default: <b>0</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Traci_Server">Traci Server</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--remote-port <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Enables TraCI Server if set; <i>default: <b>0</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Random_Number">Random Number</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--random <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Initialises the random number generator with the current system time; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--seed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Initialises the random number generator with the given value; <i>default: <b>23423</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Gui_Only">Gui Only</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--gui-settings-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Load visualisation settings from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-Q <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--quit-on-end <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Quits the GUI when the simulation stops; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-G <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--game <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Start the GUI in gaming mode; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-S <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--start <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Start the simulation after loading; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-T <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--disable-textures <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Do not load background pictures; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h1> <span class="mw-headline" id="Loading_order_of_input_files">Loading order of input files</span></h1>
+<p>Whenever a simulation object A (such as a vehicle) defined in an input file refers to another simulation object B (such as a vehicle type), the corresponding object B must be defined before A either by being put into a file that is loaded earlier, or by being put into the same file on an earlier line.
+</p><p>This is of particular importance in regard to files loaded with the options <span style="color: #111144; font-weight: bold; white-space: pre;">--route-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> and <span style="color: #111144; font-weight: bold; white-space: pre;">--additional-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>.
+The most important feature of the option <span style="color: #111144; font-weight: bold; white-space: pre;">--route-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> is that it loads the files incrementally thus saving memory.
+The option <span style="color: #111144; font-weight: bold; white-space: pre;">--additional-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> is handled before option <span style="color: #111144; font-weight: bold; white-space: pre;">--route-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> and the given files are fully loaded before the simulation starts. Some objects  must be available at the start of the simulation (such as output objects) and thus need to be loaded with this option, but is also useful for loading things referenced by route files. (Note, that all items which can be put into a <i>route-file</i> can also be put into an <i>additional-file</i>.
+When multiple files are given as a comma-separated list, they are loaded from left to right. 
+</p>
+<h1> <span class="mw-headline" id="Format_of_additional_files">Format of additional files</span></h1>
+<p>Files loaded with the option <span style="color: #111144; font-weight: bold; white-space: pre;">--additional-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> may included a wide range of network elements such as <a href="Simulation/Traffic_Lights.html" title="Simulation/Traffic Lights">traffic light programs</a>, <a href="Simulation/Output/Induction_Loops_Detectors_(E1).html" title="Simulation/Output/Induction Loops Detectors (E1)">detector definitions</a>, <a href="Simulation/Variable_Speed_Signs.html" title="Simulation/Variable Speed Signs">variable speed signs</a> and <a href="Simulation/Public_Transport.html" title="Simulation/Public Transport">bus stops</a>. Also, any element permitted in a route file such as <a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicle_Types" title="Definition of Vehicles, Vehicle Types, and Routes">vTypes</a>, <a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Routes" title="Definition of Vehicles, Vehicle Types, and Routes">routes</a> and <a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">vehicles</a> can be added. All elements may be put into the same additional file or they may be grouped into multiple files as convenient.
+</p><p>The additional file always needs a top level tag with arbitrary name (<i>additional</i> is customary). An example file is given below:
+</p>
+<pre>&lt;additional&gt;
+    &lt;inductionLoop id="myLoop1" lane="foo_0" pos="42" freq="900" file="out.xml"/&gt;
+    &lt;inductionLoop id="myLoop2" lane="foo_2" pos="42" freq="900" file="out.xml"/&gt;
+ 
+    &lt;busStop id="station1" lane="foo_0" startPos="5" endPos="20"/&gt;
+
+    &lt;vType id="bus" maxSpeed="20" length="12"/&gt;
+&lt;/additional&gt;
+</pre>
+<p><br />
+</p>
+<h1> <span class="mw-headline" id="Insertion_of_vehicles">Insertion of vehicles</span></h1>
+<p>Vehicles are inserted into the simulation at the time of their departure (or with a slight delay if the option <span style="color: #111144; font-weight: bold; white-space: pre;">--random-depart-offset</span> is used). If there is insufficient space for inserting the vehicle at that time it is put into an insertion queue and insertion is repeatedly attempted in subsequent simulation steps. If the option <span style="color: #111144; font-weight: bold; white-space: pre;">--max-depart-delay <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span> is used, vehicles are discarded after <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a> seconds. 
+</p><p>There are two methods for inserting vehicles into the simulation:
+</p>
+<ol><li> try to insert every vehicle in every simulation step
+</li><li> for every edge with vehicles to insert, abort trying to insert vehicles after one of the vehicles could not be inserted
+</li></ol>
+<p>In an uncongested networks these methods behave similar but in a congested network with lots of vehicles which cannot be inserted variant 2) is much faster. 
+In older version of sumo 1) was the default and one could switch to 2) using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--sloppy-insert</span>
+Since version 0.18.0, variant 2) is the default and one may switch to 1) using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--eager-insert</span>.
+</p>
+<h1> <span class="mw-headline" id="Subtopics">Subtopics</span></h1>
+<ul><li> <a href="Simulation/Shapes.html" title="Simulation/Shapes">Using additional Polygons and POIs within the Simulation</a>
+</li></ul>
+<p><br />
+</p>
+<hr />
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 1204/1000000
+Preprocessor generated node count: 4006/1000000
+Post‐expand include size: 27440/2097152 bytes
+Template argument size: 9805/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:76-0!*!0!!en!*!* and timestamp 20150331080516 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 31 March 2015, at 10:05.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

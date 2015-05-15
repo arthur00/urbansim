@@ -1,0 +1,6 @@
+localSettingsDesignator=Tutorial
+federationName=ExampleFederation
+federateName=Map Viewer
+
+scenarioDir=scenario
+fom=foms/FuelEconomyBase.xml

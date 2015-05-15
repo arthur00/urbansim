@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Tutorials/TraCI4Traffic_Lights - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Tutorials/TraCI4Traffic Lights</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.188302 from <a href="http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights">the wiki page for Tutorials/TraCI4Traffic_Lights</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>This tutorial wants to show how to use the Traffic Control Interface (in short TraCI) on a simple example. TraCI gives the possibility to control a running road traffic simulation. Therefore a TCP-based client/server architecture was established where SUMO acts as a server and the “controller” is the client. Our “controller” will be a Python-Script which receives informations about the actual state from the server and then sends instructions back.
+</p><p>It is assumed that road network building and routes definition is known from other tutorials, as <a href="../Tutorials/Hello_Sumo.html" title="Tutorials/Hello Sumo">Tutorials/Hello Sumo</a> or <a href="../Tutorials/Quick_Start.html" title="Tutorials/Quick Start">Tutorials/Quick Start</a>.
+</p><p>All files mentioned here can also be found in the <i><b>&lt;SUMO_HOME&gt;</b></i>/data/tutorial/traci_tls directory. The most recent version can be found in the SVN at <a rel="nofollow" class="external text" href="https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/"><i><b>&lt;SUMO_HOME&gt;</b></i>/tests/complex/tutorial/traci_tls/</a>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Example_description"><span class="tocnumber">1</span> <span class="toctext">Example description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Running_the_example"><span class="tocnumber">2</span> <span class="toctext">Running the example</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Data_preparation"><span class="tocnumber">3</span> <span class="toctext">Data preparation</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Code"><span class="tocnumber">4</span> <span class="toctext">Code</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Simulation"><span class="tocnumber">5</span> <span class="toctext">Simulation</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#TraCI"><span class="tocnumber">6</span> <span class="toctext">TraCI</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Further_Notes"><span class="tocnumber">7</span> <span class="toctext">Further Notes</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Appendix"><span class="tocnumber">8</span> <span class="toctext">Appendix</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#setRedYellowGreenState"><span class="tocnumber">8.1</span> <span class="toctext">setRedYellowGreenState</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Example_description"> Example description </span></h1>
+<p>Our example plays on a simple signalized intersection with four approaches. We only have traffic on the horizontal axis and important vehicles (like trams, trains, fire engines, ...) on the vertical axis from north to south. On the approach in the north we have an induction loop to recognize entering vehicles. While no vehicle enters from the north we give all the time green on the horizontal axis but when a vehicle enters the induction loop we switch immediately the signal so the vehicle can cross the intersection without a stop.
+</p><p><a href="../images/ScreenshotCross.gif" class="image"><img alt="ScreenshotCross.gif" src="../images//ScreenshotCross.gif" width="640" height="466" /></a>
+</p>
+<h1> <span class="mw-headline" id="Running_the_example"> Running the example </span></h1>
+<p>To run the example you need to execute the script <i>runner.py</i> with python
+</p>
+<pre> python runner.py
+</pre>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />In releases up to 0.16.0 the script executes the command-line version of SUMO (no GUI). To start the GUI you need to manually change line 63 to 'sumo-gui'. Or you can use <a rel="nofollow" class="external text" href="https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/runner.py">the latest version of the runner.py script</a></div>
+<h1> <span class="mw-headline" id="Data_preparation"> Data preparation </span></h1>
+<p>The net-definition can be found in the files <code>cross.nod.xml</code>, <code>cross.edg.xml</code>, <code>cross.con.xml</code> and <code>cross.det.xml</code>. The route data is generated randomly by the script. The vehicles leave the source according to a Poisson process approximated here by a binomial distribution. So a parameter <code>p=1./30</code> in the script means that a vehicle is generated every 30 seconds in average.
+</p>
+<h1> <span class="mw-headline" id="Code"> Code </span></h1>
+<p>To start the simulation the script <a rel="nofollow" class="external text" href="https://sourceforge.net/apps/trac/sumo/browser/trunk/sumo/tests/complex/tutorial/traci_tls/runner.py">&lt;SUMO_HOME&gt;/docs/tutorial/traci_tls/runner.py</a> has to be executed. It generates the routes, acts with the server and controls the traffic light. It makes use of the TraCI python API bundled with SUMO. The sources of the API can be found in <a rel="nofollow" class="external text" href="http://sourceforge.net/apps/trac/sumo/browser/trunk/sumo/tools/traci/">&lt;SUMO_HOME&gt;/tools/traci/</a>. 
+</p><p>For a detailed list of available functions see the <a rel="nofollow" class="external text" href="http://sumo-sim.org/daily/pydoc/traci.html">pydoc generated documentation</a>.
+</p>
+<h1> <span class="mw-headline" id="Simulation"> Simulation </span></h1>
+<p>The main program is implemented in the script <code>runner.py</code>. There, we first generate the routes as described above. Then <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> is started with the config file <code>cross.sumocfg</code> wherein the server parameter is specified:
+</p>
+<pre class="xml">
+&lt;configuration&gt;
+ 	...
+    &lt;remote-port value=&quot;8813&quot;/&gt;
+&lt;/configuration&gt;
+</pre>
+<p>In the next step the script connects with the server via a call to <code>traci.init</code>. 
+Then we start to control the simulation. We let the server simulate one simulation step, read the induction loop and set the state of the traffic light until the end is reached where no vehicle exists on the road anymore. If we find a vehicle on the induction loop the <code>PROGRAM</code> is started where the sequence of signal state for the Traffic Light is specified. At the end we close the connection.
+</p>
+<h1> <span class="mw-headline" id="TraCI"> TraCI </span></h1>
+<p>We want to run this simulation in SUMO, acting as a server, and control the signal dependent on the actual simulation state. For this task TraCI offers commands which are described in the corresponding article <a href="../TraCI.html" title="TraCI">TraCI</a> in detail. For this example we will use only four commands: <a href="../TraCI/Control-related_commands.html#Command_0x01:_Simulation_Step" title="TraCI/Control-related commands">Simulation Step</a>, <a href="../TraCI/Induction_Loop_Value_Retrieval.html#Command_0xa0:_Get_Induction_Loop_Variable" title="TraCI/Induction Loop Value Retrieval">Get Induction Loop Variable</a>, <a href="../TraCI/Change_Traffic_Lights_State.html" title="TraCI/Change Traffic Lights State">Change Traffic Lights State</a> and <a href="../TraCI/Control-related_commands.html#Command_0x7F:_Close_.28.29" title="TraCI/Control-related commands">Close</a>.
+</p><p>The commands are embedded in TCP messages but the direct client server communication is opaque to the user. The four commands needed in this tutorial are implemented in the methods <code>traci.simulationStep(step)</code>, <code>traci.inductionloop.getLastStepVehicleNumber(IndLoopID)</code>, <code>traci.trafficlights.setRedYellowGreenState(TLID, state)</code> and <code>traci.close()</code>.
+</p>
+<h1> <span class="mw-headline" id="Further_Notes">Further Notes</span></h1>
+<p>Below, you'll find a description about the format of the message to use for sending a complete tls program to SUMO:
+</p>
+<ol><li> <b>value type compound</b> - should have the value 0x0F;
+</li><li> <b>item number</b> - <b>ignored</b>; can be any integer;
+</li><li> <b>value type string</b> - should have the value 0x0B;
+</li><li> <b>program ID</b> - an ID for the program; if the program exists, it will be overwritten;
+</li><li> <b>value type integer (always 0)</b> - <b>ignored</b>, can be any integer
+</li><li> <b>value type compound</b> - should have the value 0x0F;
+</li><li> <b>compound length (always 0!)</b> - <b>ignored</b>, can be any integer;
+</li><li> <b>value type integer</b> - should have the value 0x09;
+</li><li> <b>phase index</b> - number of the phase to start the program with;
+</li><li> <b>value type integer</b> should have the value 0x09;
+</li><li> <b>phase number</b> - number of phases;
+</li><li> <b>phases</b> - phases, as described below.
+</li></ol>
+<p>Single phase consists of:
+</p>
+<ol><li> <b>value type integer</b> - should have the value 0x09;
+</li><li> <b>duration</b> - the length of the phase in milliseconds;
+</li><li> <b>value type integer</b> - should have the value 0x09;
+</li><li> <b>unused</b> - can have any arbitrary value;
+</li><li> <b>value type integer</b> - should have the value 0x09;
+</li><li> <b>unused</b> - can have any arbitrary value;
+</li><li> <b>value type string</b> - should have the value 0x0B;
+</li><li> <b>State (light/priority-tuple)</b> - has to be a string defining states of each traffic light (signal) made of characters gGyYrGoO, where i-th character defines the state of the i-th traffic light (signal).
+</li></ol>
+<p><br />
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />The integer values associated with particular value types were taken from <a href="../TraCI/Protocol.html#Data_types" title="TraCI/Protocol"> here</a>.</div>
+<h1> <span class="mw-headline" id="Appendix"> Appendix </span></h1>
+<p>The methods for sending and receiving the messages, <code>_recvExact()</code> and <code>_sendExact()</code>, respectively, are hidden in the script <code>traci/__init__.py</code> and there is no need to call them directly. In this section we will show the composition of a command using the example of <code>traci.trafficlights.setRedYellowGreenState</code>.
+</p>
+<h2> <span class="mw-headline" id="setRedYellowGreenState"> setRedYellowGreenState </span></h2>
+<p>This method sets the status of a traffic light, so it gets the ID of the traffic light and the status as parameter. The state of a string defining the signal colors, as described in <a href="../Simulation/Traffic_Lights.html#Loading_new_TLS-Programs" title="Simulation/Traffic Lights">Simulation/Traffic Lights#Loading new TLS-Programs</a>. The command is described at <a href="../TraCI/Change_Traffic_Lights_State.html" title="TraCI/Change Traffic Lights State">TraCI/Change Traffic Lights State</a>.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 65/1000000
+Preprocessor generated node count: 124/1000000
+Post‐expand include size: 740/2097152 bytes
+Template argument size: 426/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:198-0!*!0!!en!2!* and timestamp 20150331033118 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 15 July 2014, at 10:12.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

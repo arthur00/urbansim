@@ -1,0 +1,288 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: package traci</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>traci</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/traci/__init__.py">/home/behr_mi/sumo/tools/traci/__init__.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;__init__.py<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@author&nbsp;&nbsp;Lena&nbsp;Kalleske<br>
+@author&nbsp;&nbsp;Mario&nbsp;Krumnow<br>
+@author&nbsp;&nbsp;Daniel&nbsp;Krajzewicz<br>
+@author&nbsp;&nbsp;Jakob&nbsp;Erdmann<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2008-10-09<br>
+@version&nbsp;$Id:&nbsp;__init__.py&nbsp;18106&nbsp;2015-03-19&nbsp;08:08:16Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;TraCI&nbsp;interface.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2008-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Package Contents</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="traci.areal.html">areal</a><br>
+<a href="traci.constants.html">constants</a><br>
+<a href="traci.edge.html">edge</a><br>
+<a href="traci.gui.html">gui</a><br>
+<a href="traci.inductionloop.html">inductionloop</a><br>
+</td><td width="25%" valign=top><a href="traci.junction.html">junction</a><br>
+<a href="traci.lane.html">lane</a><br>
+<a href="traci.multientryexit.html">multientryexit</a><br>
+<a href="traci.person.html">person</a><br>
+<a href="traci.poi.html">poi</a><br>
+</td><td width="25%" valign=top><a href="traci.polygon.html">polygon</a><br>
+<a href="traci.rebuildConstants.html">rebuildConstants</a><br>
+<a href="traci.route.html">route</a><br>
+<a href="traci.simulation.html">simulation</a><br>
+<a href="traci.traciToHex.html">traciToHex</a><br>
+</td><td width="25%" valign=top><a href="traci.trafficlights.html">trafficlights</a><br>
+<a href="traci.vehicle.html">vehicle</a><br>
+<a href="traci.vehicletype.html">vehicletype</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="exceptions.html#Exception">exceptions.Exception</a>(<a href="exceptions.html#BaseException">exceptions.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="traci.html#FatalTraCIError">FatalTraCIError</a>
+</font></dt><dt><font face="helvetica, arial"><a href="traci.html#TraCIException">TraCIException</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="traci.html#Message">Message</a>
+</font></dt><dt><font face="helvetica, arial"><a href="traci.html#Storage">Storage</a>
+</font></dt><dt><font face="helvetica, arial"><a href="traci.html#SubscriptionResults">SubscriptionResults</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FatalTraCIError">class <strong>FatalTraCIError</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="exceptions.html#Exception">Exception</a>&nbsp;class&nbsp;for&nbsp;all&nbsp;TraCI&nbsp;errors&nbsp;which&nbsp;do&nbsp;not&nbsp;allow&nbsp;for&nbsp;continuation<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="traci.html#FatalTraCIError">FatalTraCIError</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FatalTraCIError-__init__"><strong>__init__</strong></a>(self, desc)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#FatalTraCIError-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="FatalTraCIError-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#FatalTraCIError-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="FatalTraCIError-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#FatalTraCIError-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="FatalTraCIError-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#FatalTraCIError-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="FatalTraCIError-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#FatalTraCIError-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="FatalTraCIError-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="FatalTraCIError-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#FatalTraCIError-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="FatalTraCIError-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#FatalTraCIError-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="FatalTraCIError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="FatalTraCIError-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#FatalTraCIError-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="FatalTraCIError-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Message">class <strong>Message</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;named&nbsp;tuple&nbsp;for&nbsp;internal&nbsp;usage.<br>
+&nbsp;<br>
+Simple&nbsp;"struct"&nbsp;for&nbsp;the&nbsp;composed&nbsp;message&nbsp;string<br>
+together&nbsp;with&nbsp;a&nbsp;list&nbsp;of&nbsp;TraCI&nbsp;commands&nbsp;which&nbsp;are&nbsp;inside.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data and other attributes defined here:<br>
+<dl><dt><strong>queue</strong> = []</dl>
+
+<dl><dt><strong>string</strong> = ''</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Storage">class <strong>Storage</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Storage-__init__"><strong>__init__</strong></a>(self, content)</dt></dl>
+
+<dl><dt><a name="Storage-printDebug"><strong>printDebug</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Storage-read"><strong>read</strong></a>(self, format)</dt></dl>
+
+<dl><dt><a name="Storage-readDouble"><strong>readDouble</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Storage-readInt"><strong>readInt</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Storage-readLength"><strong>readLength</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Storage-readShape"><strong>readShape</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Storage-readString"><strong>readString</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Storage-readStringList"><strong>readStringList</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Storage-ready"><strong>ready</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SubscriptionResults">class <strong>SubscriptionResults</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SubscriptionResults-__init__"><strong>__init__</strong></a>(self, valueFunc)</dt></dl>
+
+<dl><dt><a name="SubscriptionResults-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SubscriptionResults-add"><strong>add</strong></a>(self, refID, varID, data)</dt></dl>
+
+<dl><dt><a name="SubscriptionResults-addContext"><strong>addContext</strong></a>(self, refID, domain, objID, varID<font color="#909090">=None</font>, data<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="SubscriptionResults-get"><strong>get</strong></a>(self, refID<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="SubscriptionResults-getContext"><strong>getContext</strong></a>(self, refID<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="SubscriptionResults-reset"><strong>reset</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TraCIException">class <strong>TraCIException</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="exceptions.html#Exception">Exception</a>&nbsp;class&nbsp;for&nbsp;all&nbsp;TraCI&nbsp;errors&nbsp;which&nbsp;keep&nbsp;the&nbsp;connection&nbsp;intact<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="traci.html#TraCIException">TraCIException</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TraCIException-__init__"><strong>__init__</strong></a>(self, command, errorType, desc)</dt></dl>
+
+<dl><dt><a name="TraCIException-getCommand"><strong>getCommand</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TraCIException-getType"><strong>getType</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#TraCIException-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="TraCIException-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#TraCIException-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="TraCIException-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#TraCIException-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="TraCIException-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#TraCIException-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="TraCIException-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#TraCIException-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="TraCIException-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="TraCIException-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#TraCIException-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="TraCIException-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#TraCIException-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="TraCIException-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="TraCIException-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#TraCIException-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="TraCIException-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-close"><strong>close</strong></a>()</dt></dl>
+ <dl><dt><a name="-getParameterAccessors"><strong>getParameterAccessors</strong></a>(cmdGetID, cmdSetID)</dt></dl>
+ <dl><dt><a name="-getVersion"><strong>getVersion</strong></a>()</dt></dl>
+ <dl><dt><a name="-init"><strong>init</strong></a>(port<font color="#909090">=8813</font>, numRetries<font color="#909090">=10</font>, host<font color="#909090">='localhost'</font>, label<font color="#909090">='default'</font>)</dt></dl>
+ <dl><dt><a name="-isEmbedded"><strong>isEmbedded</strong></a>()</dt></dl>
+ <dl><dt><a name="-simulationStep"><strong>simulationStep</strong></a>(step<font color="#909090">=0</font>)</dt><dd><tt>Make&nbsp;simulation&nbsp;step&nbsp;and&nbsp;simulate&nbsp;up&nbsp;to&nbsp;"step"&nbsp;second&nbsp;in&nbsp;sim&nbsp;time.</tt></dd></dl>
+ <dl><dt><a name="-switch"><strong>switch</strong></a>(label)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>print_function</strong> = _Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 65536)</td></tr></table>
+</body></html>

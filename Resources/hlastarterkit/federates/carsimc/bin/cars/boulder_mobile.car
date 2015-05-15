@@ -1,0 +1,8 @@
+// config file for car
+Name=Boulder Mobile
+LicensePlate=KNR-078
+FuelType=Diesel
+NormalSpeed=90
+LitersPer100km1=15
+LitersPer100km2=10
+LitersPer100km3=5

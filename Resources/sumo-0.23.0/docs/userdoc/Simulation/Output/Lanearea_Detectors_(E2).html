@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Simulation/Output/Lanearea_Detectors_(E2) - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../../Installing.html">Installing SUMO</a></li>
+  <li><a href="../../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../../FAQ.html">FAQ</a></li>
+  <li><a href="../../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../SUMO.html">SUMO</a></li>
+   <li><a href="../../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Simulation/Output/Lanearea Detectors (E2)</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.024151 from <a href="http://sumo.dlr.de/wiki/Simulation/Output/Lanearea_Detectors_(E2)">the wiki page for Simulation/Output/Lanearea_Detectors_(E2)</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h2> <span class="mw-headline" id="Instantiating_within_the_Simulation">Instantiating within the Simulation</span></h2>
+<p>A lane area detector is defined the following way within an additional file:
+</p>
+<div class="inlxml">&lt;laneAreaDetector id="&lt;ID&gt;" lane="&lt;LANE_ID&gt;" pos="&lt;POSITION_ON_LANE&gt;" length="&lt;DETECTOR_LENGTH&gt;" freq="&lt;AGGREGATION_TIME&gt;" file="&lt;OUTPUT_FILE&gt;" [cont="&lt;BOOL&gt;"] [timeThreshold="&lt;FLOAT&gt;"] [speedThreshold="&lt;FLOAT&gt;"] [jamThreshold="&lt;FLOAT&gt;"] [friendlyPos="x"]/&gt;</div>
+<p>Most of the attributes have the same meaning as for <a href="../../Simulation/Output/Induction_Loops_Detectors_(E1).html" title="Simulation/Output/Induction Loops Detectors (E1)">induction loops</a>. As an areal detector has a certain length, "<span class="inlxml">length</span>" must be supplied as a further parameter. It may be a negative number which lets the detector be extended upstream to the given beginning position. The optional parameter "<span class="inlxml">cont</span>" let's the detector continue over the current lane onto this lane's predecessors when the detector's length plus his position is larger than the place available on the lane.
+</p><p>In constrast to the <span class="inlxml">inductionLoop</span> (E1-Detector), the E2-Detector covers an area instead of a cross section. The outputs are tailored for measuring queues of standing/jammed vehicles. However, there is less temporal precision in regard to entering/leaving (E1 has sub-second interpolation). For some purposes it may be necessary to combine both detectors.
+</p><p>The attributes are:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> id (string)
+</td>
+<td> A string holding the id of the detector
+</td></tr>
+<tr>
+<td class="inlxml"> <b>lane</b>
+</td>
+<td> referenced lane id
+</td>
+<td> The id of the lane the detector shall be laid on. The lane must be a part of the network used.
+</td></tr>
+<tr>
+<td class="inlxml"> <b>pos</b>
+</td>
+<td> float
+</td>
+<td> The position on the lane the detector shall be laid on in meters. See information about the same attribute within the detector loop description for further information.
+</td></tr>
+<tr>
+<td class="inlxml"> <b>length</b>
+</td>
+<td> float
+</td>
+<td> The length of the detector in meters. If the detector grows over the lane's end (begin in fact), it is either cut off at the lane's length if the "cont"-attribute is false or not given or is continued on the predeceding lanes in the case the "cont"-attribute is set to true.
+</td></tr>
+<tr>
+<td class="inlxml"> <b>freq</b>
+</td>
+<td> int
+</td>
+<td> The aggregation period the values the detector collects shall be summed up.
+</td></tr>
+<tr>
+<td class="inlxml"> <b>file</b>
+</td>
+<td> filename
+</td>
+<td> The path to the output file. The path may be relative.
+</td></tr>
+<tr>
+<td class="inlxml"> cont
+</td>
+<td> bool
+</td>
+<td> Holds the information whether detectors longer than a lane shall be cut off or continued (set it to true for the second case); <i>default: false (detector lies on one lane only)</i>.
+</td></tr>
+<tr>
+<td class="inlxml"> timeThreshold
+</td>
+<td> int
+</td>
+<td> The time-based threshold that describes how much time has to pass until a vehicle is recognized as halting; <i>in s, default: 1s</i>.
+</td></tr>
+<tr>
+<td class="inlxml"> speedThreshold
+</td>
+<td> float
+</td>
+<td> The speed-based threshold that describes how slow a vehicle has to be to be recognized as halting; <i>in m/s, default: 5/3.6m/s</i>.
+</td></tr>
+<tr>
+<td class="inlxml"> jamThreshold
+</td>
+<td> float
+</td>
+<td> The minimum distance to the next standing vehicle in order to make this vehicle count as a participant to the jam; <i>in m, default: 10m</i>.
+</td></tr>
+<tr>
+<td class="inlxml"> friendlyPos
+</td>
+<td> bool
+</td>
+<td> If set, no error will be reported if the detector is placed behind the lane. Instead, the detector will be placed 0.1 meters from the lane's end or at position 0.1, if the position was negative and larger than the lane's length after multiplication with -1; <i>default: false</i>.
+</td></tr></table>
+<h2> <span class="mw-headline" id="Generated_Output">Generated Output</span></h2>
+<p>A single data line within the output of a simulated lane area detector looks as following (the line is not broken within the output): <span class="inlxml">&lt;interval begin="&lt;BEGIN_TIME&gt;" end="&lt;END_TIME&gt;" id="&lt;DETECTOR_ID&gt;" nSamples="&lt;DATA_SAMPLES&gt;" meanSpeed="&lt;MEAN_SPEED&gt;" meanOccupancy="&lt;MEAN_OCCUPANCY&gt;" maxOccupancy="&lt;MAX_OCCUPANCY&gt;" meanMaxJamLengthInVehicles="&lt;VAL&gt;" meanMaxJamLengthInMeters="&lt;VAL&gt;" maxJamLengthInVehicles="&lt;VAL&gt;" maxJamLengthInMeters="&lt;VAL&gt;" jamLengthInVehiclesSum="&lt;VAL&gt;" jamLengthInMetersSum="&lt;VAL&gt;" meanHaltingDuration="&lt;VAL&gt;" maxHaltingDuration="&lt;VAL&gt;" haltingDurationSum="&lt;VAL&gt;" meanIntervalHaltingDuration="&lt;VAL&gt;" maxIntervalHaltingDuration="&lt;VAL&gt;" intervalHaltingDurationSum="&lt;VAL&gt;" startedHalts="&lt;VAL&gt;" meanVehicleNumber="&lt;VAL&gt;" maxVehicleNumber="&lt;VAL&gt;" /&gt;</span>
+</p><p>To explain this vast amount of measures, a short note about how a lane area detector works is needfull. A lane area detector takes note about each vehicle that enters the area. As long as the vehicle does not leave the area completely, its state is collected in each time step during the interval. Each vehicle state in this case is called a "data sample" and the output of a lane area detector is made up from all data samples of all vehicles within the are during the complete data collection ("freq") interval.
+</p><p>As a lane area detector covers a lane and vehicles are sorted on these, it is possible to recognize jams along the detector's area and measure them. Because more than one jam may take place at the area at one time, the values cover as well averaged measures of all jams ("jamLengthIn...Sum") as explicite measures of the longest (maximum) jam. For the longest jam, both averaged ("meanMaxJamLengthIn...") and maximum ("maxJamLengthIn...") values are written.
+[Note]	Note
+</p><p>The jam length in meters may be more than a sum of the vehicles lengths, because the place between vehicle is also taken into account.
+</p><p>Besides jam computation, the durations vehicles are halting are collected. They are both collected over the whole time span a vehicle is on the detector area ("...HaltingDuration" and "haltingDurationSum"), and explicite for each interval ("...IntervalHaltingDuration" and "intervalHaltingDurationSum").
+</p><p>The values are described in the following table.
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffbdee;"> Name
+</th>
+<th style="background:#ffbdee;"> Type
+</th>
+<th style="background:#ffbdee;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> begin
+</td>
+<td> (simulation) seconds
+</td>
+<td> The first time step the values were collected in
+</td></tr>
+<tr>
+<td class="inlxml"> end
+</td>
+<td> (simulation) seconds
+</td>
+<td> The last time step + DELTA_T the values were collected in (may be equal to begin)
+</td></tr>
+<tr>
+<td class="inlxml"> id
+</td>
+<td> id
+</td>
+<td> The id of the detector (needed if several detectors share an output file)
+</td></tr>
+<tr>
+<td class="inlxml"> nSamples
+</td>
+<td> #
+</td>
+<td> The number of data samples that could be collected. A "data sample" means the state of a vehicle that was on the detector area during one of the simulation steps of the interval described by this data line.
+</td></tr>
+<tr>
+<td class="inlxml"> meanSpeed
+</td>
+<td> m/s
+</td>
+<td> The mean velocity over all collected data samples.
+</td></tr>
+<tr>
+<td class="inlxml"> meanOccupancy
+</td>
+<td>&#160;%
+</td>
+<td> The percentage (0-100%) of the detector's place that was occupied by vehicles, summed up for each time step and averaged by the interval duration.
+</td></tr>
+<tr>
+<td class="inlxml"> maxOccupancy
+</td>
+<td>&#160;%
+</td>
+<td> The maximum percentage (0-100%) of the detector's place that was occupied by vehicles during the interval.
+</td></tr>
+<tr>
+<td class="inlxml"> meanMaxJamLengthInVehicles
+</td>
+<td> #vehicles
+</td>
+<td> The length of the longest jams recognized during each step, averaged over the interval duration. In vehicles that have contributed to these jams.
+</td></tr>
+<tr>
+<td class="inlxml"> meanMaxJamLengthInMeters
+</td>
+<td> m
+</td>
+<td> As prior, but in meters (see notes)
+</td></tr>
+<tr>
+<td class="inlxml"> maxJamLengthInVehicles
+</td>
+<td> #vehicles
+</td>
+<td> The length of the longest jam recognized during the interval duration. In vehicles that have contributed to this jams.
+</td></tr>
+<tr>
+<td class="inlxml"> maxJamLengthInMeters
+</td>
+<td> m
+</td>
+<td> As prior, but in meters (see notes)
+</td></tr>
+<tr>
+<td class="inlxml"> jamLengthInVehiclesSum
+</td>
+<td> #vehicles
+</td>
+<td> The sum of all lengths of all jams recognized during the interval. In vehicles that have contributed to these jams.
+</td></tr>
+<tr>
+<td class="inlxml"> jamLengthInMetersSum
+</td>
+<td> m
+</td>
+<td> As prior, but in meters (see notes)
+</td></tr>
+<tr>
+<td class="inlxml"> meanHaltingDuration
+</td>
+<td> s
+</td>
+<td> The mean halting duration of vehicles that entered the area and are still inside or have left the area within the reported interval.
+</td></tr>
+<tr>
+<td class="inlxml"> maxHaltingDuration
+</td>
+<td> s
+</td>
+<td> The maximum halting duration of vehicles that entered the area and are still inside or have left the area within the reported interval.
+</td></tr>
+<tr>
+<td class="inlxml"> haltingDurationSum
+</td>
+<td> s
+</td>
+<td> The sum of all halting durations of vehicles that entered the area and are still inside or have left the area within the reported interval.
+</td></tr>
+<tr>
+<td class="inlxml"> meanIntervalHaltingDuration
+</td>
+<td> s
+</td>
+<td> The mean halting duration of vehicles that entered the area and are still inside or have left the area within the reported interval, counted from the interval's begin.
+</td></tr>
+<tr>
+<td class="inlxml"> maxIntervalHaltingDuration
+</td>
+<td> s
+</td>
+<td> The maximum halting duration of vehicles that entered the area and are still inside or have left the area within the reported interval, counted from the interval's begin.
+</td></tr>
+<tr>
+<td class="inlxml"> intervalHaltingDurationSum
+</td>
+<td> s
+</td>
+<td> The sum of all halting durations of vehicles that entered the area and are still inside or have left the area within the reported interval, counted from the interval's begin.
+</td></tr>
+<tr>
+<td class="inlxml"> startedHalts
+</td>
+<td> #
+</td>
+<td> The number of started halts. Please note that during an interval a vehicle may stop halting and enter a new halting state.
+</td></tr>
+<tr>
+<td class="inlxml"> meanVehicleNumber
+</td>
+<td> #
+</td>
+<td> The mean number of vehicles that were on the detector (averaged over the interval duration).
+</td></tr>
+<tr>
+<td class="inlxml"> maxVehicleNumber
+</td>
+<td> #
+</td>
+<td> The maximum number of vehicles that were on the detector area during the interval.
+</td></tr></table>
+<h2> <span class="mw-headline" id="Further_notes">Further notes</span></h2>
+<ul><li> You can generate detector definitions automatically. See <a href="../../Tools/Output.html" title="Tools/Output">output tools</a> for more information.
+</li><li> Unlike the <a href="../../Simulation/Output/Multi-Entry_Multi-Exit_Detectors_(E3).html" title="Simulation/Output/Multi-Entry Multi-Exit Detectors (E3)">multi-entry/multi-exit detectors</a> this detector
+<ul><li> does not interpolate entry and exit times (and always counts every vehicle fully when calculating mean speeds)
+</li><li> shows (therefore) different discretization errors for small detection intervals (everything is counted even if it is barely on the detector)
+</li><li> takes into account vehicles which start or end their route on the detector (or enter / leave by teleport)
+</li><li> counts also vehicles which only touch the starting position of the detector
+</li></ul>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 21/1000000
+Preprocessor generated node count: 50/1000000
+Post‐expand include size: 41/2097152 bytes
+Template argument size: 13/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:254-0!*!0!!*!*!* and timestamp 20150331082836 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 13 December 2014, at 12:23.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

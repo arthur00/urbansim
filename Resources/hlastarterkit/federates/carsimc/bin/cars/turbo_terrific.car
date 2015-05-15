@@ -1,0 +1,8 @@
+// config file for car
+Name=Turbo Terrific
+LicensePlate=CPP-011
+FuelType=EthanolFlexibleFuel
+NormalSpeed=120
+LitersPer100km1=18
+LitersPer100km2=12
+LitersPer100km3=6

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Demand/Importing_O/D_Matrices - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../../Installing.html">Installing SUMO</a></li>
+  <li><a href="../../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../../FAQ.html">FAQ</a></li>
+  <li><a href="../../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../SUMO.html">SUMO</a></li>
+   <li><a href="../../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Demand/Importing O/D Matrices</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.894032 from <a href="http://sumo.dlr.de/wiki/Demand/Importing_O/D_Matrices">the wiki page for Demand/Importing_O/D_Matrices</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> computes trip tables from O/D (origin/destination) matrices. <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> assumes the matrix / the matrices to be coded as amounts of vehicles that drive from one district or traffic assignment zone (TAZ) to another within a certain time period. Because the generated trips must start and end at edges, <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> requires a mapping of TAZ to edges. During conversion of VISUM networks with <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> districts stored in the VISUM input file are parsed and stored within the generated SUMO network file. If you do not use VISUM as input, you must build a TAZ file by your own. The format is given in <a href="#Describing_the_TAZ">#Describing_the_TAZ</a> below. You have to pass the file containing the TAZ definitions to <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> using the <span style="color: #111144; font-weight: bold; white-space: pre;">--net-file <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> (<span style="color: #111144; font-weight: bold; white-space: pre;">--net <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> or <span style="color: #111144; font-weight: bold; white-space: pre;">-n <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> for short) option.
+</p><p>Because <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> was only used to import data stored in VISUM/VISION/VISSIM formats, it assumes O/D to be stored in one of the formats used by these applications. Not all VISUM/VISION/VISSIM formats are supported, by now only two, namely the "V"- and the "O"-format. 
+If you do not own matrices stored in these formats, you still have three possibilities:
+</p>
+<ul><li> convert them into one of the supported formats,
+</li><li> write your own reader for <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a>, or
+</li><li> convert them into flow definitions and then give them to <a href="../../DUAROUTER.html" title="DUAROUTER">DUAROUTER</a> (see Chapter "Using Flow Definitions"). 
+</li></ul>
+<p>Since SUMO 0.21.0 there is the additional possibility to read matrices in the Amitran format given by <a rel="nofollow" class="external free" href="http://sumo-sim.org/xsd/amitran/od.xsd">http://sumo-sim.org/xsd/amitran/od.xsd</a>.
+</p><p>All supported formats are described in <a href="#Describing_the_Matrix_Cells">#Describing_the_Matrix_Cells</a> below. You may either give a list of matrices to <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> using the <span style="color: #111144; font-weight: bold; white-space: pre;">--od-matrix-files <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;[,&lt;FILE&gt;]*</i></a></span> (<span style="color: #111144; font-weight: bold; white-space: pre;">-d <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;[,&lt;FILE&gt;]*</i></a></span> for short) option followed by the list of files separated using a ','.
+</p><p><br />
+<a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> reads all matrices and generates trip definitions. The generated trip definitions are numbered starting at zero. You can also add a prefix to the generated trip definition names using (<span style="color: #111144; font-weight: bold; white-space: pre;">--prefix <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>). As usual, they are written to the output file named using the <span style="color: #111144; font-weight: bold; white-space: pre;">--output-file <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> (<span style="color: #111144; font-weight: bold; white-space: pre;">-o <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> for short). You can specify a vehicle type to be added to the trip definitions using <span style="color: #111144; font-weight: bold; white-space: pre;">--vtype <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>. Please remark that vehicles will have no type unless not given in the O/D-matrices or defined using this option. The command line option overrides type names given in the O/D-matrices. The type itself will not be generated. Vehicles will be generated for the time period between <span style="color: #111144; font-weight: bold; white-space: pre;">--begin <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span> (<span style="color: #111144; font-weight: bold; white-space: pre;">-b <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>) and <span style="color: #111144; font-weight: bold; white-space: pre;">--end <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span> (<span style="color: #111144; font-weight: bold; white-space: pre;">-e <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>), having 0 and 86400 as default values, respectively. The meaning is the simulation step in seconds, as usual.
+</p><p>Because each O/D-matrix cell describes the amount of vehicles to be inserted into the network within a certain time period, <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> has to compute the vehicle's explicit departure times. Normally, this is done by using a random time within the time interval a O/D-matrix cell describes. It still is possible to insert a cell's vehicles with an uniform time between their insertion. Use the option --spread.uniform to enable this.
+</p><p>You can scale the amounts stored in the O/D-matrices using the <span style="color: #111144; font-weight: bold; white-space: pre;">--scale <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> option which assumes a float as parameter. All read flows will be multiplied with this value, the default is 1. When importing O/D-matrices that cover a whole day, you maybe want to apply a curve which resembles the spread of the trip begins found in reality. Please read the subchapter <a href="#Splitting_large_Matrices">#Splitting_large_Matrices</a> on this.
+</p><p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Describing_the_TAZ"><span class="tocnumber">1</span> <span class="toctext">Describing the TAZ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Describing_the_Matrix_Cells"><span class="tocnumber">2</span> <span class="toctext">Describing the Matrix Cells</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#The_V_format"><span class="tocnumber">2.1</span> <span class="toctext">The V format</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#The_O-format"><span class="tocnumber">2.2</span> <span class="toctext">The O-format</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#The_Amitran_format"><span class="tocnumber">2.3</span> <span class="toctext">The Amitran format</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Splitting_large_Matrices"><span class="tocnumber">3</span> <span class="toctext">Splitting large Matrices</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Free_Range_Definitions"><span class="tocnumber">3.1</span> <span class="toctext">Free Range Definitions</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Daily_Time_Lines"><span class="tocnumber">3.2</span> <span class="toctext">Daily Time Lines</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Dealing_with_broken_Data"><span class="tocnumber">4</span> <span class="toctext">Dealing with broken Data</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Describing_the_TAZ">Describing the TAZ</span></h1>
+<p>A file containing a mapping from traffic assignment zones (TAZ) to edges looks as following:
+</p>
+<pre class="xml">
+&lt;tazs&gt;
+   &lt;taz id=&quot;&lt;TAZ_ID&gt;&quot;&gt;
+      &lt;tazSource id=&quot;&lt;EDGE_ID&gt;&quot; weight=&quot;&lt;PROBABILITY_TO_USE&gt;&quot;/&gt;
+      ... further source edges ...
+
+      &lt;tazSink id=&quot;&lt;EDGE_ID&gt;&quot; weight=&quot;&lt;PROBABILITY_TO_USE&gt;&quot;/&gt;
+      ... further destination edges ...
+   &lt;/taz&gt;
+
+   ... further traffic assignment zones (districts) ...
+
+&lt;/tazs&gt;
+</pre>
+<p>This means that a TAZ is described by its id, being a simple name, and lists of source and destination edges. A TAZ should have at least one source and one destination edge, each described by its id and use probability called weight herein. These edges are used to insert and remove vehicles into/from the network respectively. The probability sums of each the source and the destination lists are normalized after loading.
+</p><p>If you do not want to distinguish between source and sink edges and give all edges the same probability you may as well use the following abbreviated form (it is also posible to mix both styles):
+</p>
+<pre class="xml">
+&lt;tazs&gt;
+   &lt;taz id=&quot;&lt;TAZ_ID&gt;&quot; edges=&quot;&lt;EDGE_ID&gt; &lt;EDGE_ID&gt; ...&quot;/&gt;
+
+   ... further traffic assignment zones (districts) ...
+
+&lt;/tazs&gt;
+</pre>
+<h1> <span class="mw-headline" id="Describing_the_Matrix_Cells">Describing the Matrix Cells</span></h1>
+<p>To understand how an O/D-matrix is stored, we should remind the meanings of the values stored herein. Each matrix describes a certain time period. The indices within the matrix are names of the origin/destination districts (normally they are equivalent, both lists are the same). The values stored within the matrix are amounts of vehicles driving from the according origin district to the according destination district within the described time period.
+</p><p>The formats used by PTV are described in the VISUM-documentation more detailed. All start with a line where the type of the O/D-matrix is given, appended to a '$'. The first following character tells in which format the table is stored. Then, further characters follow which describe which values are supplied additionally within the matrix. For further information we ask you to consult the documentation supported by PTV. Herein, only the supported variants are described.
+</p><p>The vehicle type information is used by <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> by passing it to the generated vehicles. The type definition itself will not be generated, but the vehicle will have set the attribute <span class="inlxml">type="<i>&lt;TYPE&gt;</i>"</span>. The time informations are assumed to be in the form &lt;HOURS&gt;.&lt;MINUTES&gt;. Please note that the end is exclusive; for example, if 
+</p>
+<pre>0.00 1.00
+</pre>
+<p>is given, the generated vehicles' depart times will be second 0 to second 3599.
+</p>
+<h2> <span class="mw-headline" id="The_V_format">The V format</span></h2>
+<p>The V-format stores the O/D matrix by giving the number of districts (TAZ) first and then naming them. After this, for each of the named districts, a list of vehicle amounts that leave this district is given, sorted by the destination district names as given in the district name list. An example may look like this:
+</p>
+<pre>$VMR
+* vehicle type
+4
+* From-Time  To-Time
+7.00 8.00
+* Factor
+1.00
+*
+* some
+* additional
+* comments
+* District number
+3
+* names:
+         1          2          3
+*
+* District 1 Sum = 6
+         1          2          3
+* District 2 Sum = 15
+         4          5          6
+* District 2 Sum = 24
+         7          8          9 
+
+</pre>
+<p>The 'M' in the type name indicates that a vehicle type is used, the "R" that the values shall be rounded randomly. The second information is not processed by OD2TRIPS what means that you can parse both V-, VR-, VMR, and VM-matrices. Please remark that both the names list and the lists containing the amounts are written in a way that no more than 10 fields are stored in the same line. Each of the entries they contain seem to be left-aligned to a boundary of 11 characters (possibly 10 for the name and one space character). Both constraints are not mandatory for the importer used in OD2TRIPS.
+</p>
+<h2> <span class="mw-headline" id="The_O-format">The O-format</span></h2>
+<p>The O-format instead simply lists each origin and each destination together with the amount in one line (please remark that we currently ignore the string after the ';' that occurs after the type identifier "$OR" in the first line):
+</p>
+<pre>$OR;D2
+* From-Time  To-Time
+7.00 8.00
+* Factor
+1.00
+* some
+* additional
+* comments
+         1          1       1.00
+         1          2       2.00
+         1          3       3.00
+         2          1       4.00
+         2          2       5.00
+         2          3       6.00
+         3          1       7.00
+         3          2       8.00
+         3          3       9.00
+</pre>
+<h2> <span class="mw-headline" id="The_Amitran_format">The Amitran format</span></h2>
+<p>The Amitran format defines the demand per OD pair in time slices for every vehicle type as follows:
+</p>
+<pre>&lt;demand xmlns:xsi="<a rel="nofollow" class="external free" href="http://www.w3.org/2001/XMLSchema-instance">http://www.w3.org/2001/XMLSchema-instance</a>" xsi:noNamespaceSchemaLocation="<a rel="nofollow" class="external free" href="http://sumo-sim.org/xsd/amitran/od.xsd">http://sumo-sim.org/xsd/amitran/od.xsd</a>"&gt;
+   &lt;actorConfig id="0"&gt;
+       &lt;timeSlice duration="86400000" startTime="0"&gt;
+           &lt;odPair amount="100" destination="2" origin="1"/&gt;
+       &lt;/timeSlice&gt;
+   &lt;/actorConfig&gt;
+&lt;/demand&gt;
+</pre>
+<p>For details on the types and units see the schema at <a rel="nofollow" class="external free" href="http://sumo-sim.org/xsd/amitran/od.xsd">http://sumo-sim.org/xsd/amitran/od.xsd</a>
+</p>
+<h1> <span class="mw-headline" id="Splitting_large_Matrices">Splitting large Matrices</span></h1>
+<p><a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> allows splitting matrices which define a long time period into smaller parts which contain definite percentages of the whole. There are two ways of defining the amounts the matrix shall be split into. In both cases, the probabilities are automatically normed.
+</p>
+<h2> <span class="mw-headline" id="Free_Range_Definitions">Free Range Definitions</span></h2>
+<p>The first possibility is to use the option --timeline directly. In this case, it should be followed by a list of times and probabilities, separated by ','. Each time and probability field is made up of two values, an integer time being the simulation time in seconds and a floating point number describing the probability. These two values are separated using a ':'. At least two values must be supplied making the definition of a timeline in this case being decribeable by the following BNF-formula:
+</p>
+<pre><time>:&lt;AMOUNT&gt;[,&lt;TIME&gt;:&lt;AMOUNT&gt;]+
+</pre>
+<p>In this case, the matrix will be split into (fields-1) parts and each part will have the amount described by the integral within the field.
+</p>
+<h2> <span class="mw-headline" id="Daily_Time_Lines">Daily Time Lines</span></h2>
+<p>The second case is rather common in transportation science. It allows to split the matrix into 24 subparts - this means the number of fields is fixed to 24 - allowing to spread an O/D-matrix over a day describing it by hours. To use this, give additionally the option --timeline.day-in-hours to <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a>. It the assumes the values from the --timeline - option being a list of 24 floats, divided by ',', each describing the probability of inserting a vehicle within the according hour.
+</p><p>Some common daily time lines from Germany may be retrieved from: Schmidt, Gerhard; Thomas, Bernd: Hochrechnungsfaktoren für manuelle und automatische Kurzzeitzählungen im Innerortsbereich. Hrsg.: Bundesministerium für Verkehr, Abteilung Straßenbau: Forschung Straßenbau und Straßenverkehrstechnik. Heft 732, Bonn-Bad Godesberg, 1996
+</p><p><b>Applicability of generic Time Lines</b>
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffdead;"> Name
+</th>
+<th style="background:#ffdead;"> Description
+</th>
+<th style="background:#ffdead;"> Reference
+</th></tr>
+<tr>
+<td> TGw2_PKW.txt
+</td>
+<td> passenger vehicles, Tuesday-Thursday, cities in West Germany, type#2 = ~streets at inner city border
+</td>
+<td> S.95
+</td></tr>
+<tr>
+<td> TGw3_PKW.txt
+</td>
+<td> passenger vehicles, Tuesday-Thursday, cities in West Germany, type#3 = ~streets at city border
+</td>
+<td> S.95
+</td></tr>
+<tr>
+<td> TGs1_PKW.txt
+</td>
+<td> passenger vehicles, Saturday/Sunday, cities in West Germany, group#1 = ~inner city streets, large amount of trips to/back work, freeways with no connection to recreation areas
+</td>
+<td> S.100 - 103
+</td></tr>
+<tr>
+<td> TGw_LKW.txt
+</td>
+<td> transport vehicles, Monday-Thursday, cities in West Germany
+</td>
+<td> S.98
+</td></tr>
+<tr>
+<td> TGs_LKW.txt
+</td>
+<td> transport vehicles, Sunday, type: ~long distance roads, strong heavy duty vehicle numbers
+</td>
+<td> S.102, 105
+</td></tr>
+</table>
+<p>So, in dependence to the week day and the type of traffic, one could assume using the following time-lines:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffdead;"> vehicle type
+</th>
+<th style="background:#ffdead;"> Monday
+</th>
+<th style="background:#ffdead;"> Tuesday-Thursday
+</th>
+<th style="background:#ffdead;"> Friday
+</th>
+<th style="background:#ffdead;"> Saturday
+</th>
+<th style="background:#ffdead;"> Sunday
+</th></tr>
+<tr>
+<td> HDV
+</td>
+<td> TGw_LKW.txt
+</td>
+<td> TGw_LKW.txt
+</td>
+<td> X
+</td>
+<td> X
+</td>
+<td> TGs_LKW.txt
+</td></tr>
+<tr>
+<td> passenger, far-distance
+</td>
+<td> X
+</td>
+<td> TGw3_PKW.txt
+</td>
+<td> X
+</td>
+<td> TGs1_PKW.txt
+</td>
+<td> TGs1_PKW.txt
+</td></tr>
+<tr>
+<td> passenger, near-distance
+</td>
+<td> X
+</td>
+<td> TGw2_PKW.txt
+</td>
+<td> X
+</td>
+<td> TGs1_PKW.txt
+</td>
+<td> TGs1_PKW.txt
+</td></tr></table>
+<p>One may note, that no time lines are given for passenger trips on Mondays.
+</p><p>The time lines as such are given below, they can be directly copied into the command line
+</p><p><b>Generic Time Lines</b>
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffdead;"> Name
+</th>
+<th style="background:#ffdead;"> Time Line
+</th></tr>
+<tr>
+<td> TGw_LKW
+</td>
+<td> 0.3,0.4,0.4,0.6,0.8,2.0,4.8,7.5,9.0,8.7,9.0,9.0,7.5,8.4,7.8,6.9,5.4,4.0,2.7,1.8,1.2,0.9,0.6,0.3
+</td></tr>
+<tr>
+<td> TGw3_PKW
+</td>
+<td> 0.9,0.5,0.2,0.2,0.5,1.3,7.0,9.3,6.7,4.2,4.0,3.8,4.1,4.6,5.0,6.7,9.6,9.2,7.1,4.8,3.5,2.7,2.2,1.9
+</td></tr>
+<tr>
+<td> TGw2_PKW
+</td>
+<td> 0.8,0.5,0.4,0.3,0.4,1.2,4.5,7.4,6.6,5.2,5.0,5.0,5.2,5.3,5.6,6.7,8.4,8.6,7.4,5.0,3.9,3.0,2.1,1.6
+</td></tr>
+<tr>
+<td> TGs(1)_PKW
+</td>
+<td> 3.3,2.8,2.0,1.5,1.2,1.3,1.2,1.5,2.5,3.7,4.8,5.5,6.0,6.7,7.0,7.1,6.9,7.4,7.0,6.0,4.7,4.1,3.5,2.3
+</td></tr>
+<tr>
+<td> TGs_LKW
+</td>
+<td> 1.3,1.1,0.6,0.8,0.9,1.5,2.6,3.1,3.5,3.8,4.5,4.9,5.0,5.3,5.6,5.7,5.9,6.0,5.7,5.3,4.8,4.6,10.0,7.6
+</td></tr>
+</table>
+<p>Remarks:
+</p>
+<ul><li> All time lines describe the hourly percentage of the complete traffic
+</li><li> values are normalized to 100% (so they don't need to add up to any specific value)
+</li><li> It is not possible to derive time-lines for all week days
+</li></ul>
+<p>The time lines describe how the traffic (100%) spreads over the whole day. In order to have proper demands for week-end days, one can scale down the week day traffic. The same reference as above gives the following scaling factors at page 31.
+</p><p><b>Daily time-line scale factors</b>
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffdead;"> area
+</th>
+<th style="background:#ffdead;"> Sat1992
+</th>
+<th style="background:#ffdead;"> Sun1992
+</th>
+<th style="background:#ffdead;"> Sat1993
+</th>
+<th style="background:#ffdead;"> Sun1993
+</th></tr>
+<tr>
+<td> NRW highways
+</td>
+<td> 76,1%
+</td>
+<td> 72,7%
+</td>
+<td> 72,8%
+</td>
+<td> 69,4%
+</td></tr>
+<tr>
+<td> NRW other streets
+</td>
+<td> 82,6%
+</td>
+<td> 74%
+</td>
+<td> 78,3%
+</td>
+<td> 71,6%
+</td></tr>
+<tr>
+<td> Bavaria
+</td>
+<td> 75%
+</td>
+<td> 67,2%
+</td>
+<td> 73,9%
+</td>
+<td> 64,7%
+</td></tr></table>
+<p>One may note that this information is 15 years old. Additionally, no information about the type of vehicles is given.
+</p><p>A 24h time line a given O/D-matrix shall be split by may be given to <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> using the following options: <b>--timeline.day-in-hours --timeline &lt;TIME_LINE&gt;</b> where <i>&lt;TIME_LINE&gt;</i> is a list of 24 percentages as given above. The amount of traffic defined within the O/D-matrix may be scaled via <b>--scale &lt;SCALE&gt;</b>. Example call to <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a>:
+</p>
+<pre>od2trips -n &lt;NET&gt; -d &lt;MATRIX&gt; -o &lt;OUTPUT&gt; --scale &lt;SKALIERUNG&gt; \
+   --timeline.day-in-hours --timeline &lt;TIME_LINE&gt;
+</pre>
+<h1> <span class="mw-headline" id="Dealing_with_broken_Data">Dealing with broken Data</span></h1>
+<p><a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a> behaves here as following:
+</p><p><b>incomplete districts</b> 
+</p>
+<ul><li> missing origin OR destination district: error
+</li><li> missing origin AND destination district: warning
+</li></ul>
+<p><b>incomplete connections</b> 
+</p>
+<ul><li> missing connection to an origin OR a destination district: error
+</li><li> missing connection to an origin AND a destination district: error
+</li></ul>
+<p><br />
+</p>
+<h1> <span class="mw-headline" id="See_also">See also</span></h1>
+<ul><li> <a href="../../OD2TRIPS.html" title="OD2TRIPS">OD2TRIPS</a>
+</li></ul>
+<div style="border:1px solid #909090; min-height: 35px;" align="right">
+<p><span style="float: right; margin-top: -5px;"><a href="http://cordis.europa.eu/fp7/home_en.html" title="Seventh Framework Programme" rel="nofollow"><img alt="Seventh Framework Programme" src="../../images//FP7-small.gif" width="38" height="35" /></a>
+<a href="http://amitran.eu/" title="AMITRAN project" rel="nofollow"><img alt="AMITRAN project" src="../../images//AMITRAN-small.png" width="226" height="35" /></a></span>
+<span style="">This part of SUMO was developed, reworked, or extended within the project "<a rel="nofollow" class="external text" href="http://amitran.eu/">AMITRAN</a>", co-funded by the European Commission within the <a rel="nofollow" class="external text" href="http://cordis.europa.eu/fp7/home_en.html">Seventh Framework Programme</a>.</span>
+</p>
+</div></time>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 180/1000000
+Preprocessor generated node count: 510/1000000
+Post‐expand include size: 3236/2097152 bytes
+Template argument size: 880/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:228-0!*!0!!en!2!* and timestamp 20150331082744 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 23 March 2015, at 10:16.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

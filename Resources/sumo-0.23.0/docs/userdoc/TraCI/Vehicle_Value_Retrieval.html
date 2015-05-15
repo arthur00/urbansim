@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>TraCI/Vehicle_Value_Retrieval - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">TraCI/Vehicle Value Retrieval</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.180909 from <a href="http://sumo.dlr.de/wiki/TraCI/Vehicle_Value_Retrieval">the wiki page for TraCI/Vehicle_Value_Retrieval</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h2> <span class="mw-headline" id="Command_0xa4:_Get_Vehicle_Variable"> Command 0xa4: Get Vehicle Variable </span></h2>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> ubyte
+</td>
+<td align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> Variable
+</th>
+<th style="border: 1pt solid;"> Vehicle ID
+</th></tr></table>
+<p>Asks for the value of a certain variable of the named vehicle. The value returned is the state of the asked variable/value within the last simulation step. In the case the vehicle is loaded, but outside the network - due not being yet inserted into the network or being teleported within the current time step - a default "error" value is returned.
+</p><p>The following variable values can be retrieved, the type of the return value is also shown in the table.
+</p>
+<table border="2" cellspacing="0" cellpadding="4" rules="all">
+<caption> <b>Overview Retrievable Vehicle Variables</b>
+</caption>
+<tr>
+<th> Variable
+</th>
+<th> ValueType
+</th>
+<th> Description
+</th></tr>
+<tr>
+<td> id list (0x00)
+</td>
+<td> stringList
+</td>
+<td> Returns a list of ids of all vehicles currently running within the scenario (the given vehicle ID is ignored)
+</td></tr>
+<tr>
+<td> count (0x01)
+</td>
+<td> int
+</td>
+<td> Returns the number of vehicles currently running within the scenario (the given vehicle ID is ignored)
+</td></tr>
+<tr>
+<td> speed (0x40)
+</td>
+<td> double
+</td>
+<td> Returns the speed of the named vehicle within the last step [m/s]; error value: -1001
+</td></tr>
+<tr>
+<td> position (0x42)
+</td>
+<td> position
+</td>
+<td> Returns the position(two doubles) of the named vehicle within the last step [m,m]; error value: [-1001,-1001]
+</td></tr>
+<tr>
+<td> angle (0x43)
+</td>
+<td> double
+</td>
+<td> Returns the angle of the named vehicle within the last step [°]; error value: -1001
+</td></tr>
+<tr>
+<td> road id (0x50)
+</td>
+<td> string
+</td>
+<td> Returns the id of the edge the named vehicle was at within the last step; error value: ""
+</td></tr>
+<tr>
+<td> lane id (0x51)
+</td>
+<td> string
+</td>
+<td> Returns the id of the lane the named vehicle was at within the last step; error value: ""
+</td></tr>
+<tr>
+<td> lane index (0x52)
+</td>
+<td> int
+</td>
+<td> Returns the index of the lane the named vehicle was at within the last step; error value: -1001
+</td></tr>
+<tr>
+<td> type id (0x4f)
+</td>
+<td> string
+</td>
+<td> Returns the id of the type of the named vehicle
+</td></tr>
+<tr>
+<td> route id (0x53)
+</td>
+<td> string
+</td>
+<td> Returns the id of the route of the named vehicle
+</td></tr>
+<tr>
+<td> edges (0x54)
+</td>
+<td> stringList
+</td>
+<td> Returns the ids of the edges the vehicle's route is made of
+</td></tr>
+<tr>
+<td> color (0x45)
+</td>
+<td> ubyte,ubyte,ubyte,ubyte
+</td>
+<td> Returns the vehicle's color (RGBA).
+</td></tr>
+<tr>
+<td> lane position (0x56)
+</td>
+<td> double
+</td>
+<td> The position of the vehicle along the lane (in [m]); error value: -1001
+</td></tr>
+<tr>
+<td> signal states (0x5b)
+</td>
+<td> int
+</td>
+<td> An integer encoding the state of a vehicle's signals, see <a href="../TraCI/Vehicle_Signalling.html" title="TraCI/Vehicle Signalling">TraCI/Vehicle Signalling</a> for more information.
+</td></tr>
+<tr>
+<td> CO2 emissions (id 0x60)
+</td>
+<td> double
+</td>
+<td> Vehicle's CO2 emissions in mg during this time step; error value: -1001
+</td></tr>
+<tr>
+<td> CO emissions (id 0x61)
+</td>
+<td> double
+</td>
+<td> Vehicle's CO emissions in mg during this time step; error value: -1001
+</td></tr>
+<tr>
+<td> HC emissions (id 0x62)
+</td>
+<td> double
+</td>
+<td> Vehicle's HC emissions in mg during this time step; error value: -1001
+</td></tr>
+<tr>
+<td> PMx emissions (id 0x63)
+</td>
+<td> double
+</td>
+<td> Vehicle's PMx emissions in mg during this time step; error value: -1001
+</td></tr>
+<tr>
+<td> NOx emissions (id 0x64)
+</td>
+<td> double
+</td>
+<td> Vehicle's NOx emissions in mg during this time step; error value: -1001
+</td></tr>
+<tr>
+<td> fuel consumption (id 0x65)
+</td>
+<td> double
+</td>
+<td> Vehicle's fuel consumption in ml during this time step; error value: -1001
+</td></tr>
+<tr>
+<td> noise emission (id 0x66)
+</td>
+<td> double
+</td>
+<td> Noise generated by the vehicle in dBA; error value: -1001
+</td></tr>
+<tr>
+<td> best lanes (id 0xb2)
+</td>
+<td> complex
+</td>
+<td> For each lane on the current edge, the sequences of lanes that would be followed from that lane without lane-change as well as information regarding lane-change desirability are returned (see below).
+</td></tr>
+<tr>
+<td> stop state (id 0xb5)
+</td>
+<td> ubyte
+</td>
+<td> value = 1 * stopped + 2 * parking + 4 * triggered
+</td></tr>
+<tr>
+<td> length (0x44)
+</td>
+<td> double
+</td>
+<td> Returns the length of the vehicles [m]
+</td></tr>
+<tr>
+<td> vmax (0x41)
+</td>
+<td> double
+</td>
+<td> Returns the maximum speed of the vehicle [m/s]
+</td></tr>
+<tr>
+<td> accel (0x46)
+</td>
+<td> double
+</td>
+<td> Returns the maximum acceleration possibility of this vehicle [m/s^2]
+</td></tr>
+<tr>
+<td> decel (0x47)
+</td>
+<td> double
+</td>
+<td> Returns the maximum deceleration possibility of this vehicle [m/s^2]
+</td></tr>
+<tr>
+<td> tau (0x48)
+</td>
+<td> double
+</td>
+<td> Returns the driver's reaction time for this vehicle [s]
+</td></tr>
+<tr>
+<td> sigma(0x5d)
+</td>
+<td> double
+</td>
+<td> Returns the driver's imperfection (dawdling) [0,1]
+</td></tr>
+<tr>
+<td> speedFactor(0x5e)
+</td>
+<td> double
+</td>
+<td> Returns the road speed multiplier for this vehicle [double]
+</td></tr>
+<tr>
+<td> speedDev(0x5f)
+</td>
+<td> double
+</td>
+<td> Returns the deviation of speedFactor for this vehicle [double]
+</td></tr>
+<tr>
+<td> vClass (0x49)
+</td>
+<td> string
+</td>
+<td> Returns the permission class of this vehicle
+</td></tr>
+<tr>
+<td> emission_class (0x4a)
+</td>
+<td> string
+</td>
+<td> Returns the emission class of this vehicle
+</td></tr>
+<tr>
+<td> shape (0x4b)
+</td>
+<td> string
+</td>
+<td> Returns the shape class of this vehicle
+</td></tr>
+<tr>
+<td> minGap (0x4c)
+</td>
+<td> double
+</td>
+<td> Returns the offset (gap to front vehicle if halting) of this vehicle [m]
+</td></tr>
+<tr>
+<td> gui width (0x4d)
+</td>
+<td> double
+</td>
+<td> Returns the width of this vehicle [m]
+</td></tr>
+<tr>
+<td> waiting time (0x7a)
+</td>
+<td> double
+</td>
+<td> Returns the waiting time [s]
+</td></tr>
+</table>
+<h2> <span class="mw-headline" id="Response_0xb4:_Vehicle_Variable"> Response 0xb4: Vehicle Variable </span></h2>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td width="75" align="center"> ubyte
+</td>
+<td width="75" align="center"> string
+</td>
+<td width="150" align="center"> ubyte
+</td>
+<td width="75" align="center"> &lt;return_type&gt;
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> Variable
+</th>
+<th style="border: 1pt solid;"> Vehicle ID
+</th>
+<th style="border: 1pt solid;"> Return type of the variable
+</th>
+<th style="border: 1pt solid;"> &lt;VARIABLE_VALUE&gt;
+</th></tr></table>
+<p>The respond to a <b>"Command Get Vehicle Variable"</b>.
+</p><p><b>best lanes (0xb2)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> ...
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of following edge information
+</th>
+<th style="border: 1pt solid;"> edge information
+</th></tr></table>
+<p>Each edge information is:
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> byte (signed)
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> byte (unsigned)
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> stringList
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> lane-id
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> length
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> occupation
+</th>
+<th style="border: 1pt solid;"> value type <i>byte</i>
+</th>
+<th style="border: 1pt solid;"> offset to best lane
+</th>
+<th style="border: 1pt solid;"> value type <i>ubyte</i>
+</th>
+<th style="border: 1pt solid;"> 0: lane may not be used for continuing drive, 1: it may be used
+</th>
+<th style="border: 1pt solid;"> value type <i>stringlist</i>
+</th>
+<th style="border: 1pt solid;"> list of best subsequent lanes
+</th></tr></table>
+<p><br />
+</p>
+<h2> <span class="mw-headline" id="Extended_retrieval_messages"> Extended retrieval messages </span></h2>
+<p>Some further messages require additional parameters.
+</p>
+<table border="2" cellspacing="0" cellpadding="4" rules="all">
+<caption> <b>Overview Extended Variables Retrieval</b>
+</caption>
+<tr>
+<th> Variable
+</th>
+<th> Request ValueType
+</th>
+<th> Response ValueType
+</th>
+<th> Description
+</th></tr>
+<tr>
+<td> edge travel time information (0x58)
+</td>
+<td> compound (time, edgeID), see below
+</td>
+<td> double
+</td>
+<td> Returns the edge travel time for the given time as stored in the vehicle's internal container. If such a value does not exist, -1 is returned.
+</td></tr>
+<tr>
+<td> edge effort information (0x59)
+</td>
+<td> compound (time, edgeID), see below
+</td>
+<td> double
+</td>
+<td> Returns the edge effort for the given time as stored in the vehicle's internal container. If such a value does not exist, -1 is returned.
+</td></tr>
+<tr>
+<td> leader (0x68)
+</td>
+<td> double, see below
+</td>
+<td> compound (string, double)
+</td>
+<td> Returns the id of the leading vehicle and its distance, if the string is empty, no leader was found. Only vehicles ahead on the currently list of <i>best lanes</i> are considered (see above). This means, the leader is only valid until the next lane-change maneuver.
+</td></tr>
+</table>
+<p><br />
+The request message contents are as following:
+</p><p><b>edge travel time information (0x58)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=2)
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> requested time (in s)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> edge id
+</th></tr></table>
+<p><br />
+<b>edge effort information (0x59)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=2)
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> requested time (in s)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> edge id
+</th></tr></table>
+<p><b>leader (0x68)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> maximum look ahead distance (in m)
+</th></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 10/1000000
+Preprocessor generated node count: 16/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:265-0!*!0!!*!*!* and timestamp 20150330121737 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 27 March 2015, at 16:19.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

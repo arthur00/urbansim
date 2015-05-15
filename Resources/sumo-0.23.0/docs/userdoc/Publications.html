@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Publications - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="Installing.html">Installing SUMO</a></li>
+  <li><a href="Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="Simulation/Output.html">Simulation output</a></li>
+  <li><a href="TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="Models/Emissions.html">Emissions</a></li>
+  <li><a href="Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Other/Glossary.html">Glossary</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+  <li><a href="Tools/Main.html">Additional Tools</a></li>
+  <li><a href="Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="SUMO.html">SUMO</a></li>
+   <li><a href="SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="DFROUTER.html">DFROUTER</a></li>
+   <li><a href="MAROUTER.html">MAROUTER</a></li>
+   <li><a href="POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Publications</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.003128 from <a href="http://sumo.dlr.de/wiki/Publications">the wiki page for Publications</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>If your publication mentions SUMO please let us know!
+</p><p>Please note that this page will be slowly replaced by something that renders the entries nicer. The entries will be slowly moved into this <a rel="nofollow" class="external text" href="http://sourceforge.net/apps/trac/sumo/browser/trunk/sumo/docs/sumo.bib">bibtex-file</a>. We advice to use <a rel="nofollow" class="external text" href="http://jabref.sourceforge.net/">JabRef</a> for editing this list of publications. Please read the page on <a href="Developer/Managing_Publications.html" title="Developer/Managing Publications">managing publications</a> for further details.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Simulation_Theory"><span class="tocnumber">1</span> <span class="toctext">Simulation Theory</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#ChowdhurySantenSchadschneider2000"><span class="tocnumber">1.1</span> <span class="toctext">ChowdhurySantenSchadschneider2000</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#SUMO_project_descriptions"><span class="tocnumber">2</span> <span class="toctext">SUMO project descriptions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Krajzewicz_et_al2012"><span class="tocnumber">2.1</span> <span class="toctext">Krajzewicz_et_al2012</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Behrisch_et_al2011"><span class="tocnumber">2.2</span> <span class="toctext">Behrisch_et_al2011</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Krajzewicz_et_al2002_1"><span class="tocnumber">2.3</span> <span class="toctext">Krajzewicz_et_al2002_1</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Krajzewicz_et_al2006"><span class="tocnumber">2.4</span> <span class="toctext">Krajzewicz_et_al2006</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#General_information_on_SUMO_.28in_german.29"><span class="tocnumber">2.5</span> <span class="toctext">General information on SUMO (in german)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Car-Following_Models"><span class="tocnumber">3</span> <span class="toctext">Car-Following Models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#The_car-following_model_by_Stefan_Krau.C3.9F"><span class="tocnumber">3.1</span> <span class="toctext">The car-following model by Stefan Krau&#223;</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Krauss1998_1"><span class="tocnumber">3.1.1</span> <span class="toctext">Krauss1998_1</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Krauss1998_2"><span class="tocnumber">3.1.2</span> <span class="toctext">Krauss1998_2</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Lane-Change_Models"><span class="tocnumber">4</span> <span class="toctext">Lane-Change Models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Krajzewicz2009_1"><span class="tocnumber">4.1</span> <span class="toctext">Krajzewicz2009_1</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Erdmann2014"><span class="tocnumber">4.2</span> <span class="toctext">Erdmann2014</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Intermodality"><span class="tocnumber">5</span> <span class="toctext">Intermodality</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Behrisch2010"><span class="tocnumber">5.1</span> <span class="toctext">Behrisch2010</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Traffic_Assignment"><span class="tocnumber">6</span> <span class="toctext">Traffic Assignment</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Road_Network_Preparation"><span class="tocnumber">7</span> <span class="toctext">Road Network Preparation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Krajzewicz_et_al2005_2"><span class="tocnumber">7.1</span> <span class="toctext">Krajzewicz_et_al2005_2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Validation.2C_Calibration.2C_and_Tests"><span class="tocnumber">8</span> <span class="toctext">Validation, Calibration, and Tests</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#Krajzewicz_et_al2002_2"><span class="tocnumber">8.1</span> <span class="toctext">Krajzewicz_et_al2002_2</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Heppner2010"><span class="tocnumber">8.2</span> <span class="toctext">Heppner2010</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Traffic_Lights"><span class="tocnumber">9</span> <span class="toctext">Traffic Lights</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#Krajzewicz_et_al2005_1"><span class="tocnumber">9.1</span> <span class="toctext">Krajzewicz_et_al2005_1</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Zubillaga_et_al2014"><span class="tocnumber">9.2</span> <span class="toctext">Zubillaga_et_al2014</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#Car2Car_Communication"><span class="tocnumber">10</span> <span class="toctext">Car2Car Communication</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#BauzaGozalvezSepulcre2008"><span class="tocnumber">10.1</span> <span class="toctext">BauzaGozalvezSepulcre2008</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#CottinghamDaviesBeresford2005"><span class="tocnumber">10.2</span> <span class="toctext">CottinghamDaviesBeresford2005</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#KarnadiMoLan2005"><span class="tocnumber">10.3</span> <span class="toctext">KarnadiMoLan2005</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#GozalvezSepulcre2008"><span class="tocnumber">10.4</span> <span class="toctext">GozalvezSepulcre2008</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Honomichl2008"><span class="tocnumber">10.5</span> <span class="toctext">Honomichl2008</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Lehr2005"><span class="tocnumber">10.6</span> <span class="toctext">Lehr2005</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#PiorkowskiRayaLugoPapadimitratosGrossglauserHubaux2007"><span class="tocnumber">10.7</span> <span class="toctext">PiorkowskiRayaLugoPapadimitratosGrossglauserHubaux2007</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#SommerYaoGermanDressler2008"><span class="tocnumber">10.8</span> <span class="toctext">SommerYaoGermanDressler2008</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#SommerYaoGermanDressler2008_2"><span class="tocnumber">10.9</span> <span class="toctext">SommerYaoGermanDressler2008_2</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#WegenerPiorkowskiRayaHellbruckFischerHubaux2008"><span class="tocnumber">10.10</span> <span class="toctext">WegenerPiorkowskiRayaHellbruckFischerHubaux2008</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#WegenerHellbrueckWewetzerLuebke2008"><span class="tocnumber">10.11</span> <span class="toctext">WegenerHellbrueckWewetzerLuebke2008</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="#Barber2011"><span class="tocnumber">10.12</span> <span class="toctext">Barber2011</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-40"><a href="#ITS_-_other_topics"><span class="tocnumber">11</span> <span class="toctext">ITS - other topics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-41"><a href="#EdekampJabarMehrer2005"><span class="tocnumber">11.1</span> <span class="toctext">EdekampJabarMehrer2005</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="#Morenz2008"><span class="tocnumber">11.2</span> <span class="toctext">Morenz2008</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="#Willigens2008"><span class="tocnumber">11.3</span> <span class="toctext">Willigens2008</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="#Kerekes_et_al2009"><span class="tocnumber">11.4</span> <span class="toctext">Kerekes_et_al2009</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="#Pereira2011"><span class="tocnumber">11.5</span> <span class="toctext">Pereira2011</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="#BajpaiMathew2011"><span class="tocnumber">11.6</span> <span class="toctext">BajpaiMathew2011</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-47"><a href="#SUMO_Conferences"><span class="tocnumber">12</span> <span class="toctext">SUMO Conferences</span></a>
+<ul>
+<li class="toclevel-2 tocsection-48"><a href="#SUMO_2013"><span class="tocnumber">12.1</span> <span class="toctext">SUMO 2013</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="#SUMO_2014"><span class="tocnumber">12.2</span> <span class="toctext">SUMO 2014</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Simulation_Theory">Simulation Theory</span></h1>
+<h4> <span class="mw-headline" id="ChowdhurySantenSchadschneider2000">ChowdhurySantenSchadschneider2000</span></h4>
+<p><a rel="nofollow" class="external text" href="http://arxiv.org/abs/cond-mat/0007053">"Statistical Physics of Vehicular Traffic and Some Related Systems"</a>; D. Chowdhury, L. Santen, A. Schadschneider; Physics Reports 329, (4-6), S. 199-329, Elsevier, 2000, ISSN: 0370-1573<br />
+</p><p><br />
+</p>
+<h1> <span class="mw-headline" id="SUMO_project_descriptions">SUMO project descriptions</span></h1>
+<h4> <span class="mw-headline" id="Krajzewicz_et_al2012">Krajzewicz_et_al2012</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/sysmea_v5_n34_2012_4.pdf">"Recent Development and Applications of SUMO - Simulation of Urban MObility"</a>; Daniel Krajzewicz, Jakob Erdmann, Michael Behrisch, and Laura Bieker. International Journal On Advances in Systems and Measurements, 5 (3&amp;4):128-138, December 2012.<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/sysmea_v5_n34_2012_4.pdf">.pdf, ~1100KB</a>. See also: <a rel="nofollow" class="external text" href="http://www.iariajournals.org/systems_and_measurements/tocv5n34.html">journal page</a>.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />This is our current reference publication. Please use it when citing SUMO in general.</div>
+<p>BibTex:
+</p>
+<pre>@article{SUMO2012,
+         author = {Daniel Krajzewicz and Jakob Erdmann and Michael Behrisch and Laura Bieker},
+          title = {Recent Development and Applications of {SUMO - Simulation of Urban MObility}},
+         volume = {5},
+         number = {3\&amp;4 },
+          month = {December},
+           year = {2012},
+        journal = {International Journal On Advances in Systems and Measurements},
+          pages = {128--138},
+ }
+</pre>
+<h4> <span class="mw-headline" id="Behrisch_et_al2011">Behrisch_et_al2011</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/simul_2011_3_40_50150.pdf">"SUMO - Simulation of Urban MObility: An Overview"</a>; Michael Behrisch, Laura Bieker, Jakob Erdmann, Daniel Krajzewicz; In: SIMUL 2011, The Third International Conference on Advances in System Simulation, 2011, 63-68.<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/simul_2011_3_40_50150.pdf">.pdf, ~790KB</a>. See also: <a rel="nofollow" class="external text" href="http://www.thinkmind.org/index.php?view=article&amp;articleid=simul_2011_3_40_50150">publications page</a>.
+</p>
+<h4> <span class="mw-headline" id="Krajzewicz_et_al2002_1">Krajzewicz_et_al2002_1</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_MESM2002_SUMO.pdf">"SUMO (Simulation of Urban MObility); An open-source traffic simulation"</a>; Daniel Krajzewicz, Georg Hertkorn, Christian R&#246;ssel, Peter Wagner; In: ~Al-Akaidi, A. [Ed.]: Proceedings of the 4th Middle East Symposium on Simulation and Modelling (MESM2002), SCS European Publishing House, pp. 183-187, 4th Middle East Symposium on Simulation and Modelling, Sept. 2002, Sharjah / United Arab Emirates.<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_MESM2002_SUMO.pdf">.pdf, ~250KB</a>. You may also download the <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_mesm2002_SUMO_transparencies.pdf">.pdf-transparencies, ~900KB</a>
+</p>
+<h4> <span class="mw-headline" id="Krajzewicz_et_al2006">Krajzewicz_et_al2006</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/RoboCup2006_dkrajzew_SUMO.pdf">"The Open Source Traffic Simulation Package SUMO"</a>; Daniel Krajzewicz, Michael Bonert, Peter Wagner; RoboCup 2006 Infrastructure Simulation Competition, RoboCup 2006, Germany, Bremen.<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/RoboCup2006_dkrajzew_SUMO.pdf">.pdf, ~180KB</a>
+</p>
+<h4> <span class="mw-headline" id="General_information_on_SUMO_.28in_german.29">General information on SUMO (in german)</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/de_SUMO_HU.pdf">"Simulation of Urban MObility: SUMO - Eine freie Verkehrssimulation"</a>; Daniel Krajzewicz, Michael Behrisch.<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/de_SUMO_HU.pdf">.pdf-transparencies, ~1300KB</a>
+</p>
+<h1> <span class="mw-headline" id="Car-Following_Models">Car-Following Models</span></h1>
+<h2> <span class="mw-headline" id="The_car-following_model_by_Stefan_Krau.C3.9F">The car-following model by Stefan Krau&#223;</span></h2>
+<h4> <span class="mw-headline" id="Krauss1998_1">Krauss1998_1</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/sk.pdf">"Metastable States in a Microscopic Model of Traffic Flow"</a>; Stefan Krau&#223;, Peter Wagner, Christian Gawron; Physical Review E, volume 55, number 304, pages 55-97; May, 1997<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/sk.pdf">.pdf, ~210KB</a>
+</p>
+<h4> <span class="mw-headline" id="Krauss1998_2">Krauss1998_2</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/KraussDiss.pdf">"Microscopic Modeling of Traffic Flow: Investigation of Collision Free Vehicle Dynamics"</a>; Stefan Krau&#223;; Hauptabteilung Mobilit&#228;t und Systemtechnik des DLR K&#246;ln; 1998; ISSN 1434-8454<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/KraussDiss.pdf">.pdf, ~1.5MB</a>
+</p><p><br />
+</p>
+<h1> <span class="mw-headline" id="Lane-Change_Models">Lane-Change Models</span></h1>
+<h4> <span class="mw-headline" id="Krajzewicz2009_1">Krajzewicz2009_1</span></h4>
+<p>"Kombination von taktischen und strategischen Einflüssen in einer mikroskopischen Verkehrsflusssimulation"; Krajzewicz, Daniel; In: Fahrermodellierung in Wissenschaft und Wirtschaft, 2. Berliner Fachtagung für Fahrermodellierung; VDI-Reihe 22 (Mensch-Maschine-Systeme); ISBN: 978-3-18-302822-1; ISSN: 1439-958X; 2009
+</p>
+<h4> <span class="mw-headline" id="Erdmann2014">Erdmann2014</span></h4>
+<p><a rel="nofollow" class="external text" href="http://elib.dlr.de/89233/">Erdmann, Jakob (2014) Lane-Changing Model in SUMO. In: Proceedings of the SUMO2014 Modeling Mobility with Open Data, 24, Seiten 77-88. Deutsches Zentrum für Luft- und Raumfahrt e.V.. SUMO2014, 16.-16. Mai 2014, Berlin, Deutschland. ISSN 1866-721X</a>
+</p><p><br />
+</p>
+<h1> <span class="mw-headline" id="Intermodality">Intermodality</span></h1>
+<h4> <span class="mw-headline" id="Behrisch2010">Behrisch2010</span></h4>
+<p><a rel="nofollow" class="external text" href="http://elib.dlr.de/65964/">Behrisch, Michael und Erdmann, Jakob und Krajzewicz, Daniel (2010) Adding intermodality to the microscopic simulation package SUMO. MESM 2010, 01-03.Dez. 2010, Alexandria, Agypten.</a>
+</p>
+<h1> <span class="mw-headline" id="Traffic_Assignment">Traffic Assignment</span></h1>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/GawronDiss.pdf">"Simulation-Based Traffic Assignment"</a>; Christian Gawron; PhD thesis, University of Cologne, Germany, 1998.<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/GawronDiss.pdf">.pdf, ~1.6MB</a>
+</p><p><a rel="nofollow" class="external text" href="http://e-archive.informatik.uni-koeln.de/339/">Gawron, Christian (1998) An Iterative Algorithm to Determine the Dynamic User Equilibrium in a Traffic Simulation Model.</a>
+Published in: International Journal of Modern Physics C Vol. 9 (3). pp. 393-407.
+</p>
+<h1> <span class="mw-headline" id="Road_Network_Preparation">Road Network Preparation</span></h1>
+<h4> <span class="mw-headline" id="Krajzewicz_et_al2005_2">Krajzewicz_et_al2005_2</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_TRAF5_DigitalMaps1.pdf">"Preparation of Digital Maps for Traffic Simulation; Part 1: Approach and Algorithms"</a>; Daniel Krajzewicz, Georg Hertkorn, Julia Ringel, Peter Wagner; In: Proceedings of the 3rd Industrial Simulation Conference 2005, EUROSIS-ETI, J. Kr&#252;ger, A. Lisounkin, G. Schreck (Eds.); p. 285-290; <a href="Special:BookSources/907738118X.html" class="internal mw-magiclink-isbn">ISBN 90-77381-18-X</a>, Jun. 2005, Berlin / Germany<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_TRAF5_DigitalMaps1.pdf">.pdf, ~230KB</a>.<br />You may also download the <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_TRAF5_DigitalMaps1_transparencies.pdf">.pdf-transparencies, ~560KB</a>
+</p><p><br />
+</p>
+<h1> <span class="mw-headline" id="Validation.2C_Calibration.2C_and_Tests">Validation, Calibration, and Tests</span></h1>
+<h4> <span class="mw-headline" id="Krajzewicz_et_al2002_2">Krajzewicz_et_al2002_2</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_ESS2002_LOG14_Validation.pdf">"An Example of Microscopic Car Models Validation using the open source Traffic Simulation SUMO"</a>; Daniel Krajzewicz, Georg Hertkorn, Christian R&#246;ssel, Peter Wagner; In: Proceedings of Simulation in Industry, 14th European Simulation Symposium, 2002, SCS European Publishing House, 2002, pp. 318-322, Simulation in Industry, 14th European Simulation Symposium, Oct. 2002, Dresden / Germany<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_ESS2002_LOG14_Validation.pdf">.pdf, ~320KB</a>. You may also download the <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_ESS2002_Validation_transparencies.pdf">.pdf-transparencies, ~700KB</a>
+</p>
+<h4> <span class="mw-headline" id="Heppner2010">Heppner2010</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www2.informatik.hu-berlin.de/swt/dipl/MatthiasHeppner.2010.pdf">"Einführung von Unit Tests in das bestehende C++ Softwaresystem SUMO"</a>; Matthias Heppner; Diploma thesis, Humboldt-Universität zu Berlin, Jan. 2010<br />Available as: <a rel="nofollow" class="external text" href="http://www2.informatik.hu-berlin.de/swt/dipl/MatthiasHeppner.2010.pdf">.pdf</a>.
+</p>
+<h1> <span class="mw-headline" id="Traffic_Lights">Traffic Lights</span></h1>
+<h4> <span class="mw-headline" id="Krajzewicz_et_al2005_1">Krajzewicz_et_al2005_1</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_TRAF9_AgentbasedTLS.pdf">"Simulation of modern Traffic Lights Control Systems using the open source Traffic Simulation SUMO"</a>; Daniel Krajzewicz, Elmar Brockfeld, J&#252;rgen Mikat, Julia Ringel, Christian R&#246;ssel, Wolfram Tuchscheerer, Peter Wagner, Richard Woesler; In: Proceedings of the 3rd Industrial Simulation Conference 2005; J. Kr&#252;ger, A. Lisounkin, G. Schreck (Eds.); EUROSIS-ETI, S. 299-302, ISBN: 90-77381-18-X, Jun. 2005, Berlin / Germany<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_TRAF9_AgentbasedTLS.pdf">.pdf, ~200KB</a>. You may also download the <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/dkrajzew_TRAF9_AgentbasedTLS_transparencies.pdf">/dkrajzew_TRAF9_AgentbasedTLS_transparencies.pdf .pdf-transparencies, ~2MB</a>
+</p>
+<h4> <span class="mw-headline" id="Zubillaga_et_al2014">Zubillaga_et_al2014</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www.mdpi.com/1099-4300/16/5/2384">Zubillaga D, Cruz G, Aguilar LD, Zapotécatl J, Fernández N, Aguilar J, Rosenblueth DA, Gershenson C. Measuring the Complexity of Self-Organizing Traffic Lights. Entropy. 2014; 16(5):2384-2407.</a>
+</p>
+<h1> <span class="mw-headline" id="Car2Car_Communication">Car2Car Communication</span></h1>
+<h4> <span class="mw-headline" id="BauzaGozalvezSepulcre2008">BauzaGozalvezSepulcre2008</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www.uwicore.umh.es/files/paper/2008_international/uwicore_WiVeC08_Operation%20and%20Performance%20of%20Vehicular%20Ad-hoc%20Routing%20Protocols%20in%20Realistic%20Environments.pdf">"Operation and Performance of Vehicular Ad-hoc Routing Protocols in Realistic Environments"</a>; Proceedings of the 2nd IEEE International Symposium on Wireless Vehicular Communications (WiVeC) , September 2008, Calgary (Canada)
+</p>
+<h4> <span class="mw-headline" id="CottinghamDaviesBeresford2005">CottinghamDaviesBeresford2005</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www.cl.cam.ac.uk/Research/DTG/research/sentient/vehicles.php">"Congestion-Aware Vehicular Traffic Routing Using WiFi Hotspots"</a>; David N. Cottingham and Jonathan J. Davies and Alastair R. Beresford; In: Proceedings of Communications Innovation Institute Workshop, Cambridge-MIT Institute, p. 4-6, Apr. 2005
+</p>
+<h4> <span class="mw-headline" id="KarnadiMoLan2005">KarnadiMoLan2005</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www.cse.unsw.edu.au/~klan/paper/sumo.pdf">"Rapid Generation of Realistic Mobility Models for VANET"</a>; Feliz Kristianto Karnadi, Zhi Hai Mo, Kun-chan Lan; Appeared in ACM MOBICOMM 2005
+</p>
+<h4> <span class="mw-headline" id="GozalvezSepulcre2008">GozalvezSepulcre2008</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www.uwicore.umh.es/files/paper/2008_international/uwicore_ITS08_Channel%20Efficiency%20of%20Adaptive%20Transmission%20Techniques%20for%20Wireless%20Vehicular%20Communications.pdf">"Channel Efficiency of Adaptive Transmission Techniques for Wireless Vehicular Communications"</a>; J. Gozalvez, and M. Sepulcre; Proceedings of the 15th World Congress on Intelligent Transport Systems, November 2008, New York (USA)
+</p>
+<h4> <span class="mw-headline" id="Honomichl2008">Honomichl2008</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo.sf.net/pdf/Analyse_Verkettbarkeit.pdf">"Analyse und Simulation von Verkettbarkeitsmaßen in pseudonymer, mobiler Kommunikation"</a> Clemens Honomichl; Diploma Thesis; 2008
+</p>
+<h4> <span class="mw-headline" id="Lehr2005">Lehr2005</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/DiplomarbeitSebastianLehr.pdf">"Optimierung der Kommunikation zwischen am Verkehr beteiligten Strukturen"</a>; Sebastian Lehr; Diploma Thesis; Fachhochschule für Technik und Wirtschaft Berlin<br />Available as: <a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/DiplomarbeitSebastianLehr.pdf">.pdf, ~1MB</a>
+</p>
+<h4> <span class="mw-headline" id="PiorkowskiRayaLugoPapadimitratosGrossglauserHubaux2007">PiorkowskiRayaLugoPapadimitratosGrossglauserHubaux2007</span></h4>
+<p><a rel="nofollow" class="external text" href="http://infoscience.epfl.ch/record/113879">"TraNS: Realistic Joint Traffic and Network Simulator for VANETs"</a>; Michal Piorkowski, Maxim Raya, Ada Lezama Lugo, Panos Papadimitratos, Matthias Grossglauser and Jean-Pierre Hubaux; The 13th ACM Annual International Conference on Mobile Computing and Networking MobiCom'07, Montreal, Canada, September 2007; (to appear in ACM MC2R special issue)
+</p>
+<h4> <span class="mw-headline" id="SommerYaoGermanDressler2008">SommerYaoGermanDressler2008</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www7.informatik.uni-erlangen.de/~sommer/publications/">"Simulating the Influence of IVC on Road Traffic using Bidirectionally Coupled Simulators"</a>; Christoph Sommer, Zheng Yao, Reinhard German and Falko Dressler; Proceedings of 27th IEEE Conference on Computer Communications (IEEE INFOCOM 2008): Mobile Networking for Vehicular Environments (MOVE 2008), Phoenix, AZ, April 2008.
+</p>
+<h4> <span class="mw-headline" id="SommerYaoGermanDressler2008_2">SommerYaoGermanDressler2008_2</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www7.informatik.uni-erlangen.de/~sommer/publications/">"On the Need for Bidirectional Coupling of Road Traffic Microsimulation and Network Simulation"</a>; Christoph Sommer, Zheng Yao, Reinhard German and Falko Dressler; Proceedings of 9th ACM International Symposium on Mobile Ad Hoc Networking and Computing (ACM Mobihoc 2008): 1st ACM International Workshop on Mobility Models for Networking Research (MobilityModels'08), Hong Kong, China, May 2008.
+</p>
+<h4> <span class="mw-headline" id="WegenerPiorkowskiRayaHellbruckFischerHubaux2008">WegenerPiorkowskiRayaHellbruckFischerHubaux2008</span></h4>
+<p><a rel="nofollow" class="external text" href="http://infoscience.epfl.ch/record/115106">"TraCI: An Interface for Coupling Road Traffic and Network Simulators"</a>; Axel Wegener, Michal Piorkowski, Maxim Raya, Horst Hellbrück, Stefan Fischer, and Jean-Pierre Hubaux; The 11th Communications and Networking Simulation Symposium CNS'08, Ottawa, Canada, April 2008
+</p>
+<h4> <span class="mw-headline" id="WegenerHellbrueckWewetzerLuebke2008">WegenerHellbrueckWewetzerLuebke2008</span></h4>
+<p>"VANET Simulation Environment with Feedback Loop and its Application to Traffic Light Assistance"; Axel Wegener, Horst Hellbrück, Christian Wewetzer and Andreas Lübke; Proceedings of the 3rd IEEE Workshop on Automotive Networking and Applications, New Orleans, LA, USA, 2008
+</p>
+<h4> <span class="mw-headline" id="Barber2011">Barber2011</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/BarberThesis.pdf">"SHARING THE ROADS USING ROUTE INFORMATION SHARING"</a>; Anthony Barber; Master Thesis; The University of Tulsa; 2011
+</p>
+<h1> <span class="mw-headline" id="ITS_-_other_topics">ITS - other topics</span></h1>
+<h4> <span class="mw-headline" id="EdekampJabarMehrer2005">EdekampJabarMehrer2005</span></h4>
+<p><a rel="nofollow" class="external text" href="http://www.tzi.de/~edelkamp/Endbericht/End.pdf">"GPS-Route, Endbericht"</a>; Stefan Edelkamp, Shahidd Jabar, Tilman Mehrer<br />Topics: car-to-car (c2c) communication, vehicle navigation, road network generation
+</p>
+<h4> <span class="mw-headline" id="Morenz2008">Morenz2008</span></h4>
+<p><a rel="nofollow" class="external text" href="https://www.cs.tcd.ie/publications/tech-reports/reports.07/TCD-CS-2007-56.pdf">"iTranSIM -  Simulation-based Vehicle Location"</a> Tino Morenz; Master thesis; 2008
+</p>
+<h4> <span class="mw-headline" id="Willigens2008">Willigens2008</span></h4>
+<p><a href="/w/index.php?title=Special:Upload&amp;wpDestFile=Master_willigens.pdf" class="new" title="Master willigens.pdf">"Development and Evaluation of a Centralized Traffic Information System using UMTS and GPS"</a>; Michael Willigens; Master Thesis, 2008
+</p>
+<h4> <span class="mw-headline" id="Kerekes_et_al2009">Kerekes_et_al2009</span></h4>
+<p><a rel="nofollow" class="external text" href="http://spie.org/x648.html?product_id=819265">"Sensor modeling and demonstration of a multi-object spectrometer for performance-driven sensing"</a>. John P. Kerekes, Michael D. Presnar, Kenneth D. Fourspring, Zoran Ninkov, David R. Pogorzala, Alan D. Raisanen, Andrew C. Rice, Juan R. Vasquez, Jeffrey P. Patel, Robert T. MacIntyre, and Scott D. Brown, Proc. SPIE 7334, 73340J (2009), DOI:10.1117/12.819265
+</p>
+<h4> <span class="mw-headline" id="Pereira2011">Pereira2011</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/mieec1.pdf">"An Integrated Architecture for Autonomous Vehicles Simulation"</a>; José Luis Ferrás Pereira; Master Thesis, FACULDADE DE ENGENHARIA DA UNIVERSIDADE DO PORTO, 2011
+</p>
+<h4> <span class="mw-headline" id="BajpaiMathew2011">BajpaiMathew2011</span></h4>
+<p><a rel="nofollow" class="external text" href="http://sumo-sim.org/pdf/CTRG_Interface-SUMO.pdf">"Development of an Interface between Signal Controller and Traffic Simulator"</a>; Ashutosh Bajpai, Tom V Mathew; 1st Conference of Transportation Research Group of India (CTRG), 2011
+</p>
+<h1> <span class="mw-headline" id="SUMO_Conferences">SUMO Conferences</span></h1>
+<h2> <span class="mw-headline" id="SUMO_2013"> SUMO 2013 </span></h2>
+<pre> [<a rel="nofollow" class="external text" href="http://sumo-sim.org/2013/SUMO2013_15-17May%202013_Berlin-Adlershof.pdf">Proceedings</a>][<a rel="nofollow" class="external text" href="http://sumo-sim.org/2013/conference.html">conference page</a>]
+</pre>
+<h2> <span class="mw-headline" id="SUMO_2014"> SUMO 2014 </span></h2>
+<pre> [<a rel="nofollow" class="external text" href="http://sumo-sim.org/2014/Proceeding_SUMO2014_15+16May2014_Berlin-Adlershof.pdf">Proceedings</a>][<a rel="nofollow" class="external text" href="http://sumo-sim.org/2014/conference.html">conference page</a>]
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 202/1000000
+Preprocessor generated node count: 226/1000000
+Post‐expand include size: 221/2097152 bytes
+Template argument size: 85/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:29-0!*!0!!en!*!* and timestamp 20150330190337 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 4 February 2015, at 17:24.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

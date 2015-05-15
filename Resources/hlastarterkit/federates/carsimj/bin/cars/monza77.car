@@ -1,0 +1,8 @@
+// config file for car
+Name=Monza 77
+LicensePlate=BRP-123
+FuelType=Gasoline
+NormalSpeed=100
+LitersPer100km1=25
+LitersPer100km2=15
+LitersPer100km3=10

@@ -1,0 +1,147 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module traci.simulation</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="traci.html"><font color="#ffffff">traci</font></a>.simulation</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/behr_mi/sumo/tools/traci/simulation.py">/home/behr_mi/sumo/tools/traci/simulation.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;simulation.py<br>
+@author&nbsp;&nbsp;Daniel&nbsp;Krajzewicz<br>
+@author&nbsp;&nbsp;Jakob&nbsp;Erdmann<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2011-03-15<br>
+@version&nbsp;$Id:&nbsp;simulation.py&nbsp;18106&nbsp;2015-03-19&nbsp;08:08:16Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;TraCI&nbsp;interface.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo.dlr.de/">http://sumo.dlr.de/</a><br>
+Copyright&nbsp;(C)&nbsp;2011-2015&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+&nbsp;<br>
+This&nbsp;file&nbsp;is&nbsp;part&nbsp;of&nbsp;SUMO.<br>
+SUMO&nbsp;is&nbsp;free&nbsp;software;&nbsp;you&nbsp;can&nbsp;redistribute&nbsp;it&nbsp;and/or&nbsp;modify<br>
+it&nbsp;under&nbsp;the&nbsp;terms&nbsp;of&nbsp;the&nbsp;GNU&nbsp;General&nbsp;Public&nbsp;License&nbsp;as&nbsp;published&nbsp;by<br>
+the&nbsp;Free&nbsp;Software&nbsp;Foundation;&nbsp;either&nbsp;version&nbsp;3&nbsp;of&nbsp;the&nbsp;License,&nbsp;or<br>
+(at&nbsp;your&nbsp;option)&nbsp;any&nbsp;later&nbsp;version.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top><a href="traci.constants.html">traci.constants</a><br>
+</td><td width="25%" valign=top><a href="traci.html">traci</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-clearPending"><strong>clearPending</strong></a>(routeID<font color="#909090">=''</font>)</dt></dl>
+ <dl><dt><a name="-convert2D"><strong>convert2D</strong></a>(edgeID, pos, laneIndex<font color="#909090">=0</font>, toGeo<font color="#909090">=False</font>)</dt></dl>
+ <dl><dt><a name="-convert3D"><strong>convert3D</strong></a>(edgeID, pos, laneIndex<font color="#909090">=0</font>, toGeo<font color="#909090">=False</font>)</dt></dl>
+ <dl><dt><a name="-convertGeo"><strong>convertGeo</strong></a>(x, y, fromGeo<font color="#909090">=False</font>)</dt></dl>
+ <dl><dt><a name="-convertRoad"><strong>convertRoad</strong></a>(x, y, isGeo<font color="#909090">=False</font>)</dt></dl>
+ <dl><dt><a name="-getArrivedIDList"><strong>getArrivedIDList</strong></a>()</dt><dd><tt><a href="#-getArrivedIDList">getArrivedIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;ids&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;arrived&nbsp;(have&nbsp;reached&nbsp;their&nbsp;destination&nbsp;and&nbsp;are&nbsp;removed&nbsp;from&nbsp;the&nbsp;road&nbsp;network)&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getArrivedNumber"><strong>getArrivedNumber</strong></a>()</dt><dd><tt><a href="#-getArrivedNumber">getArrivedNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;arrived&nbsp;(have&nbsp;reached&nbsp;their&nbsp;destination&nbsp;and&nbsp;are&nbsp;removed&nbsp;from&nbsp;the&nbsp;road&nbsp;network)&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getBusStopWaiting"><strong>getBusStopWaiting</strong></a>()</dt><dd><tt><a href="#-getBusStopWaiting">getBusStopWaiting</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getCurrentTime"><strong>getCurrentTime</strong></a>()</dt><dd><tt><a href="#-getCurrentTime">getCurrentTime</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;current&nbsp;simulation&nbsp;time&nbsp;in&nbsp;ms.</tt></dd></dl>
+ <dl><dt><a name="-getDeltaT"><strong>getDeltaT</strong></a>()</dt><dd><tt><a href="#-getDeltaT">getDeltaT</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getDepartedIDList"><strong>getDepartedIDList</strong></a>()</dt><dd><tt><a href="#-getDepartedIDList">getDepartedIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;ids&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;departed&nbsp;(were&nbsp;inserted&nbsp;into&nbsp;the&nbsp;road&nbsp;network)&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getDepartedNumber"><strong>getDepartedNumber</strong></a>()</dt><dd><tt><a href="#-getDepartedNumber">getDepartedNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;departed&nbsp;(were&nbsp;inserted&nbsp;into&nbsp;the&nbsp;road&nbsp;network)&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getDistance2D"><strong>getDistance2D</strong></a>(x1, y1, x2, y2, isGeo<font color="#909090">=False</font>, isDriving<font color="#909090">=False</font>)</dt><dd><tt><a href="#-getDistance2D">getDistance2D</a>(double,&nbsp;double,&nbsp;double,&nbsp;double,&nbsp;boolean,&nbsp;boolean)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Reads&nbsp;two&nbsp;coordinate&nbsp;pairs&nbsp;and&nbsp;an&nbsp;indicator&nbsp;whether&nbsp;the&nbsp;air&nbsp;or&nbsp;the&nbsp;driving&nbsp;distance&nbsp;shall&nbsp;be&nbsp;computed.&nbsp;Returns&nbsp;the&nbsp;according&nbsp;distance.</tt></dd></dl>
+ <dl><dt><a name="-getDistanceRoad"><strong>getDistanceRoad</strong></a>(edgeID1, pos1, edgeID2, pos2, isDriving<font color="#909090">=False</font>)</dt><dd><tt><a href="#-getDistanceRoad">getDistanceRoad</a>(string,&nbsp;double,&nbsp;string,&nbsp;double,&nbsp;boolean)&nbsp;-&gt;&nbsp;double<br>
+&nbsp;<br>
+Reads&nbsp;two&nbsp;positions&nbsp;on&nbsp;the&nbsp;road&nbsp;network&nbsp;and&nbsp;an&nbsp;indicator&nbsp;whether&nbsp;the&nbsp;air&nbsp;or&nbsp;the&nbsp;driving&nbsp;distance&nbsp;shall&nbsp;be&nbsp;computed.&nbsp;Returns&nbsp;the&nbsp;according&nbsp;distance.</tt></dd></dl>
+ <dl><dt><a name="-getEndingTeleportIDList"><strong>getEndingTeleportIDList</strong></a>()</dt><dd><tt><a href="#-getEndingTeleportIDList">getEndingTeleportIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;ids&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;ended&nbsp;to&nbsp;be&nbsp;teleported&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getEndingTeleportNumber"><strong>getEndingTeleportNumber</strong></a>()</dt><dd><tt><a href="#-getEndingTeleportNumber">getEndingTeleportNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;ended&nbsp;to&nbsp;be&nbsp;teleported&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getLoadedIDList"><strong>getLoadedIDList</strong></a>()</dt><dd><tt><a href="#-getLoadedIDList">getLoadedIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;ids&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;were&nbsp;loaded&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getLoadedNumber"><strong>getLoadedNumber</strong></a>()</dt><dd><tt><a href="#-getLoadedNumber">getLoadedNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;were&nbsp;loaded&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getMinExpectedNumber"><strong>getMinExpectedNumber</strong></a>()</dt><dd><tt><a href="#-getMinExpectedNumber">getMinExpectedNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;are&nbsp;in&nbsp;the&nbsp;net&nbsp;plus&nbsp;the<br>
+ones&nbsp;still&nbsp;waiting&nbsp;to&nbsp;start.&nbsp;This&nbsp;number&nbsp;may&nbsp;be&nbsp;smaller&nbsp;than<br>
+the&nbsp;actual&nbsp;number&nbsp;of&nbsp;vehicles&nbsp;still&nbsp;to&nbsp;come&nbsp;because&nbsp;of&nbsp;delayed<br>
+route&nbsp;file&nbsp;parsing.&nbsp;If&nbsp;the&nbsp;number&nbsp;is&nbsp;0&nbsp;however,&nbsp;it&nbsp;is<br>
+guaranteed&nbsp;that&nbsp;all&nbsp;route&nbsp;files&nbsp;have&nbsp;been&nbsp;parsed&nbsp;completely<br>
+and&nbsp;all&nbsp;vehicles&nbsp;have&nbsp;left&nbsp;the&nbsp;network.</tt></dd></dl>
+ <dl><dt><a name="-getNetBoundary"><strong>getNetBoundary</strong></a>()</dt><dd><tt><a href="#-getNetBoundary">getNetBoundary</a>()&nbsp;-&gt;&nbsp;((double,&nbsp;double),&nbsp;(double,&nbsp;double))<br>
+&nbsp;<br>
+The&nbsp;boundary&nbsp;box&nbsp;of&nbsp;the&nbsp;simulation&nbsp;network.</tt></dd></dl>
+ <dl><dt><a name="-getParkingEndingVehiclesIDList"><strong>getParkingEndingVehiclesIDList</strong></a>()</dt><dd><tt><a href="#-getParkingEndingVehiclesIDList">getParkingEndingVehiclesIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getParkingEndingVehiclesNumber"><strong>getParkingEndingVehiclesNumber</strong></a>()</dt><dd><tt><a href="#-getParkingEndingVehiclesNumber">getParkingEndingVehiclesNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getParkingStartingVehiclesIDList"><strong>getParkingStartingVehiclesIDList</strong></a>()</dt><dd><tt><a href="#-getParkingStartingVehiclesIDList">getParkingStartingVehiclesIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getParkingStartingVehiclesNumber"><strong>getParkingStartingVehiclesNumber</strong></a>()</dt><dd><tt><a href="#-getParkingStartingVehiclesNumber">getParkingStartingVehiclesNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getStartingTeleportIDList"><strong>getStartingTeleportIDList</strong></a>()</dt><dd><tt><a href="#-getStartingTeleportIDList">getStartingTeleportIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;ids&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;started&nbsp;to&nbsp;teleport&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getStartingTeleportNumber"><strong>getStartingTeleportNumber</strong></a>()</dt><dd><tt><a href="#-getStartingTeleportNumber">getStartingTeleportNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;vehicles&nbsp;which&nbsp;started&nbsp;to&nbsp;teleport&nbsp;in&nbsp;this&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-getStopEndingVehiclesIDList"><strong>getStopEndingVehiclesIDList</strong></a>()</dt><dd><tt><a href="#-getStopEndingVehiclesIDList">getStopEndingVehiclesIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getStopEndingVehiclesNumber"><strong>getStopEndingVehiclesNumber</strong></a>()</dt><dd><tt><a href="#-getStopEndingVehiclesNumber">getStopEndingVehiclesNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getStopStartingVehiclesIDList"><strong>getStopStartingVehiclesIDList</strong></a>()</dt><dd><tt><a href="#-getStopStartingVehiclesIDList">getStopStartingVehiclesIDList</a>()&nbsp;-&gt;&nbsp;list(string)<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getStopStartingVehiclesNumber"><strong>getStopStartingVehiclesNumber</strong></a>()</dt><dd><tt><a href="#-getStopStartingVehiclesNumber">getStopStartingVehiclesNumber</a>()&nbsp;-&gt;&nbsp;integer<br>
+&nbsp;<br>
+.</tt></dd></dl>
+ <dl><dt><a name="-getSubscriptionResults"><strong>getSubscriptionResults</strong></a>()</dt><dd><tt><a href="#-getSubscriptionResults">getSubscriptionResults</a>()&nbsp;-&gt;&nbsp;dict(integer:&nbsp;&lt;value_type&gt;)<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;subscription&nbsp;results&nbsp;for&nbsp;the&nbsp;last&nbsp;time&nbsp;step.<br>
+It&nbsp;is&nbsp;not&nbsp;possible&nbsp;to&nbsp;retrieve&nbsp;older&nbsp;subscription&nbsp;results&nbsp;than&nbsp;the&nbsp;ones<br>
+from&nbsp;the&nbsp;last&nbsp;time&nbsp;step.</tt></dd></dl>
+ <dl><dt><a name="-subscribe"><strong>subscribe</strong></a>(varIDs<font color="#909090">=(116,)</font>, begin<font color="#909090">=0</font>, end<font color="#909090">=2147483647</font>)</dt><dd><tt><a href="#-subscribe">subscribe</a>(list(integer),&nbsp;double,&nbsp;double)&nbsp;-&gt;&nbsp;None<br>
+&nbsp;<br>
+Subscribe&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;simulation&nbsp;values&nbsp;for&nbsp;the&nbsp;given&nbsp;interval.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>subscriptionResults</strong> = &lt;{}, {}&gt;</td></tr></table>
+</body></html>

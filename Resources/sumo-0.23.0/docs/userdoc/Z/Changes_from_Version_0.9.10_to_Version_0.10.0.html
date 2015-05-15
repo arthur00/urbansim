@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Z/Changes_from_Version_0.9.10_to_Version_0.10.0 - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Z/Changes from Version 0.9.10 to Version 0.10.0</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.199062 from <a href="http://sumo.dlr.de/wiki/Z/Changes_from_Version_0.9.10_to_Version_0.10.0">the wiki page for Z/Changes_from_Version_0.9.10_to_Version_0.10.0</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><ul><li> Build
+<ul><li> removed obsolete configuration option <b>--enable-speedcheck</b>
+</li></ul>
+</li></ul>
+<ul><li> All
+<ul><li> using a reduced, faster XML parser (not validating) 
+</li><li> default vehicle length is set to 7.5m (including gap)
+</li><li> route format changed ("edges" attribute)
+</li><li> (junction) internal lanes are the default now
+</li><li> copyright changed (removed obsolete ZAIK reference)
+</li></ul>
+</li></ul>
+<ul><li> GUISIM
+<ul><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2163422&amp;group_id=45607&amp;atid=443424">bug 2163422: Simulation does not start automatically</a>
+</li><li> refactored the visualization speed-up; instead of using a self-made hack that uses a grid, an rtree structure is now used. This should solve problems with disappearing edges and nodes and with a slow selection
+</li><li> Added the possibility to save and load decals (int an XML-file)
+</li><li> View settings are now saved loaded using XML
+</li><li> implemented <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1906106&amp;group_id=45607&amp;atid=443424">feature 1906106: make lines of bus stops always visible</a>
+</li><li> implemented <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2103556&amp;group_id=45607&amp;atid=443424">feature 2103556: Remove "Add Successors To Selected"</a>
+</li></ul>
+</li></ul>
+<ul><li> Simulation
+<ul><li> Refactored mean data; instead of having it as an additional item that has to be touched by vehicles, it is a MSMoveReminder
+</li><li> changed the definition of triggers; the old definition is still possible, but prints a warning.
+<ul><li> &lt;trigger objecttype="lane" attr="speed" objectid="&lt;LANE&gt;[;&lt;LANE&gt;]*" ...  --&gt;  &lt;variableSpeedSign lanes="&lt;LANE&gt;[;&lt;LANE&gt;]*" ...
+</li><li> &lt;trigger objecttype="rerouter" objectid="&lt;EDGE&gt;[;&lt;EDGE&gt;]*" ...  --&gt;  &lt;rerouter edges="&lt;EDGE&gt;[;&lt;EDGE&gt;]*" ...
+</li><li> &lt;trigger objecttype="emitter" objectid="&lt;LANE&gt;" ...  --&gt;  &lt;emitter lane="&lt;LANE&gt;" ...
+</li><li> &lt;trigger objecttype="bus_stop" objectid="&lt;LANE&gt;" ...  --&gt;  &lt;busStop lane="&lt;LANE&gt;" ...
+</li></ul>
+</li><li> new "route probe" output added
+</li><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2350888&amp;group_id=45607&amp;atid=443424">bug 2350888: vehicle on false lane with cyclic routes</a> (thanks to Daniel Janusz for supplying the example)
+</li><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2082959&amp;group_id=45607&amp;atid=443424">bug 2082959: bus stops that end at edge end confuse vehicles</a> (thanks to Gerrit Lammert for supplying the example)
+</li><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2468327&amp;group_id=45607&amp;atid=443424">bug 2468327: log files together with input errors let sumo crash</a>
+</li><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2227272&amp;group_id=45607&amp;atid=443424">bug 2227272: Random routes do not work with simple net</a>
+</li><li> distributions for routes and vehicle types
+</li><li> changed format of dump definitions from command line to xml configuration
+</li></ul>
+</li></ul>
+<ul><li> NETCONVERT
+<ul><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2137657&amp;group_id=45607&amp;atid=443424">bug 2137657: edges disappear in combination with --keep-edges</a>
+</li><li> changed APIs for setting lane-2-lane connections
+</li><li> work on Vissim-import
+</li><li> Now, the node positions are not added to an edge's geometry if one exists (if the edge has no explicite geometry, the node positions are still used). <b>--add-node-positions</b> was added, so that the old behaviour is still available
+</li><li> Changed features of <b>--plain-outoput</b>: plain-nodes now contain tls information, addtionally, plain-connections are written
+</li><li> changed computation whether a link is a left-mover
+</li><li> changed traffic lights computation
+</li><li> removed unneeded option <b>--all-logics</b>
+</li><li> removed "FileErrorReporter" usage
+</li><li> too complicated junctions (#links&gt;64) are catched and set to unregulated
+</li><li> corrected computation of right-of-way rules
+</li><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2392943&amp;group_id=45607&amp;atid=443424">bug 2392943: netconvert fails when removing edges and guessing ramps</a>
+</li><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2171355&amp;group_id=45607&amp;atid=443424">bug 2171355: turnarounds even with --no-turnarounds</a>
+</li><li> building turnarounds may be now skipped for tls-controlled edges (using <b>--no-tls-turnarounds</b>)
+</li></ul>
+</li></ul>
+<ul><li> NETGEN
+<ul><li> removed unneeded option <b>--all-logics</b>
+</li></ul>
+</li></ul>
+<ul><li> Router
+<ul><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2149069&amp;group_id=45607&amp;atid=443424">bug 2149069: DFROUTER does not work with internal lanes</a>
+</li></ul>
+</li></ul>
+<ul><li> DFROUTER
+<ul><li> removed support for elmar's detector descriptions
+</li><li> removed <b>--fast-flows</b> option
+</li><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2165708&amp;group_id=45607&amp;atid=443424">bug 2165708: False speed conversion in DFROUTER?</a>
+</li><li> named classes properly
+</li><li> applied changes to trigger definitions (see "Simulation")
+</li><li> solved <a rel="nofollow" class="external text" href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2165666&amp;group_id=45607&amp;atid=443424">bug 2165666: DFROUTER does not regard <i>--all-end-follower"</i></a>
+</li></ul>
+</li></ul>
+<ul><li> POLYCONVERT
+<ul><li> refactoring
+</li><li> in-line documentation added
+</li><li> added OSM-import functionality
+</li><li> added shape-file - import functionality (imports points, line strings, polygons, and their multi-pendants)
+<ul><li> import is done via <b>--shape-files</b>
+</li><li> the id-field is given via <b>--shape-file.id-name <i>&lt;NAME&gt;</i></b>
+</li><li> optional projection guess is done via <b>--arcview.guess-projection</b>
+</li></ul>
+</li><li> renamed <b>--visum-file</b> to <b>--visum-files</b>; debugged
+</li></ul>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:285-0!*!*!*!*!*!* and timestamp 20150330202733 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 23 September 2011, at 09:36.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

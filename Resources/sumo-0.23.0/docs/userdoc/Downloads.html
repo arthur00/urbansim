@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Downloads - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="Installing.html">Installing SUMO</a></li>
+  <li><a href="Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="Simulation/Output.html">Simulation output</a></li>
+  <li><a href="TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="Models/Emissions.html">Emissions</a></li>
+  <li><a href="Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Other/Glossary.html">Glossary</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+  <li><a href="Tools/Main.html">Additional Tools</a></li>
+  <li><a href="Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="SUMO.html">SUMO</a></li>
+   <li><a href="SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="DFROUTER.html">DFROUTER</a></li>
+   <li><a href="MAROUTER.html">MAROUTER</a></li>
+   <li><a href="POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Downloads</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.926217 from <a href="http://sumo.dlr.de/wiki/Downloads">the wiki page for Downloads</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Here, you will find SUMO both as sources and as compiled binaries.
+</p><p>Please <a href="Contact.html" title="Contact">contact</a> us if you have any problems. If you want to report a
+bug, please use <a rel="nofollow" class="external text" href="http://sumo-sim.org/trac.wsgi/newticket">Trac to open a ticket</a>. For further information about the changes between releases see the <a href="ChangeLog.html" title="ChangeLog">ChangeLog</a>.
+</p><p>SUMO is licensed under the <a rel="nofollow" class="external text" href="http://www.gnu.org/licenses/gpl.html">GPL</a>.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br /> If you have problems running SUMO because of missing files/commands/dlls please consult <a href="FAQ.html#Basic_Usage" title="FAQ">FAQ#Basic_Usage</a></div>
+<p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Packages"><span class="tocnumber">1</span> <span class="toctext">Packages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Repositories"><span class="tocnumber">1.1</span> <span class="toctext">Repositories</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#SUMO_-_Latest_Release_.28Version_0.23.0.29"><span class="tocnumber">2</span> <span class="toctext">SUMO - Latest Release (Version 0.23.0)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#SUMO_latest_SVN-version"><span class="tocnumber">3</span> <span class="toctext">SUMO latest SVN-version</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Nightly_Snapshots"><span class="tocnumber">3.1</span> <span class="toctext">Nightly Snapshots</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Direct_Subversion_Access"><span class="tocnumber">3.2</span> <span class="toctext">Direct Subversion Access</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Hint_for_git-svn_users"><span class="tocnumber">3.3</span> <span class="toctext">Hint for git-svn users</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#SUMO_-_older_releases"><span class="tocnumber">4</span> <span class="toctext">SUMO - older releases</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Packages">Packages</span></h2>
+<p>SUMO is available as different packages. The contents of each package is listed in the table below.
+</p>
+<table cellspacing="0" border="1" align="center">
+
+<tr>
+<th style="background:#ffdead; width:160px;">
+</th>
+<th style="background:#ffdead; width:70px;"> bin
+</th>
+<th style="background:#ffdead; width:70px;"> build
+</th>
+<th style="background:#ffdead; width:70px;"> src<br />(source<br />code)
+</th>
+<th style="background:#ffdead; width:70px;"> user<br />docs
+</th>
+<th style="background:#ffdead; width:70px;"> developer<br />docs<br />(doxygen)
+</th>
+<th style="background:#ffdead; width:70px;"> data
+</th>
+<th style="background:#ffdead; width:70px;"> examples
+</th>
+<th style="background:#ffdead; width:70px;"> tutorials
+</th>
+<th style="background:#ffdead; width:70px;"> tests
+</th>
+<th style="background:#ffdead; width:70px;"> tools (except jars)
+</th>
+<th style="background:#ffdead; width:70px;"> jars
+</th></tr>
+<tr>
+<td> sumo-src-<i>XXX</i>.tar.gz<br />sumo-src-<i>XXX</i>.zip
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td></tr>
+<tr>
+<td> sumo-doc-<i>XXX</i>.tar.gz<br />sumo-doc-<i>XXX</i>.zip
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td> sumo-tests-<i>XXX</i>.tar.gz<br />&#160;
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td> sumo-winbin-<i>XXX</i>.zip<br />&#160;
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td></tr>
+<tr>
+<td> sumo-<i>XXX</i>.msi<br />&#160;
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td></tr>
+<tr>
+<td> sumo-all-<i>XXX</i>.tar.gz<br />sumo-all-<i>XXX</i>.zip
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td></tr>
+<tr>
+<td> rpm<br />&#160;
+</td>
+<td style="vertical-align:middle; text-align:center;"> (X)
+</td>
+<td>
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td>
+<td style="vertical-align:middle; text-align:center;"> X
+</td>
+<td>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Repositories"> Repositories </span></h3>
+<p>In addition to the open build service, there are a debian and an ubuntu launchpad project in the making:
+</p>
+<ul><li> <a rel="nofollow" class="external free" href="https://build.opensuse.org/project/show?project=home%3Abehrisch">https://build.opensuse.org/project/show?project=home%3Abehrisch</a>
+</li><li> <a rel="nofollow" class="external free" href="http://anonscm.debian.org/gitweb/?p=debian-science/packages/sumo.git">http://anonscm.debian.org/gitweb/?p=debian-science/packages/sumo.git</a>
+</li><li> <a rel="nofollow" class="external free" href="https://launchpad.net/~sumo">https://launchpad.net/~sumo</a>
+</li></ul>
+<p>To add sumo to your ubuntu (11.04 and later) you will need to do:
+</p>
+<pre>sudo add-apt-repository ppa:sumo/stable
+sudo apt-get update
+sudo apt-get install sumo sumo-tools sumo-doc
+</pre>
+<p>This is still an experimental feature, feedback is welcome.
+</p>
+<h2> <span class="mw-headline" id="SUMO_-_Latest_Release_.28Version_0.23.0.29">SUMO - Latest Release (Version 0.23.0)</span></h2>
+<p><b>Release date: 31.03.2015</b>
+</p>
+<ul><li> The latest MS Windows binaries.
+</li></ul>
+<dl><dd>Contains the binaries (32 bit), all dlls needed, the examples, tools, and documentation in HTML format.
+</dd><dd>Download as installer: <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/sumo/sumo-winbin-0.23.0.msi?download">sumo-winbin-0.23.0.msi</a>
+</dd><dd>Download as zip: <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/sumo/sumo-winbin-0.23.0.zip?download">sumo-winbin-0.23.0.zip</a>
+</dd><dd>Download 64 bit version: <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/sumo/sumo-winbin-x64-0.23.0.zip?download">sumo-winbin-x64-0.23.0.zip</a>
+</dd></dl>
+<ul><li> Linux binaries are created by the <a rel="nofollow" class="external text" href="http://en.opensuse.org/Build_Service">open build service</a>
+</li></ul>
+<dl><dd>If the repositories do not contain the libraries (like proj and gdal) they are either part of the distribution or you will need them from another repository (you may try one of the build service repositories here too, e.g. <a rel="nofollow" class="external text" href="http://download.opensuse.org/repositories/Application:/Geo/">Application:Geo</a>). At the moment there is no documentation included in the packages. The repositories include a nightly build as well (called sumo-svn). We dropped support for Red Hat Enterprise Linux and encourage RHEL users to try out the CentOS packages which should be binary compatible. Ubuntu and Debian users please see above for repository information.
+<ul><li><a rel="nofollow" class="external text" href="http://download.opensuse.org/repositories/home:/behrisch/openSUSE_13.1_Geo/">openSUSE 13.1 repository</a>
+</li><li><a rel="nofollow" class="external text" href="http://download.opensuse.org/repositories/home:/behrisch/openSUSE_13.2_Geo/">openSUSE 13.2 repository</a>
+</li><li><a rel="nofollow" class="external text" href="http://download.opensuse.org/repositories/home:/behrisch/openSUSE_Tumbleweed_Geo/">openSUSE Tumbleweed repository</a>
+</li><li><a rel="nofollow" class="external text" href="http://download.opensuse.org/repositories/home:/behrisch/Fedora_20/">Fedora 20 repository</a>
+</li><li><a rel="nofollow" class="external text" href="http://download.opensuse.org/repositories/home:/behrisch/Fedora_21/">Fedora 21 repository</a>
+</li></ul>
+</dd></dl>
+<ul><li> The latest source-tarball. 
+</li></ul>
+<dl><dd>Includes sources, examples, Linux-Makefiles and solution files for MSVC++ 2010 (aka 10.0). Does not contain tests.
+</dd><dd>Download as: 
+<ul><li> <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/sumo/sumo-src-0.23.0.tar.gz?download">sumo-src-0.23.0.tar.gz</a>
+</li><li> <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/sumo/sumo-src-0.23.0.zip?download">sumo-src-0.23.0.zip</a>
+</li></ul>
+</dd></dl>
+<ul><li> The latest documentation-tarball. Includes a dump of the user documentation from the wiki as well as source code documentation (doxygen and pydoc).
+</li></ul>
+<dl><dd>Download as: <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/sumo/sumo-doc-0.23.0.tar.gz?download">sumo-doc-0.23.0.tar.gz</a>
+</dd></dl>
+<ul><li> The latest tests-tarball. These tests run with <a rel="nofollow" class="external text" href="http://www.texttest.org">TextTest</a>.
+</li></ul>
+<dl><dd>Download as: <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/sumo/sumo-tests-0.23.0.tar.gz?download">sumo-tests-0.23.0.tar.gz</a>
+</dd></dl>
+<ul><li> The latest all-inclusive-tarball. Includes sources, tests and docs but no binaries.
+</li></ul>
+<dl><dd>Download as: <a rel="nofollow" class="external text" href="http://prdownloads.sourceforge.net/sumo/sumo-all-0.23.0.tar.gz?download">sumo-all-0.23.0.tar.gz</a>
+</dd></dl>
+<h2> <span class="mw-headline" id="SUMO_latest_SVN-version"> SUMO latest SVN-version </span></h2>
+<p>SUMO is under active development. You can find a continuously updated list of bug-fixes and enhancements at our <a href="ChangeLog.html" title="ChangeLog">ChangeLog</a>.
+To make use of the latest features and (and to give us pre-release feedback) we
+encourage you to use the latest version from our Subversion (SVN) repository.
+</p>
+<h3> <span class="mw-headline" id="Nightly_Snapshots">Nightly Snapshots </span></h3>
+<p>The code within the SVN is compiled each night. The following resulting packages can be obtained:
+</p>
+<ul><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumo-src-svn.tar.gz">http://sumo-sim.org/daily/sumo-src-svn.tar.gz</a> (sources)
+</li><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumo-src-svn.zip">http://sumo-sim.org/daily/sumo-src-svn.zip</a> (sources)
+</li><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumo-msvc10Win32-svn.zip">http://sumo-sim.org/daily/sumo-msvc10Win32-svn.zip</a> (windows, 32bit)
+</li><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumo-msvc10x64-svn.zip">http://sumo-sim.org/daily/sumo-msvc10x64-svn.zip</a> (windows, 64bit)
+</li><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumo-tests-svn.tar.gz">http://sumo-sim.org/daily/sumo-tests-svn.tar.gz</a> (tests)
+</li><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumo-all-svn.tar.gz">http://sumo-sim.org/daily/sumo-all-svn.tar.gz</a> (sources, documentation and tests)
+</li><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumogame.zip">http://sumo-sim.org/daily/sumogame.zip</a> (windows 32bit binaries of the sumo game)
+</li><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumo-msvc10Win32-svn.msi">http://sumo-sim.org/daily/sumo-msvc10Win32-svn.msi</a> (windows installer, 32bit)
+</li><li> <a rel="nofollow" class="external free" href="http://sumo-sim.org/daily/sumo-msvc10x64-svn.msi">http://sumo-sim.org/daily/sumo-msvc10x64-svn.msi</a> (windows installer, 64bit)
+</li></ul>
+<p>The linux repositories specified above contain a nightly build as well.
+</p><p><a rel="nofollow" class="external text" href="http://sumo-sim.org/daily/userdoc">The corresponding documentation</a> is also visible live including <a rel="nofollow" class="external text" href="http://sumo-sim.org/daily/doxygen">Doxygen docs</a>.
+</p>
+<h3> <span class="mw-headline" id="Direct_Subversion_Access">Direct Subversion Access</span></h3>
+<p>You can get very latest sources directly from our Subversion repository. Normally,
+they should compile and complete our test suite successfully. To assess the current
+state of the build, you may take a look at the <a rel="nofollow" class="external text" href="http://sumo.dlr.de/daily/">nightly test statistics</a>.
+The repository url is:
+</p>
+<pre><a rel="nofollow" class="external free" href="https://svn.code.sf.net/p/sumo/code/trunk/sumo">https://svn.code.sf.net/p/sumo/code/trunk/sumo</a>
+</pre>
+<h3> <span class="mw-headline" id="Hint_for_git-svn_users"> Hint for git-svn users </span></h3>
+<p>SUMO's SVN repository uses SVN externals. SVN externals include parts of external SVN repositories into the work files hierarchy. Unfortunately git-svn cannot handle that, so those files are missing in a git-svn fetch. There are several workarounds to solve this with different drawbacks. Just search the web for git-svn and "SVN externals" to find the one that suits your needs.
+</p>
+<h2> <span class="mw-headline" id="SUMO_-_older_releases">SUMO - older releases </span></h2>
+<p>Older releases can be obtained via the <a rel="nofollow" class="external text" href="http://sourceforge.net/projects/sumo/files/sumo/">sourceforge download portal</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 88/1000000
+Preprocessor generated node count: 200/1000000
+Post‐expand include size: 346/2097152 bytes
+Template argument size: 108/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:64-0!*!0!!en!*!* and timestamp 20150331074524 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 31 March 2015, at 09:45.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

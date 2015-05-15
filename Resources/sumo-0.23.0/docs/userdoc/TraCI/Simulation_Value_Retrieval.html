@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>TraCI/Simulation_Value_Retrieval - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">TraCI/Simulation Value Retrieval</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.179081 from <a href="http://sumo.dlr.de/wiki/TraCI/Simulation_Value_Retrieval">the wiki page for TraCI/Simulation_Value_Retrieval</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Command_0xab:_Get_Simulation_Variable"><span class="tocnumber">1</span> <span class="toctext">Command 0xab: Get Simulation Variable</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Response_0xbb:_Simulation_Variable"><span class="tocnumber">2</span> <span class="toctext">Response 0xbb: Simulation Variable</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Extended_retrieval_messages"><span class="tocnumber">3</span> <span class="toctext">Extended retrieval messages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Command_0x82:_Position_Conversion"><span class="tocnumber">3.1</span> <span class="toctext">Command 0x82: Position Conversion</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Command_0x83:_Distance_Request"><span class="tocnumber">3.2</span> <span class="toctext">Command 0x83: Distance Request</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Command_0xab:_Get_Simulation_Variable"> Command 0xab: Get Simulation Variable </span></h2>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> ubyte
+</td>
+<td align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> Variable
+</th>
+<th style="border: 1pt solid;"> Simulation ID (always unused)
+</th></tr></table>
+<p>Asks for the value of a certain simulation variable
+</p><p>The following variable values can be retrieved, the type of the return value is also shown in the table.
+</p>
+<table border="2" cellspacing="0" cellpadding="4" rules="all">
+<caption> <b>Overview Retrievable Simulation Variables</b>
+</caption>
+<tr>
+<th> Variable
+</th>
+<th> ValueType
+</th>
+<th> Description
+</th></tr>
+<tr>
+<td> current simulation time (0x70)
+</td>
+<td> int
+</td>
+<td> Returns the current simulation time (in ms)
+</td></tr>
+<tr>
+<td> number of loaded vehicles (id 0x71)
+</td>
+<td> int
+</td>
+<td> The number of vehicles which were loaded in this time step.
+</td></tr>
+<tr>
+<td> ids of loaded vehicles (id 0x72)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles which were loaded in this time step.
+</td></tr>
+<tr>
+<td> number of departed vehicles (id 0x73)
+</td>
+<td> int
+</td>
+<td> The number of vehicles which departed (were inserted into the road network) in this time step.
+</td></tr>
+<tr>
+<td> ids of departed vehicles (id 0x74)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles which departed (were inserted into the road network) in this time step.
+</td></tr>
+<tr>
+<td> number of vehicles that start to teleport (id 0x75)
+</td>
+<td> int
+</td>
+<td> The number of vehicles which started to teleport in this time step.
+</td></tr>
+<tr>
+<td> ids of vehicles that start to teleport (id 0x76)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles which started to teleport in this time step.
+</td></tr>
+<tr>
+<td> number of vehicles that end being teleported (id 0x77)
+</td>
+<td> int
+</td>
+<td> The number of vehicles which ended to be teleported in this time step.
+</td></tr>
+<tr>
+<td> ids of vehicles that end being teleported (id 0x78)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles which ended to be teleported in this time step.
+</td></tr>
+<tr>
+<td> number of arrived vehicles (id 0x79)
+</td>
+<td> int
+</td>
+<td> The number of vehicles which arrived (have reached their destination and are removed from the road network) in this time step.
+</td></tr>
+<tr>
+<td> ids of arrived vehicles (id 0x7a)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles which arrived (have reached their destination and are removed from the road network) in this time step.
+</td></tr>
+<tr>
+<td> network boundaries (id 0x7c)
+</td>
+<td> boundary box
+</td>
+<td> The boundary box of the simulation network.
+</td></tr>
+<tr>
+<td> minimum number of vehicles that are still expected to leave the net (id 0x7d)
+</td>
+<td> int
+</td>
+<td> The number of vehicles which are in the net plus the ones still waiting to start. This number may be smaller than the actual number of vehicles still to come because of delayed route file parsing.
+</td></tr>
+<tr>
+<td> number of vehicles that begin a stop (id 0x68)
+</td>
+<td> int
+</td>
+<td> The number of vehicles that halted on a scheduled stop in this time step.
+</td></tr>
+<tr>
+<td> ids of vehicles that end being teleported (id 0x69)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles that halted on a scheduled stop in this time step.
+</td></tr>
+<tr>
+<td> number of vehicles that end a stop (id 0x6a)
+</td>
+<td> int
+</td>
+<td> The number of vehicles that begin to continue their journey, leaving a scheduled stop in this time step.
+</td></tr>
+<tr>
+<td> ids of vehicles that end being teleported (id 0x6b)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles that begin to continue their journey, leaving a scheduled stop in this time step.
+</td></tr>
+<tr>
+<td> number of vehicles that begin to be parked (id 0x6c)
+</td>
+<td> int
+</td>
+<td> The number of vehicles that enter a parking position in this time step.
+</td></tr>
+<tr>
+<td> ids of vehicles that begin to be parked (id 0x6d)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles that enter a parking position in this time step.
+</td></tr>
+<tr>
+<td> number of vehicles that end to be parked (id 0x6e)
+</td>
+<td> int
+</td>
+<td> The number of vehicles that begin to continue their journey, leaving a scheduled parking in this time step.
+</td></tr>
+<tr>
+<td> ids of vehicles that end being teleported (id 0x6f)
+</td>
+<td> stringList
+</td>
+<td> A list of ids of vehicles that begin to continue their journey, leaving a scheduled parking in this time step.
+</td></tr>
+</table>
+<h2> <span class="mw-headline" id="Response_0xbb:_Simulation_Variable"> Response 0xbb: Simulation Variable </span></h2>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td width="75" align="center"> ubyte
+</td>
+<td width="75" align="center"> string
+</td>
+<td width="150" align="center"> ubyte
+</td>
+<td width="75" align="center"> &lt;return_type&gt;
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> Variable
+</th>
+<th style="border: 1pt solid;"> &lt;invalid&gt;
+</th>
+<th style="border: 1pt solid;"> Return type of the variable
+</th>
+<th style="border: 1pt solid;"> &lt;VARIABLE_VALUE&gt;
+</th></tr></table>
+<p>The respond to a <b>"Command Get Simulation Variable"</b>.
+</p>
+<h2> <span class="mw-headline" id="Extended_retrieval_messages"> Extended retrieval messages </span></h2>
+<p>Some further messages require additional parameters.
+</p>
+<table border="2" cellspacing="0" cellpadding="4" rules="all">
+<caption> <b>Overview Extended Variables Retrieval</b>
+</caption>
+<tr>
+<th> Variable
+</th>
+<th> Request ValueType
+</th>
+<th> Response ValueType
+</th>
+<th> Description
+</th></tr>
+<tr>
+<td> position conversion (0x58)
+</td>
+<td> compound, see below
+</td>
+<td> Position, as wished
+</td>
+<td> Reads a position information and returns it converted into the given representation.
+</td></tr>
+<tr>
+<td> distance request (0x59)
+</td>
+<td> compound, see below
+</td>
+<td> double
+</td>
+<td> Reads two positions and an indicator whether the air or the driving distance shall be computed. Returns the according distance.
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Command_0x82:_Position_Conversion"> Command 0x82: Position Conversion </span></h3>
+<p>The request needs the following parameter:
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> integer
+</td>
+<td align="center"> <i>Position</i>
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> ubyte
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> item number (always 2)
+</th>
+<th style="border: 1pt solid;"> position to convert
+</th>
+<th style="border: 1pt solid;"> value type <i>ubyte</i>
+</th>
+<th style="border: 1pt solid;"> Type of the<br />Position to return
+</th></tr></table>
+<p>Use this command to convert between the different position types used by TraCI. The specified <i>Position</i> is converted into the requested format given through <i>PositionId</i>. The result is the closest position that was found to match the given one. The return values consists of the converted value only.
+</p><p>See <a href="../TraCI/Protocol.html#Position_Representations" title="TraCI/Protocol">TraCI/Protocol#Position Representations</a> for available position formats.
+</p>
+<h3> <span class="mw-headline" id="Command_0x83:_Distance_Request"> Command 0x83: Distance Request </span></h3>
+<p>The request needs the following parameter:
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> integer
+</td>
+<td align="center"> <i>Position</i>
+</td>
+<td align="center"> <i>Position</i>
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> ubyte
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> item number (always 3)
+</th>
+<th style="border: 1pt solid;"> start position
+</th>
+<th style="border: 1pt solid;"> end position
+</th>
+<th style="border: 1pt solid;"> value type <i>ubyte</i>
+</th>
+<th style="border: 1pt solid;"> Distance Type
+</th></tr></table>
+<p>where
+</p>
+<dl><dd>Distance Type==0: air distance
+</dd><dd>Distance Type==1: driving distance
+</dd></dl>
+<p>The resulting distance is returned.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 18/1000000
+Preprocessor generated node count: 24/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:320-0!*!0!!en!*!* and timestamp 20150330202717 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 5 September 2013, at 12:27.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

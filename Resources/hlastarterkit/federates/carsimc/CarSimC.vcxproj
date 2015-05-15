@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6B6497B-3588-4618-84E4-8F483E298B62}</ProjectGuid>
+    <RootNamespace>CarSimC</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)/bin/build/$(Configuration)/</OutDir>
+    <IntDir>$(OutDir)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)/bin/build/$(Configuration)/</OutDir>
+    <IntDir>$(OutDir)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)/bin/build/$(Configuration)/</OutDir>
+    <IntDir>$(OutDir)</IntDir>
+    <TargetName>$(ProjectName)_x64</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)/bin/build/$(Configuration)/</OutDir>
+    <IntDir>$(OutDir)</IntDir>
+    <TargetName>$(ProjectName)_x64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(PRTI1516E_HOME)/include;$(SolutionDir)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4290;4251</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(PRTI1516E_HOME)/lib/vc100;$(SolutionDir)/lib/win/</AdditionalLibraryDirectories>
+      <AdditionalDependencies>boost_filesystem-vc100-mt-gd-1_49.lib;boost_system-vc100-mt-gd-1_49.lib;boost_date_time-vc100-mt-gd-1_49.lib;boost_thread-vc100-mt-gd-1_49.lib;libfedtime1516ed.lib;librti1516ed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(PRTI1516E_HOME)/include;$(SolutionDir)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4290;4251</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(PRTI1516E_HOME)/lib/vc100_64;$(SolutionDir)/lib/win/x64/</AdditionalLibraryDirectories>
+      <AdditionalDependencies>boost_filesystem-vc100-mt-gd-1_49.lib;boost_system-vc100-mt-gd-1_49.lib;boost_date_time-vc100-mt-gd-1_49.lib;boost_thread-vc100-mt-gd-1_49.lib;libfedtime1516e64d.lib;librti1516e64d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(PRTI1516E_HOME)/include;$(SolutionDir)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4290;4251</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(PRTI1516E_HOME)/lib/vc100;$(SolutionDir)/lib/win/;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>boost_date_time-vc100-mt-1_49.lib;boost_filesystem-vc100-mt-1_49.lib;boost_system-vc100-mt-1_49.lib;boost_thread-vc100-mt-1_49.lib;libfedtime1516e.lib;librti1516e.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(PRTI1516E_HOME)/include;$(SolutionDir)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);BOOST_ALL_DYN_LINK</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4290;4251;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(PRTI1516E_HOME)/lib/vc100_64;$(SolutionDir)/lib/win/x64</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>boost_date_time-vc100-mt-1_49.lib;boost_filesystem-vc100-mt-1_49.lib;boost_system-vc100-mt-1_49.lib;libfedtime1516e64.lib;librti1516e64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)/src/Car.h" />
+    <ClInclude Include="$(SolutionDir)/src/CarFactory.h" />
+    <ClInclude Include="$(SolutionDir)/src/CarProperties.h" />
+    <ClInclude Include="$(SolutionDir)/src/Controller.h" />
+    <ClInclude Include="$(SolutionDir)/src/FuelType.h" />
+    <ClInclude Include="$(SolutionDir)/src/HLAfuelType.h" />
+    <ClInclude Include="$(SolutionDir)/src/HLAmodule.h" />
+    <ClInclude Include="$(SolutionDir)/src/HLAposition.h" />
+    <ClInclude Include="$(SolutionDir)/src/InteractionListener.h" />
+    <ClInclude Include="$(SolutionDir)/src/LatLongHelper.h" />
+    <ClInclude Include="$(SolutionDir)/src/NoScenarioState.h" />
+    <ClInclude Include="$(SolutionDir)/src/Position.h" />
+    <ClInclude Include="$(SolutionDir)/src/Properties.h" />
+    <ClInclude Include="$(SolutionDir)/src/RunningState.h" />
+    <ClInclude Include="$(SolutionDir)/src/Scenario.h" />
+    <ClInclude Include="$(SolutionDir)/src/ScenarioLoadedState.h" />
+    <ClInclude Include="$(SolutionDir)/src/Simulator.h" />
+    <ClInclude Include="$(SolutionDir)/src/SimulatorConfig.h" />
+    <ClInclude Include="$(SolutionDir)/src/SimulatorListener.h" />
+    <ClInclude Include="$(SolutionDir)/src/State.h" />
+    <ClInclude Include="$(SolutionDir)/src/StringUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)/src/Car.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/CarFactory.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/CarProperties.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/CarSimC.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/Controller.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/FuelType.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/HLAfuelType.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/HLAmodule.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/HLAposition.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/LatLongHelper.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/NoScenarioState.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/Position.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/Properties.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/RunningState.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/Scenario.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/ScenarioLoadedState.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/Simulator.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/SimulatorConfig.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/State.cpp" />
+    <ClCompile Include="$(SolutionDir)/src/StringUtils.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

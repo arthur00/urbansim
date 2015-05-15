@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>TraCI/Change_Vehicle_State - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">TraCI/Change Vehicle State</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.130486 from <a href="http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State">the wiki page for TraCI/Change_Vehicle_State</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h1> <span class="mw-headline" id="Command_0xc4:_Change_Vehicle_State"> Command 0xc4: Change Vehicle State </span></h1>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> ubyte
+</td>
+<td align="center"> string
+</td>
+<td width="150" align="center"> ubyte
+</td>
+<td align="center"> &lt;value_type&gt;
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> Variable
+</th>
+<th style="border: 1pt solid;"> Vehicle ID
+</th>
+<th style="border: 1pt solid;"> Type of the value
+</th>
+<th style="border: 1pt solid;"> New Value
+</th></tr></table>
+<p>Changes the state of a vehicle. Because it is possible to change different values of a vehicle, the number of parameter to supply and their types differ between commands. The following values can be changed, the parameter which must be given are also shown in the table. Furthermore it is possible to change all values mentioned in <a href="../TraCI/Change_VehicleType_State.html" title="TraCI/Change VehicleType State">TraCI/Change_VehicleType_State</a>. If you do so, the vehicle gets a new type (named "typeid@vehid") and won't be affected by further changes to the original type. 
+</p>
+<table border="2" cellspacing="0" cellpadding="4" rules="all">
+<caption> <b>Overview Changeable Vehicle Variables</b>
+</caption>
+<tr>
+<th> Variable
+</th>
+<th> ValueType
+</th>
+<th> Description
+</th></tr>
+<tr>
+<td> stop (0x12)
+</td>
+<td> compound (string, double, byte, double), see below
+</td>
+<td> Lets the vehicle stop at the given edge, at the given position and lane. The vehicle will stop for the given duration. Re-issuing a stop command with the same lane and position allows changing the duration. Setting the duration to 0 cancels an existing stop.
+</td></tr>
+<tr>
+<td> change lane (0x13)
+</td>
+<td> compound (byte, int), see below
+</td>
+<td> Forces a lane change to the lane with the given index; if successful, the lane will be chosen for the given amount of time (in ms).
+</td></tr>
+<tr>
+<td> slow down (0x14)
+</td>
+<td> compound (double, int), see below
+</td>
+<td> Changes the speed smoothly to the given value over the given amount of time in ms (can also be used to increase speed).
+</td></tr>
+<tr>
+<td> resume (0x19)
+</td>
+<td> compound (), see below
+</td>
+<td> Resumes from a stop
+</td></tr>
+<tr>
+<td> change target (0x31)
+</td>
+<td> string (destination edge id)
+</td>
+<td> The vehicle's destination edge is set to the given. The route is rebuilt.
+</td></tr>
+<tr>
+<td> speed (0x40)
+</td>
+<td> double (new speed)
+</td>
+<td> Sets the vehicle speed to the given value. The speed will be followed until a new is given. If -1 is given, the vehicle follows the car-following rules again.
+</td></tr>
+<tr>
+<td> color (0x45)
+</td>
+<td> ubyte,ubyte,ubyte,ubyte (RGBA)
+</td>
+<td> Sets the vehicle's color.
+</td></tr>
+<tr>
+<td> change route by id (0x53)
+</td>
+<td> string (route id)
+</td>
+<td> Assigns the named route to the vehicle, assuming a) the named route exists, and b) it starts on the edge the vehicle is currently at<sup>(1)</sup><sup>(2)</sup>.
+</td></tr>
+<tr>
+<td> change route (0x57)
+</td>
+<td> stringList (ids of edges to pass)
+</td>
+<td> Assigns the list of edges as the vehicle's new route assuming the first edge given is the one the vehicle is curently at<sup>(1)</sup><sup>(2)</sup>.
+</td></tr>
+<tr>
+<td> change edge travel time information (0x58)
+</td>
+<td> compound (begin time, end time, edgeID, value), see below
+</td>
+<td> Inserts the information about the travel time of edge "edgeID" valid from begin time to end time into the vehicle's internal edge weights container.
+</td></tr>
+<tr>
+<td> change edge effort information (0x59)
+</td>
+<td> compound (begin time, end time, edgeID, value), see below
+</td>
+<td> Inserts the information about the effort of edge "edgeID" valid from begin time to end time into the vehicle's internal edge weights container.
+</td></tr>
+<tr>
+<td> signal states (0x5b)
+</td>
+<td> int
+</td>
+<td> Sets a new state of signals, please see the comments on <a href="../TraCI/Vehicle_Signalling.html" title="TraCI/Vehicle Signalling">TraCI/Vehicle Signalling</a> for more information.
+</td></tr>
+<tr>
+<td> move to (0x5c)
+</td>
+<td> compound (lane ID, position along lane)
+</td>
+<td> Moves the vehicle to a new position, see comments below.
+</td></tr>
+<tr>
+<td> reroute (compute new route) by travel time (0x90)
+</td>
+<td> compound (&lt;empty&gt;), see below
+</td>
+<td> Computes a new route using the vehicle's internal and the global edge travel time information. Replaces the current route by the found<sup>(2)</sup>.
+</td></tr>
+<tr>
+<td> reroute (compute new route) by effort (0x91)
+</td>
+<td> compound (&lt;empty&gt;), see below
+</td>
+<td> Computes a new route using the vehicle's internal and the global edge effort information. Replaces the current route by the found<sup>(2)</sup>.
+</td></tr>
+<tr>
+<td> speed mode (0xb3)
+</td>
+<td> int bitset (see below)
+</td>
+<td> Sets how the values set by speed (0x40) and slowdown (0x14) shall be treated. Also allows to configure the behavior at junctions. See below.
+</td></tr>
+<tr>
+<td> lane change mode (0xb6)
+</td>
+<td> int bitset (see below)
+</td>
+<td> Sets how lane changing in general and lane changing requests by TraCI are performed. See below.
+</td></tr>
+<tr>
+<td> add (0x80)
+</td>
+<td> complex (see below)
+</td>
+<td> Adds the defined vehicle. See below.
+</td></tr>
+<tr>
+<td> add_full (0x85)
+</td>
+<td> complex (see below)
+</td>
+<td> Adds the defined vehicle. See below.
+</td></tr>
+<tr>
+<td> remove (0x81)
+</td>
+<td> complex (see below)
+</td>
+<td> Removes the defined vehicle. See below.
+</td></tr>
+<tr>
+<td> length (0x44)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's length to the given value
+</td></tr>
+<tr>
+<td> max speed (0x41)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's maximum speed to the given value
+</td></tr>
+<tr>
+<td> vehicle class (0x49)
+</td>
+<td> string
+</td>
+<td> Sets the vehicle's vehicle class to the given value
+</td></tr>
+<tr>
+<td> speed factor (0x5e)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's speed factor to the given value
+</td></tr>
+<tr>
+<td> emission class (0x4a)
+</td>
+<td> string
+</td>
+<td> Sets the vehicle's emission class to the given value
+</td></tr>
+<tr>
+<td> width (0x4d)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's width to the given value
+</td></tr>
+<tr>
+<td> min gap (0x4c)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's minimum headway gap to the given value
+</td></tr>
+<tr>
+<td> shape class (0x4b)
+</td>
+<td> string
+</td>
+<td> Sets the vehicle's shape class to the given value
+</td></tr>
+<tr>
+<td> acceleration (0x46)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's wished maximum acceleration to the given value
+</td></tr>
+<tr>
+<td> deceleration (0x47)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's wished maximum deceleration to the given value
+</td></tr>
+<tr>
+<td> imperfection (0x5d)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's driver imperfection (sigma) to the given value
+</td></tr>
+<tr>
+<td> tau (0x48)
+</td>
+<td> double
+</td>
+<td> Sets the vehicle's wished headway time to the given value
+</td></tr>
+</table>
+<p>Please note:
+</p><p>(1): The first occurrence of the edge is currently at is searched within the new route; the vehicle continues the route from this point in the route from. If the edge the vehicle is currently does not exist within the new route, an error is generated.
+(2): changing the route works only if the vehicle is not within an intersection.
+</p><p>The message contents are as following:
+</p><p><b>stop (0x12)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> integer
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> item number (4 or 5)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> Edge ID
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> Position
+</th>
+<th style="border: 1pt solid;"> value type <i>byte</i>
+</th>
+<th style="border: 1pt solid;"> Lane Index
+</th>
+<th style="border: 1pt solid;"> value type <i>int</i>
+</th>
+<th style="border: 1pt solid;"> Duration [ms]
+</th>
+<th style="border: 1pt solid;"> value type <i>byte</i> (optional)
+</th>
+<th style="border: 1pt solid;"> stop flags: 1 for parking, 2 for triggered, 3 for both
+</th></tr></table>
+<p><b>change lane (0x13)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> integer
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> item number (always 2)
+</th>
+<th style="border: 1pt solid;"> value type <i>byte</i>
+</th>
+<th style="border: 1pt solid;"> Lane Index
+</th>
+<th style="border: 1pt solid;"> value type <i>int</i>
+</th>
+<th style="border: 1pt solid;"> Duration [ms]
+</th></tr></table>
+<p><b>slow down (0x14)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> integer
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> item number (always 2)
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> Speed
+</th>
+<th style="border: 1pt solid;"> value type <i>int</i>
+</th>
+<th style="border: 1pt solid;"> Duration [ms]
+</th></tr></table>
+<p><br />
+<b>resume (0x19)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> integer
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> item number (always 0)
+</th></tr></table>
+<p><b>change target (0x31)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td width="150" align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> Edge ID
+</th></tr></table>
+<p><br />
+<b>change route by id (0x54)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td width="150" align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> Route ID
+</th></tr></table>
+<p><br />
+<b>change route (0x57)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td width="150" align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>string list</i>
+</th>
+<th style="border: 1pt solid;"> number of elements
+</th>
+<th style="border: 1pt solid;"> Edge ID
+</th></tr></table>
+<p><br />
+<b>change edge travel time information (0x58)</b>
+</p><p>This command can be sent using 4, 2, or 1 parameters. In the first form, it adds a new override of edge information to the list of existing overrides for the given vehicle, valid from begin time to end time. In the second form, it adds a new override that is valid throughout the simulation, replacing an earlier one for the same edge. In the third form, it removes as earlier override for the given edge, valid throughout the simulation.
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=4)
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> begin time (in s)
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> end time (in s)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> edge id
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> travel time value (in s)
+</th></tr></table>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements  (always=2)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> edge id
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> travel time value (in s)
+</th></tr></table>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements  (always=1)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> edge id
+</th></tr></table>
+<p><br />
+<b>change edge effort information (0x59)</b>
+</p><p>This command can be sent using 4, 2, or 1 parameters. In the first form, it adds a new override of edge information to the list of existing overrides for the given vehicle, valid from begin time to end time. In the second form, it adds a new override that is valid throughout the simulation, replacing an earlier one for the same edge. In the third form, it removes as earlier override for the given edge, valid throughout the simulation.
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=4)
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> begin time (in s)
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> end time (in s)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> edge id
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> effort value (abstract)
+</th></tr></table>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=2)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> edge id
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> effort value (abstract)
+</th></tr></table>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=1)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> edge id
+</th></tr></table>
+<p><b>reroute (compute new route) by travel time (0x90)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=0)
+</th></tr></table>
+<p><b>reroute (compute new route) by effort (0x91)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=0)
+</th></tr></table>
+<p><br />
+<b>reroute (compute new route) by effort (0x91)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=2)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> lane ID
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> Position along the lane.
+</th></tr></table>
+<p>The vehicle will be renamed from its lane and moved to the given position on the given lane. No collision checks are done, this means that moving the vehicle may cause in collisions or in situations yielding in such. The vehicle keeps its speed - in the next time step it is at given position + speed. Note that the lane must be a part of the following route, this means it must be either a part of the edge the vehicle is currently on or a part of an edge the vehicle will pass in future; setting a new route before moving the vehicle if needed should work.
+</p><p><br />
+<b>speed mode (0xb3)</b>
+</p><p>Per default, the vehicle is using the given speed regarding the safe gap, the
+maximum acceleration, and the maximum deceleration. Furthermore, vehicles follow the
+right-of-way rules when approaching an intersection and if necessary they brake hard to avoid driving across a red light. One can control this behavior using the speed mode (0xb3) command, the given integer is a bitset (bit0 is the least significant bit) with the following fields:
+</p>
+<ul><li> bit0: Regard safe speed
+</li><li> bit1: Regard maximum acceleration
+</li><li> bit2: Regard maximum deceleration
+</li><li> bit3: Regard right of way at intersections
+</li><li> bit4: Brake hard to avoid passing a red light
+</li></ul>
+<p>Setting the bit enables the check (the according value is regarded), keeping the bit==zero disables the check.
+</p><p>Examples: 
+</p><p>all checks off -&gt; [0 0 0 0 0] -&gt; Speed Mode = 0
+</p><p>disable right of way check -&gt; [1 0 1 1 1] -&gt; Speed Mode = 23
+</p><p>all checks on -&gt; [1 1 1 1 1] -&gt; Speed Mode = 31
+</p><p><br />
+<b>lane change mode (0xb6)</b>
+</p><p>The <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicle_Types" title="Definition of Vehicles, Vehicle Types, and Routes">laneChangeModel</a> discriminates four reasons reasons to change lanes:
+</p>
+<ul><li> strategic (change lanes to continue the route)
+</li><li> cooperative (change in order to allow others to change)
+</li><li> speed gain (the other lane allows for faster driving)
+</li><li> obligation to drive on the right
+</li></ul>
+<p>During each simulation step the laneChangeModel computes an <i>internal</i> request to change the lane or to stay on the current lane.
+</p><p>If an <i>external</i> change lane command (0x13) command is in conflict with the <i>internal</i> request this is resolved by the current value of the vehicles <i>lane change mode</i>.
+The given integer is interpreted as a bitset (bit0 is the least significant bit) with the following fields:
+</p>
+<ul><li> bit1, bit0: 00 = do no strategic changes; 01 = do strategic changes if not in conflict with a TraCI request; 10 = do strategic change even if overriding TraCI request
+</li><li> bit3, bit2: 00 = do no cooperative changes; 01 = do cooperative changes if not in conflict with a TraCI request; 10 = do cooperative change even if overriding TraCI request
+</li><li> bit5, bit4: 00 = do no changes; 01 = do speed gain changes if not in conflict with a TraCI request; 10 = do speed gain change even if overriding TraCI request
+</li><li> bit7, bit6: 00 = do no right drive changes; 01 = do right drive changes if not in conflict with a TraCI request; 10 = do right drive change even if overriding TraCI request
+</li></ul>
+<ul><li> bit9, bit8: 
+<ul><li> 00 = do not respect other drivers when following TraCI requests, adapt speed to fulfill request
+</li><li> 01 = avoid immediate collisions when following a TraCI request, adapt speed to fulfill request
+</li><li> 10 = respect the speed / brake gaps of others when changing lanes, adapt speed to fulfill request
+</li><li> 11 = respect the speed / brake gaps of others when changing lanes, no speed adaption
+</li></ul>
+</li></ul>
+<p>The default lane change mode is 0b1001010101 = 597 which means that the laneChangeModel may execute all changes unless in conflict with TraCI. Requests from TraCI are handled urgently but with full consideration for safety constraints.
+</p><p><b>add (0x80)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> double
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> byte
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=6)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> vehicle type ID (must exist)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> route ID (must exist)
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> depart time
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> depart position
+</th>
+<th style="border: 1pt solid;"> value type <i>double</i>
+</th>
+<th style="border: 1pt solid;"> depart speed
+</th>
+<th style="border: 1pt solid;"> value type <i>byte</i>
+</th>
+<th style="border: 1pt solid;"> depart lane
+</th></tr></table>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />Please note that the values are not checked in a very elaborated way. Make sure they are correct before sending.</div>
+<p>If a negative departure time is set, one of the following fixed time settings will be used:
+</p>
+<ul><li> -1: DEPART_TRIGGERED
+</li><li> -2: DEPART_NOW (discards vehicle if it cannot be inserted immediately, net yet implemented, see <a rel="nofollow" class="external autonumber" href="http://sumo-sim.org/trac.wsgi/ticket/896">[1]</a>)
+</li></ul>
+<p>If zero or a negative departure speed is set, one of the following fixed speed settings will be used:
+</p>
+<ul><li>  0: DEPART_SPEED_DEFAULT
+</li><li> -2: DEPART_SPEED_RANDOM
+</li><li> -3: DEPART_SPEED_MAX
+</li></ul>
+<p>If a negative departure position is set, one of the following position settings will be used:
+</p>
+<ul><li> -2: DEPART_POS_RANDOM
+</li><li> -3: DEPART_POS_FREE
+</li><li> -4: DEPART_POS_BASE
+</li><li> -5: DEPART_POS_PWAG_SIMPLE
+</li><li> -6: DEPART_POS_PWAG_GENERIC
+</li><li> -7: DEPART_POS_MAX_SPEED_GAP
+</li><li> -8: DEPART_POS_RANDOM_FREE
+</li></ul>
+<p>Please note that giving 0 as depart position will result in the vehicle starting with its front at the begin of lane (unlike the simulation default which is the vehicle placed completely on the lane == DEPART_POS_BASE)
+</p><p>If a negative departure lane is set, one of the following lane settings will be used:
+</p>
+<ul><li> -2: DEPART_LANE_RANDOM
+</li><li> -3: DEPART_LANE_FREE
+</li><li> -4: DEPART_LANE_ALLOWED_FREE
+</li><li> -5: DEPART_LANE_BEST_FREE
+</li></ul>
+<p><b>add_full (0x85)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> string
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td>
+<td align="center"> byte
+</td>
+<td align="center"> int
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>compound</i>
+</th>
+<th style="border: 1pt solid;"> number of elements (always=14)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> route ID (must exist)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> vehicle type ID (must exist)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> depart time
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> depart lane
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> depart position
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> depart speed
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> arrival lane
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> arrival position
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> arrival speed
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> from taz (origin district)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> to taz (destination district)
+</th>
+<th style="border: 1pt solid;"> value type <i>string</i>
+</th>
+<th style="border: 1pt solid;"> line (for public ttansport)
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> person capacity
+</th>
+<th style="border: 1pt solid;"> value type <i>integer</i>
+</th>
+<th style="border: 1pt solid;"> person number
+</th></tr></table>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />Please note that the values are not checked in a very elaborated way. Make sure they are correct before sending.</div>
+<p><b>remove (0x81)</b>
+</p>
+<table cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td align="center"> byte
+</td>
+<td align="center"> byte
+</td></tr>
+<tr>
+<th style="border: 1pt solid;"> value type <i>byte</i>
+</th>
+<th style="border: 1pt solid;"> reason
+</th></tr></table>
+<p>The following reasons may be given:
+</p>
+<ul><li> 0: NOTIFICATION_TELEPORT
+</li><li> 1: NOTIFICATION_PARKING
+</li><li> 2: NOTIFICATION_ARRIVED
+</li><li> 3: NOTIFICATION_VAPORIZED
+</li><li> 4: NOTIFICATION_TELEPORT_ARRIVED
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 12/1000000
+Preprocessor generated node count: 54/1000000
+Post‐expand include size: 496/2097152 bytes
+Template argument size: 224/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:284-0!*!0!*!*!*!* and timestamp 20150331062544 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 16 February 2015, at 09:39.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

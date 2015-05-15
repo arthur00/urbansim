@@ -1,0 +1,19 @@
+INSTUPmobdat.simulator.Trip
+C:\Users\Arthur Valadares\Copy\Projects\mobdat\mobdat\simulator\Trip.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5&&3|8|2|5&&3|9|2|5&&3|10|2|5&&3|11|2|5&&3|12|2|5&&2|13|2|1&&2|14|2|1&&3|7|2|15&&2|16|2|1
+Destination=9
+Trip=1
+TripStarted=14
+VehicleType=12
+VehicleName=11
+mobdat.simulator.Trip=2
+Source=8
+TripID=10
+Trip.TripStarted=15
+ActualStartTime=7
+__cmp__=16
+Trip.__init__=5
+Traveler=4
+ScheduledStartTime=6
+__init__=3
+TripCompleted=13

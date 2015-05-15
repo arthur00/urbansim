@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Simulation/Pedestrians - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Simulation/Pedestrians</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.028648 from <a href="http://sumo.dlr.de/wiki/Simulation/Pedestrians">the wiki page for Simulation/Pedestrians</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Pedestrian_Simulation"><span class="tocnumber">1</span> <span class="toctext">Pedestrian Simulation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Building_a_network_for_pedestrian_simulation"><span class="tocnumber">2</span> <span class="toctext">Building a network for pedestrian simulation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Generating_a_network_with_sidewalks"><span class="tocnumber">2.1</span> <span class="toctext">Generating a network with sidewalks</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Explicity_specification"><span class="tocnumber">2.1.1</span> <span class="toctext">Explicity specification</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Type-base_generation"><span class="tocnumber">2.1.2</span> <span class="toctext">Type-base generation</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Heuristic_generation"><span class="tocnumber">2.1.3</span> <span class="toctext">Heuristic generation</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Permission-based_generation"><span class="tocnumber">2.1.4</span> <span class="toctext">Permission-based generation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Generating_a_network_with_crossings"><span class="tocnumber">2.2</span> <span class="toctext">Generating a network with crossings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Generating_pedestrian_demand"><span class="tocnumber">3</span> <span class="toctext">Generating pedestrian demand</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Pedestrian_Models"><span class="tocnumber">4</span> <span class="toctext">Pedestrian Models</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Model_nonInteraction"><span class="tocnumber">4.1</span> <span class="toctext">Model <i>nonInteraction</i></span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Model_striping"><span class="tocnumber">4.2</span> <span class="toctext">Model <i>striping</i></span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Interaction_between_pedestrians_and_other_modes"><span class="tocnumber">5</span> <span class="toctext">Interaction between pedestrians and other modes</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Pedestrian_Simulation">Pedestrian Simulation</span></h1>
+<p>This page describes simulations of pedestrians in SUMO. To build an intermodal simulation scenario with propper interactions between road vehicles and pedestrians, additional steps have to be take in comparisson to a plain vehicular simulation.
+</p>
+<h1> <span class="mw-headline" id="Building_a_network_for_pedestrian_simulation">Building a network for pedestrian simulation</span></h1>
+<p>When walking along an edge, pedestrians use sidewalks where available. A sidewalks is a lane which allows only the sumo <span class="inlxml">vClass</span> <i>pedestrian</i>. When crossing a road at an intersection, pedestrians use special lanes of type <i>crossing</i>. The area that connects sidewalks with crossings is modeled by special lanes of the type <i>walkingarea</i>. In the following, we describe how to build a simulation network that <i>contains sidewalks</i>, <i>crossings</i> and <i>walkingareas</i>.
+</p><p>When performing pedestrian routing, the router distinguishes between networks that contain <i>walkingareas</i> and those which do not. In the former, pedestrians may only cross a street whenever there is a pedestrian crossing. In the latter they may "jump" between any two edges which allow pedestrians at an intersection.
+</p>
+<h2> <span class="mw-headline" id="Generating_a_network_with_sidewalks">Generating a network with sidewalks</span></h2>
+<p>There are various different options for generating a network with sidewalks which are explained below. All of these options recognize the presence of an existing sidewalk (the rightmost lane allows pedestrians exclusively) and will not add another lane in that case.
+</p>
+<h3> <span class="mw-headline" id="Explicity_specification"> Explicity specification </span></h3>
+<p>Sidewalks may be defined explicitly in plain XML input when describing <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Lane-specific_Definitions" title="Networks/Building Networks from own XML-descriptions">edges (plain.edg.xml)</a>. This is done by defining an additional lane which only permits the vClass “pedestrian” and setting the appropriate width. In this case it is important to disallow pedestrians on all other lanes. Also, any pre-exisiting connection definitions must be modified to account for the new sidewalk lane. Alternatively, the <span class="inlxml">&lt;edge&gt;</span> -attribute <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Edge_Descriptions" title="Networks/Building Networks from own XML-descriptions"><span class="inlxml">sidewalkWidth</span> may be used</a>. It will cause a sidewalk of the specified width to be added to that edge, connections to be remapped and pedestrian permissions to be removed from all other lanes.
+</p>
+<h3> <span class="mw-headline" id="Type-base_generation"> Type-base generation </span></h3>
+<p>When importing edges with defined types, it is also possible to declare that certain types should receive a sidewalk. This can be used to automatically generate sidewalks for residential streets while omitting them for motorways when importing OSM data.
+An example type file can be found in <i><b>&lt;SUMO_HOME&gt;</b></i>/data/typemap/osmNetconverPedestrians.typ.xml.
+</p>
+<pre>&lt;types&gt;
+   &lt;type id="highway.motorway" numLanes="3" speed="44.44" priority="13" oneway="true" disallow="pedestrian bicycle"/&gt;
+   &lt;type id="highway.unclassified"   numLanes="1" speed="13.89" priority="5" sidewalkWidth="2" disallow="pedestrian"/&gt;
+   &lt;type id="highway.residential"    numLanes="1" speed="13.89" priority="4" sidewalkWidth="2" disallow="pedestrian"/&gt;
+   &lt;type id="highway.living_street"  numLanes="1" speed="2.78"  priority="3"/&gt;
+   &lt;type id="highway.service"        numLanes="1" speed="5.56"  priority="2" allow="delivery pedestrian"/&gt;
+   ...
+&lt;/types&gt;
+</pre>
+<h3> <span class="mw-headline" id="Heuristic_generation"> Heuristic generation </span></h3>
+<p>A third option which can be used if no edge types are available is a heuristic based on edge speed. It adds a sidewalk for all edges within a given speed range. This is controlled by using the following options:
+</p>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--sidewalks.guess <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Guess pedestrian sidewalks based on edge speed
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--sidewalks.guess.max-speed <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Add sidewalks for edges with a speed equal or below the given limit <i>default:13.89</i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--sidewalks.guess.mim-speed <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Add sidewalks for edges with a speed above the given limit <i>default:5.8</i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Permission-based_generation"> Permission-based generation </span></h3>
+<p>Option <span style="color: #111144; font-weight: bold; white-space: pre;">--sidewalks.guess.from-permissons <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span> is suitable for networks which specify their edge permissions (such as <a href="../Networks/Import/DlrNavteq.html" title="Networks/Import/DlrNavteq">DlrNavteq</a>). It adds a sidewalk for all edges which allow pedestrians on any of their lanes.
+</p>
+<h2> <span class="mw-headline" id="Generating_a_network_with_crossings">Generating a network with crossings</span></h2>
+<p>Crossings may be defined explicitly in plain XML input when describing <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Pedestrian_Crossings" title="Networks/Building Networks from own XML-descriptions">connections (plain.con.xml) using the new XML element <span class="inlxml">crossings</span></a>. 
+</p><p>The second available method adding crossing information to a network is with the option <span style="color: #111144; font-weight: bold; white-space: pre;"> --crossings.guess <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>. This enables a heuristic which adds crossings wherever sidewalks with similar angle are separated by lanes which forbid pedestrians. If the edges to be crossed have sufficient distance between them or vary a by a sufficient angle, two crossings with an intermediate walking area are generated. To use this option <a href="../Simulation/Pedestrians.html#Generating_a_network_with_sidewalks" title="Simulation/Pedestrians">sidewalks should be defined</a> for the network.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />To ensure proper generation of crossings, road lanes need to prohibit pedestrians either by setting <span class="inlxml">disallow="pedestrian"</span> or by explicitly specifying all other allowed classes using attribute <span class="inlxml">allow</span> When adding sidewalks via attribute <span class="inlxml">sidewalkWidth</span> or any of the heuristics above, pedestrians will be forbidden automatically on the remaining lanes.</div>
+<h1> <span class="mw-headline" id="Generating_pedestrian_demand">Generating pedestrian demand</span></h1>
+<p>Pedestrian demand may be specified explicitly as described at <a href="../Specification/Persons.html#Walks" title="Specification/Persons">Specification/Persons#Walks</a> or it may be generated.
+The tool <a href="../Tools/Trip.html#randomTrips.py" title="Tools/Trip">Tools/Trip#randomTrips.py</a> supports generating random pedestrian demand using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--pedestrians</span>.
+The option <span style="color: #111144; font-weight: bold; white-space: pre;">--max-dist <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> may be used to limit the maximum air distance of pedestrian walks.
+</p>
+<h1> <span class="mw-headline" id="Pedestrian_Models">Pedestrian Models</span></h1>
+<p>The pedestrian model to use can be selected by using the new simulation option <span style="color: #111144; font-weight: bold; white-space: pre;"> --pedestrian.model <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span> with the available paramters being <i>nonInteracting</i> and <i>striping</i> (default is <i>striping</i>). 
+The interface between the pedestrian model and the rest of the simulation was designed with the aim of having a high degree of freedom when implementing new models. It is planned to implement models with a higher level of interaction detail in the future.
+</p>
+<h2> <span class="mw-headline" id="Model_nonInteraction">Model <i>nonInteraction</i></span></h2>
+<p>This is a very basic walking model. Pedestrians walk bidirectionally along normal edges and “jump” across intersections. They maybe either be configured to complete a walk in a fixed amount of time or to move along the edges with a fixed speed. No interaction between pedestrians and vehicles or other pedestrians takes place.
+This model has a very high execution speed and may be useful if the pedestrian dynamics are not important.
+</p>
+<h2> <span class="mw-headline" id="Model_striping">Model <i>striping</i></span></h2>
+<p>This model assigns 2D-coordinates within a lane (of type sidewalk, walkingarea or crossing) to each pedestrian. These coordinates which are defined relative to the leftmost side of the start of the lane are updated in every simulation step. This is in contrast to the coordinates of vehicles, which (generally) only have 1D-coordinates within their respective lane. Pedestrians advance along a lane towards the next node which may either correspond to the natural direction of the lane (forward movement) or it may opposite to the natural direction (backward movement). Thus, the x coordinate monotonically increase or decreases while on a lane. Once the end of a lane has been reached, the pedestrian is placed on the next lane (which may either be unique or determined dynamically with a routing algorithm). 
+</p><p>The most important feature of pedestrian interactions is collision avoidance. To achieve this, the “striping”-model divides the lateral width of a lane into discrete stripes of fixed width. This width is user configurable using the option   <span style="color: #111144; font-weight: bold; white-space: pre;"> --pedestrian.striping.stripe-width <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> and defaults to 0.65 m. These stripes are similar to lanes of a multi-lane road. Collision avoidance is thus reduced to maintaining sufficient distance within the same stripe. Whenever a pedestrian comes too close to another pedestrian within the same stripe it moves in the y-direction (laterally) as well as in the x-direction to change to a different stripe. The y-coordinate changes continuously which leads to situations in which a pedestrian temporarily occupies two stripes and thus needs to ensure sufficient distances in both. The algorithm for selecting the preferred stripe is based on the direction of movement (preferring evasion to the right for oncoming pedestrians) and the expected distance the pedestrian will be able to walk in that stripe without a collision.
+</p><p>During every simulation step, each pedestrian advances as fast as possible while still avoiding collisions. The updates happen in a single pass for each walking direction with the pedestrian in the front being updated first and then its followers sorted by their x-coordinate. The speed in the x-direction may be reduced by a random amount with the maximum amount defined as a fraction of the maximum speed, using the global option <span style="color: #111144; font-weight: bold; white-space: pre;"> --pedestrian.striping.dawdling <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> (defaulting to 0.2). 
+As a consequence of the above movement rules, pedestrians tend to walk side by side on sidewalks of sufficient width. They wait in front of crossings in a wide queue and they form a jam if the inflow into a lane is larger than its outflow.
+</p><p>More complicated movement rules apply when moving on a <i>walkingarea</i>. Here, pedestrians paths cross in multiple directions. The actual path taken across the walkingarea consists of 1-3 linear segments and is unique for each pair of adjacent sidewalks or crossings. The pedestrians on each path of these paths compute their movements as if they were on a sidewalk. However, all other pedestrians are mapped into the coordinate system of that path in order achieve collision avoidance.
+</p>
+<h1> <span class="mw-headline" id="Interaction_between_pedestrians_and_other_modes">Interaction between pedestrians and other modes</span></h1>
+<p>A pedestrian wishing to cross the street at an uncontrolled intersection can only do so if its expected time slot for using the intersection does not interfere with that of an approaching vehicle. It should be noted that the dynamics at unprioritized crossings are conservative in estimating the time required gap. In the simulation, pedestrians will only use such a crossing if the whole length of the crossing is free of vehicles for the whole time needed to cross. 
+At priority crossings, pedestrians cross without regard for vehicles.
+</p><p>Vehicles are prevented from driving across a pedestrian crossing which is occupied by pedestrians. If a pedestrian is found which is not yet past the intersection point (between the crossing and the vehicles trajectory) but within a threshold distance to that point (currently hardcoded as 10m) the crossing is considered to be blocked.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />Using the model 'nonInteracting', no interactions between pedestians and other modes take place.</div>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 192/1000000
+Preprocessor generated node count: 544/1000000
+Post‐expand include size: 3018/2097152 bytes
+Template argument size: 1314/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:554-0!*!0!!en!*!* and timestamp 20150330202651 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 28 February 2015, at 18:31.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

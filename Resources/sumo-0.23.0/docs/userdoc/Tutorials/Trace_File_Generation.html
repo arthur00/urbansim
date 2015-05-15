@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Tutorials/Trace_File_Generation - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Tutorials/Trace File Generation</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.188756 from <a href="http://sumo.dlr.de/wiki/Tutorials/Trace_File_Generation">the wiki page for Tutorials/Trace_File_Generation</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Simulation_Scenario"><span class="tocnumber">2</span> <span class="toctext">Simulation Scenario</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Generating_a_SUMO-trace"><span class="tocnumber">3</span> <span class="toctext">Generating a SUMO-trace</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Converting_the_Trace"><span class="tocnumber">4</span> <span class="toctext">Converting the Trace</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Further_Possibilities"><span class="tocnumber">5</span> <span class="toctext">Further Possibilities</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Output_Options"><span class="tocnumber">5.1</span> <span class="toctext">Output Options</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Different_Penetration_Rates"><span class="tocnumber">5.2</span> <span class="toctext">Different Penetration Rates</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Limiting_the_Time"><span class="tocnumber">5.3</span> <span class="toctext">Limiting the Time</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Further_Information"><span class="tocnumber">6</span> <span class="toctext">Further Information</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Introduction">Introduction</span></h1>
+<p>This tutorial describes how to generate vehicular trace files. Besides SUMO, the <a href="../Tools/TraceExporter.html" title="Tools/TraceExporter">Tools/TraceExporter</a> will be used. It requires Python to be executed and currently allows to generate trace files for ns2/ns3, Shawn, OMNET, and PHEM.
+</p>
+<h1> <span class="mw-headline" id="Simulation_Scenario">Simulation Scenario</span></h1>
+<p>For generating vehicular traces, You need a simulation scenario, consisting at least of a road network and routes. You may visit <a href="../Tutorials/Hello_Sumo.html" title="Tutorials/Hello Sumo">Tutorials/Hello Sumo</a> or <a href="../Tutorials/Quick_Start.html" title="Tutorials/Quick Start">Tutorials/Quick Start</a> to learn how to get a scenario.
+</p>
+<h1> <span class="mw-headline" id="Generating_a_SUMO-trace">Generating a SUMO-trace</span></h1>
+<p>We assume You have the scenario and a configuration file named "myConfig.sumocfg". It may have a different name, of course. You should be able to start SUMO using Your configuration like this:
+</p>
+<pre>sumo -c myConfig.sumocfg
+</pre>
+<p>Now, we use the simulation to get an <a href="../Simulation/Output/FCDOutput.html" title="Simulation/Output/FCDOutput">fcd output</a>, a trace file in a SUMO-format. This file will be later converted into a trace file for one of the applications supported by <a href="../Tools/TraceExporter.html" title="Tools/TraceExporter">Tools/TraceExporter</a>. We generate an <a href="../Simulation/Output/FCDOutput.html" title="Simulation/Output/FCDOutput">fcd output</a> as following:
+</p>
+<pre>sumo -c myConfig.sumocfg --fcd-output sumoTrace.xml
+</pre>
+<p>And we will obtain the file "sumoTrace.xml".
+</p>
+<h1> <span class="mw-headline" id="Converting_the_Trace">Converting the Trace</span></h1>
+<p>We can now convert the vehicular traces in SUMO format into another format. For now, let's assume You would like to have a ns2 mobility file. We can generate one from the obtained <a href="../Simulation/Output/FCDOutput.html" title="Simulation/Output/FCDOutput">fcd output</a> using:
+</p>
+<pre>traceExporter.py --fcd-input sumoTrace.xml --ns2mobility-output ns2mobility.tcl
+</pre>
+<p>We obtain the file "ns2mobility.tcl", which we can give ns2 as input.
+</p>
+<h1> <span class="mw-headline" id="Further_Possibilities">Further Possibilities</span></h1>
+<h2> <span class="mw-headline" id="Output_Options">Output Options</span></h2>
+<p><a href="../Tools/TraceExporter.html" title="Tools/TraceExporter">Tools/TraceExporter</a> generates files for ns2/ns3, OMNET, Shawn, and PHEM. Please visit the <a href="../Tools/TraceExporter.html" title="Tools/TraceExporter">Tools/TraceExporter</a> manual page for further information about how to generate these files. Look for "output options".
+</p>
+<h2> <span class="mw-headline" id="Different_Penetration_Rates">Different Penetration Rates</span></h2>
+<p><a href="../Tools/TraceExporter.html" title="Tools/TraceExporter">Tools/TraceExporter</a> allows to define different equipment / penetration rates using the <span style="color: #111144; font-weight: bold; white-space: pre;">--penetration <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>. <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a> will be the amount of vehicles that are exported, where 1 is equal to 100&#160;%. This means, if You want to have 10&#160;% of vehicles to show up in Your ns2-trace, use:
+</p>
+<pre>traceExporter.py --penetration 0.1 \
+ --fcd-input sumoTrace.xml --ns2-mobilityoutput ns2mobility.tcl
+</pre>
+<p>The <span style="color: #111144; font-weight: bold; white-space: pre;">--seed <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> allows You to give different random number initialisations for choosing the vehicles to export.
+</p>
+<h2> <span class="mw-headline" id="Limiting_the_Time">Limiting the Time</span></h2>
+<p>You may limit the time steps to export using the options <span style="color: #111144; font-weight: bold; white-space: pre;">--begin <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span> and <span style="color: #111144; font-weight: bold; white-space: pre;">--end <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>. All time steps before <span style="color: #111144; font-weight: bold; white-space: pre;">--begin</span> and all after <span style="color: #111144; font-weight: bold; white-space: pre;">--end</span> will be dismissed. 
+</p><p>Additionally, You may force <a href="../Tools/TraceExporter.html" title="Tools/TraceExporter">Tools/TraceExporter</a> to convert only every n<sup>th</sup> time step using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--delta <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;TIME&gt;</i></a></span>. Please note that the value should be a multiple of the time step length used within the simulation.
+</p>
+<h1> <span class="mw-headline" id="Further_Information">Further Information</span></h1>
+<ul><li> See the <a href="../Tools/TraceExporter.html" title="Tools/TraceExporter">Tools/TraceExporter</a> manual page
+</li><li> See more information on SUMO's <a href="../Simulation/Output/FCDOutput.html" title="Simulation/Output/FCDOutput">fcd output</a>
+</li><li> Visit tutorials describing how to set up a simulation: <a href="../Tutorials/Hello_Sumo.html" title="Tutorials/Hello Sumo">Tutorials/Hello Sumo</a> or <a href="../Tutorials/Quick_Start.html" title="Tutorials/Quick Start">Tutorials/Quick Start</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 93/1000000
+Preprocessor generated node count: 238/1000000
+Post‐expand include size: 1186/2097152 bytes
+Template argument size: 335/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:509-0!*!0!!en!*!* and timestamp 20150330123236 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 14 March 2014, at 12:03.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

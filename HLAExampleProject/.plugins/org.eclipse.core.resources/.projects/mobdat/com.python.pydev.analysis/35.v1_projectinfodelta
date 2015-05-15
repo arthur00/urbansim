@@ -1,0 +1,22 @@
+INSTUPmobdat.simulator.BaseConnector
+C:\Users\Arthur Valadares\Copy\Projects\mobdat\mobdat\simulator\BaseConnector.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5&&3|8|2|5&&3|9|2|5&&3|10|2|5&&3|11|2|5&&3|11|2|5&&3|12|2|5&&3|13|2|5&&2|14|2|1&&2|15|2|1&&2|16|2|1&&2|17|2|1&&2|18|2|1&&2|19|2|1
+WorldTime=17
+BaseConnector.__init__=5
+BaseConnector=1
+mobdat.simulator.BaseConnector=2
+NetSettings=12
+WorldDay=19
+WorldTimeOfDay=18
+SecondsPerStep=8
+__Logger=4
+Clock=11
+World=13
+GetWorldTime=14
+GetWorldDay=16
+RealDayLength=10
+StartTimeOfDay=9
+GetWorldTimeOfDay=15
+CurrentStep=6
+__init__=3
+Interval=7

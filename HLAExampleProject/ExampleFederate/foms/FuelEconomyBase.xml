@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<objectModel xsi:schemaLocation="http://standards.ieee.org/IEEE1516-2010 http://standards.ieee.org/downloads/1516/1516.2-2010/IEEE1516-DIF-2010.xsd" xmlns="http://standards.ieee.org/IEEE1516-2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelIdentification>
+        <name>Fuel Economy FOM</name>
+        <type>FOM</type>
+        <version>1.0</version>
+        <modificationDate>2012-08-28</modificationDate>
+        <securityClassification>Unclassified</securityClassification>
+        <purpose>Tutorial FOM</purpose>
+        <applicationDomain>Engineering</applicationDomain>
+        <description>FOM for the Getting Started with HLA Evolved kit.</description>
+        <useLimitation>None</useLimitation>
+        <poc>
+            <pocType>Primary author</pocType>
+            <pocName>Björn Möller</pocName>
+            <pocOrg>Pitch Technologies</pocOrg>
+            <pocTelephone>+46 13 13 45 45</pocTelephone>
+            <pocEmail>info@pitch.se</pocEmail>
+        </poc>
+        <poc>
+            <pocType>Contributor</pocType>
+            <pocName>Åsa Wihlborg</pocName>
+            <pocOrg>Pitch Technologies</pocOrg>
+            <pocTelephone>+46 13 13 45 45</pocTelephone>
+            <pocEmail>info@pitch.se</pocEmail>
+        </poc>
+        <reference>
+            <type>Document</type>
+            <identification>The HLA Tutorial (Sep 2012)</identification>
+        </reference>
+        <other></other>
+        <glyph alt="Fuel pump" width="36" height="36" type="gif">R0lGODlhJAAkAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAJAAkAAAI/wD/CRwo0J8/gggPHvxnEKHDhxAhNozoUJ85bRgzaszojR5Dig77DVNyAYOGDChTotSAoUWjfB9BDmRHBQADEydK6NypEwUHABCGDZxI8dsPAG+mPWvGtCnTaLQqPBA1dKHEf+egACAFMh+NBq7uLTMX82pWAI9AtmvxoNa3HGrgyfwXLggASmrZymIH5sCbdwyJDv0nbggATmpZOGj1790ZAGjSFYQ4zshWkPRoLBYYjAKANHKtIqwMIJE+evry0Vtdj3W2EBAY/+ulc8Iq0aOTAEixJQuYM1yyZNEiXIsSAhVkrxKxCUcXuZSVAAAgQMAAAwMCWK8+QAAAC7KRif9QEYFIuYjjdE9fD8CAd/bfZecL9QLAj3Ho1cMnoCDAev8WsBIYPuzsIEM4+bHn33QDHJDdehrsgpARMSBImX4LAuBfANgF4J8CTNihCDgCFVFhgvBNtyECA2gYwAEIBKDDN/+YKA6KKboYgAIEAHABLv94AkAp/zxxgjc4wpehABAIAN4/skAQyj91QPBMkv9lKYACFqjyTytT/cOKAKrgNlB6OSo53Qe2iOnAlN1kUEc9F6appgZtrtLAlP/YAMQ6ddqp4nQVpPLPKxB4IpAZFHATqJ0ZPomLCqcIJEoAQj2EpqDsPQkLCbcI1AsAr5hJ2BGcdipgMRhoQQ46Xwx4gAxE6DiR6noYzPKPPYAccMMRC8whD61WTGfAAixmCB8GsAjkziRXkCGJZA7Bc8gUIxjbAIt2JgCEHELxs047/JQ1kDgg3JpjInOxEwcSU8Qr77z0TiHFE1iEKhM/7ZyDzr8AByzwv+ekY89c5iKs8GAKK2TqQAEBADs=</glyph>
+    </modelIdentification>
+    <objects>
+        <objectClass>
+            <name>HLAobjectRoot</name>
+            <objectClass>
+                <name>Car</name>
+                <sharing>PublishSubscribe</sharing>
+                <semantics>A car for the Fuel Economy federation</semantics>
+                <attribute>
+                    <name>Name</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <updateType>Static</updateType>
+                    <updateCondition>NA</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Name of the car</semantics>
+                </attribute>
+                <attribute>
+                    <name>LicensePlateNumber</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <updateType>Static</updateType>
+                    <updateCondition>NA</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Number on the license plate.</semantics>
+                </attribute>
+                <attribute>
+                    <name>FuelLevel</name>
+                    <dataType>FuelInt32</dataType>
+                    <updateType>Conditional</updateType>
+                    <updateCondition>On change</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Current fuel level of the car at each point in time</semantics>
+                </attribute>
+                <attribute>
+                    <name>FuelType</name>
+                    <dataType>FuelTypeEnum32</dataType>
+                    <updateType>Static</updateType>
+                    <updateCondition>NA</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Type of fuel for the car.</semantics>
+                </attribute>
+                <attribute>
+                    <name>Position</name>
+                    <dataType>PositionRec</dataType>
+                    <updateType>Conditional</updateType>
+                    <updateCondition>On change</updateCondition>
+                    <ownership>NoTransfer</ownership>
+                    <sharing>PublishSubscribe</sharing>
+                    <dimensions/>
+                    <transportation>HLAreliable</transportation>
+                    <order>Receive</order>
+                    <semantics>Position of the car.</semantics>
+                </attribute>
+            </objectClass>
+        </objectClass>
+    </objects>
+    <interactions>
+        <interactionClass>
+            <name>HLAinteractionRoot</name>
+            <interactionClass>
+                <name>LoadScenario</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>Interaction to set up the scenario</semantics>
+                <parameter>
+                    <name>ScenarioName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Scenario file for the simulation</semantics>
+                </parameter>
+                <parameter>
+                    <name>InitialFuelAmount</name>
+                    <dataType>FuelInt32</dataType>
+                    <semantics>Initial amount of fuel</semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>ScenarioLoaded</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>This interaction confirms that the scenarion has been loaded</semantics>
+                <parameter>
+                    <name>FederateName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Name of the federate that succeeded in loading the scenario</semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>ScenarioLoadFailure</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>To be sent by a federate that has failed to load a scenario for some reason</semantics>
+                <parameter>
+                    <name>FederateName</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Name of the federate that failed with loading the scenario</semantics>
+                </parameter>
+                <parameter>
+                    <name>ErrorMessage</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Explanation of failure</semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>Start</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>Interaction to Start the simulation</semantics>
+                <parameter>
+                    <name>TimeScaleFactor</name>
+                    <dataType>ScaleFactorFloat32</dataType>
+                    <semantics>How fast will the simulation run compared to real time. Example: 1.0= real time, 2.0 indicates that the simulation runs at twice the speed. </semantics>
+                </parameter>
+            </interactionClass>
+            <interactionClass>
+                <name>Stop</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>Interaction to Stop the simulation</semantics>
+            </interactionClass>
+        </interactionClass>
+    </interactions>
+    <switches>
+        <autoProvide isEnabled="true"/>
+        <conveyRegionDesignatorSets isEnabled="false"/>
+        <conveyProducingFederate isEnabled="false"/>
+        <attributeScopeAdvisory isEnabled="false"/>
+        <attributeRelevanceAdvisory isEnabled="false"/>
+        <objectClassRelevanceAdvisory isEnabled="false"/>
+        <interactionRelevanceAdvisory isEnabled="false"/>
+        <serviceReporting isEnabled="false"/>
+        <exceptionReporting isEnabled="false"/>
+        <delaySubscriptionEvaluation isEnabled="false"/>
+        <automaticResignAction resignAction="CancelThenDeleteThenDivest"/>
+    </switches>
+    <dataTypes>
+        <simpleDataTypes>
+            <simpleData>
+                <name>FuelInt32</name>
+                <representation notes="fueleconomybase_1">HLAinteger32BE</representation>
+                <units>Litres</units>
+                <resolution>1</resolution>
+                <accuracy>1</accuracy>
+                <semantics>Integer that describes a fuel volume. Note that this is rounded to an integer value in the information exchange.</semantics>
+            </simpleData>
+            <simpleData>
+                <name>AngleFloat64</name>
+                <representation>HLAfloat64BE</representation>
+                <units>Degree</units>
+                <resolution>0.000001</resolution>
+                <accuracy>0.000001</accuracy>
+                <semantics>Decimal degree data type used for Lat/Long positioning. A 64 bit value is required to accurately describe the position of a car on earth.</semantics>
+            </simpleData>
+            <simpleData>
+                <name>ScaleFactorFloat32</name>
+                <representation>HLAfloat32BE</representation>
+                <units>NA</units>
+                <resolution>0.001</resolution>
+                <accuracy>0.001</accuracy>
+                <semantics>Ratio between two values. Used for the scaling of time or space. Negative numbers are not allowed.
+</semantics>
+            </simpleData>
+        </simpleDataTypes>
+        <enumeratedDataTypes>
+            <enumeratedData>
+                <name>FuelTypeEnum32</name>
+                <representation>HLAinteger32BE</representation>
+                <semantics>Main type of fuel for a car. Hybrid fuel cars are mainly treated as gasoline or diesel cars. Electrical cars to be covered in the next version of this FOM.</semantics>
+                <enumerator>
+                    <name>Gasoline</name>
+                    <value>1</value>
+                </enumerator>
+                <enumerator>
+                    <name>Diesel</name>
+                    <value>2</value>
+                </enumerator>
+                <enumerator>
+                    <name>EthanolFlexibleFuel</name>
+                    <value>3</value>
+                </enumerator>
+                <enumerator>
+                    <name>NaturalGas</name>
+                    <value>4</value>
+                </enumerator>
+            </enumeratedData>
+        </enumeratedDataTypes>
+        <arrayDataTypes/>
+        <fixedRecordDataTypes>
+            <fixedRecordData>
+                <name>PositionRec</name>
+                <encoding>HLAfixedRecord</encoding>
+                <semantics>Position on Earth described as Lat/Long using WGS-84.</semantics>
+                <field>
+                    <name>Lat</name>
+                    <dataType>AngleFloat64</dataType>
+                    <semantics>Latitude degree (-90 to 90)</semantics>
+                </field>
+                <field>
+                    <name>Long</name>
+                    <dataType>AngleFloat64</dataType>
+                    <semantics>Longitude degree (-180 to 180)</semantics>
+                </field>
+            </fixedRecordData>
+        </fixedRecordDataTypes>
+        <variantRecordDataTypes/>
+    </dataTypes>
+    <notes>
+        <note>
+            <label>fueleconomybase_1</label>
+            <semantics>Consider using a float for this for higher accuracy</semantics>
+        </note>
+    </notes>
+</objectModel>

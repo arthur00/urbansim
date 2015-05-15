@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Simulation/VehicleSpeed - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Simulation/VehicleSpeed</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.094384 from <a href="http://sumo.dlr.de/wiki/Simulation/VehicleSpeed">the wiki page for Simulation/VehicleSpeed</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>There are a wide range of influences on vehicle speed. They are described in the following. Each of these influences sets an upper bound on the vehicle speed. The actual speed in any given situation is the minimum speed of all influences.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#maxSpeed"><span class="tocnumber">1</span> <span class="toctext">maxSpeed</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#edge.2Flane_speed"><span class="tocnumber">2</span> <span class="toctext">edge/lane speed</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Car_Following_Model"><span class="tocnumber">3</span> <span class="toctext">Car Following Model</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Dawdling"><span class="tocnumber">3.1</span> <span class="toctext">Dawdling</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Intersections"><span class="tocnumber">4</span> <span class="toctext">Intersections</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Lane_Changing"><span class="tocnumber">5</span> <span class="toctext">Lane Changing</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Stops"><span class="tocnumber">6</span> <span class="toctext">Stops</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Acceleration_.2F_Deceleration_constraints"><span class="tocnumber">7</span> <span class="toctext">Acceleration / Deceleration constraints</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#departSpeed_.2F_arrivalSpeed"><span class="tocnumber">8</span> <span class="toctext">departSpeed / arrivalSpeed</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Variable_Speed_Signs"><span class="tocnumber">9</span> <span class="toctext">Variable Speed Signs</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Calibrators"><span class="tocnumber">10</span> <span class="toctext">Calibrators</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#TraCI"><span class="tocnumber">11</span> <span class="toctext">TraCI</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="maxSpeed"> maxSpeed </span></h1>
+<p>The <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicle_Types" title="Definition of Vehicles, Vehicle Types, and Routes"><span class="inlxml">&lt;vType&gt;</span>-attribute <span class="inlxml">maxSpeed</span></a> models the maximum speed that a vehicle will travel. It can be thought of as the maximum speed of the engine or the maximum speed desired by the driver under any circumstances (possibly these two aspects will be modelled with separate attributes in the future).
+</p>
+<h1> <span class="mw-headline" id="edge.2Flane_speed"> edge/lane speed </span></h1>
+<p>The <span class="inlxml">speed</span>-attribute is usually <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Edge_Descriptions" title="Networks/Building Networks from own XML-descriptions">defined for edges</a> but may also <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Lane-specific_Definitions" title="Networks/Building Networks from own XML-descriptions">differ among the lanes</a> of the same edge. It models the legal speed limit.
+Each vehicle can be <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Speed_Distributions" title="Definition of Vehicles, Vehicle Types, and Routes">assigned an individual speed multiplier</a> which then lets it exceed this limit.
+</p>
+<h1> <span class="mw-headline" id="Car_Following_Model"> Car Following Model</span></h1>
+<p>The <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Car-Following_Models" title="Definition of Vehicles, Vehicle Types, and Routes">car following model</a> of a vehicle defines its speed in relation the vehicle ahead. The default model always selects the maximum speed which is <i>safe</i> in the sense of being able to stop in time to avoid a collision.
+</p>
+<h2> <span class="mw-headline" id="Dawdling"> Dawdling </span></h2>
+<p>Most car-following models support the <span class="inlxml">sigma</span>-attribute which models driver imperfection. For values above <b>0</b>, drivers with the default car-following model will drive <i>slower</i> than would be safe by a random amount (between [0, <span class="inlxml">accel</span>]).
+</p>
+<h1> <span class="mw-headline" id="Intersections"> Intersections </span></h1>
+<p>Vehicles approaching an intersection without the right-of-way have to slow down. If the intersection is used by other vehicles which have the right of way, stopping may be necessary until a safe time-window is found. Even if a vehicle has the right-of-way it may need to slow down due to <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Impatience" title="Definition of Vehicles, Vehicle Types, and Routes">impatient</a> drivers which drive across the intersection. The right-of-way rules at an intersection are <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Node_Descriptions" title="Networks/Building Networks from own XML-descriptions">defined by the node <span class="inlxml">type</span>-attribute</a> and by <a href="../Simulation/Traffic_Lights.html" title="Simulation/Traffic Lights">traffic lights</a>. 
+</p>
+<h1> <span class="mw-headline" id="Lane_Changing"> Lane Changing </span></h1>
+<p>Vehicles may decide to slow down in order to execute a lane-change maneuver. They may also slow down in order to aid other vehicles with lane-changing. If the lane a vehicle is on does not have a connection to the next edge on a vehicles route, the vehicle will decelerate and stop.
+</p>
+<h1> <span class="mw-headline" id="Stops"> Stops </span></h1>
+<p>Vehicles will decelerate when approaching the position of <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Stops" title="Definition of Vehicles, Vehicle Types, and Routes"><span class="inlxml">stop</span>-definition</a>.
+</p>
+<h1> <span class="mw-headline" id="Acceleration_.2F_Deceleration_constraints"> Acceleration / Deceleration constraints </span></h1>
+<p>Vehicles can only change their speed by a certain amount each time step. This is defined by the <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicle_Types" title="Definition of Vehicles, Vehicle Types, and Routes"><span class="inlxml">&lt;vType&gt;</span>-attributes <span class="inlxml">accel</span> and <span class="inlxml">decel</span></a>
+</p>
+<h1> <span class="mw-headline" id="departSpeed_.2F_arrivalSpeed"> departSpeed / arrivalSpeed </span></h1>
+<p>Vehicles enter the network using their <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">defined <span class="inlxml">departSpeed</span></a>. When approaching the end of their route they will adapt their speed to match their <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html#Vehicles_and_Routes" title="Definition of Vehicles, Vehicle Types, and Routes">defined <span class="inlxml">arrivalSpeed</span></a>
+</p>
+<h1> <span class="mw-headline" id="Variable_Speed_Signs"> Variable Speed Signs </span></h1>
+<p><a href="../Simulation/Variable_Speed_Signs.html" title="Simulation/Variable Speed Signs">Variable speed signs</a> are used to modify the speed limit of an edge for a defined time interval.
+</p>
+<h1> <span class="mw-headline" id="Calibrators"> Calibrators </span></h1>
+<p><a href="../Simulation/Calibrator.html" title="Simulation/Calibrator">Calibrators</a> are used to adapt the flow on an edge for a defined time interval but may also be used to modify the speed limit of an edge.
+</p>
+<h1> <span class="mw-headline" id="TraCI"> TraCI </span></h1>
+<p>Vehicles can forced to adapt their speed using <a href="../TraCI/Change_Vehicle_State.html" title="TraCI/Change Vehicle State">TraCI commands</a>.
+Using the <b>speed mode</b> command, The above influences can be selectively overridden.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 131/1000000
+Preprocessor generated node count: 298/1000000
+Post‐expand include size: 414/2097152 bytes
+Template argument size: 78/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:576-0!*!0!!en!*!* and timestamp 20150330202655 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 23 December 2014, at 18:32.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

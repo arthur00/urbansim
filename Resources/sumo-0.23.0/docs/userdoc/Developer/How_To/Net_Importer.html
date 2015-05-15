@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Developer/How_To/Net_Importer - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../../Installing.html">Installing SUMO</a></li>
+  <li><a href="../../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../../FAQ.html">FAQ</a></li>
+  <li><a href="../../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../SUMO.html">SUMO</a></li>
+   <li><a href="../../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Developer/How To/Net Importer</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.917410 from <a href="http://sumo.dlr.de/wiki/Developer/How_To/Net_Importer">the wiki page for Developer/How_To/Net_Importer</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>In the following, advices on implementing a new network importer are given-
+</p><p>Implementing an own network import module is very easy. The following steps are necessary:
+</p>
+<ul><li> write methods which read and parse the information from the original file
+</li><li> insert parsed values into the netbuilding containers
+</li><li> make the network importer know and use your code
+</li><li> submit your code
+</li></ul>
+<p>Yes, that's all. Still, the three steps are described more detailed in the following sections.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Building_a_Reader"><span class="tocnumber">1</span> <span class="toctext">Building a Reader</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Initial_Considerations"><span class="tocnumber">1.1</span> <span class="toctext">Initial Considerations</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Calling_the_Reader"><span class="tocnumber">1.2</span> <span class="toctext">Calling the Reader</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Import_Order"><span class="tocnumber">1.3</span> <span class="toctext">Import Order</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Starting_to_Parse"><span class="tocnumber">1.4</span> <span class="toctext">Starting to Parse</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Error_Handling"><span class="tocnumber">1.5</span> <span class="toctext">Error Handling</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Adding_read_Values_to_the_netbuilding_Containers"><span class="tocnumber">2</span> <span class="toctext">Adding read Values to the netbuilding Containers</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Tests"><span class="tocnumber">3</span> <span class="toctext">Tests</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Submitting_the_Code"><span class="tocnumber">4</span> <span class="toctext">Submitting the Code</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Building_a_Reader">Building a Reader</span></h1>
+<h2> <span class="mw-headline" id="Initial_Considerations">Initial Considerations</span></h2>
+<p>There are some conventions on network importers we try to follow. They are not mandatory, but they are assumed to assure the code's extendibility and to force a higher quality of the code.
+</p><p>When starting to write your own importer, you should consider to base it on an existing one. NIImporter_OpenStreetMap.*, NIXML...Handler.* are examples of reading network descriptions form XML files. NIImporter_VISUM.* and NIImporter_DlrNavteq.* read plain text files, formatted in different ways. All these modules are located in <i><b>&lt;SUMO_HOME&gt;</b></i>/src/netimport and of course, your import should be placed here, too.
+</p>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> network importer code is located in <i><b>&lt;SUMO_HOME&gt;</b></i>/src/netimport/</div>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> network importer should be named NIImporter_&lt;FORMAT_NAME&gt;</div>
+<h2> <span class="mw-headline" id="Calling_the_Reader">Calling the Reader</span></h2>
+<p>Before adding a call to the init-function of your network importer, you have to add according options; otherwise the first call will end with an error due to accessing an unknown option. The options have to be added to void NIFrame::fillOptions().
+</p><p>Then, you can make the importing facility know your parser by including the .h-file of your parser to NILoader.cpp and add a call to his loadNetwork-method within void NILoader::load(OptionsCont &amp;oc).
+</p>
+<h2> <span class="mw-headline" id="Import_Order">Import Order</span></h2>
+<p>In most cases, edges, nodes, traffic lights, connections between edges, and other road network attributes are given explicitly and separated. The information <b>must</b> be imported in the correct order. The following order is right:
+</p>
+<ul><li> nodes
+</li><li> edges (need references to origin and to destination nodes)
+</li><li> connections between edges (need usually references to edges)
+</li><li> traffic lights (need references to nodes)
+</li></ul>
+<p>Some more outrageous programmers may try to optimise the order a bit if the original data is aligned different. This may be possible in some cases.
+</p><p>In the case nodes, edges, and other information are parsed from several files, the import order must be considered. Of course, it is also possible to store data in temporary containers. Still, this should be avoided as it increases memory consumption, and yes, memory consumption is one of the major problems for the network building process. In the case temporary containers are used, they must of course be cleared before returning from importing.
+</p>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> try to avoid static containers</div>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> clean static containers if used</div>
+<h2> <span class="mw-headline" id="Starting_to_Parse">Starting to Parse</span></h2>
+<p>All importers have a static method named "loadNetwork" which starts the parsing. This method is responsible for starting the import if the according options are set and to assure the read values are stored for further processing within the according netbuilding containers. For this purpose, it is necessary to have the options and the netbuilding structure be given to the importer, making the call have the following fingerprint:
+</p>
+<pre>static void loadNetwork(const OptionsCont &amp;oc, NBNetBuilder &amp;nb);
+</pre>
+<p>At first, this method asks whether the option which makes <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> read a file of the according format is set and whether the set value is right. By now, this means only that a check whether the given file(s) really exist(s) is made, not whether it is well formatted or valid in any means. The method FileHelpers::exists(&lt;FILE&gt;) returns whether a given file is existing.
+</p>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> all importer have a static member which checks whether the according option is set with a valid value</div>
+<p>After the file has been checked for being existent, a parser is built and started.
+</p><p>You may have noticed, that some of the import parsers allow to give more than one file, divided by ','. This is of a great help sometimes, still it is not mandatory. It is up to you to decide whether your importer should be able to handle several files or not.
+</p>
+<h2> <span class="mw-headline" id="Error_Handling">Error Handling</span></h2>
+<p>Different formats have different sources for being errornous. In some cases, heuristics may have to be applied during the parsing. In all cases something is strange - and it is not strange each time a network from the given format is imported - a warning should be generated. This is done by calling the macro
+</p>
+<pre>WRITE_WARNING(&lt;TEXT&gt;);
+</pre>
+<p>If the odd behaviour completely disallows further processing of the imported file, or in the case a read value is not in the right format (a string is read, though a floating point number was awaited, for example), a ProcessError should be thrown. The exception must have an information about the error, for example:
+</p>
+<pre>throw ProcessError("Number of lanes is &lt;0");
+</pre>
+<p>Yes, the decision whether a strange value is an error or a warning is sometimes difficult.
+</p>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> throw a ProcessError in the case of errors</div>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> warn on strange behaviour</div>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> both, a warning and an error exception must have an explanation about the reason supplied</div>
+<h1> <span class="mw-headline" id="Adding_read_Values_to_the_netbuilding_Containers">Adding read Values to the netbuilding Containers</span></h1>
+<p>After the definition of a node, an edge, or anything else has been parsed, the according structure must be built and inserted into the according netbuilding container. 
+</p><p><br />
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Class
+</th>
+<th style="background:#ddddff;"> Road element
+</th></tr>
+<tr>
+<td> NBNode
+</td>
+<td> A node (intersection, junction)
+</td></tr>
+<tr>
+<td> NBEdge
+</td>
+<td> An edge (road, street)
+</td></tr>
+</table>
+<p>The following table shows which definitions are stored into which containers:
+</p><p>In most cases, these methods return whether the addition was successful. If it was not, there probably is already an object with the same name. Normally, the imported networks we have dealt with so far did not contain duplicates - with the exception of edges which may bidirectional. In the case the object could not been added, you have to delete it explicitly. In the case your format is known to contain duplicates, you should ask whether a duplicate was already built and only if not, build the instance.
+</p>
+<div style="background: #ccffcc; padding: .5em; margin: .5em; border: 1px dashed #88ff88;"><b>Convention:</b> try to avoid building and deleting of duplicates</div>
+<h1> <span class="mw-headline" id="Tests">Tests</span></h1>
+<h1> <span class="mw-headline" id="Submitting_the_Code">Submitting the Code</span></h1>
+<p>In the case you do not have a write access to the SVN, we would be very happy if you could provide patches against a recent version to <a href="../../Contact.html" title="Contact">the sumo-devel mailing list</a>.
+</p><p><br />
+</p><p><br />
+</p>
+<p style="border:1px solid #909090; padding:1px 4px 3px 4px"><a href="../../images/CC-BY-SA-small.png" class="image" title="Creative Commons License"><img alt="Creative Commons License" src="../../images//CC-BY-SA-small.png" width="80" height="15" /></a>
+This work is licensed under a <a rel="nofollow" class="external text" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. The authors are listed in the history.</p>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 106/1000000
+Preprocessor generated node count: 256/1000000
+Post‐expand include size: 1869/2097152 bytes
+Template argument size: 495/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:251-0!*!0!!en!2!* and timestamp 20150331082750 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 6 March 2012, at 13:19.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

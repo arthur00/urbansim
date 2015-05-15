@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Installing/Windows_Build - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Installing/Windows Build</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.966602 from <a href="http://sumo.dlr.de/wiki/Installing/Windows_Build">the wiki page for Installing/Windows_Build</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>This document describes how to build SUMO under MS-Windows using only freely
+available (this does <b>not</b> mean "open source") tools. Instructions on how to build SUMO on Windows using an Open Source toolchain are included in our <a href="../Installing/Linux_Build.html" title="Installing/Linux Build">building on Linux</a> pages. Please note that You may also <a href="../Downloads.html" title="Downloads">download pre-build Windows binaries</a>.
+</p><p>Please read the whole document before you start, there are some detours and shortcuts included.
+</p><p>If you do not need the GUI, you can skip everything concerning Fox.
+If you do not need precise geodata conversion, you can skip everything concerning GDAL, Proj and FWTools.
+</p>
+<ul><li>Download <a rel="nofollow" class="external text" href="https://www.microsoft.com/germany/msdn/vstudio/products/express/download.mspx">Visual C++ 2010 Express Edition</a> (or a newer one). (There is no need to install a separate <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Microsoft_Windows_SDK">Platform SDK</a> any longer.) If you are using Windows 8 be sure to download Visual Studio Express for Windows Desktop and not Visual Studio Express for Windows 8. 
+</li><li><a rel="nofollow" class="external text" href="http://www.python.org/download/">Download Python for Windows</a> and install it. It is used to dynamically include the SVN revision into compilation. (The build will work without it, but you may see nasty warnings and even editor windows popping up.) Python 3 won't work, we use Python 2.7.
+</li><li>Download the <a rel="nofollow" class="external text" href="http://xml.apache.org/xerces-c/">Xerces-C</a> prebuilt <a rel="nofollow" class="external text" href="http://xerces.apache.org/xerces-c/download.cgi">binaries</a> for your Visual Studio version (for VS 2010 you need the *windows-vc-10.0.zip), the <a rel="nofollow" class="external text" href="http://www.fox-toolkit.org/">Fox</a> sources (<a rel="nofollow" class="external text" href="http://www.fox-toolkit.org/ftp/fox-1.6.36.zip">Version 1.6.36</a> is confirmed to work) and either the <a rel="nofollow" class="external text" href="http://fwtools.maptools.org/">FWTools</a> (<a rel="nofollow" class="external text" href="http://home.gdal.org/fwtools/FWTools113.exe">Version 1.1.3</a> should work) or <a rel="nofollow" class="external text" href="http://download.osgeo.org/proj/">PROJ</a> and <a rel="nofollow" class="external text" href="http://trac.osgeo.org/gdal/wiki/DownloadSource">GDAL</a> sources separately. You may also try the binary packages provided at <a rel="nofollow" class="external free" href="http://www.gisinternals.com/sdk/">http://www.gisinternals.com/sdk/</a>
+</li><li>Note on installation paths: MSVC seems to have difficulties with include and library paths containing spaces (for instance <tt>C:\Program Files</tt>). Thus try to avoid installing any of the following libraries in such paths.
+</li></ul>
+<p>Please note that for compiling from svn either <a rel="nofollow" class="external text" href="http://www.python.org/">Python</a> has to be installed on your system (which is a good idea, because also many SUMO tools are Python scripts) or you have to undefine HAVE_VERSION_H in src/windows_config.h.
+</p><p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Libraries"><span class="tocnumber">1</span> <span class="toctext">Libraries</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Xerces-C"><span class="tocnumber">1.1</span> <span class="toctext">Xerces-C</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Fox"><span class="tocnumber">1.2</span> <span class="toctext">Fox</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#PNG_support_in_Fox"><span class="tocnumber">1.2.1</span> <span class="toctext">PNG support in Fox</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#JPEG_support_in_Fox"><span class="tocnumber">1.2.2</span> <span class="toctext">JPEG support in Fox</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#PROJ_and_GDAL"><span class="tocnumber">1.3</span> <span class="toctext">PROJ and GDAL</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Tamas_Szekeres_binary_packages_at_http:.2F.2Fwww.gisinternals.com.2Fsdk.2F"><span class="tocnumber">1.3.1</span> <span class="toctext">Tamas Szekeres binary packages at http://www.gisinternals.com/sdk/</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#FWTools"><span class="tocnumber">1.3.2</span> <span class="toctext">FWTools</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Building_from_source"><span class="tocnumber">1.3.3</span> <span class="toctext">Building from source</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#SUMO"><span class="tocnumber">2</span> <span class="toctext">SUMO</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Configuration"><span class="tocnumber">2.1</span> <span class="toctext">Configuration</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Build"><span class="tocnumber">2.2</span> <span class="toctext">Build</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Troubleshooting"><span class="tocnumber">3</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Linker_reports_something_similar_to_.22LINK_:_fatal_error_LNK1104:_cannot_open_file_.27C:.5CProgram.obj.27.22"><span class="tocnumber">3.1</span> <span class="toctext">Linker reports something similar to "LINK&#160;: fatal error LNK1104: cannot open file 'C:\Program.obj'"</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Failure_on_pre-build_event"><span class="tocnumber">3.2</span> <span class="toctext">Failure on pre-build event</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Available_Builds"><span class="tocnumber">4</span> <span class="toctext">Available Builds</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Libraries">Libraries</span></h2>
+<h3> <span class="mw-headline" id="Xerces-C">Xerces-C</span></h3>
+<p>Up to (and including) SUMO 0.10.3 (precisely up to svn revision 6993) SUMO used Xerces-C 2.8 by default, now it uses Xerces-C 3.0.1. The changes needed to compile with a different Xerces version should be limited to changing <a rel="nofollow" class="external text" href="http://apps.sourceforge.net/trac/sumo/browser/trunk/sumo/src/windows_config.h">src/windows_config.h</a>, <a rel="nofollow" class="external text" href="http://apps.sourceforge.net/trac/sumo/browser/trunk/sumo/build/msvc10/Win32.props">build/msvc10/Win32.props</a> and / or <a rel="nofollow" class="external text" href="http://apps.sourceforge.net/trac/sumo/browser/trunk/sumo/build/msvc10/x64.props">build/msvc10/x64.props</a>.
+</p>
+<ul><li>You just need to install <a rel="nofollow" class="external text" href="http://www.apache.org/dist/xerces/c/3/binaries/xerces-c-3.1.1-x86-windows-vc-10.0.zip">the binary Xerces 3.1.1 distribution</a> or its <a rel="nofollow" class="external text" href="http://www.apache.org/dist/xerces/c/3/binaries/xerces-c-3.1.1-x86_64-windows-vc-10.0.zip">64bit version</a> for the 64bit build.
+</li><li>Create a environment variable XERCES pointing to your xerces-c directory, e.g.
+</li></ul>
+<pre>set XERCES=D:\libs\xerces-c-3.1.1-x86-windows-vc-10.0.
+</pre>
+<ul><li>Copy dll-files <code>%XERCES%\bin\xerces-c_3_1.dll</code> and <code>%XERCES%\bin\xerces-c_3_1D.dll</code> to some directory which is in your PATH (last resort: into Windows' system32 directory).
+</li><li>For the 64bit build the name of the variable is XERCES_64
+</li></ul>
+<h3> <span class="mw-headline" id="Fox">Fox</span></h3>
+<ul><li>If you do not need a GUI, you can skip this section.
+</li><li>Up to (and including) SUMO 0.10.3 (precisely up to svn revision 7025) SUMO used Fox 1.4, now it uses Fox 1.6. The building instructions are the same just replace 1.6 by 1.4 (and FOX16 by FOX14) wherever you need it.
+</li><li>Go to the Fox directory and open the VC project e.g. D:\libs\fox-1.6.36\windows\vcpp\win32.dsw.
+<ul><li>If you are using the Visual Studio 10.0 <i>Express</i> version, it cannot convert the project directly, you will need an intermediate Visual Studio 8.0 conversion
+</li></ul>
+</li><li>Confirm the conversion to VC 10.0 and build the foxdll project as "release and debug" (if you think you might wish to use the Visual Studio debugger) version. If you want to build for the 64bit platform you need to add a new configuration to the foxdll project using the <a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/t1hy4dhz(VS.80).aspx">Configuration Manager</a>.
+</li><li>You might get approximately 240 warnings and one error, which can be ignored.
+</li><li>Errors on not finding windows.h mean the SDK was not installed properly.
+</li><li>Create an environment variable FOX16 pointing to your Fox directory, e.g.
+</li></ul>
+<pre>set FOX16=D:\libs\fox-1.6.36.
+</pre>
+<ul><li>Copy dll-files <code>%FOX16%\libs\fox-1.6.36\lib\FOXDLL-1.6.dll</code> and <code>%FOX16%\lib\FOXDLLD-1.6.dll</code> to some directory which is in your PATH (last resort: into Windows' system32 directory).
+</li></ul>
+<h4> <span class="mw-headline" id="PNG_support_in_Fox">PNG support in Fox</span></h4>
+<ul><li>Warning: This is a little advanced, we were successful with libpng 1.5.2 and zlib 1.2.5
+</li><li>download zlib sources and libpng sources from <a rel="nofollow" class="external autonumber" href="http://ftp.fox-toolkit.org/pub/">[1]</a>
+</li><li>unzip all zips
+</li><li>there is no need to build zlib
+</li><li>build pnglib by first adapting the path in &lt;libpng&gt;\projects\vstudio\zlib.props and then use the vstudio.sln from the same dir to build the libpng project
+</li><li>you will get a png lib and a dll in &lt;libpng&gt;\projects\vstudio\Debug\
+</li><li>if you want to be really sure, you can build the pngtest project as well and check the output
+</li><li>Open the Fox project solution and edit properties of foxdll
+<ul><li>in the C++/General section add the &lt;libpng&gt; dir to the include path
+</li><li>in the C++/Preprocessor section add the HAVE_PNG_H define
+</li><li>in the Linker/Input section add the .lib file to the input
+</li></ul>
+</li><li>recompile fox and put the resulting dll together with libpng dll in your path
+</li></ul>
+<h4> <span class="mw-headline" id="JPEG_support_in_Fox">JPEG support in Fox</span></h4>
+<ul><li>Warning: This is a little advanced, we were successful with jpeg 8d, the jpeg 8c which can be found at the fox-toolkit site was broken
+</li><li>download libjpeg sources from <a rel="nofollow" class="external autonumber" href="http://www.ijg.org/">[2]</a> and unzip it
+</li><li>open a visual studio command prompt, cd to the jpeg dir and execute
+</li></ul>
+<pre>nmake /f makefile.vc setup-v10
+nmake /f makefile.vc
+</pre>
+<ul><li>you will get a libjpeg lib (and no dll!) in the &lt;jpeg&gt; dir
+</li><li>Open the Fox project solution and edit properties of foxdll
+<ul><li>in the C++/General section add the &lt;jpeg&gt; dir to the include path
+</li><li>in the C++/Preprocessor section add the HAVE_JPEG_H define
+</li><li>in the Linker/Input section add the .lib file to the input
+</li></ul>
+</li><li>recompile foxdll (see above) and put the resulting dll (which has jpeg support linked statically inside) in your path
+</li></ul>
+<h3> <span class="mw-headline" id="PROJ_and_GDAL">PROJ and GDAL</span></h3>
+<p>If you do not need transformation of geocoordinates you can disable PROJ and GDAL in <a rel="nofollow" class="external text" href="http://apps.sourceforge.net/trac/sumo/browser/trunk/sumo/build/msvc10/Win32.props">build/msvc10/Win32.props</a> and / or <a rel="nofollow" class="external text" href="http://apps.sourceforge.net/trac/sumo/browser/trunk/sumo/build/msvc10/x64.props">build/msvc10/x64.props</a> 
+(remove the UserMacros lines referencing the relevant *.lib files and remove the Preprocessor definitions HAVE_PROJ and/or HAVE_GDAL)
+and skip this section.
+Otherwise you have the choice between downloading the binary packages by Tamas Szekeres (preferred choice), the FWTools distribution (a little outdated) or compiling for yourself (for the adventurous). Building from source should only be necessary if you want a 64bit build or if you want to ship a copy of the SUMO executable(s) without the need to ship the FWTools as well.
+</p>
+<h4> <span class="mw-headline" id="Tamas_Szekeres_binary_packages_at_http:.2F.2Fwww.gisinternals.com.2Fsdk.2F">Tamas Szekeres binary packages at <a rel="nofollow" class="external free" href="http://www.gisinternals.com/sdk/">http://www.gisinternals.com/sdk/</a></span></h4>
+<ul><li>Choose the latest stable release and then the <a rel="nofollow" class="external text" href="http://www.gisinternals.com/sdk/Download.aspx?file=release-1600-gdal-1-9-2-mapserver-6-2-0.zip">binaries zip</a> and the <a rel="nofollow" class="external text" href="http://www.gisinternals.com/sdk/Download.aspx?file=release-1600-gdal-1-9-2-mapserver-6-2-0-libs.zip">libs zip</a> (links valid for MSVC10 as of 26/2/2013)
+</li><li>unzip the zips in a directory of your choice (lets say D:\libs\proj_gdal) and set PROJ_GDAL=D:\libs\proj_gdal.
+</li><li>Add <code>%PROJ_GDAL%\bin</code> to your PATH (or copy the contents to some directory in your PATH).
+</li></ul>
+<h4> <span class="mw-headline" id="FWTools">FWTools</span></h4>
+<ul><li>Just execute the binary and select a target directory.
+</li><li>Create a environment variable PROJ_GDAL pointing to that directory, e.g.
+</li></ul>
+<pre>set PROJ_GDAL=D:\libs\FWTools1.1.3.
+</pre>
+<ul><li>Add <code>%PROJ_GDAL%\bin</code> to your PATH (or copy the contents to some directory in your PATH).
+</li></ul>
+<h4> <span class="mw-headline" id="Building_from_source">Building from source</span></h4>
+<p>If you want to build PROJ and GDAL yourself for some reason, please follow the relevant <a rel="nofollow" class="external text" href="http://trac.osgeo.org/proj/browser/trunk/proj/README">build instructions for PROJ</a> and <a rel="nofollow" class="external text" href="http://trac.osgeo.org/gdal/wiki/BuildingOnWindows">for GDAL</a>. You then should install in a common directory and let the PROJ_GDAL variable point to it as above.
+You should also copy proj.dll and gdal*.dll to a directory in your PATH.
+</p><p>If you do or download a 64bit build, the name of the environment variable needs to be PROJ_GDAL_64.
+</p>
+<h2> <span class="mw-headline" id="SUMO">SUMO</span></h2>
+<h3> <span class="mw-headline" id="Configuration">Configuration</span></h3>
+<ul><li>If you installed all libraries and defined the environment variables correctly there is no need for further configuration and you can skip to the build section.
+</li><li>The Visual Studio build is configured using .props files in the build/msvc10 subdirectory. If you change some settings which should apply to all subprojects, be sure to edit those files (either with a text editor or the property manager of Visual Studio) and not the project configuration (.vcxproj).
+</li><li>If you do not like to define the places of the includes and libraries via environment variables you can enter the location directly into x64.props or Win32.props (or both, depending on your target platforms). You should also disable PROJ and GDAL in those files (if you don't need them) by setting the value for the appropriate "LIB" Usermacro to the empty string.
+</li></ul>
+<h3> <span class="mw-headline" id="Build">Build</span></h3>
+<ul><li>Open the project sumo\build\msvc10\prj.sln and build the configurations you need.
+</li></ul>
+<h2> <span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3> <span class="mw-headline" id="Linker_reports_something_similar_to_.22LINK_:_fatal_error_LNK1104:_cannot_open_file_.27C:.5CProgram.obj.27.22">Linker reports something similar to "LINK&#160;: fatal error LNK1104: cannot open file 'C:\Program.obj'"</span></h3>
+<p>You probably have installed a library to a path containing white spaces in its name. In such a case, the according environment variable should be embedded in quotes (").<br />Example: set FOX="D:\my libs\fox-1.6.36".
+</p>
+<h3> <span class="mw-headline" id="Failure_on_pre-build_event">Failure on pre-build event</span></h3>
+<p>If Visual Studio reports a failed pre-build event you can safely ignore this, unless you are building from the subversion repository. In this case you should probably install Python. Even if python is installed the file associations may be broken which causes the generation of src/version.h vial tools/build/version.py to fail. Either repair your file associations or undefine HAVE_VERSION_H in src/windows_config.h
+</p><p><br />
+</p>
+<h2> <span class="mw-headline" id="Available_Builds"> Available Builds </span></h2>
+<p>The release build is used for the distribution of sumo. The Fastbuild is suitable for frequent recompilation and the Debug build allows all debugging features. Keep in mind that <a href="../Developer/Tests.html" title="Developer/Tests">Texttest</a> usually picks up the release build.
+</p>
+<ul><li> Release:  All optimizations, assertions disabled, no debugging symbols, links against external release libs
+</li><li> Fastbuild: Fewer optimizations, assertions disabled, debugging symbols included, links against external release libs
+</li><li> Debug: No optimizations, assertions enabled, debugging symbols included, links against external debug libs
+</li></ul>
+<p>Naming Conventions: executables, built with 64bit build carry the '64' suffix. The Debug build additionally carries the suffix 'D' whereas the Fastbuild uses the 'F' suffix.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 63/1000000
+Preprocessor generated node count: 68/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:37-0!*!0!!en!*!* and timestamp 20150330184321 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 2 September 2014, at 11:23.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

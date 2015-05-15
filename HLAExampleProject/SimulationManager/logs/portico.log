@@ -1,0 +1,14 @@
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE destoryFederation [ExampleFederate]: doesn't exist
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionDoesNotExist: doesn't exist: ExampleFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE destoryFederation [ExampleFederate]: doesn't exist
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionDoesNotExist: doesn't exist: ExampleFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1, 2]
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=ExampleFederate
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederatesCurrentlyJoined: federates still joined: [1, 2]
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=ExampleFederate
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederate

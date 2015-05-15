@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>SUMO-GUI - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="Installing.html">Installing SUMO</a></li>
+  <li><a href="Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="Simulation/Output.html">Simulation output</a></li>
+  <li><a href="TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="Models/Emissions.html">Emissions</a></li>
+  <li><a href="Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Other/Glossary.html">Glossary</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+  <li><a href="Tools/Main.html">Additional Tools</a></li>
+  <li><a href="Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="SUMO.html">SUMO</a></li>
+   <li><a href="SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="DFROUTER.html">DFROUTER</a></li>
+   <li><a href="MAROUTER.html">MAROUTER</a></li>
+   <li><a href="POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">SUMO-GUI</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.014244 from <a href="http://sumo.dlr.de/wiki/SUMO-GUI">the wiki page for SUMO-GUI</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#From_30.000_feet"><span class="tocnumber">1</span> <span class="toctext">From 30.000 feet</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Usage_Description"><span class="tocnumber">2</span> <span class="toctext">Usage Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Interaction_with_the_View"><span class="tocnumber">3</span> <span class="toctext">Interaction with the View</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Basic_Navigation"><span class="tocnumber">3.1</span> <span class="toctext">Basic Navigation</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Changing_the_appearance.2Fvisualisation_of_the_simulation"><span class="tocnumber">3.2</span> <span class="toctext">Changing the appearance/visualisation of the simulation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Vehicle_Visualisation_Settings"><span class="tocnumber">3.2.1</span> <span class="toctext">Vehicle Visualisation Settings</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Edge.2FLane_Visualisation_Settings"><span class="tocnumber">3.2.2</span> <span class="toctext">Edge/Lane Visualisation Settings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Using_Decals_within_SUMO-GUI"><span class="tocnumber">3.3</span> <span class="toctext">Using Decals within SUMO-GUI</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Decals_FAQ"><span class="tocnumber">3.3.1</span> <span class="toctext">Decals FAQ</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Understanding_what_you_see"><span class="tocnumber">4</span> <span class="toctext">Understanding what you see</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Right_of_way"><span class="tocnumber">4.1</span> <span class="toctext">Right of way</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Selecting_Objects"><span class="tocnumber">5</span> <span class="toctext">Selecting Objects</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Configuration_Files"><span class="tocnumber">6</span> <span class="toctext">Configuration Files</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Further_Notes"><span class="tocnumber">7</span> <span class="toctext">Further Notes</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="From_30.000_feet">From 30.000 feet</span></h1>
+<p><b>SUMO-GUI</b> is basically the same application as <a href="SUMO.html" title="SUMO">SUMO</a>, just extended by a graphical user interface.
+</p>
+<dl><dt>
+</dt><dd><b>Purpose:</b> Simulates a defined scenario
+</dd><dd><b>System:</b> portable (Linux/Windows is tested); opens a window
+</dd><dd><b>Input (mandatory):</b> A SUMO-configuration file (see <a href="SUMO.html" title="SUMO">SUMO</a>)
+</dd><dd><b>Output:</b> SUMO-GUI generates the same output as <a href="SUMO.html" title="SUMO">SUMO</a>
+</dd><dd><b>Programming Language:</b> C++
+</dd></dl>
+<h1> <span class="mw-headline" id="Usage_Description">Usage Description</span></h1>
+<div class="thumb tleft"><div class="thumbinner" style="width:182px;"><a href="images/Guisim_empty.gif" class="image"><img alt="" src="images/Guisim_empty.gif" width="180" height="159" class="thumbimage" srcset="/w/images/thumb/7/75/Guisim_empty.gif/270px-Guisim_empty.gif 1.5x, /w/images/thumb/7/75/Guisim_empty.gif/360px-Guisim_empty.gif 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="images/Guisim_empty.gif" class="internal" title="Enlarge"><img src="images//magnify-clip.png" width="15" height="11" alt="" /></a></div>Initial appearence of SUMO-GUI; may differ from what you see</div></div></div>
+<p>Being a window-based application, SUMO-GUI is started by a double click with the left mouse button on Windows, on Linux probably with a single click. After this, an empty window should show up, similar to the one shown in the image.
+</p><p>Using either the "File-&gt;Open Simulation..." menu entry or by using the "open"-icon (<a href="images/Open_sim.gif" class="image"><img alt="Open sim.gif" src="images//Open_sim.gif" width="16" height="13" /></a>), you should be able to load an existing <a href="SUMO.html" title="SUMO">SUMO</a> <a href="Basics/Using_the_Command_Line_Applications.html#Configuration_Files" title="Basics/Using the Command Line Applications">configuration file</a>, if it has the proper <a href="Other/File_Extensions.html" title="Other/File Extensions">extension</a> <i>".sumocfg"</i>. If the <a href="SUMO.html" title="SUMO">SUMO</a> <a href="Basics/Using_the_Command_Line_Applications.html#Configuration_Files" title="Basics/Using the Command Line Applications">configuration file</a> is erroneous, the errors are reported, otherwise your network referenced within the configuration file should be shown. Now you can start to simulate by pressing the "play" button (<a href="images/Play.gif" class="image"><img alt="Play.gif" src="images//Play.gif" width="12" height="15" /></a>). The simulation works as if being started on the command line. The simulation can be halted using the "stop" button (<a href="images/Stop.gif" class="image"><img alt="Stop.gif" src="images//Stop.gif" width="15" height="15" /></a>) and continued by pressing the "play" button again. When stopped, also single steps may be performed by pressing the "single step" button (<a href="images/Step.gif" class="image"><img alt="Step.gif" src="images//Step.gif" width="15" height="15" /></a>).
+</p><p>If the simulation is running, the current simulation second is shown in the "digital digits" field, right to "Time:" (<a href="images/Current_step_example.gif" class="image"><img alt="Current step example.gif" src="images//Current_step_example.gif" width="134" height="29" /></a>). By clicking on the word "Time:", the display can be toggled between showing &lt;seconds&gt; and &lt;hour:minute:seconds&gt;.
+</p><p>Besides loading simulation configurations, it is also possible to load networks by using either the "File-&gt;Open Network..." menu entry or by using the "open network"-icon (<a href="images/Open_net.gif" class="image"><img alt="Open net.gif" src="images//Open_net.gif" width="16" height="15" /></a>). Please note, that normally <strong class="selflink">SUMO-GUI</strong> assumes networks have the <a href="Other/File_Extensions.html" title="Other/File Extensions">extension</a> <i>".net.xml"</i>, but also accepts other extensions.
+</p><p>Both, the loaded simulation or the loaded network may be reloaded using the "reload" button (<a href="images/Reload.gif" class="image"><img alt="Reload.gif" src="images//Reload.gif" width="15" height="16" /></a>) or the menu entry "File-&gt;Reload".
+</p><p>If a network or a simulation are loaded, the navigation through the network is possible with the mouse only. One can drag the network with the left mouse button pressed into all directions and zoom either by using the mouse wheel or by pressing the right mouse button and moving the mouse up and down. For fine grained zooming (half zoom speed) press the "Control" key while using the mouse wheel, for double speed use "Shift".
+</p>
+<h1> <span class="mw-headline" id="Interaction_with_the_View">Interaction with the View</span></h1>
+<h2> <span class="mw-headline" id="Basic_Navigation">Basic Navigation</span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:182px;"><a href="images/Viewport_editor.gif" class="image"><img alt="" src="images/Viewport_editor.gif" width="180" height="173" class="thumbimage" srcset="/w/images/8/86/Viewport_editor.gif 1.5x, /w/images/8/86/Viewport_editor.gif 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="images/Viewport_editor.gif" class="internal" title="Enlarge"><img src="images//magnify-clip.png" width="15" height="11" alt="" /></a></div>The viewport editor</div></div></div>
+<p>As soon as a network is displayed, one can interact with the view. Pressing the left mouse button within the view and moving the mouse with the button pressed, will shift the network. Moving the mouse up and down while pressing the right mouse button changes the zoom of the network. It is also possible to change the zoom by using the mouse wheel (holding <i>&lt;SHIFT&gt;</i> increases the zooming speed and holding <i>&lt;CTRL&gt;</i> lowers it). 
+Zooming is either focused on the center of the screen or on the cursor position. The zoom style can be selected with the <a href="images/Zoomstyle.png" class="image"><img alt="Zoomstyle.png" src="images//Zoomstyle.png" width="16" height="16" /></a> button.
+</p><p>You can also control which part of the network is visible by directly setting the network coordinates which shall be at the center of the screen along with the zoom (given a value of 100 the whole network will fit onto the screen). These settings can be changed by opening the viewport editor using the <a href="images/Open_viewport_editor.gif" class="image"><img alt="Open viewport editor.gif" src="images//Open_viewport_editor.gif" width="18" height="18" /></a> button. From this editor, it is possible to save the current settings (<a href="images/Save.gif" class="image"><img alt="Save.gif" src="images//Save.gif" width="16" height="16" /></a>) or load previously saved ones (<a href="images/Open_sim.gif" class="image"><img alt="Open sim.gif" src="images//Open_sim.gif" width="16" height="13" /></a> within the viewport editor).
+</p><p>The viewport is defined as following: <span class="inlxml">&lt;viewport zoom="<i>&lt;ZOOM&gt;</i>" x="<i>&lt;X&gt;</i>" y="<i>&lt;Y&gt;</i>"/&gt;</span>. It can be loaded as a part of viewsettings.
+</p><p>Pressing the center-button (<a href="images/Center.gif" class="image"><img alt="Center.gif" src="images//Center.gif" width="19" height="19" /></a>) from the menu bar at the top of the view, will reset the viewport so that the complete network is shown.
+</p>
+<h2> <span class="mw-headline" id="Changing_the_appearance.2Fvisualisation_of_the_simulation">Changing the appearance/visualisation of the simulation</span></h2>
+<p>The View Settings menu allows to change and customize the simulations' appearance and visualization. To open the visualization settings use <a href="images/Colorwheel.gif" class="image"><img alt="Colorwheel.gif" src="images//Colorwheel.gif" width="16" height="16" /></a> in the menu bar at the top of the view. 
+</p><p>For customizing the simulation one can make changes e.g. to the background coloring, streets and vehicle appearance as well as the visualization of POIs. Furthermore one can save (<a href="images/Save_to_registry.gif" class="image"><img alt="Save to registry.gif" src="images//Save_to_registry.gif" width="18" height="18" /></a>) and delete (<a href="images/Delete_from_registry.gif" class="image"><img alt="Delete from registry.gif" src="images//Delete_from_registry.gif" width="18" height="17" /></a>‎) settings to the registry or export (<a href="images/Save.gif" class="image"><img alt="Save.gif" src="images//Save.gif" width="16" height="16" /></a>) custom made settings files and load previews settings again <a href="images/Open_sim.gif" class="image"><img alt="Open sim.gif" src="images//Open_sim.gif" width="16" height="13" /></a>. So one can use different favorite settings files for any simulation.
+</p><p>The current settings file is shown in a drop down menu in the top bar of the View Settings window where you can switch back to default settings. 
+</p>
+<h3> <span class="mw-headline" id="Vehicle_Visualisation_Settings">Vehicle Visualisation Settings</span></h3>
+<p><b>Table 1.1 Vehicle shape schemes</b>
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffdead;"> Name
+</th>
+<th style="background:#ffdead;"> Description
+</th></tr>
+<tr>
+<td> triangle
+</td>
+<td> All vehicles are shaped triangular
+</td></tr>
+<tr>
+<td> boxes
+</td>
+<td> All vehicles are shaped square
+</td></tr>
+<tr>
+<td> simple shapes
+</td>
+<td> All vehicles have simple car shape
+</td></tr>
+<tr>
+<td> raster images
+</td>
+<td> All vehicles are drawn with a loaded bitmap defined for their type using attribute <span class="inlxml">imgFile</span> (using <i>simple shapes</i> as fallback)
+</td></tr></table>
+<p><br />
+<b>Table 1.2 Vehicle coloring schemes and boundaries</b>
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffdead;"> Name
+</th>
+<th style="background:#ffdead;"> Measure
+</th>
+<th style="background:#ffdead;"> Description
+</th></tr>
+<tr>
+<td> given vehicle/type/route color
+</td>
+<td> -
+</td>
+<td> The color given within the vehicle definition with fallback to type and then to route color
+</td></tr>
+<tr>
+<td> uniform
+</td>
+<td> -
+</td>
+<td> All vehicles are colored uniformly
+</td></tr>
+<tr>
+<td> given/assigned vehicle color
+</td>
+<td> -
+</td>
+<td> The color given within the vehicle definition
+</td></tr>
+<tr>
+<td> given/assigned type color
+</td>
+<td> -
+</td>
+<td> The color given within the vehicle type definition
+</td></tr>
+<tr>
+<td> given/assigned route color
+</td>
+<td> -
+</td>
+<td> The color given within the vehicle route definition
+</td></tr>
+<tr>
+<td> depart position as HSV
+</td>
+<td> -
+</td>
+<td> The depart position of each vehicle, relative to the network center, is used to color the vehicle. Direction will be used as H(ue), distance from the center as S(aturation), V(alue) is always 1.
+</td></tr>
+<tr>
+<td> arrival position as HSV
+</td>
+<td> -
+</td>
+<td> The arrival position of each vehicle, relative to the network center, is used to color the vehicle. Direction will be used as H(ue), distance from the center as S(aturation), V(alue) is always 1.
+</td></tr>
+<tr>
+<td> direction/distance as HSV
+</td>
+<td> -
+</td>
+<td> The direction and distance between a vehicle's departure and arrival position, are used to color the vehicle. Direction will be used as H(ue), distance from the center as S(aturation), V(alue) is always 1.
+</td></tr>
+<tr>
+<td> by speed
+</td>
+<td> m/s
+</td>
+<td> The current vehicle speed
+</td></tr>
+<tr>
+<td> by waiting time
+</td>
+<td> s
+</td>
+<td> The time for which a vehicle is halting
+</td></tr>
+<tr>
+<td> by time since last lanechange
+</td>
+<td> s
+</td>
+<td> The time since the last lane change. The color also indicates the direction of the last lane-change.
+</td></tr>
+<tr>
+<td> by max speed
+</td>
+<td> m/s
+</td>
+<td> Vehicle's maximum velocity
+</td></tr>
+<tr>
+<td> by CO2 emissions
+</td>
+<td> g/s
+</td>
+<td> The amount of CO2 currently emitted by the vehicle
+</td></tr>
+<tr>
+<td> by CO emissions
+</td>
+<td> g/s
+</td>
+<td> The amount of CO currently emitted by the vehicle
+</td></tr>
+<tr>
+<td> by PMx emissions
+</td>
+<td> g/s
+</td>
+<td> The amount of PMx currently emitted by the vehicle
+</td></tr>
+<tr>
+<td> by NOx emissions
+</td>
+<td> g/s
+</td>
+<td> The amount of NOx currently emitted by the vehicle
+</td></tr>
+<tr>
+<td> by HC emissions
+</td>
+<td> g/s
+</td>
+<td> The amount of HC currently emitted by the vehicle
+</td></tr>
+<tr>
+<td> by fuel consumption
+</td>
+<td> l/s
+</td>
+<td> The consumed fuel
+</td></tr>
+<tr>
+<td> by noise emissions
+</td>
+<td> dbA
+</td>
+<td> The noise produced by the vehicle
+</td></tr>
+<tr>
+<td> by reroute number
+</td>
+<td> count
+</td>
+<td> The number of times this vehicle has bee rerouted
+</td></tr>
+<tr>
+<td> by selection
+</td>
+<td> -
+</td>
+<td> Colors selected and unselected vehicles differently
+</td></tr>
+<tr>
+<td> by offset from best lane
+</td>
+<td> count
+</td>
+<td> By the number of immediate lane changes the vehicle must perform in order to follow its route
+</td></tr>
+<tr>
+<td> by accleration
+</td>
+<td> m/s^2
+</td>
+<td>
+</td></tr>
+<tr>
+<td> by time gap
+</td>
+<td> s
+</td>
+<td> By the time to collide with the leader vehicle assuming constant speeds
+</td></tr></table>
+<p><br />
+In addition to the vehicle shape and coloring one can display blinker and brake lights, the minimum gap, and the vehicle name. The vehicle names will always be scaled to the chosen size, no matter which zoom step is chosen.
+</p>
+<h3> <span class="mw-headline" id="Edge.2FLane_Visualisation_Settings">Edge/Lane Visualisation Settings</span></h3>
+<p><b>Table 2.1 Lane coloring schemes</b>
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffdead;"> Name
+</th>
+<th style="background:#ffdead;"> Measure
+</th>
+<th style="background:#ffdead;"> Description
+</th></tr>
+<tr>
+<td> uniform
+</td>
+<td> -
+</td>
+<td> All road edges are drawn using the same color. Bicycle lanes are drawn in brown, sidewalks in grey and prohibited lanes (allowing no vehicle classes) are transparent.
+</td></tr>
+<tr>
+<td> by selection (lane-/streetwise)
+</td>
+<td> -
+</td>
+<td> selected lanes are drawn different than those that are not
+</td></tr>
+<tr>
+<td> by permission code
+</td>
+<td> -
+</td>
+<td> all lanes are colored according to the permitted vehicle classes. The code for each lane can be retrieved from the lane parameter dialog (permission code).
+</td></tr>
+<tr>
+<td> by allowed speed (lanewise)
+</td>
+<td> m/s
+</td>
+<td> The maximum velocity allowed on this lane
+</td></tr>
+<tr>
+<td> by current occupancy (lanewise, brutto)
+</td>
+<td>&#160;% / 100
+</td>
+<td> By the amount of place that is covered by vehicles (including minGap)
+</td></tr>
+<tr>
+<td> by current occupancy (lanewise, netto)
+</td>
+<td>&#160;% / 100
+</td>
+<td> By the amount of place that is covered by vehicles (excluding minGap)
+</td></tr>
+<tr>
+<td> by first vehicle waiting time (lanewise)
+</td>
+<td> s
+</td>
+<td> By the time the first vehicle on the lane waits
+</td></tr>
+<tr>
+<td> by lane number (streetwise)
+</td>
+<td> -
+</td>
+<td> By the number of lanes this edge has
+</td></tr>
+<tr>
+<td> by CO2 emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of CO2 emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by CO emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of CO emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by PMx emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of PMx emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by NOx emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of NOx emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by HC emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of HC emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by fuel consumption
+</td>
+<td> l/s
+</td>
+<td> The mean amount of consumed fuel per a lane's meter
+</td></tr>
+<tr>
+<td> by noise emission
+</td>
+<td> dBa
+</td>
+<td> The noise generated by the vehicles on the lane
+</td></tr>
+<tr>
+<td> by global travel time
+</td>
+<td> s
+</td>
+<td> The travel time on that edge loaded from a weight file
+</td></tr>
+<tr>
+<td> by global speed percentage
+</td>
+<td>&#160;%
+</td>
+<td> By the fraction of the maximum speed that the edge allows based on travel times from a loaded weight file
+</td></tr>
+<tr>
+<td> by given length/geometrical length
+</td>
+<td>
+</td>
+<td> The factor by which the geometrical length differs from the user-specified edge length
+</td></tr>
+<tr>
+<td> by angle
+</td>
+<td>
+</td>
+<td> The angle of the edge measured from start to end (excluding in-between geometry)
+</td></tr>
+<tr>
+<td> by loaded weight
+</td>
+<td>
+</td>
+<td> By the value loaded using options <span style="color: #111144; font-weight: bold; white-space: pre;">--weight-files, --weight-attribute</span>
+</td></tr>
+<tr>
+<td> by priority
+</td>
+<td>
+</td>
+<td> By the right-of-way priority using during network building
+</td></tr>
+<tr>
+<td> by height at start
+</td>
+<td> m
+</td>
+<td> By the z-coordinate at the start of the lane
+</td></tr>
+<tr>
+<td> by inclination
+</td>
+<td>&#160;%
+</td>
+<td> By the average change in height between start and end of the lane per m
+</td></tr>
+<tr>
+<td> by average speed
+</td>
+<td> m/s
+</td>
+<td> By the average speed of vehicles on the lane
+</td></tr>
+<tr>
+<td> by average relative speed
+</td>
+<td>&#160;%
+</td>
+<td> By the average speed of vehicles on the lane as percentage of the allowed speed
+</td></tr></table>
+<p><b>Table 2.2 Lane scaling schemes</b>
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ffdead;"> Name
+</th>
+<th style="background:#ffdead;"> Measure
+</th>
+<th style="background:#ffdead;"> Description
+</th></tr>
+<tr>
+<td> by selection (lane-/streetwise)
+</td>
+<td> -
+</td>
+<td> selected lanes are drawn different than those that are not
+</td></tr>
+<tr>
+<td> by allowed speed (lanewise)
+</td>
+<td> m/s
+</td>
+<td> The maximum velocity allowed on this lane
+</td></tr>
+<tr>
+<td> by current occupancy (lanewise, brutto)
+</td>
+<td>&#160;% / 100
+</td>
+<td> By the amount of place that is covered by vehicles (including minGap)
+</td></tr>
+<tr>
+<td> by current occupancy (lanewise, netto)
+</td>
+<td>&#160;% / 100
+</td>
+<td> By the amount of place that is covered by vehicles (excluding minGap)
+</td></tr>
+<tr>
+<td> by first vehicle waiting time (lanewise)
+</td>
+<td> s
+</td>
+<td> By the time the first vehicle on the lane waits
+</td></tr>
+<tr>
+<td> by lane number (streetwise)
+</td>
+<td> -
+</td>
+<td> By the number of lanes this edge has
+</td></tr>
+<tr>
+<td> by CO2 emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of CO2 emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by CO emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of CO emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by PMx emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of PMx emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by NOx emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of NOx emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by HC emissions
+</td>
+<td> g/s
+</td>
+<td> The mean amount of HC emitted per a lane's meter
+</td></tr>
+<tr>
+<td> by fuel consumption
+</td>
+<td> l/s
+</td>
+<td> The mean amount of consumed fuel per a lane's meter
+</td></tr>
+<tr>
+<td> by noise emission
+</td>
+<td> dBa
+</td>
+<td> The noise generated by the vehicles on the lane
+</td></tr>
+<tr>
+<td> by global travel time
+</td>
+<td> s
+</td>
+<td> The travel time on that edge loaded from a weight file
+</td></tr>
+<tr>
+<td> by global speed percentage
+</td>
+<td>&#160;%
+</td>
+<td> By the fraction of the maximum speed that the edge allows based on travel times from a loaded weight file
+</td></tr>
+<tr>
+<td> by given length/geometrical length
+</td>
+<td>
+</td>
+<td> The factor by which the geometrical length differs from the user-specified edge length
+</td></tr>
+<tr>
+<td> by angle
+</td>
+<td>
+</td>
+<td> The angle of the edge measured from start to end (excluding in-between geometry)
+</td></tr>
+<tr>
+<td> by loaded weight
+</td>
+<td>
+</td>
+<td> By the value loaded using options <span style="color: #111144; font-weight: bold; white-space: pre;">--weight-files, --weight-attribute</span>
+</td></tr>
+<tr>
+<td> by priority
+</td>
+<td>
+</td>
+<td> By the right-of-way priority using during network building
+</td></tr>
+<tr>
+<td> by average speed
+</td>
+<td> m/s
+</td>
+<td> By the average speed of vehicles on the lane
+</td></tr>
+<tr>
+<td> by average relative speed
+</td>
+<td>&#160;%
+</td>
+<td> By the average speed of vehicles on the lane as percentage of the allowed speed
+</td></tr></table>
+<p>In addition to the lane / edge coloring one can display lane borders, link decals, rails, edge names, street names, internal edge names, and hide macro connectors. The edge names as well as the street and internal edge names will always be scaled to the chosen size, no matter which zoom step is chosen.
+</p>
+<h2> <span class="mw-headline" id="Using_Decals_within_SUMO-GUI">Using Decals within SUMO-GUI</span></h2>
+<p>In addition to changing the appearance of simulated structures, one may also load additional "decals" into <strong class="selflink">SUMO-GUI</strong>. For this, open the visualisation settings using <a href="images/Colorwheel.gif" class="image"><img alt="Colorwheel.gif" src="images//Colorwheel.gif" width="16" height="16" /></a> and - if you are not yet here - choose the "Background" panel (figure 1.1). You will see a table with following columns: <b>picture file</b>, <b>center x</b>, <b>center y</b>, <b>width</b>, <b>height</b>, and <b>rotation</b>.
+</p><p><a href="images/Decals_gui.gif" class="image"><img alt="Decals gui.gif" src="images/Decals_gui.gif" width="300" height="217" srcset="/w/images/thumb/e/e0/Decals_gui.gif/450px-Decals_gui.gif 1.5x, /w/images/thumb/e/e0/Decals_gui.gif/600px-Decals_gui.gif 2x" /></a>
+</p><p><b>Fig. 1.1: The decals GUI.</b>
+</p><p>Now, if you click into the first row of the "picture file" column, you should be able to enter the complete path of an image file. Confirming the path by pressing RETURN should force <strong class="selflink">SUMO-GUI</strong> to load and display the file below the road network, as shown in figure 1.2.
+</p><p><a href="images/Background_example.gif" class="image"><img alt="Background example.gif" src="images/Background_example.gif" width="400" height="419" srcset="/w/images/thumb/8/8f/Background_example.gif/600px-Background_example.gif 1.5x, /w/images/8/8f/Background_example.gif 2x" /></a>
+</p><p><b>Fig. 1.2: Example of a background image (decal).</b>
+</p><p>Currently, <strong class="selflink">SUMO-GUI</strong> may load .gif and .bmp files. Please note, that the images should have in both directions (height and width) a size which is equal to 2^x. This means that the image's width must be 2, 4, 8, 16, 32, 64, ... pixels. The same also applies to the image's height. This is a limitation of openGL. From sumo 0.11.0 (precisely from svn revision 7073) <strong class="selflink">SUMO-GUI</strong> scales the pictures automatically to the nearest power of 2, furthermore it supports more image formats, including pcx, ico and tga. png, jpg and tif are supported only if your fox supports it which is most likely if you are on a *nix platform and very unlikely if you did a plain visual studio compilation on Windows. For more information on enabling support for image file formats have a look at the INSTALL file which comes with the fox sources.
+</p><p>Now, you may position/stretch/rotate the image using the columns <b>center x</b>, <b>center y</b>, <b>width</b>, <b>height</b>, and <b>rotation</b>.
+</p><p>After aligning your decals, you can save them using the "Save Decals" button located in the dialog. Accordingly, previously saved decals can be loaded by pressing the "Load Decals" button.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br /> The contents of a decal-configuration can also be embedded in a view-settings file and thus loaded on startup. see <a href="SUMO-GUI.html#Configuration_Files" title="SUMO-GUI">Configuration Files</a></div>
+<h3> <span class="mw-headline" id="Decals_FAQ">Decals FAQ</span></h3>
+<dl><dd>Must a decal fit to the network's size?
+</dd><dd>No, the decal must be adjusted manually. It may cover any area.
+</dd></dl>
+<h1> <span class="mw-headline" id="Understanding_what_you_see">Understanding what you see</span></h1>
+<h2> <span class="mw-headline" id="Right_of_way">Right of way</span></h2>
+<p>At the end of every lane and at the outset of a junction there is a little colored bar which indicates right of way. When there are multiple target lanes from one lane, the bar is split in smaller parts each indication the rules for one connection. The colors a defined as follows:
+</p>
+<ul><li> <span style="color:#00FF00; background:#00FF00">FOO</span> Traffic light, green phase, vehicle has right of way
+</li><li> <span style="color:#00B300; background:#00B300">FOO</span> Traffic light, green phase, vehicle has to yield to some streams
+</li><li> <span style="color:#FF0000; background:#FF0000">FOO</span> Traffic light, red phase, vehicle has to wait
+</li><li> <span style="color:#FF8000; background:#FF8000">FOO</span> Traffic light, red/yellow phase, indicates upcoming green phase, vehicle has to wait
+</li><li> <span style="color:#FFFF00; background:#FFFF00">FOO</span> Traffic light, yellow phase, vehicle should stop if possible
+</li><li> <span style="color:#804000; background:#804000">FOO</span> Traffic light, off-blinking, vehicle has to yield
+</li><li> <span style="color:#00FFFF; background:#00FFFF">FOO</span> Traffic light, off-no-signal, vehicle has right of way
+</li><li> <span style="color:#FFFFFF; background:#FFFFFF">FOO</span> uncontrolled, vehicle has right of way
+</li><li> <span style="color:#333333; background:#333333">FOO</span> uncontrolled, vehicle has to yield to some streams
+</li><li> <span style="color:#808080; background:#808080">FOO</span> uncontrolled, right-before-left rules, all vehicles yield to the rightmost incoming lane
+</li><li> <span style="color:#800080; background:#800080">FOO</span> uncontrolled, stop-sign, vehicle has to stop and then yield
+</li><li> <span style="color:#0000C0; background:#0000C0">FOO</span> uncontrolled, allway-stop, all vehicles have to stop and then drive in the order of arrival
+</li><li> <span style="color:#000000; background:#000000">FOO</span> dead-end, vehicle may not drive there
+</li></ul>
+<h1> <span class="mw-headline" id="Selecting_Objects">Selecting Objects</span></h1>
+<p><strong class="selflink">SUMO-GUI</strong> allows for the selection of arbitrary network elements such as edges, lanes and junctions, which can be saved to a file
+(and also loaded from a file) for further processing. Selection is done by either choosing "Add To Selected" from the context
+menu (right click) of the element or by clicking left on an element while pressing the "Control" key.
+</p><p>The selected elements can be saved / loaded and looked at in the "Edit Chosen" dialog available from the edit menu. The list format is a plain list at the moment, but will most likely change to XML in the future.
+</p><p><br />
+</p>
+<h1> <span class="mw-headline" id="Configuration_Files">Configuration Files</span></h1>
+<p><strong class="selflink">SUMO-GUI</strong> uses the same configuration files as SUMO. The recognized options can be obtained by calling <i>sumo --help</i> or you save a configuration file with default settings by calling <code>sumo --save-template &lt;file&gt; --save-commented</code>. The option <i>gui-settings-file</i> is specific to <strong class="selflink">SUMO-GUI</strong>. It allows you to load a previously saved gui-settings file. The easiest way to obtain a gui-settings file is via the <i>View Settings</i>-Dialog <a href="images/Open_viewsettings_editor.gif" class="image"><img alt="Open viewsettings editor.gif" src="images//Open_viewsettings_editor.gif" width="18" height="18" /></a>. Simply modify the settings and save <a href="images/Save.gif" class="image"><img alt="Save.gif" src="images//Save.gif" width="16" height="16" /></a>.
+</p><p>Note, that the gui-settings-file obtained this way does not contain information about the viewport (zoom and offset), delay, breakpoints and decals. If you wish to include any of these additional settings into your gui-settings file you have to edit the file by hand.
+When you are done the configuration files should look like below:
+</p><p><i>example.sumocfg</i>
+</p>
+<pre class="xml">
+&lt;configuration&gt;
+    &lt;net-file value=&quot;yournetwork.net.xml&quot;/&gt;
+    &lt;gui-settings-file value=&quot;gui-settings.cfg&quot;/&gt;
+&lt;/configuration&gt;
+</pre>
+<p><i>gui-settings.cfg</i>
+</p>
+<pre class="xml">
+&lt;viewsettings&gt;
+    &lt;scheme name=&quot;...
+       ...
+    &lt;/scheme&gt;
+
+    &lt;viewport zoom=&quot;200&quot; x=&quot;100&quot; y=&quot;-100&quot;/&gt;
+    &lt;delay value=&quot;42&quot;/&gt;
+    &lt;decal filename=&quot;background.gif&quot; centerX=&quot;550.00&quot; centerY=&quot;1530.00&quot; width=&quot;64.00&quot; height=&quot;64.00&quot; rota tion=&quot;0.00&quot;/&gt;
+    &lt;breakpoints-file value=&quot;breakpoints.txt&quot;/&gt;
+&lt;/viewsettings&gt;
+</pre>
+<p>A file, suitable for loading breakpoints can be obtained by setting breakpoints in the gui and using the menu-option for saving (Edit-&gt;Edit Breakpoints-&gt;save).
+</p><p>You may either load <i>example.sumocfg</i> using the <i>open simulation</i>-dialog or by using the command-line <code>sumo-gui -c example.sumocfg</code>.
+</p><p>You may use a XML schema definition file for setting up a SUMO-GUI configuration: <a rel="nofollow" class="external text" href="http://sumo.sf.net/doc/current/docs/xsd/sumoConfiguration.xsd">sumoConfiguration.xsd</a>.
+</p>
+<h1> <span class="mw-headline" id="Further_Notes">Further Notes</span></h1>
+<ul><li> <a href="Simulation/Shapes.html" title="Simulation/Shapes">Using additional Polygons and POIs within the Simulation</a>
+</li></ul>
+<hr />
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 114/1000000
+Preprocessor generated node count: 226/1000000
+Post‐expand include size: 555/2097152 bytes
+Template argument size: 243/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:77-0!*!0!!en!2!* and timestamp 20150330132050 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 18 November 2014, at 15:14.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

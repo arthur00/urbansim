@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Networks/Building_Networks_from_own_XML-descriptions - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Networks/Building Networks from own XML-descriptions</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.979744 from <a href="http://sumo.dlr.de/wiki/Networks/Building_Networks_from_own_XML-descriptions">the wiki page for Networks/Building_Networks_from_own_XML-descriptions</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Almost all examples within the distribution were made by hand. For doing this, you need at least two files: one file for nodes and another one for the streets between them. Please notice that herein, "node" and "junction" mean the same as well as "edge" and "street" do (see also <a href="../Other/Glossary.html" title="Other/Glossary">Glossary</a>). Besides defining the nodes and edges, you can also join edge attributes by type and set explicit connections between edges or lanes. We will describe how each of these four file types should look like in the following chapters. Further information on road networks may be also found in the <a href="../Networks/SUMO_Road_Networks.html" title="Networks/SUMO Road Networks">SUMO Road Networks</a> description.
+</p><p>After you have generated the files as described below - you need at least the edges and the nodes-files, using type and/or a connections file is optional - you should run <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> to build the network. If you only use edges and nodes, stored in "MyEdges.edg.xml" and "MyNodes.nod.xml" respectively, the call should look like:
+</p>
+<pre>netconvert --node-files=MyNodes.nod.xml --edge-files=MyEdges.edg.xml \
+  --output-file=MySUMONet.net.xml
+</pre>
+<p>If you also use connections and types the call is:
+</p>
+<pre>netconvert --node-files=MyNodes.nod.xml --edge-files=MyEdges.edg.xml \
+  --connection-files=MyConnections.con.xml --type-files=MyTypes.typ.xml \
+  --output-file=MySUMONet.net.xml
+</pre>
+<p>The options used here, including their abbreviations, are documented on the <a href="../NETCONVERT.html#Input_Options" title="NETCONVERT">NETCONVERT manual page</a>.
+</p><p>Maybe your edge definitions are incomplete or buggy. If you still want to import your network, you can try passing <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-errors</span> to <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>. In this case, edges which are not defined properly are omitted, but <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> tries to build the network anyway. You may also flip the network around the horizontal axis. Use option <span style="color: #111144; font-weight: bold; white-space: pre;">--flip-y-axis</span> for this.
+</p><p>The structures of the files described in the following are also available as XML Schema Definitions:
+</p>
+<ul><li> <a href="#Node_Descriptions">nodes files</a>: <a rel="nofollow" class="external free" href="http://sumo-sim.org/xsd/nodes_file.xsd">http://sumo-sim.org/xsd/nodes_file.xsd</a> 
+</li><li> <a href="#Edge_Descriptions">edges files</a>: <a rel="nofollow" class="external free" href="http://sumo-sim.org/xsd/edges_file.xsd">http://sumo-sim.org/xsd/edges_file.xsd</a>
+</li><li> <a href="#Type_Descriptions">types files</a>: <a rel="nofollow" class="external free" href="http://sumo-sim.org/xsd/types_file.xsd">http://sumo-sim.org/xsd/types_file.xsd</a>
+</li><li> <a href="#Connection_Descriptions">connections files</a>: <a rel="nofollow" class="external free" href="http://sumo.sourceforge.net/xsd/connections_file.xsd">http://sumo.sourceforge.net/xsd/connections_file.xsd</a>
+</li></ul>
+<p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Node_Descriptions"><span class="tocnumber">1</span> <span class="toctext">Node Descriptions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Joining_Nodes"><span class="tocnumber">1.1</span> <span class="toctext">Joining Nodes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Edge_Descriptions"><span class="tocnumber">2</span> <span class="toctext">Edge Descriptions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Lane-specific_Definitions"><span class="tocnumber">2.1</span> <span class="toctext">Lane-specific Definitions</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Road_Segment_Refining"><span class="tocnumber">2.2</span> <span class="toctext">Road Segment Refining</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Edge_Priorities"><span class="tocnumber">2.3</span> <span class="toctext">Edge Priorities</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Roundabouts"><span class="tocnumber">2.4</span> <span class="toctext">Roundabouts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Type_Descriptions"><span class="tocnumber">3</span> <span class="toctext">Type Descriptions</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Connection_Descriptions"><span class="tocnumber">4</span> <span class="toctext">Connection Descriptions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Explicitly_setting_which_Edge_.2F_Lane_is_connected_to_which"><span class="tocnumber">4.1</span> <span class="toctext">Explicitly setting which Edge / Lane is connected to which</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Setting_Connection_Priorities"><span class="tocnumber">4.2</span> <span class="toctext">Setting Connection Priorities</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Custom_shapes_for_internal_lanes.2C_crossings_and_walkingareas"><span class="tocnumber">4.3</span> <span class="toctext">Custom shapes for internal lanes, crossings and walkingareas</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Traffic_Light_Program_Definition"><span class="tocnumber">5</span> <span class="toctext">Traffic Light Program Definition</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Pedestrian_Crossings"><span class="tocnumber">6</span> <span class="toctext">Pedestrian Crossings</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Node_Descriptions">Node Descriptions</span></h1>
+<table class="wikitable" style="width:25em; border-width:1px 1px; border-style:solid; border-color:#909090; background-color:#f8f8ff; font-size:90%; margin:1em 0em 1em 2em; padding:3px 6px">
+<caption> <b>Node Descriptions</b>
+</caption>
+<tr>
+<td width="45%"> Filename extension </td>
+<td> .nod.xml
+</td></tr>
+<tr>
+<td> Type of content </td>
+<td> Nodes (intersections/junctions)
+</td></tr>
+<tr>
+<td> Open format? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> SUMO specific? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> XML Schema
+</td>
+<td> <a rel="nofollow" class="external text" href="http://sumo-sim.org/xsd/nodes_file.xsd">nodes_file.xsd</a>
+</td></tr></table>
+<p>Within the nodes-files, normally having the extension ".nod.xml" (see <a href="../Other/File_Extensions.html" title="Other/File Extensions">Known Extensions</a>), every node is described in a single line which looks like this: <span class="inlxml">&lt;node id="<i>&lt;STRING&gt;</i>" x="<i>&lt;FLOAT&gt;</i>" y="<i>&lt;FLOAT&gt;</i>" [type="<i>&lt;TYPE&gt;</i>"]/&gt;</span> - the straight brackets ('[' and ']') indicate that the parameter is optional. Each of these attributes has a certain meaning and value range:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> id (string)
+</td>
+<td> The name of the node
+</td></tr>
+<tr>
+<td class="inlxml"> <b>x</b>
+</td>
+<td> float
+</td>
+<td> The x-position of the node on the plane in meters
+</td></tr>
+<tr>
+<td class="inlxml"> <b>y</b>
+</td>
+<td> float
+</td>
+<td> The y-position of the node on the plane in meters
+</td></tr>
+<tr>
+<td class="inlxml"> z
+</td>
+<td> float
+</td>
+<td> The z-position of the node on the plane in meters
+</td></tr>
+<tr>
+<td class="inlxml"> ty
+</td>
+<td> enum ( "priority", "traffic_light", "right_before_left", "unregulated", "priority_stop", "traffic_light_unregulated", "allway_stop", "rail_signal" )
+</td>
+<td> An optional type for the node
+</td></tr>
+<tr>
+<td class="inlxml"> tlType
+</td>
+<td> enum ( "static", "actuated")
+</td>
+<td> An optional type for the traffic light algorithm
+</td></tr>
+<tr>
+<td class="inlxml"> tl
+</td>
+<td> id (string)
+</td>
+<td> An optional id for the traffic light program. Nodes with the same tl-value will be joined into a single program
+</td></tr>
+<tr>
+<td class="inlxml"> radius
+</td>
+<td> positive float;
+</td>
+<td> optional turning radius (for all corners) for that node in meters <i>(default 1.5)</i>
+</td></tr>
+<tr>
+<td class="inlxml"> shape
+</td>
+<td> List of positions; each position is encoded in x,y or x,y,z in meters (do not separate the numbers with a space!).
+</td>
+<td> A custom shape for that node. If less than two positions are given, netconvert will reset that node to use a computed shape.
+</td></tr></table>
+<p>If you leave out the type of the node, it is automatically guessed by <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> but may not be the one you intended. The following types are possible, any other string is counted as an error and will yield in a program stop:
+</p>
+<ul><li> <span class="inlxml">priority</span>: Vehicles on a low-priority edge have to wait until vehicles on a high-priority edge have passed the junction.
+</li><li> <span class="inlxml">traffic_light</span>: The junction is controlled by a traffic light (priority rules are used to avoid collisions if conflicting links have green light at the same time).
+</li><li> <span class="inlxml">right_before_left</span>: Vehicles will let vehicles coming from their right side pass.
+</li><li> <span class="inlxml">unregulated</span>: The junction is completely unregulated - all vehicles may pass without braking; this may cause collisions
+</li><li> <span class="inlxml">traffic_light_unregulated</span>: The junction is controlled by a traffic light without any further rules. this may cause collision if unsafe signal plans are used
+</li><li> <span class="inlxml">priority_stop</span>: This works like a <i>priority</i>-junction but vehicles on minor links alway have to stop before passing
+</li><li> <span class="inlxml">allway_stop</span>: This junction works like an [<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/All-way_stop"><i>All-way stop</i></a>]
+</li><li> <span class="inlxml">rail_signal</span>: This junction is controlled by a <a href="../Simulation/Rail_signals.html" title="Simulation/Rail signals">rail signal</a>. This type of junction/control is only useful for rails. 
+</li></ul>
+<p>When writing your nodes-file, please do not forget to embed your node definitions into an opening and a closing "tag". A complete file should like the example below, which is the node file "cross3l.nod.xml" for the examples "<i><b>&lt;SUMO_HOME&gt;</b></i>/data/examples/netbuild/types/cross_usingtypes/" and "<i><b>&lt;SUMO_HOME&gt;</b></i>/data/examples/netbuild/types/cross_notypes/" example.
+</p>
+<pre class="xml">
+&lt;nodes&gt; &lt;!-- The opening tag --&gt;
+
+   &lt;node id=&quot;0&quot; x=&quot;0.0&quot; y=&quot;0.0&quot; type=&quot;traffic_light&quot;/&gt; &lt;!-- def. of node &quot;0&quot; --&gt;
+
+   &lt;node id=&quot;1&quot; x=&quot;-500.0&quot; y=&quot;0.0&quot; type=&quot;priority&quot;/&gt; &lt;!-- def. of node &quot;1&quot; --&gt;
+   &lt;node id=&quot;2&quot; x=&quot;+500.0&quot; y=&quot;0.0&quot; type=&quot;priority&quot;/&gt; &lt;!-- def. of node &quot;2&quot; --&gt;
+   &lt;node id=&quot;3&quot; x=&quot;0.0&quot; y=&quot;-500.0&quot; type=&quot;priority&quot;/&gt; &lt;!-- def. of node &quot;3&quot; --&gt;
+   &lt;node id=&quot;4&quot; x=&quot;0.0&quot; y=&quot;+500.0&quot; type=&quot;priority&quot;/&gt; &lt;!-- def. of node &quot;4&quot; --&gt;
+
+   &lt;node id=&quot;m1&quot; x=&quot;-250.0&quot; y=&quot;0.0&quot; type=&quot;priority&quot;/&gt; &lt;!-- def. of node &quot;m1&quot; --&gt;
+   &lt;node id=&quot;m2&quot; x=&quot;+250.0&quot; y=&quot;0.0&quot; type=&quot;priority&quot;/&gt; &lt;!-- def. of node &quot;m2&quot; --&gt;
+   &lt;node id=&quot;m3&quot; x=&quot;0.0&quot; y=&quot;-250.0&quot; type=&quot;priority&quot;/&gt; &lt;!-- def. of node &quot;m3&quot; --&gt;
+   &lt;node id=&quot;m4&quot; x=&quot;0.0&quot; y=&quot;+250.0&quot; type=&quot;priority&quot;/&gt; &lt;!-- def. of node &quot;m4&quot; --&gt;
+
+&lt;/nodes&gt; &lt;!-- The closing tag --&gt;
+</pre>
+<p>As you may notice, only the first node named "0", which is the node in the middle of the network, is a traffic light controlled junction. All other nodes are uncontrolled. You may also notice, that each of both ends of a street needs an according node. This is not really necessary as you may see soon, but it eases the understanding of the concept: every edge (street/road) is a connection between two nodes (junctions).
+</p><p>For traffic light nodes, <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> generates a default traffic light program. The simulation can <a href="../Simulation/Traffic_Lights.html" title="Simulation/Traffic Lights">load additional programs</a> which may be used instead.
+</p><p>If you leave out the tlType of the node, it is set to <i>static</i>. This default may be changed using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.default-type <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>. 
+</p>
+<ul><li> <span class="inlxml">static</span>: Each phase of the traffic light will last for a fixed duration
+</li><li> <span class="inlxml">actuated</span>: Green phases may be prolonged depending on traffic measurements from automatically added induction loops ("<i>Zeitlückensteuerung</i>")
+</li></ul>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />You can load multiple node files at the same time by giving a comma-separated list of file names on the command line. In a configuration file you can use a space separated list as well.</div>
+<h2> <span class="mw-headline" id="Joining_Nodes">Joining Nodes</span></h2>
+<p>Sometimes your network may contain nodes which are very close together forming a big cluster. This happens frequently when <a href="../Networks/Import/OpenStreetMap.html" title="Networks/Import/OpenStreetMap">Importing Networks from OpenStreetMap</a>.
+<a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> supports the option <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join</span> to find such clusters and join them into a big and well shaped junction. You can control the joining algorithm by supplying the option <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join-dist <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> which sets a search distance for finding clusters <i>(default 10m)</i>. The search for joinable node clusters works like this:
+</p>
+<ol><li> junction shapes are computed for all nodes
+</li><li> the length of the edges between the junction shapes is compared against <b>join-dist</b>
+</li><li> nodes within the given distance are transitively added to a candidate cluster
+</li><li> nodes with only a single connection to the cluster (nodes at the outside) are removed
+</li><li> clusters which are to complex are filtered out (a warning with an explanation is issued for each case)
+</li><li> each cluster is turned into a joined node
+</li></ol>
+<p>More fine grained control over joining can be achieved by using the following syntax within a nodes-file 
+</p>
+<pre class="xml">
+&lt;nodes&gt;
+   &lt;join nodes=&quot;id0 id23 id24&quot;/&gt;
+   &lt;joinExclude nodes=&quot;id13 id17&quot;/&gt;
+&lt;/nodes&gt;
+</pre>
+<p>This will cause the nodes <i>id0</i>,<i>id23</i> and <i>id24</i> to be joined into a single junction. It will also prevent the nodes <i>id13</i> and <i>id17</i> from being joined.
+The <b>joinExclude</b>-tag is only usefull together with the option <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join</span> but the <b>join</b>-tag can also be used all by itself. Nodes to be excluded from joining can also be specified via the option <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join-exclude id,[id]+</span>.
+</p>
+<div style="background: #ffcc44; padding: .5em; border: 1px dashed #ff8800; margin-right:10px; margin-left:10px;"><b>Caution:</b><br />After merging nodes, the lane-to-lane connections are recalculated. You can override them by resorting to a 2-step process:
+<pre># 1. Merging the junctions.
+netconvert --sumo-net-file berlin-separated-junctions.net.xml \
+    --output-file berlin-joined-junctions.net.xml \
+    --junctions.join
+# 2. Resetting the connections.
+netconvert --sumo-net-file berlin-joined-junctions.net.xml \
+    --output-file berlin-with-fixed-connections.net.xml \
+    --connection-files berlin-new-connections.con.xml
+</pre>
+<p>See <a href="#Connection_Descriptions">#Connection Descriptions</a> on how to define connections in <b>*.con.xml</b> format. 
+</p>
+</div>
+<p>When loading networks with defined connections, the results of joining nodes may be quite surprising. Please note the - quite pathologic - network on the left side and compare it to the one on the right. You may note some big differences in lane-to-lane connections, especially for the edge coming from the south. 
+<a href="../images/JunctionJoin_before.svg" class="image"><img alt="JunctionJoin before.svg" src="../images/JunctionJoin_before.svg" width="300" height="166" srcset=" 1.5x,  2x" /></a> <a href="../images/JunctionJoin_after.svg" class="image"><img alt="JunctionJoin after.svg" src="../images/JunctionJoin_after.svg" width="300" height="166" srcset=" 1.5x,  2x" /></a>
+</p><p>The reason is that during joining, edges are subsequently merged, and the connections are tried to be kept. In the case of the straight connection on the left lane of the road from south, it is propagated along the intersection - along all four edges that are lying within the intersection - yielding in a further right-turning connection.
+</p><p>To avoid surprises like this, you should first join the nodes. Then, set the connections.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br /> If you use the option <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join</span> during OSM import, the connections are guessed based on the joined junctions and no pathologies should occur</div>
+<h1> <span class="mw-headline" id="Edge_Descriptions">Edge Descriptions</span></h1>
+<table class="wikitable" style="width:25em; border-width:1px 1px; border-style:solid; border-color:#909090; background-color:#f8f8ff; font-size:90%; margin:1em 0em 1em 2em; padding:3px 6px">
+<caption> <b>Edge Descriptions</b>
+</caption>
+<tr>
+<td width="45%"> Filename extension </td>
+<td> .edg.xml
+</td></tr>
+<tr>
+<td> Type of content </td>
+<td> Edges (roads/streets)
+</td></tr>
+<tr>
+<td> Open format? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> SUMO specific? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> XML Schema
+</td>
+<td> <a rel="nofollow" class="external text" href="http://sumo-sim.org/xsd/edges_file.xsd">edges_file.xsd</a>
+</td></tr></table>
+<p>Within the edges file, each description of a single edge looks like this: <span class="inlxml">&lt;edge id="<i>&lt;STRING&gt;</i>" from="<i>&lt;NODE_ID&gt;</i>" to="<i>&lt;NODE_ID&gt;</i>" [type="<i>&lt;STRING&gt;</i>"] [numLanes="<i>&lt;INT&gt;</i>"] [speed="<i>&lt;FLOAT&gt;</i>"] [priority="<i>&lt;UINT&gt;</i>"] [length="<i>&lt;FLOAT&gt;</i>"] [shape="<i>&lt;2D-POSITION&gt;</i>[ <i>&lt;2D-POSITION&gt;</i>]*"] [spreadType="center"] [allow="<i>&lt;VEHICLE_CLASS&gt;</i>[ <i>&lt;VEHICLE_CLASS&gt;</i>]*"] [disallow="<i>&lt;VEHICLE_CLASS&gt;</i>[ <i>&lt;VEHICLE_CLASS&gt;</i>]*"]/&gt;</span>.
+</p><p>The origin and the destination nodes are defined using their IDs (<span class="inlxml">from="<i>&lt;NODE_ID&gt;</i>" to="<i>&lt;NODE_ID&gt;</i>"</span>). Each edge is unidirectional and starts at the "<span class="inlxml">from</span>"-node and ends at the "<span class="inlxml">to</span>"-node. If a name of one of the nodes can not be dereferenced (because they have not been defined within the nodes file) an error is generated. To avoid the stop of further netconversion in such cases, you may start <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> with the option <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-errors</span>.
+</p><p>For each edge, some further attributes should be supplied, being the number of lanes the edge has (<span class="inlxml">numLanes</span>), the maximum speed allowed on the edge <span class="inlxml">speed</span>. Furthermore, the <span class="inlxml">priority</span> may be defined optionally.
+</p><p>All edge values - beside the length in fact - may either be given for each edge using according attributes or you can omit them by giving the edge a "<span class="inlxml">type</span>". In this case, you should also write a <a href="#Type_Descriptions">SUMO edge type file</a>. A type with this name should of course be within the used type file, otherwise an error is reported. Even if you supply a type, you can still override the type's values by supplying any of the parameter <span class="inlxml">allow</span>, <span class="inlxml">disallow</span>, <span class="inlxml">numLanes</span>, <span class="inlxml">priority</span> and <span class="inlxml">speed</span>. You may also leave the edge parameter completely unset. In this case, default-values will be used and the edge will have a single lane, a default (unset) priority and the maximum allowed speed on this edge will be 13.9m/s being around 50km/h. The length of this edge will be computed as the distance between the starting and the end point.
+</p><p>As an edge may have a more complicated geometry, you may supply the edge's shape within the <span class="inlxml">shape</span> attribute. If the length of the edge is not given otherwise, the distances of the shape elements will be summed. The information <span class="inlxml">spreadType="center"</span> forces <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> to spread lanes to both sides of the connection between the begin node and the end node or from the list of lines making up the shape. If not given, lanes are spread to right, as default.
+</p><p>Let's list an edge's attributes again:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> id (string)
+</td>
+<td> The id of the edge (must be unique)
+</td></tr>
+<tr>
+<td class="inlxml"> from
+</td>
+<td> referenced node id
+</td>
+<td> The name of a node within the nodes-file the edge shall start at
+</td></tr>
+<tr>
+<td class="inlxml"> to
+</td>
+<td> referenced node id
+</td>
+<td> The name of a node within the nodes-file the edge shall end at
+</td></tr>
+<tr>
+<td class="inlxml"> type
+</td>
+<td> referenced type id
+</td>
+<td> The name of a type within the <a href="../SUMO_edge_type_file.html" title="SUMO edge type file">SUMO edge type file</a>
+</td></tr>
+<tr>
+<td class="inlxml"> numLanes
+</td>
+<td> int
+</td>
+<td> The number of lanes of the edge; must be an integer value
+</td></tr>
+<tr>
+<td class="inlxml"> speed
+</td>
+<td> float
+</td>
+<td> The maximum speed allowed on the edge in m/s; must be a floating point number (see also "Using Edges' maximum Speed Definitions in km/h")
+</td></tr>
+<tr>
+<td class="inlxml"> priority
+</td>
+<td> int
+</td>
+<td> The priority of the edge
+</td></tr>
+<tr>
+<td class="inlxml"> length
+</td>
+<td> float
+</td>
+<td> The length of the edge in meter
+</td></tr>
+<tr>
+<td class="inlxml"> shape
+</td>
+<td> List of positions; each position is encoded in x,y or x,y,z in meters (do not separate the numbers with a space!).
+</td>
+<td> If the shape is given it should start and end with the positions of the from-node and to-node. Alternatively it can also start and end with the position where the edge leaves or enters the junction shape. This gives some control over the final junction shape. When using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--plain.extend-edge-shape</span> it is sufficient to supply inner geometry points and extend the shape with the starting and ending node positions automatically
+</td></tr>
+<tr>
+<td class="inlxml"> spreadType
+</td>
+<td> enum ( "right", "center" )
+</td>
+<td> The description of how to spread the lanes; "center" spreads lanes to both directions of the shape, any other value will be interpreted as "right"
+</td></tr>
+<tr>
+<td class="inlxml"> allow
+</td>
+<td> list of vehicle classes
+</td>
+<td> Explicitly allows the given vehicle classes (not given will be not allowed). Vehicle classes must be separated using ' '.
+</td></tr>
+<tr>
+<td class="inlxml"> disallow
+</td>
+<td> list of vehicle classes
+</td>
+<td> Explicitly disallows the given vehicle classes (not given will be allowed). Vehicle classes must be separated using ' '.
+</td></tr>
+<tr>
+<td class="inlxml"> width
+</td>
+<td> float
+</td>
+<td> lane width for all lanes of this edge in meters (used for visualization)
+</td></tr>
+<tr>
+<td class="inlxml"> name
+</td>
+<td> string
+</td>
+<td> street name (need not be unique, used for visualization)
+</td></tr>
+<tr>
+<td class="inlxml"> endOffset
+</td>
+<td> float &gt;= 0
+</td>
+<td> Move the stop line back from the intersection by the given amount (effectively shortening the edge and locally enlarging the intersection)
+</td></tr>
+<tr>
+<td class="inlxml"> sidewalkWidth
+</td>
+<td> float &gt;= 0
+</td>
+<td> Adds a sidewalk with the given width (defaults to -1 which adds nothing).
+</td></tr></table>
+<p>The priority plays a role during the computation of the way-giving rules of a node. Normally, the allowed speed on the edge and the edge's number of lanes are used to compute which edge has a greater priority on a junction. Using the priority attribute, you may increase the priority of the edge making more lanes yielding in it or making vehicles coming from this edge into the junction not wait.
+</p><p>Also the definitions of edges must be embedded into an opening and a closing tag and for the example "<i><b>&lt;SUMO_HOME&gt;</b></i>/data/examples/netbuild/types/cross_notypes/" the whole edges-file looks like this ("cross3l.edg.xml"):
+</p>
+<pre class="xml">
+&lt;edges&gt;
+
+   &lt;edge id=&quot;1fi&quot; from=&quot;1&quot; to=&quot;m1&quot; priority=&quot;2&quot; numLanes=&quot;2&quot; speed=&quot;11.11&quot;/&gt;
+   &lt;edge id=&quot;1si&quot; from=&quot;m1&quot; to=&quot;0&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.89&quot;/&gt;
+   &lt;edge id=&quot;1o&quot; from=&quot;0&quot; to=&quot;1&quot; priority=&quot;1&quot; numLanes=&quot;1&quot; speed=&quot;11.11&quot;/&gt;
+
+   &lt;edge id=&quot;2fi&quot; from=&quot;2&quot; to=&quot;m2&quot; priority=&quot;2&quot; numLanes=&quot;2&quot; speed=&quot;11.11&quot;/&gt;
+   &lt;edge id=&quot;2si&quot; from=&quot;m2&quot; to=&quot;0&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.89&quot;/&gt;
+   &lt;edge id=&quot;2o&quot; from=&quot;0&quot; to=&quot;2&quot; priority=&quot;1&quot; numLanes=&quot;1&quot; speed=&quot;11.11&quot;/&gt;
+
+   &lt;edge id=&quot;3fi&quot; from=&quot;3&quot; to=&quot;m3&quot; priority=&quot;2&quot; numLanes=&quot;2&quot; speed=&quot;11.11&quot;/&gt;
+   &lt;edge id=&quot;3si&quot; from=&quot;m3&quot; to=&quot;0&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.89&quot;/&gt;
+   &lt;edge id=&quot;3o&quot; from=&quot;0&quot; to=&quot;3&quot; priority=&quot;1&quot; numLanes=&quot;1&quot; speed=&quot;11.11&quot;/&gt;
+
+   &lt;edge id=&quot;4fi&quot; from=&quot;4&quot; to=&quot;m4&quot; priority=&quot;2&quot; numLanes=&quot;2&quot; speed=&quot;11.11&quot;/&gt;
+   &lt;edge id=&quot;4si&quot; from=&quot;m4&quot; to=&quot;0&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.89&quot;/&gt;
+   &lt;edge id=&quot;4o&quot; from=&quot;0&quot; to=&quot;4&quot; priority=&quot;1&quot; numLanes=&quot;1&quot; speed=&quot;11.11&quot;/&gt;
+
+&lt;/edges&gt;
+</pre>
+<p><br />
+Within this example, we have used explicit definitions of edges. An example for using types is described in the chapter <a href="#Type_Descriptions">Type Descriptions</a>.
+</p>
+<div style="background: #ffcc44; padding: .5em; border: 1px dashed #ff8800; margin-right:10px; margin-left:10px;"><b>Caution:</b><br />There are some constraints about the streets' ids. They must not contain any of the following characters: '_' (underline - used for lane ids), '[' and ']' (used for enumerations), ' ' (space - used as list divider), '*' (star, used as wildcard), ':' (used as marker for internal lanes).</div>
+<h2> <span class="mw-headline" id="Lane-specific_Definitions">Lane-specific Definitions</span></h2>
+<p>You may allow/forbid explicit vehicle classes to use a lane. The information which vehicle classes are allowed on a lane may be specified within an edges descriptions file by embedding the list of lanes together with vehicle classes allowed/forbidden on them into these edge's lanes. Assume you want to allow only buses to use the leftmost lane of edge "2si" from the example above. Simply change this edge's definition into:
+</p>
+<pre class="xml">
+... previous definitions ...
+   &lt;edge id=&quot;2si&quot; from=&quot;m2&quot; to=&quot;0&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.89&quot;&gt;
+      &lt;lane index=&quot;2&quot; allow=&quot;bus&quot;/&gt;
+   &lt;/edge&gt;
+... further definitions ...
+</pre>
+<p>If you would like to disallow passenger cars and taxis, the following snippet would do it:
+</p>
+<pre class="xml">
+... previous definitions ...
+   &lt;edge id=&quot;2si&quot; from=&quot;m2&quot; to=&quot;0&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.89&quot;&gt;
+      &lt;lane index=&quot;2&quot; disallow=&quot;passenger taxi&quot;/&gt;
+   &lt;/edge&gt;
+... further definitions ...
+</pre>
+<p>The definition of a lane contains the following optional attributes:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>index</b>
+</td>
+<td> int
+</td>
+<td> The enumeration index of the lane (0 is the rightmost lane, &lt;NUMBER_LANES&gt;-1 is the leftmost one)
+</td></tr>
+<tr>
+<td class="inlxml"> allow
+</td>
+<td> list of vehicle classes
+</td>
+<td> Explicitly allows the given vehicle classes (not given will be not allowed). Vehicle classes must be separated using ' '.
+</td></tr>
+<tr>
+<td class="inlxml"> disallow
+</td>
+<td> list of vehicle classes
+</td>
+<td> Explicitly disallows the given vehicle classes (not given will be allowed). Vehicle classes must be separated using ' '.
+</td></tr>
+<tr>
+<td class="inlxml"> speed
+</td>
+<td> float
+</td>
+<td> speed in meters per second
+</td></tr>
+<tr>
+<td class="inlxml"> width
+</td>
+<td> float
+</td>
+<td> width in meters (used for visualization)
+</td></tr>
+<tr>
+<td class="inlxml"> endOffset
+</td>
+<td> float &gt;= 0
+</td>
+<td> Move the stop line back from the intersection by the given amount (effectively shortening the lane and locally enlarging the intersection)
+</td></tr></table>
+<p>See "Vehicle Classes" for further information about allowed vehicle classes and their usage.
+</p>
+<h2> <span class="mw-headline" id="Road_Segment_Refining">Road Segment Refining</span></h2>
+<p>Normally, each edge has a certain number of lanes and a fixed speed; road widenings and speed reductions are defined using consequent edges. Though, in some cases, it is more comfortable to set up a single edge and change the number of its lanes or the speed along its length.
+</p><p>This is possible using "split" - a subelement of an XML-edge definition after 02.09.2009. A split may be given as following:
+</p>
+<pre class="xml">
+... previous definitions ...
+   &lt;edge id=&quot;2si&quot; from=&quot;m2&quot; to=&quot;0&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.89&quot;&gt;
+      &lt;split pos=&quot;30&quot; lanes=&quot;0 1&quot; speed=&quot;10&quot;/&gt;
+   &lt;/edge&gt;
+... further definitions ...
+</pre>
+<p>What happens here is the following: 30meters from its begin (<span class="inlxml">pos="30"</span>) the edge is split, inserting a node named &lt;EDGE_ID&gt;.&lt;POSITION&gt;. Until this node, the edge includes all lanes. After this node, only the lanes given in the <span class="inlxml">lanes</span> attribute are inserted and their speed is reduced. This yields in two edges which replace the initial one and the second edge contains only two lanes with a maximum speed of 10m/s.
+</p><p>The most common usage example is the other way round: lanes must be added, not removed along a road. The following snippet shows the by example:
+</p>
+<pre class="xml">
+... previous definitions ...
+   &lt;edge id=&quot;2si&quot; from=&quot;m2&quot; to=&quot;0&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.89&quot;&gt;
+      &lt;split pos=&quot;0&quot; lanes=&quot;0 1&quot;/&gt;
+      &lt;split pos=&quot;30&quot; lanes=&quot;0 1 2&quot;/&gt;
+   &lt;/edge&gt;
+... further definitions ...
+</pre>
+<p>There are several things to note:
+</p>
+<ul><li> In the road definition, we use the maximum lane number (3)
+</li><li> We add an "split" at position 0; in this case, no node is built, but the lane number is applied to the edge directly.
+</li><li> If we add a split with a position only, it resets lane number and speed to the default values for the edge (so in the example above we could have left out the lanes attribute in the second split).
+</li></ul>
+<p>The definition of a split uses the following attributes:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>pos</b>
+</td>
+<td> float
+</td>
+<td> The position along the edge at which the split shall be done (in m); if a negative position is given, the split is inserted counting from the end of the edge
+</td></tr>
+<tr>
+<td class="inlxml"> <b>lanes</b>
+</td>
+<td> list of lane ids (ints)
+</td>
+<td> Information which lanes should exist after the split
+</td></tr>
+<tr>
+<td class="inlxml"> <b>speed</b>
+</td>
+<td> float
+</td>
+<td> The speed in m/s after the split position
+</td></tr></table>
+<h2> <span class="mw-headline" id="Edge_Priorities">Edge Priorities</span></h2>
+<p>The edge priority is a hint for determining which of the incoming edges will be the higher prioritised one if the intersection it is incoming into is a <span class="inlxml">priority</span> junction. If not given, other edge attributes are used. Given two edges, the following comparison is done to determine whether one is higher prioritised:
+</p>
+<pre>if (e1-&gt;getPriority()&#160;!= e2-&gt;getPriority()) {
+ return e1-&gt;getPriority() &gt; e2-&gt;getPriority();
+}
+if (e1-&gt;getSpeed()&#160;!= e2-&gt;getSpeed()) {
+ return e1-&gt;getSpeed() &gt; e2-&gt;getSpeed();
+}
+return e1-&gt;getNumLanes() &gt; e2-&gt;getNumLanes();
+</pre>
+<p>This means that the priority information is evaluated, first. Then the speed information, then the lane number.
+</p><p><br />
+</p>
+<h2> <span class="mw-headline" id="Roundabouts">Roundabouts</span></h2>
+<p>Edges may be part of a roundabout. This influences the right of way computation and disables turn-arounds for edges entering the roundabout from outside.
+A roundabout is specified within an <i>.edg.xml</i>-file in the following way:
+</p><p><span class="inlxml">&lt;roundabout edges="<i>&lt;EDGE_ID&gt;</i> <i>&lt;EDGE_ID</i> [<i>&lt;EDGE_ID&gt;</i>..]"/&gt; </span>
+</p><p>Manual specification of roundabouts is a useful supplement for the existing roundabout heuristic (activated via option <span style="color: #111144; font-weight: bold; white-space: pre;">--roundabouts.guess</span>). Guessed roundabouts are written as part of the <i>plain-xml</i> output (option <span style="color: #111144; font-weight: bold; white-space: pre;">--plain-output-prefix</span>). This output can then be customized by the user and fed back into <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>.
+</p>
+<h1> <span class="mw-headline" id="Type_Descriptions">Type Descriptions</span></h1>
+<table class="wikitable" style="width:25em; border-width:1px 1px; border-style:solid; border-color:#909090; background-color:#f8f8ff; font-size:90%; margin:1em 0em 1em 2em; padding:3px 6px">
+<caption> <b>Edge Type Descriptions</b>
+</caption>
+<tr>
+<td width="45%"> Filename extension </td>
+<td> .typ.xml
+</td></tr>
+<tr>
+<td> Type of content </td>
+<td> Edge Types
+</td></tr>
+<tr>
+<td> Open format? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> SUMO specific? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> XML Schema
+</td>
+<td> <a rel="nofollow" class="external text" href="http://sumo-sim.org/xsd/types_file.xsd">types_file.xsd</a>
+</td></tr></table>
+<p>As mentioned, <a href="../SUMO_edge_type_file.html" title="SUMO edge type file">edge types</a> are meant to be used to ease the definition of edges. Each description of an edge should include information about the number of lanes, the maximum speed allowed on this edge and optionally this edge's priority and its allowed and disallowed vehicle classes. See <a href="../SUMO_edge_type_file.html" title="SUMO edge type file">SUMO edge type file</a> for a complete description of edge types and the format of those files.
+</p><p>The attributes of a type are of course exactly the same as for edges themselves. The information about the nodes the edge starts and ends at is not given within the types' descriptions. They can only be set within the edge's attributes. Here's an example on referencing types in edge definitions:
+</p>
+<pre class="xml">
+&lt;edges&gt;
+
+   &lt;edge id=&quot;1fi&quot; from=&quot;1&quot; to=&quot;m1&quot; type=&quot;b&quot;/&gt;
+   &lt;edge id=&quot;1si&quot; from=&quot;m1&quot; to=&quot;0&quot; type=&quot;a&quot;/&gt;
+   &lt;edge id=&quot;1o&quot; from=&quot;0&quot; to=&quot;1&quot; type=&quot;c&quot;/&gt;
+
+   &lt;edge id=&quot;2fi&quot; from=&quot;2&quot; to=&quot;m2&quot; type=&quot;b&quot;/&gt;
+   &lt;edge id=&quot;2si&quot; from=&quot;m2&quot; to=&quot;0&quot; type=&quot;a&quot;/&gt;
+   &lt;edge id=&quot;2o&quot; from=&quot;0&quot; to=&quot;2&quot; type=&quot;c&quot;/&gt;
+
+   &lt;edge id=&quot;3fi&quot; from=&quot;3&quot; to=&quot;m3&quot; type=&quot;b&quot;/&gt;
+   &lt;edge id=&quot;3si&quot; from=&quot;m3&quot; to=&quot;0&quot; type=&quot;a&quot;/&gt;
+   &lt;edge id=&quot;3o&quot; from=&quot;0&quot; to=&quot;3&quot; type=&quot;c&quot;/&gt;
+
+   &lt;edge id=&quot;4fi&quot; from=&quot;4&quot; to=&quot;m4&quot; type=&quot;b&quot;/&gt;
+   &lt;edge id=&quot;4si&quot; from=&quot;m4&quot; to=&quot;0&quot; type=&quot;a&quot;/&gt;
+   &lt;edge id=&quot;4o&quot; from=&quot;0&quot; to=&quot;4&quot; type=&quot;c&quot;/&gt;
+
+&lt;/edges&gt;
+</pre>
+<p>The according types file looks like this (see <a href="../SUMO_edge_type_file.html" title="SUMO edge type file">SUMO edge type file</a>):
+</p>
+<pre class="xml">
+&lt;types&gt;
+
+   &lt;type id=&quot;a&quot; priority=&quot;3&quot; numLanes=&quot;3&quot; speed=&quot;13.889&quot;/&gt;
+   &lt;type id=&quot;b&quot; priority=&quot;2&quot; numLanes=&quot;2&quot; speed=&quot;11.111&quot;/&gt;
+   &lt;type id=&quot;c&quot; priority=&quot;1&quot; numLanes=&quot;1&quot; speed=&quot;11.111&quot;/&gt;
+
+&lt;/types&gt;
+</pre>
+<p>As you can see, we have joined the edges into three classes "a", "b", and "c" and have generated a description for each of these classes. Doing this, the generated net is similar to the one generated using the settings described above (example "<i><b>&lt;SUMO_HOME&gt;</b></i>/docs/examples/netconvert/types/cross_notypes/" ).
+</p>
+<h1> <span class="mw-headline" id="Connection_Descriptions">Connection Descriptions</span></h1>
+<table class="wikitable" style="width:25em; border-width:1px 1px; border-style:solid; border-color:#909090; background-color:#f8f8ff; font-size:90%; margin:1em 0em 1em 2em; padding:3px 6px">
+<caption> <b>Connection Descriptions</b>
+</caption>
+<tr>
+<td width="45%"> Filename extension </td>
+<td> .con.xml
+</td></tr>
+<tr>
+<td> Type of content </td>
+<td> Connections
+</td></tr>
+<tr>
+<td> Open format? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> SUMO specific? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> XML Schema
+</td>
+<td> <a rel="nofollow" class="external text" href="http://sumo-sim.org/xsd/connections_file.xsd">connections_file.xsd</a>
+</td></tr></table>
+<p>"Connections" describe how a node's incoming and outgoing edges are connected (for example to prohibit left-turns at some junctions). Your can specify connections on the edge level or you can declare in in detail which incoming lane shall be connected to which outgoing lanes. 
+If you leave some connections unspecified <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> automatically computes the missing information based on heuristics.
+</p>
+<div style="background: #ffcc44; padding: .5em; border: 1px dashed #ff8800; margin-right:10px; margin-left:10px;"><b>Caution:</b><br />It is possible to connect two incoming lanes to the same outgoing lane. This should be avoided because it will probably cause crashes. SUMO vehicles are not aware of the conflicts set up this way. If you have merging lanes in your network, one of them should be a dead end. This way vehicles will merge into the continuing lane as desired.</div>
+<h2> <span class="mw-headline" id="Explicitly_setting_which_Edge_.2F_Lane_is_connected_to_which">Explicitly setting which Edge / Lane is connected to which</span></h2>
+<p>Though guessed if not given, definitions of connections between edges or lanes may be manually set up and given to <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> using connection files. The connection file specifies which edges outgoing from a junction may be reached by a certain edge incoming into this junction and optionally also which lanes shall be used on both sides.
+</p><p>If you only want to describe which edges may be reached from a certain edge, the definition is: <span class="inlxml">&lt;connection from="<i>&lt;FROM_EDGE_ID&gt;</i>" to="<i>&lt;T0_EDGE_ID&gt;</i>"/&gt;</span>. This tells <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> not only that vehicles shall be allowed to drive from the edge named <i>&lt;FROM_EDGE_ID&gt;</i> to the edge named <i>&lt;TO_EDGE_ID&gt;</i>, but also prohibits all movements to other edges from <i>&lt;FROM_EDGE_ID&gt;</i>, unless they are specified within this file. Let's repeat the parameters:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>from</b>
+</td>
+<td> referenced edge id
+</td>
+<td> The name of the edge the vehicles leave
+</td></tr>
+<tr>
+<td class="inlxml"> to
+</td>
+<td> referenced edge id
+</td>
+<td> The name of the edge the vehicles may reach when leaving "from". If omitted or set to "" the incoming edge will have no connections.
+</td></tr></table>
+<p>When using this kind of input, <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> will compute which lanes shall be used if any of the connected edges has more than one lane. If you also want to override this computation and set the lanes by hand, use the following: <span class="inlxml">&lt;connection from="<i>&lt;FROM_EDGE_ID&gt;</i>" to="<i>&lt;T0_EDGE_ID&gt;</i>" fromLane="<i>&lt;INT_1&gt;</i>" toLane="<i>&lt;INT_2&gt;</i>"/&gt;</span>. Here, a connection from the edge's "<i>&lt;FROM_EDGE_ID&gt;</i>" lane with the number <i>&lt;INT_1&gt;</i> is build to the lane <i>&lt;INT_2&gt;</i> of the edge "<i>&lt;TO_EDGE_ID&gt;</i>". Lanes are counted from the right (outer) to the left (inner) side of the road beginning with 0. Again the parameter:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>from</b>
+</td>
+<td> referenced edge id
+</td>
+<td> The name of the edge the vehicles leave
+</td></tr>
+<tr>
+<td class="inlxml"> to
+</td>
+<td> referenced edge id
+</td>
+<td> The name of the edge the vehicles may reach when leaving "from"
+</td></tr>
+<tr>
+<td class="inlxml"> fromLane
+</td>
+<td> <i>&lt;INT&gt;</i>
+</td>
+<td> the lane index of the incoming lane (numbers starting with 0)
+</td></tr>
+<tr>
+<td class="inlxml"> toLane
+</td>
+<td> <i>&lt;INT&gt;</i>
+</td>
+<td> the lane index of the outgoing lane (numbers starting with 0)
+</td></tr>
+<tr>
+<td class="inlxml"> pass
+</td>
+<td> bool
+</td>
+<td> if set, vehicles which pass this (lane-2-lane) connection) will not wait
+</td></tr></table>
+<p>If you only wish to <b>remove</b> a connection it may be convenient to use the following xml definition: 
+<span class="inlxml">&lt;delete from="<i>&lt;FROM_EDGE_ID&gt;</i>" to="<i>&lt;T0_EDGE_ID&gt;</i>"/&gt;</span>. The attributes are the same as for the simple connection element:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>from</b>
+</td>
+<td> referenced edge id
+</td>
+<td> The source edge id of the connection to be removed
+</td></tr>
+<tr>
+<td class="inlxml"> <b>to</b>
+</td>
+<td> referenced edge id
+</td>
+<td> The destination edge id of the connection to be removed
+</td></tr>
+<tr>
+<td class="inlxml"> fromLane
+</td>
+<td> referenced lane no
+</td>
+<td> The source lane index of the connection to be removed
+</td></tr>
+<tr>
+<td class="inlxml"> toLane
+</td>
+<td> referenced lane no
+</td>
+<td> The destination lane index of the connection to be removed
+</td></tr></table>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />Note that in basic format (that is, without <b>fromLane</b> and <b>toLane</b> attributes) the defenition deletes <b>all</b> connections from given incoming edge to the given outgoing edge. When <b>fromLane</b> and <b>toLane</b> attributes are provided, only the connection from given lane to given lane is removed.</div>
+<p>There are two examples within the distribution. Both use the nodes and edges descriptions from the example located in "<i><b>&lt;SUMO_HOME&gt;</b></i>/docs/examples/netconvert/types/cross_notypes/". The junction in the center of this example looks like shown within the next figure. We will now call it the "unconstrained network" because all connections and turnarounds are computed using the default values.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a href="../images/Cross3l_unconstrained.gif" class="image"><img alt="" src="../images/Cross3l_unconstrained.gif" width="200" height="200" class="thumbimage" srcset="/w/images/thumb/5/5b/Cross3l_unconstrained.gif/300px-Cross3l_unconstrained.gif 1.5x, /w/images/thumb/5/5b/Cross3l_unconstrained.gif/400px-Cross3l_unconstrained.gif 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../images/Cross3l_unconstrained.gif" class="internal" title="Enlarge"><img src="../images//magnify-clip.png" width="15" height="11" alt="" /></a></div>Unconstrained Network</div></div></div></div>
+<p>The example <i><b>&lt;SUMO_HOME&gt;</b></i>/docs/examples/netconvert/connections/cross3l_edge2edge_conns/" shows what happens when one uses connections to limit the number of reachable edges. To do this we built a connections file where we say that the horizontal edges ("1si" and "2si") have only connections to the edges right to them and the edge in straight direction. The file looks like this:
+</p>
+<pre class="xml">
+&lt;connections&gt;
+
+   &lt;connection from=&quot;1si&quot; to=&quot;3o&quot;/&gt;
+   &lt;connection from=&quot;1si&quot; to=&quot;2o&quot;/&gt;
+
+   &lt;connection from=&quot;2si&quot; to=&quot;4o&quot;/&gt;
+   &lt;connection from=&quot;2si&quot; to=&quot;1o&quot;/&gt;
+
+&lt;/connections&gt;
+</pre>
+<p>As you may see in the next picture, the horizontal edges within the result network contain no left-moving connections.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a href="../images/Cross3l_edge2edge_conns.gif" class="image"><img alt="" src="../images/Cross3l_edge2edge_conns.gif" width="200" height="206" class="thumbimage" srcset="/w/images/thumb/9/91/Cross3l_edge2edge_conns.gif/300px-Cross3l_edge2edge_conns.gif 1.5x, /w/images/thumb/9/91/Cross3l_edge2edge_conns.gif/400px-Cross3l_edge2edge_conns.gif 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../images/Cross3l_edge2edge_conns.gif" class="internal" title="Enlarge"><img src="../images//magnify-clip.png" width="15" height="11" alt="" /></a></div>Network with explicit edge-2-edge connections</div></div></div></div>
+<p>In the second example located in <i><b>&lt;SUMO_HOME&gt;</b></i>/docs/examples/netconvert/connections/cross3l_lane2lane_conns" we additionally describe which lanes shall be connected. The according connections file says that the connections going straight shall be start at the second lane of the incoming edges:
+</p>
+<pre class="xml">
+&lt;connections&gt;
+
+   &lt;connection from=&quot;1si&quot; to=&quot;3o&quot; fromLane=&quot;0&quot; toLane=&quot;0&quot;/&gt;
+   &lt;connection from=&quot;1si&quot; to=&quot;2o&quot; fromLane=&quot;2&quot; toLane=&quot;0&quot;/&gt;
+
+   &lt;connection from=&quot;2si&quot; to=&quot;4o&quot; fromLane=&quot;0&quot; toLane=&quot;0&quot;/&gt;
+   &lt;connection from=&quot;2si&quot; to=&quot;1o&quot; fromLane=&quot;2&quot; toLane=&quot;0&quot;/&gt;
+
+&lt;/connections&gt;
+</pre>
+<p>The built network looks like this:
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a href="../images/Cross3l_lane2lane_conns.gif" class="image"><img alt="" src="../images/Cross3l_lane2lane_conns.gif" width="200" height="201" class="thumbimage" srcset="/w/images/thumb/1/13/Cross3l_lane2lane_conns.gif/300px-Cross3l_lane2lane_conns.gif 1.5x, /w/images/thumb/1/13/Cross3l_lane2lane_conns.gif/400px-Cross3l_lane2lane_conns.gif 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../images/Cross3l_lane2lane_conns.gif" class="internal" title="Enlarge"><img src="../images//magnify-clip.png" width="15" height="11" alt="" /></a></div>Network with explicit lane-2-lane connections</div></div></div></div>
+<div style="background: #ffcc44; padding: .5em; border: 1px dashed #ff8800; margin-right:10px; margin-left:10px;"><b>Caution:</b><br />Please do not use both types of connection declarations (those with an lane attribute and those without) for the same from-edge! The behaviour is not verified and tested for these settings.</div>
+<h2> <span class="mw-headline" id="Setting_Connection_Priorities">Setting Connection Priorities</span></h2>
+<p>Since version 0.9.6 you can also let vehicles passing a connection between two edges wait for another stream. Let's take another look at "Network with explicit edge-2-edge connections" above. Here, all right-moving vehicles may drive. The following definition within the connections file lets vehicles on vertical edges moving right wait for those which move straight on horizontal edges:
+</p>
+<pre class="xml">
+&lt;connections&gt;
+
+   &lt;!-- The next four connection definitions are same as in 
+        &quot;Network with explicit edge-2-edge connections&quot; --&gt;
+   &lt;connection from=&quot;1si&quot; to=&quot;3o&quot;/&gt;
+   &lt;connection from=&quot;1si&quot; to=&quot;2o&quot;/&gt;
+
+   &lt;connection from=&quot;2si&quot; to=&quot;4o&quot;/&gt;
+   &lt;connection from=&quot;2si&quot; to=&quot;1o&quot;/&gt;
+
+   &lt;!-- now, let's prohibit the vertical connections by the horizontal --&gt;
+   &lt;!-- prohibit moving right from top to left by straight from right to left --&gt;
+   &lt;prohibition prohibitor=&quot;2si-&gt;1o&quot; prohibited=&quot;4si-&gt;1o&quot;/&gt;
+   &lt;!-- prohibit moving straight from top to bottom by straight from right to left --&gt;
+   &lt;prohibition prohibitor=&quot;2si-&gt;1o&quot; prohibited=&quot;4si-&gt;3o&quot;/&gt;
+   &lt;!-- prohibit moving left from top to right by straight from right to left --&gt;
+   &lt;prohibition prohibitor=&quot;2si-&gt;1o&quot; prohibited=&quot;4si-&gt;2o&quot;/&gt;
+
+   &lt;!-- prohibit moving right from bottom to right by straight from left to right --&gt;
+   &lt;prohibition prohibitor=&quot;1si-&gt;2o&quot; prohibited=&quot;3si-&gt;2o&quot;/&gt;
+   &lt;!-- prohibit moving straight from bottom to top by straight from left to right --&gt;
+   &lt;prohibition prohibitor=&quot;1si-&gt;2o&quot; prohibited=&quot;3si-&gt;4o&quot;/&gt;
+   &lt;!-- prohibit moving left from bottom to right by straight from left to right --&gt;
+   &lt;prohibition prohibitor=&quot;1si-&gt;2o&quot; prohibited=&quot;3si-&gt;1o&quot;/&gt;
+
+&lt;/connections&gt;
+</pre>
+<p>As one may see, it was necessary to prohibit all connections from a vertical edge by the counter-clockwise straight connection on a horizontal edge because otherwise the vehicles on the horizontal edge want to wait due to right-before-left - rule. The network looks like this:
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a href="../images/Cross3l_prohibitions.gif" class="image"><img alt="" src="../images/Cross3l_prohibitions.gif" width="200" height="200" class="thumbimage" srcset="/w/images/thumb/5/58/Cross3l_prohibitions.gif/300px-Cross3l_prohibitions.gif 1.5x, /w/images/thumb/5/58/Cross3l_prohibitions.gif/400px-Cross3l_prohibitions.gif 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="../images/Cross3l_prohibitions.gif" class="internal" title="Enlarge"><img src="../images//magnify-clip.png" width="15" height="11" alt="" /></a></div>Network with explicite prohibitions</div></div></div></div>
+<p>The syntax of a prohibition-tag is: <span class="inlxml">&lt;prohibition prohibitor="<i>&lt;PROHIBITING_FROM_EDGE_ID&gt;</i>-&gt;<i>&lt;PROHIBITING_TO_EDGE_ID&gt;</i>" prohibited="<i>&lt;PROHIBITED_FROM_EDGE_ID&gt;</i>-&gt;<i>&lt;PROHIBITED_TO_EDGE_ID&gt;</i>"/&gt;</span>. This means we define two connections (edge-to-edge), the prohibiting one (prohibitor) and the prohibited (prohibited). Each connection is defined by a from-edge and a to-edge, divided by "-&gt;".
+</p>
+<h2> <span class="mw-headline" id="Custom_shapes_for_internal_lanes.2C_crossings_and_walkingareas">Custom shapes for internal lanes, crossings and walkingareas </span></h2>
+<p>Edges of type <i>internal</i>, <i>crossing</i> and <i>walkingarea</i> define the connectivity across an intersection.
+Their shape can be declared by the user as follows:
+</p>
+<pre class="xml">
+&lt;connections&gt;
+   &lt;customShape id=&quot;:C_9_1&quot; shape=&quot;88.65,95.05 100.00,80.00 111.35,95.05&quot;/&gt;
+&lt;/connections&gt;
+</pre>
+<p><i>id</i> is the full lane id as retrieved by the GUI when right-clicking on the lane. To enable clicking on the lanes, the <a href="../SUMO-GUI.html#Changing_the_appearance.2Fvisualisation_of_the_simulation" title="SUMO-GUI">gui option</a> <i>draw junction shape</i> must be disabled. <i>shape</i> is a space-separate list of coordinate tuples. If <span class="inlxml">shape=""</span> the automatically generated shape will be used instead.
+</p>
+<h1> <span class="mw-headline" id="Traffic_Light_Program_Definition"> Traffic Light Program Definition </span></h1>
+<p>Since version 0.13.1 you can load traffic light definitions using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--tllogic-files</span>. You can easily get examples by loading a <i>sumo.net.xml</i> in <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> and using option <span style="color: #111144; font-weight: bold; white-space: pre;">--plain-output-prefix</span>. 
+</p>
+<div style="background: #ffc0a0; padding: .5em; border: 1px dashed #440000; margin-right:10px; margin-left:10px;"><b>Missing:</b><br />Format Specification and Example</div>
+<h1> <span class="mw-headline" id="Pedestrian_Crossings"> Pedestrian Crossings </span></h1>
+<p>When building a network for <a href="../Simulation/Pedestrians.html" title="Simulation/Pedestrians">pedestrian simulation</a>, pedestrian crossings at intersections can be specified explicitly. This is done using <span class="inlxml">crossing</span> elements within a <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Connection_Descriptions" title="Networks/Building Networks from own XML-descriptions"><i>connection-file</i></a>. 
+</p>
+<pre> &lt;crossing node="C" edges="edge1 edge2" priority="true"/&gt;
+
+</pre>
+<p>The attributes are described in the following.
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>node</b>
+</td>
+<td> id (string)
+</td>
+<td> The name of the node at which this crossing is located
+</td></tr>
+<tr>
+<td class="inlxml"> <b>edges</b>
+</td>
+<td> ids (list of strings)
+</td>
+<td> The (road) edges which are crossed
+</td></tr>
+<tr>
+<td class="inlxml"> priority
+</td>
+<td> bool
+</td>
+<td> Whether the pedestrians have priority over the vehicles (automatically set to true at tls-controlled intersections).
+</td></tr></table>
+<p>Pedestrians may only cross the street at a crossing. Crossings may have priority which means, pedestrians are free to walk without considerations for vehicular traffic. This can be used to model the behavior at controlled intersections and at marked pedestrian crossings (at least for some countries such as Germany). At uncontrolled intersections pedestrians may only cross when there is a suitable gap in road traffic.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 562/1000000
+Preprocessor generated node count: 1490/1000000
+Post‐expand include size: 7084/2097152 bytes
+Template argument size: 3759/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:195-0!*!0!!en!2!* and timestamp 20150330215953 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 23 March 2015, at 10:50.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

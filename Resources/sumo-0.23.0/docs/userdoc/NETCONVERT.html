@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>NETCONVERT - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="Installing.html">Installing SUMO</a></li>
+  <li><a href="Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="Simulation/Output.html">Simulation output</a></li>
+  <li><a href="TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="Models/Emissions.html">Emissions</a></li>
+  <li><a href="Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Other/Glossary.html">Glossary</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+  <li><a href="Tools/Main.html">Additional Tools</a></li>
+  <li><a href="Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="SUMO.html">SUMO</a></li>
+   <li><a href="SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="DFROUTER.html">DFROUTER</a></li>
+   <li><a href="MAROUTER.html">MAROUTER</a></li>
+   <li><a href="POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">NETCONVERT</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.971292 from <a href="http://sumo.dlr.de/wiki/NETCONVERT">the wiki page for NETCONVERT</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#From_30.000_feet"><span class="tocnumber">1</span> <span class="toctext">From 30.000 feet</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Usage_Description"><span class="tocnumber">2</span> <span class="toctext">Usage Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Supported_Formats"><span class="tocnumber">2.1</span> <span class="toctext">Supported Formats</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Import"><span class="tocnumber">2.1.1</span> <span class="toctext">Import</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Export"><span class="tocnumber">2.1.2</span> <span class="toctext">Export</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Options"><span class="tocnumber">2.2</span> <span class="toctext">Options</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Configuration"><span class="tocnumber">2.2.1</span> <span class="toctext">Configuration</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Input"><span class="tocnumber">2.2.2</span> <span class="toctext">Input</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Output"><span class="tocnumber">2.2.3</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Projection"><span class="tocnumber">2.2.4</span> <span class="toctext">Projection</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Tls_Building"><span class="tocnumber">2.2.5</span> <span class="toctext">Tls Building</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Ramp_Guessing"><span class="tocnumber">2.2.6</span> <span class="toctext">Ramp Guessing</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Edge_Removal"><span class="tocnumber">2.2.7</span> <span class="toctext">Edge Removal</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Unregulated_Nodes"><span class="tocnumber">2.2.8</span> <span class="toctext">Unregulated Nodes</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Processing"><span class="tocnumber">2.2.9</span> <span class="toctext">Processing</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Building_Defaults"><span class="tocnumber">2.2.10</span> <span class="toctext">Building Defaults</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Report"><span class="tocnumber">2.2.11</span> <span class="toctext">Report</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Random_Number"><span class="tocnumber">2.2.12</span> <span class="toctext">Random Number</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Warnings_during_Import"><span class="tocnumber">3</span> <span class="toctext">Warnings during Import</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="From_30.000_feet">From 30.000 feet</span></h1>
+<p><b>NETCONVERT</b> imports digital road networks from different sources and generates road networks that can be used by other tools from the package.
+</p>
+<dl><dt>
+</dt><dd><b>Purpose:</b> Road networks import and conversion
+</dd><dd><b>System:</b> portable (Linux/Windows is tested); runs on command line
+</dd><dd><b>Input (mandatory):</b> Definition of a road network
+</dd><dd><b>Output:</b> A generated SUMO-road network; optionally also other outputs
+</dd><dd><b>Programming Language:</b> C++
+</dd></dl>
+<h1> <span class="mw-headline" id="Usage_Description">Usage Description</span></h1>
+<p><strong class="selflink">NETCONVERT</strong> is a command line application. It assumes at least one parameter - the combination of the name of the file type to import as parameter name and the name of the file to import as parameter value. So, for importing a network from OpenStreetMap one could simply write:
+</p>
+<pre>netconvert --osm my_osm_net.xml
+</pre>
+<p>and for importing a VISUM-network:
+</p>
+<pre>netconvert --visum my_visum_net.net
+</pre>
+<p>In both cases, as no output name is given, the SUMO network generated from the imported data is written into the file "net.net.xml". To write the network into a different file, use the option <span style="color: #111144; font-weight: bold; white-space: pre;">-o <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>. If you want to save the imported VISUM-network into a file named "my_sumo_net.net.xml", write:
+</p>
+<pre>netconvert --visum my_visum_net.net -o my_sumo_net.net.xml
+</pre>
+<p>Many further parameter steer how the network is imported and how the resulting SUMO-network is generated.
+</p>
+<h2> <span class="mw-headline" id="Supported_Formats">Supported Formats</span></h2>
+<h3> <span class="mw-headline" id="Import">Import</span></h3>
+<p><strong class="selflink">NETCONVERT</strong> is able to import road networks from the following formats:
+</p>
+<ul><li> <a href="Networks/Building_Networks_from_own_XML-descriptions.html" title="Networks/Building Networks from own XML-descriptions">"SUMO native" XML descriptions</a> (*.edg.xml, *.nod.xml, *.con.xml, *.tll.xml)
+</li><li> <a href="OpenStreetMap_file.html" title="OpenStreetMap file">OpenStreetMap</a> (*.osm.xml), including shapes (see <a href="Networks/Import/OpenStreetMap.html" title="Networks/Import/OpenStreetMap">OpenStreetMap import</a>)
+</li><li> <a href="Networks/Import/VISUM.html" title="Networks/Import/VISUM">VISUM</a>, including shapes and demands
+</li><li> <a href="Networks/Import/Vissim.html" title="Networks/Import/Vissim">Vissim</a>, including demands
+</li><li> <a href="Networks/Import/OpenDRIVE.html" title="Networks/Import/OpenDRIVE">OpenDRIVE</a>
+</li><li> <a href="Networks/Import/MATsim.html" title="Networks/Import/MATsim">MATsim</a>
+</li><li> <a href="Networks/Import/SUMO_Road_Networks.html" title="Networks/Import/SUMO Road Networks">SUMO</a> (*.net.xml)
+</li><li> <a href="Networks/Import/ArcView.html" title="Networks/Import/ArcView">Shapefiles</a> (.shp, .shx, .dbf), e.g. ArcView and newer Tiger networks
+</li><li> <a href="Networks/Import/RoboCup.html" title="Networks/Import/RoboCup">Robocup Rescue League</a>, including shapes
+</li><li> <a href="Networks/Import/DlrNavteq.html" title="Networks/Import/DlrNavteq">a DLR internal variant of Navteq's GDF</a> (Elmar format)
+</li></ul>
+<h3> <span class="mw-headline" id="Export">Export</span></h3>
+<p><strong class="selflink">NETCONVERT</strong> is able to export road networks in the following formats:
+</p>
+<ul><li> <a href="Networks/Export.html#SUMO" title="Networks/Export">SUMO</a> (*.net.xml)
+</li><li> <a href="Networks/Export.html#Plain" title="Networks/Export">"SUMO native" XML descriptions</a> (*.edg.xml, *.nod.xml, *.con.xml, *.tll.xml)
+</li><li> <a href="Networks/Export.html#OpenDRIVE" title="Networks/Export">OpenDRIVE</a>
+</li><li> <a href="Networks/Export.html#MATsim" title="Networks/Export">MATsim</a>
+</li><li> <a href="Networks/Export.html#DlrNavteq" title="Networks/Export">a DLR internal variant of Navteq's GDF</a> (Elmar format)
+</li><li> <a href="Networks/Export.html#Amitran" title="Networks/Export">a basic network view developed in the Amitran project</a>
+</li></ul>
+<h2> <span class="mw-headline" id="Options">Options</span></h2>
+<p>You may use a XML schema definition file for setting up a NETCONVERT configuration: <a rel="nofollow" class="external text" href="http://sumo-sim.org/xsd/netconvertConfiguration.xsd">netconvertConfiguration.xsd</a>.
+</p>
+<h3> <span class="mw-headline" id="Configuration">Configuration</span></h3>
+<p>All applications of the <b>SUMO</b>-suite handle configuration options the same way. These options are discussed at <a href="Basics/Using_the_Command_Line_Applications.html#Configuration_Files" title="Basics/Using the Command Line Applications">Basics/Using the Command Line Applications#Configuration Files</a>.
+</p>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-c <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--configuration-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Loads the named config on startup
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-configuration <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Saves current configuration into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-template <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Saves a configuration template (empty) into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-schema <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Saves the configuration schema into FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--save-commented <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Adds comments to saved template, configuration, or schema; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Input">Input</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-s <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--sumo-net-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read SUMO-net from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-n <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--node-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read XML-node defs from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-e <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--edge-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read XML-edge defs from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-x <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--connection-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read XML-connection defs from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-i <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--tllogic-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read XML-traffic light defs from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-t <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--type-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read XML-type defs from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--shapefile-prefix <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read shapefiles (ArcView, Tiger, ...) from files starting with 'FILE'
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--dlr-navteq-prefix <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read converted Navteq GDF data (unsplitted Elmar-network) from path 'FILE'
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--osm-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read OSM-network from path 'FILE(s)'
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--opendrive-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read OpenDRIVE-network from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read VISUM-net from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vissim-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read VISSIM-net from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--robocup-dir <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read RoboCup-net from DIR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--matsim-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read MATsim-net from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--itsumo-files <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read ITSUMO-net from FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--heightmap.shapefiles <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read heightmap from ArcGIS shapefile
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--heightmap.geotiff <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read heightmap from GeoTIFF
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Output">Output</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--output-prefix <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prefix which is applied to all output files. The special string 'TIME' is replaced by the current time.
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-o <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--output-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The generated net will be written to FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--plain-output-prefix <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prefix of files to write plain xml nodes, edges and connections to
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes information about joined junctions to FILE (can be loaded as additional node-file to reproduce joins
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--amitran-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The generated net will be written to FILE using Amitran format
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--matsim-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The generated net will be written to FILE using MATsim format
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--opendrive-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The generated net will be written to FILE using OpenDRIVE format
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--dlr-navteq-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The generated net will be written to dlr-navteq files with the given PREFIX
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--output.street-names <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Street names will be included in the output (if available); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--output.original-names <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes original names, if given, as parameter; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--street-sign-output <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes street signs as POIs to FILE
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Projection">Projection</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--simple-projection <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Uses a simple method for projection; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--proj.scale <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Number of places to shift decimal point to right in geo-coordinates; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--proj.utm <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Determine the UTM zone (for a universal transversal mercator projection based on the WGS84 ellipsoid); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--proj.dhdn <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Determine the DHDN zone (for a transversal mercator projection based on the bessel ellipsoid, "Gauss-Krueger"); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--proj <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Uses STR as proj.4 definition for projection; <i>default: <b>!</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--proj.inverse <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Inverses projection; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--proj.dhdnutm <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Convert from Gauss-Krueger to UTM; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--proj.plain-geo <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Write geo coordinates in plain-xml; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Tls_Building">Tls Building</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.discard-loaded <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Does not instatiate traffic lights loaded from other formats than XML; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.discard-simple <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Does not instatiate traffic lights at geometry-like nodes loaded from other formats than XML; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.set <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Interprets STR as list of junctions to be controlled by TLS
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.unset <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Interprets STR as list of junctions to be not controlled by TLS
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.guess <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Turns on TLS guessing; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.taz-nodes <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Sets district nodes as tls-controlled; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls-guess.joining <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Includes node clusters into guess; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.join <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Tries to cluster tls-controlled nodes; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.green.time <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Use INT as green phase duration; <i>default: <b>31</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-D <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.yellow.min-decel <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Defines smallest vehicle deceleration; <i>default: <b>3</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.yellow.patch-small <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Given yellow times are patched even if being too short; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.yellow.time <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Set INT as fixed time for yellow phase durations
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.half-offset <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> TLSs in STR will be shifted by half-phase
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.quarter-offset <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> TLSs in STR will be shifted by quarter-phase
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.default-type <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> TLSs with unspecified type will use STR as their algorithm; <i>default: <b>static</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Ramp_Guessing">Ramp Guessing</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ramps.guess <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Enable ramp-guessing; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ramps.max-ramp-speed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Treat edges with speed &gt; FLOAT as no ramps; <i>default: <b>-1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ramps.min-highway-speed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Treat edges with speed &lt; FLOAT as no highways; <i>default: <b>21.9444</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ramps.ramp-length <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Use FLOAT as ramp-length; <i>default: <b>100</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ramps.set <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Tries to handle the given edges as ramps
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ramps.no-split <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Avoids edge splitting; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Edge_Removal">Edge Removal</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-edges.min-speed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Only keep edges with speed in meters/second &gt; FLOAT
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--remove-edges.explicit <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Remove edges in STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-edges.explicit <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Only keep edges in STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-edges.input-file <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Only keep edges in FILE
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-edges.postload <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Remove edges after joining; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-edges.in-boundary <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Only keep edges which are located within the given boundary (given either as CARTESIAN corner coordinates &lt;xmin,ymin,xmax,ymax&gt; or as polygon &lt;x0,y0,x1,y1,...&gt;)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-edges.in-geo-boundary <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Only keep edges which are located within the given boundary (given either as GEODETIC corner coordinates &lt;lon-min,lat-min,lon-max,lat-max&gt; or as polygon &lt;lon0,lat0,lon1,lat1,...&gt;)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-edges.by-vclass <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Only keep edges which allow one of the vclasss in STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--remove-edges.by-vclass <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Remove edges which allow only vclasses from STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-edges.by-type <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Only keep edges where type is in STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--remove-edges.by-type <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Remove edges where type is in STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--remove-edges.isolated <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Removes isolated edges; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Unregulated_Nodes">Unregulated Nodes</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-nodes-unregulated <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> All nodes will be unregulated; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-nodes-unregulated.explicit <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Do not regulate nodes in STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--keep-nodes-unregulated.district-nodes <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Do not regulate district nodes; <i>default: <b>false</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Processing">Processing</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-errors <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Continue on broken input; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-errors.connections <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Continue on invalid connections; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--show-errors.connections-first-try <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Show errors in connections at parsing; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-errors.edge-type <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Continue on unknown edge types; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--lanes-from-capacity.norm <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The factor for flow to no. lanes conversion; <i>default: <b>1800</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--speed-in-kmh <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> vmax is parsed as given in km/h (some); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--plain.extend-edge-shape <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> If edge shapes do not end at the node positions, extend them; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--matsim.keep-length <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The edge lengths given in the MATSIM-file will be kept; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--matsim.lanes-from-capacity <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The lane number will be computed from the capacity; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--shapefile.street-id <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read edge ids from column STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--shapefile.from-id <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read from-node ids from column STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--shapefile.to-id <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read to-node ids from column STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--shapefile.type-id <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Read type ids from column STR
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--shapefile.use-defaults-on-failure <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Uses edge type defaults on problems; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--shapefile.all-bidirectional <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Insert edges in both directions; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--shapefile.guess-projection <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Guess the proper projection; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vissim.join-distance <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Structure join offset; <i>default: <b>5</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vissim.default-speed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Use FLOAT as default speed; <i>default: <b>50</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vissim.speed-norm <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Factor for edge velocity; <i>default: <b>1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--vissim.report-unset-speeds <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes lanes without an explicit speed set; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum.use-type-priority <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Uses priorities from types; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum.use-type-laneno <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Uses lane numbers from types; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum.use-type-speed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Uses speeds from types; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum.connector-speeds <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Sets connector speed; <i>default: <b>100</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum.connectors-lane-number <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Sets connector lane number; <i>default: <b>3</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum.no-connectors <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Excludes connectors; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum.recompute-lane-number <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Computes the number of lanes from the edges' capacities; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--visum.verbose-warnings <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prints all warnings, some of which are due to VISUM misbehaviour; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--osm.skip-duplicates-check <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Skips the check for duplicate nodes and edges; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--osm.railway.oneway-default <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Imports railway edges as one-way by default; <i>default: <b>true</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--osm.elevation <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Imports elevation data; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--opendrive.import-all-lanes <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Imports all lane types; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--opendrive.ignore-widths <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Whether lane widths shall be ignored.; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-internal-links <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Omits internal links; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--dismiss-vclasses <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Removes vehicle class restrictions from imported edges; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-turnarounds <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Disables building turnarounds; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-turnarounds.tls <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Disables building turnarounds at tls-controlled junctions; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-left-connections <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Disables building connections to left; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.split <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Splits edges across geometry nodes; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-R <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.remove <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Replace nodes which only define edge geometry by geometry points (joins edges); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.max-segment-length <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> splits geometry to restrict segment length; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.min-dist <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> reduces too similar geometry points
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.max-angle <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Warn about edge geometries with an angle above DEGREES in successive segments; <i>default: <b>99</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.min-radius <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Warn about edge geometries with a turning radius less than METERS at the start or end; <i>default: <b>9</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.min-radius.fix <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Straighten edge geometries to avoid turning radii less than geometry.min-radius; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.junction-mismatch-threshold <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Warn if the junction shape is to far away from the original node position; <i>default: <b>20</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--offset.disable-normalization <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Turn off normalizing node positions; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--offset.x <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Adds FLOAT to net x-positions; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--offset.y <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Adds FLOAT to net y-positions; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--flip-y-axis <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Flips the y-coordinate along zero; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--roundabouts.guess <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Enable roundabout-guessing; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--lefthand <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Assumes left-hand traffic on the network; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Joins junctions that are close to each other (recommended for OSM import); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join-dist <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Determines the maximal distance for joining junctions (defaults to 10); <i>default: <b>10</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join-exclude <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Interprets STR as list of junctions to exclude from joining
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--speed.offset <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Modifies all edge speeds by adding FLOAT; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--speed.factor <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Modifies all edge speeds by multiplying by FLOAT; <i>default: <b>1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.corner-detail <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Generate INT intermediate points to smooth out intersection corners; <i>default: <b>0</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--check-lane-foes.roundabout <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Allow driving onto a multi-lane road if there are foes on other lanes (at roundabouts); <i>default: <b>true</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--check-lane-foes.all <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Allow driving onto a multi-lane road if there are foes on other lanes (everywhere); <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--sidewalks.guess <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Guess pedestrian sidewalks based on edge speed; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--sidewalks.guess.max-speed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Add sidewalks for edges with a speed equal or below the given limit; <i>default: <b>13.89</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--sidewalks.guess.min-speed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Add sidewalks for edges with a speed above the given limit; <i>default: <b>5.8</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--sidewalks.guess.from-permissions <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Add sidewalks for edges that allow pedestrians on any of their lanes regardless of speed; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--crossings.guess <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Guess pedestrian crossings based on the presence of sidewalks; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.join-dist <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Determines the maximal distance for joining traffic lights (defaults to 20); <i>default: <b>20</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.guess-signals <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Interprets tls nodes surrounding an intersection as signal positions for a larger TLS. This is typical pattern for OSM-derived networks; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.guess-signals.dist <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Distance for interpreting nodes as signal locations; <i>default: <b>25</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Building_Defaults">Building Defaults</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-L <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--default.lanenumber <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The default number of lanes in an edge; <i>default: <b>1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-S <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--default.speed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The default speed on an edge (in m/s); <i>default: <b>13.9</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-P <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--default.priority <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The default priority of an edge; <i>default: <b>-1</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--default.sidewalk-width <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> The default width of added sidewalks; <i>default: <b>2</b></i>
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Report">Report</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-v <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--verbose <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Switches to verbose output; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--print-options <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prints option values before processing; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-? <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--help <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prints this screen; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-V <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--version <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Prints the current version; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-X <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--xml-validation <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Set schema validation scheme of XML inputs ("never", "auto" or "always"); <i>default: <b>auto</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--xml-validation.net <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Set schema validation scheme of SUMO network inputs ("never", "auto" or "always"); <i>default: <b>never</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-W <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--no-warnings <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Disables output of warnings; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">-l <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span><br /> <span style="color: #111144; font-weight: bold; white-space: pre;">--log <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes all messages to FILE (implies verbose)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--message-log <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes all non-error messages to FILE (implies verbose)
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--error-log <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Writes all warnings and errors to FILE
+</td></tr>
+</table>
+<h3> <span class="mw-headline" id="Random_Number">Random Number</span></h3>
+<table class="wikitable" style="width:90%">
+
+<tr>
+<th style="background:#ddffdd; vertical-align:top; width:350px"> Option
+</th>
+<th style="background:#ddffdd; vertical-align:top"> Description
+</th></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--random <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;BOOL&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Initialises the random number generator with the current system time; <i>default: <b>false</b></i>
+</td></tr>
+<tr>
+<td style="vertical-align:top"> <span style="color: #111144; font-weight: bold; white-space: pre;">--seed <a href="Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>
+</td>
+<td style="vertical-align:top"> Initialises the random number generator with the given value; <i>default: <b>23423</b></i>
+</td></tr>
+</table>
+<h1> <span class="mw-headline" id="Warnings_during_Import"> Warnings during Import </span></h1>
+<p>Several types of warnings and errors with different levels of severity may be issued during network building. 
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Message
+</th>
+<th style="background:#ddddff;"> Explanation
+</th>
+<th style="background:#ddddff;"> Recommended Action
+</th></tr>
+<tr>
+<td> Error: Could not set connection ...
+</td>
+<td> A connection definition could not be applied because the lanes do not exist or do not share a common junction
+</td>
+<td> Check your input files
+</td></tr>
+<tr>
+<td> Warning: Removed a road without junctions ...
+</td>
+<td> Isolated road is removed from the network
+</td>
+<td>
+</td></tr>
+<tr>
+<td> Warning: Not joining junctions ... because the cluster is too complex
+</td>
+<td> The heuristic for option <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join</span> cannot handle a complex junction
+</td>
+<td> Inspect the mentioned nodes and provide a <a href="Networks/Building_Networks_from_own_XML-descriptions.html#Joining_Nodes" title="Networks/Building Networks from own XML-descriptions">join-description</a> manually.
+</td></tr>
+<tr>
+<td> Warning: Found angle of ... degrees
+</td>
+<td> An edge has an unusually sharp turn somewhere in the middle
+</td>
+<td> Inspect the mentioned edge for correctness. Warning may be suppressed using option <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.max-angle</span>.
+</td></tr>
+<tr>
+<td> Warning: Warning: Found sharp turn with radius ...
+</td>
+<td> An edge has an unusually sharp turn where entering or leaving an intersection
+</td>
+<td> Inspect the mentioned edge for correctness. Problems may be corrected automatically by setting option <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.min-radius.fix</span>. Warning may be suppressed by setting option <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.min-radius</span>.
+</td></tr>
+<tr>
+<td> Warning: For node '...': could not compute shape.
+</td>
+<td> The shape of the junction area could not be computed
+</td>
+<td> Inspect the mentioned node and maybe <a href="Networks/Building_Networks_from_own_XML-descriptions.html#Node_Descriptions" title="Networks/Building Networks from own XML-descriptions">provide a custom node shape</a>.
+</td></tr>
+<tr>
+<td> Warning: Junction shape for '...' has distance ... to its given position.
+</td>
+<td> The shape and location of the junction area is suspicious.
+</td>
+<td> Inspect the mentioned node and maybe <a href="Networks/Building_Networks_from_own_XML-descriptions.html#Node_Descriptions" title="Networks/Building Networks from own XML-descriptions">provide a custom node shape</a>. Warning may be suppressed by setting option <span style="color: #111144; font-weight: bold; white-space: pre;">--geometry.junction-mismatch-threshold</span>.
+</td></tr>
+<tr>
+<td> Warning: The traffic light '...' does not control any links; it will not be build.
+</td>
+<td> The traffic light at the given node sits at a junction without connections or the node was removed altogether.
+</td>
+<td> Inspect the mentioned node if it still exists. Can usually be ignored.
+</td></tr>
+<tr>
+<td> Warning: Splitting vector close to end ...
+</td>
+<td> A geometry computation somewhere deep in the code is suspicious. Often related to computation of internal lanes at intersections with bad shape.
+</td>
+<td> Ignore for lack of sufficient information (or try to narrow down the problem by building smaller sections of the network).
+</td></tr>
+</table>
+<hr />
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 1552/1000000
+Preprocessor generated node count: 5264/1000000
+Post‐expand include size: 36148/2097152 bytes
+Template argument size: 12906/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:78-0!*!0!!en!*!* and timestamp 20150331081422 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 31 March 2015, at 10:14.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

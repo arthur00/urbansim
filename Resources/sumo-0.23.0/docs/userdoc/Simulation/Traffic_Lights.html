@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Simulation/Traffic_Lights - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Simulation/Traffic Lights</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.031458 from <a href="http://sumo.dlr.de/wiki/Simulation/Traffic_Lights">the wiki page for Simulation/Traffic_Lights</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Normally, <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> and <a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a> generate traffic lights and programs for junctions during the computation of the networks. Still, these computed programs differ quite often from those found in reality. To feed the simulation with real traffic light programs, it is possible to run <a href="../SUMO.html" title="SUMO">SUMO</a>/<a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> with additional programs definitions. Also, <a href="../SUMO.html" title="SUMO">SUMO</a>/<a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> allow to load definition which describe when and how a set of traffic lights can switch from one program to another. Both will be discussed in the following subchapters.
+</p><p><br />
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Loading_new_TLS-Programs"><span class="tocnumber">1</span> <span class="toctext">Loading new TLS-Programs</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Additional_Parameters"><span class="tocnumber">1.1</span> <span class="toctext">Additional Parameters</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Tools_for_TLS_programs_import"><span class="tocnumber">1.2</span> <span class="toctext">Tools for TLS programs import</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Example"><span class="tocnumber">1.2.1</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Comments"><span class="tocnumber">1.2.2</span> <span class="toctext">Comments</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Defining_Program_switch_Times_and_Procedure"><span class="tocnumber">2</span> <span class="toctext">Defining Program switch Times and Procedure</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Evaluation_of_Traffic_Lights_Performance"><span class="tocnumber">3</span> <span class="toctext">Evaluation of Traffic Lights Performance</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Tools_for_automatic_Detector_Generation"><span class="tocnumber">3.1</span> <span class="toctext">Tools for automatic Detector Generation</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Loading_new_TLS-Programs">Loading new TLS-Programs</span></h1>
+<p>You can load new definitions for traffic lights as a part of an <a href="../SUMO.html#Format_of_additional_files" title="SUMO"><i>additional-file</i></a>. When loaded, the last program will be used. Switching between programs is possible via WAUTs and/or TraCI. Also, one can switch between them using the GUI context menu. A definition of a traffic light program within an <a href="../SUMO.html#Format_of_additional_files" title="SUMO"><i>additional-file</i></a> looks like this:
+</p>
+<pre class="xml">
+&lt;additional&gt;
+   &lt;tlLogic id=&quot;0&quot; programID=&quot;my_program&quot; offset=&quot;0&quot; type=&quot;static&quot;&gt;
+      &lt;phase duration=&quot;31&quot; state=&quot;GGggrrrrGGggrrrr&quot;/&gt;
+      &lt;phase duration=&quot;5&quot;  state=&quot;yyggrrrryyggrrrr&quot;/&gt;
+      &lt;phase duration=&quot;6&quot;  state=&quot;rrGGrrrrrrGGrrrr&quot;/&gt;
+      &lt;phase duration=&quot;5&quot;  state=&quot;rryyrrrrrryyrrrr&quot;/&gt;
+      &lt;phase duration=&quot;31&quot; state=&quot;rrrrGGggrrrrGGgg&quot;/&gt;
+      &lt;phase duration=&quot;5&quot;  state=&quot;rrrryyggrrrryygg&quot;/&gt;
+      &lt;phase duration=&quot;6&quot;  state=&quot;rrrrrrGGrrrrrrGG&quot;/&gt;
+      &lt;phase duration=&quot;5&quot;  state=&quot;rrrrrryyrrrrrryy&quot;/&gt;
+   &lt;/tlLogic&gt;
+&lt;/additional&gt;
+</pre>
+<p>Assuming the above lines are put in a file called <i>tls.add.xml</i> it can be loaded in <a href="../SUMO.html" title="SUMO">SUMO</a>/<a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> like this
+</p>
+<pre> sumo -a tls.add.xml ...&lt;other options for network and routes&gt;
+</pre>
+<p>The following attributes/elements are used within the tlLogic element:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> id (string)
+</td>
+<td> The id of the traffic light. This must be an existing traffic light id in the .net.xml file. Typically the id for a traffic light is identical with the junction id. The name may be obtained by right-clicking the red/green bars in front of a controlled intersection.
+</td></tr>
+<tr>
+<td class="inlxml"> <b>type</b>
+</td>
+<td> enum (static, actuated)
+</td>
+<td> The type of the traffic light (fixed phase durations, phase prolongation based time gaps between vehicles)
+</td></tr>
+<tr>
+<td class="inlxml"> <b>programID</b>
+</td>
+<td> id (string)
+</td>
+<td> The id of the traffic light program; This must be a new program name for the traffic light id. Please note that "off" is reserved, see below.
+</td></tr>
+<tr>
+<td class="inlxml"> <b>offset</b>
+</td>
+<td> int
+</td>
+<td> The initial time offset of the program
+</td></tr>
+</table>
+<p>Each phase is defined using the following attributes:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>duration</b>
+</td>
+<td> time (int)
+</td>
+<td> The duration of the phase
+</td></tr>
+<tr>
+<td class="inlxml"> <b>state</b>
+</td>
+<td> list of signal states
+</td>
+<td> The traffic light states for this phase, see below
+</td></tr>
+<tr>
+<td class="inlxml"> minDur
+</td>
+<td> time (int)
+</td>
+<td> The minimum duration of the phase when using type <b>actuated</b>. Optional, defaults to duration.
+</td></tr>
+<tr>
+<td class="inlxml"> maxDur
+</td>
+<td> time (int)
+</td>
+<td> The maximum duration of the phase when using type <b>actuated</b>. Optional, defaults to duration.
+</td></tr>
+</table>
+<p>Each character within a phases' state describes the state of one signal of the traffic light. Please note, that a single lane may contain several signals - for example one for vehicles turning left, one for vehicles which move straight. This means that a signal does not control lanes, but links - each connecting a lane which is incoming into a junction and one which is outgoing from this junction. In SUMO, a one-to-n dependency between signals and links is implemented, this means each signal may control more than a single link - though networks generated by <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> or <a href="../NETGENERATE.html" title="NETGENERATE">NETGENERATE</a> usually use one signal per link. Please note also, that a traffic light may control lanes incoming into different junctions. The information about which link is controlled by which traffic light signal may be obtained using the "show link tls index" option within <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a>'s visualisation settings or from the according <span class="inlxml">linkIndex@connection</span> attribute of the network.
+</p><p>The following signal colors are used:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Character
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> r
+</td>
+<td> 'red light' for a signal - vehicles must stop
+</td></tr>
+<tr>
+<td class="inlxml"> y
+</td>
+<td> 'amber (yellow) light' for a signal - vehicles will start to decelerate if far away from the junction, otherwise they pass
+</td></tr>
+<tr>
+<td class="inlxml"> g
+</td>
+<td> 'green light' for a signal, no priority - vehicles may pass the junction if no vehicle uses a higher priorised foe stream, otherwise they decelerate for letting it pass
+</td></tr>
+<tr>
+<td class="inlxml"> G
+</td>
+<td> 'green light' for a signal, priority - vehicles may pass the junction
+</td></tr>
+</table>
+<p>After having defined a tls program as above, it can be loaded as an <a href="../SUMO.html#Format_of_additional_files" title="SUMO"><i>additional-file</i></a>; of course, a single <a href="../SUMO.html#Format_of_additional_files" title="SUMO"><i>additional-file</i></a> may contain several programs. It is possible to load several programs for a single tls into the simulation. The program loaded last will be used (unless not defined differently using a WAUT description). All subkeys of the additional programs must differ if they describe the same tls.
+</p><p>It is also possible to load a program which switches the tls off by giving the <span class="inlxml">programID</span> the value "<span class="inlxml">off</span>". 
+</p>
+<pre class="xml">
+&lt;tlLogic id=&quot;0&quot; type=&quot;static&quot; programID=&quot;off&quot;/&gt;
+</pre>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />To get started you can copy the <b>tlLogic</b> elements for all traffic lights you wish to edit from a .net.xml file and put them into a new file. Then you only need to change the programID attribute and the program is ready to be modified and loaded</div>
+<h3> <span class="mw-headline" id="Additional_Parameters"> Additional Parameters </span></h3>
+<p>Actuated traffic lights require the usage of the <span class="inlxml">phase</span>-attributes <span class="inlxml">minDur</span> and <span class="inlxml">maxDur</span> to allow for dynamic changes in phase length. They also support some additional parameters. These may be given within the &lt;span <span class="inlxml">&lt;tlLogic&gt;</span>-Element as follows:
+</p>
+<pre class="xml">
+&lt;tlLogic id=&quot;0&quot; programID=&quot;my_program&quot; offset=&quot;0&quot; type=&quot;actuated&quot;&gt;
+   &lt;param key=&quot;max-gap&quot; value=&quot;3.1&quot;/&gt;
+   &lt;param key=&quot;detector-gap&quot; value=&quot;3.0&quot;/&gt;
+   &lt;param key=&quot;show-detectors&quot; value=&quot;false&quot;/&gt;
+   &lt;phase duration=&quot;31&quot; state=&quot;GGggrrrrGGggrrrr&quot;/&gt;
+   ...
+&lt;/tlLogic&gt;
+</pre>
+<p>The value of <i>max-gap</i> describes the maximum time gap between successive vehicle that will cause the current phase to be prolonged (within limits). <i>detector-gap</i> determines the time distance between the (automatially generated) detector and the stop line in seconds (at each lanes maximum speed). If <i>show-detectors</i> is set to <b>true</b>, the generated detectors are shown in <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a>.
+The examples values are the default values for these parameters.
+</p>
+<h2> <span class="mw-headline" id="Tools_for_TLS_programs_import">Tools for TLS programs import</span></h2>
+<p>Description from real-world traffic light systems do not arrive us in form of SUMO-traffic light descriptions normally. For an easier import than editing them by hand, a tool named "tls_csv2SUMO.py" exists which parses a csv-file which describes the program and builds an according SUMO-traffic light description. The tool can be found in <i><b>&lt;SUMO_HOME&gt;</b></i>/tools/tls. This tool requires the program definition and the SUMO-network it shall be converted to:
+</p>
+<pre>tls_csv2SUMO.py &lt;TLS_CSV&gt; &lt;NET&gt;
+</pre>
+<p>It prints the generated TLS definition on stdout (you can pipe it to a file).
+</p><p>The format of the CSV description is as following. At first, three header lines must be given, which name the tls (which is the id of the tlLogic in the network), the program's subkey, and the offset at which the program shall start in seconds - normally 0:
+</p>
+<pre class="csv">
+key;&lt;KEY&gt;
+subkey;&lt;SUBKEY&gt;
+offset;&lt;OFFSET&gt;
+</pre>
+<p>Then, it is defined which signal (number) in the program is responsible for which link. The link may be described either using the incoming edge only, or the incoming lane only, or also incorporating the outgoing edge/lane. This means the following lines are all valid:
+</p>
+<pre class="csv">
+link;&lt;LINK_NUMBER&gt;;&lt;FROM_EDGE&gt;;;0
+link;&lt;LINK_NUMBER&gt;;&lt;FROM_LANE&gt;;;0
+link;&lt;LINK_NUMBER&gt;;&lt;FROM_EDGE&gt;;&lt;TO_EDGE&gt;;0
+link;&lt;LINK_NUMBER&gt;;&lt;FROM_EDGE&gt;;&lt;TO_LANE&gt;;0
+link;&lt;LINK_NUMBER&gt;;&lt;FROM_LANE&gt;;&lt;TO_EDGE&gt;;0
+link;&lt;LINK_NUMBER&gt;;&lt;FROM_LANE&gt;;&lt;TO_LANE&gt;;0
+</pre>
+<p>It is also possible to assign more than one link to a single signal.
+</p><p>Then, the signals' states are given:
+</p>
+<pre class="csv">
+&lt;LINK_NUMBER&gt;;&lt;STATES&gt;
+</pre>
+<p>The states are encoded using the signal colors (please note that only lower-case letters are used, see below) described above, separated by ';'. An example signal phase definition (for signal 1) could be:
+</p>
+<pre class="csv">
+1;g;g;g;g;y;r;r;r;r;r
+</pre>
+<p>Please not that the number of states must be the same for all defined links.
+</p><p>Now, we only have to define the phase times:
+</p>
+<pre class="csv">
+time;&lt;TIMES&gt;
+</pre>
+<p>The times are given in seconds, again separated using ';'. An example could be:
+</p>
+<pre class="csv">
+time;18;33;3;6;3;3;9;15;90
+</pre>
+<p>A complete CSV-description could look like:
+</p>
+<pre class="csv">
+key;102
+subkey;utopia
+offset;0
+link;1;4643;;0
+link;1;3078;;0
+link;2;3074;;0
+link;2;-6494;;0
+1;g;g;y;r;r;r;r;r
+2;r;r;r;r;g;g;y;r
+3;r;r;r;r;g;y;y;r
+4;g;y;y;r;r;r;r;r
+min;21;3;3;2;20;9;3;2
+time;45;3;3;2;36;9;3;2
+max;78;3;3;2;62;9;3;2
+</pre>
+<h3> <span class="mw-headline" id="Example">Example</span></h3>
+<p>The example shows what is tested in <a rel="nofollow" class="external autonumber" href="http://sourceforge.net/apps/trac/sumo/browser/trunk/sumo/tests/tools/tls/csv2sumo/both_ok">[1]</a>. It is not a real-world program plan, only a demonstration for using the script.
+</p><p>We have a simple four-arms intersections which is controlled by traffic lights, see next figure.
+</p><p><b>Figure: example intersection</b>
+</p><p><a href="../images/Tls2csv_example_net.svg" class="image"><img alt="Tls2csv example net.svg" src="../images/Tls2csv_example_net.svg" width="400" height="221" srcset=" 1.5x, /w/images/thumb/c/c9/Tls2csv_example_net.svg/800px-Tls2csv_example_net.svg 2x" /></a>
+</p><p>Now, we define two different programs for this intersection. The first:
+</p>
+<pre>key;0
+subkey;own1
+offset;0
+link;1;4si;3o;0
+link;1;4si;1o;0
+link;1;3si;4o;0
+link;1;3si;2o;0
+link;2;4si;4o;0
+link;2;4si;2o;0
+link;2;3si;1o;0
+link;2;3si;3o;0
+link;3;1si;1o;0
+link;3;1si;4o;0
+link;3;2si;2o;0
+link;3;2si;3o;0
+link;4;1si;3o;0
+link;4;1si;2o;0
+link;4;2si;1o;0
+link;4;2si;4o;0
+1;g;y;r;r;r;r;r;r;r;r
+2;g;g;g;y;r;r;r;r;r;r
+3;r;r;r;r;r;g;y;r;r;r
+4;r;r;r;r;r;g;g;g;y;r
+min;10;3;5;3;3;10;3;5;3;3
+time;15;3;5;3;3;45;3;5;3;3
+max;30;3;15;3;3;60;3;15;3;3
+</pre>
+<p>This means, we have four streams: two for north/south (edges 3si and 4si) and two for east/west (edges 1si and 2si). Two, because we give green longer for the respective left-movers. The key is the ID of the traffic light ("0"), the subkey is the name of our program ("own1").
+</p><p>The second program looks like this:
+</p>
+<pre>key;0
+subkey;own2
+offset;0
+link;1;4si;3o;0
+link;1;4si;1o;0
+link;1;3si;4o;0
+link;1;3si;2o;0
+link;2;4si;4o;0
+link;2;4si;2o;0
+link;2;3si;1o;0
+link;2;3si;3o;0
+link;3;1si;2o;0
+link;3;1si;3o;0
+link;3;2si;1o;0
+link;3;2si;4o;0
+link;4;1si;4o;0
+link;4;1si;1o;0
+link;4;2si;3o;0
+link;4;2si;2o;0
+1;g;y;r;r;r;r;r;r
+2;g;g;g;y;r;r;r;r
+3;r;r;r;r;g;y;r;r
+4;r;r;r;r;g;g;g;y
+time;31;16;6;16;31;16;6;16
+</pre>
+<p>We convert those program definitions using
+</p>
+<pre>tools/tls/tls_csv2SUMO.py lsa_def.csv,lsa_def2.csv input_net.net.xml 
+</pre>
+<p>And obtain the following programs after loading them into <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a>:
+</p><p><b>Figure: converted programs</b>
+</p><p><a href="../images/Program_own1.png" class="image"><img alt="Program own1.png" src="../images/Program_own1.png" width="200" height="257" srcset="/w/images/thumb/2/2f/Program_own1.png/300px-Program_own1.png 1.5x, /w/images/2/2f/Program_own1.png 2x" /></a> <a href="../images/Program_own2.png" class="image"><img alt="Program own2.png" src="../images/Program_own2.png" width="200" height="257" srcset="/w/images/thumb/6/6c/Program_own2.png/300px-Program_own2.png 1.5x, /w/images/6/6c/Program_own2.png 2x" /></a>
+</p>
+<h3> <span class="mw-headline" id="Comments">Comments</span></h3>
+<p>This is definitely not the most comfortable way to define traffic lights. Some tools, as <a href="../NETEDIT.html" title="NETEDIT">NETEDIT</a> f.e., allow to edit them using a graphical user interface. Also, one could think of defining traffic lights by giving the begin and end times of green only. This is a quite usual approach within other traffic simulation packages. Any ideas on improving and/or patches to the script are welcome.
+</p>
+<h1> <span class="mw-headline" id="Defining_Program_switch_Times_and_Procedure">Defining Program switch Times and Procedure</span></h1>
+<p>In the reality, a tls often uses different programs during a day and maybe also for weekdays and for the weekend days. It is possible to load a definition of switch times between the programs using a WAUT (short for "Wochenschaltautomatik" ~ weekly switch automatism).
+</p><p>Given a tls which knows four programs - two for weekdays and two for weekend days where from 22:00 till 6:00 the night plan shall be used and from 6:00 till 22:00 the day plan, and already defined programs, named "weekday_night", "weekday_day", "weekend_night", "weekend_day". To describe the switch process, we have to describe the switch at first, assuming our simulation runs from monday 0.00 (second 0) to monday 0.00 (second 604800):
+</p>
+<pre class="xml">
+&lt;WAUT refTime=&quot;0&quot; id=&quot;myWAUT&quot; startProg=&quot;weekday_night&quot;&gt;
+   &lt;wautSwitch time=&quot;21600&quot; to=&quot;weekday_day&quot;/&gt;    &lt;!-- monday, 6.00 --&gt;
+   &lt;wautSwitch time=&quot;79200&quot; to=&quot;weekday_night&quot;/&gt;  &lt;!-- monday, 22.00 --&gt;
+   &lt;wautSwitch time=&quot;108000&quot; to=&quot;weekday_day&quot;/&gt;   &lt;!-- tuesday, 6.00 --&gt;
+... further weekdays ...
+   &lt;wautSwitch time=&quot;453600&quot; to=&quot;weekend_day&quot;/&gt;   &lt;!-- saturday, 6.00 --&gt;
+... the weekend days ...
+&lt;/WAUT&gt;
+</pre>
+<p><br />
+The fields in WAUT have the following meanings:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> string id
+</td>
+<td> The name of the defined WAUT
+</td></tr>
+<tr>
+<td class="inlxml"> <b>refTime</b>
+</td>
+<td> int
+</td>
+<td> A reference time which is used as offset to the switch times given later (in simulation seconds)
+</td></tr>
+<tr>
+<td class="inlxml"> <b>startProg</b>
+</td>
+<td> string id
+</td>
+<td> The program that will be used at the simulation's begin
+</td></tr></table>
+<p>and the fields in wautSwitch:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>time</b>
+</td>
+<td> int
+</td>
+<td> The time the switch will take place
+</td></tr>
+<tr>
+<td class="inlxml"> <b>to</b>
+</td>
+<td> string id
+</td>
+<td> The name of the program the assigned tls shall switch to
+</td></tr></table>
+<p>Of course, programs with the used names must be defined before this definition is read. Also, the switch steps must be sorted by their execution time.
+</p><p>Additionally, a definition about which tls shall be switched by the WAUT must be given, as following:
+</p>
+<pre>
+&lt;wautJunction wautID=&quot;myWAUT&quot; junctionID=&quot;RCAS&quot; [procedure=&quot;Stretch&quot;] [synchron=&quot;t&quot;]/&gt;
+</pre>
+<p>Here, the attributes have the following meaning:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Attribute Name
+</th>
+<th style="background:#ddddff;"> Value Type
+</th>
+<th style="background:#ddddff;"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>wautID</b>
+</td>
+<td> string id
+</td>
+<td> The id of the WAUT the tls shall be switched by
+</td></tr>
+<tr>
+<td class="inlxml"> <b>junctionID</b>
+</td>
+<td> string id
+</td>
+<td> The name of the tls to assign to the WAUT
+</td></tr>
+<tr>
+<td class="inlxml"> <b>procedure</b>
+</td>
+<td> string enum
+</td>
+<td> The switching algorithm to use; If none is given, the programs will switch immediately (default)
+</td></tr>
+<tr>
+<td class="inlxml"> <b>synchron</b>
+</td>
+<td> string enum
+</td>
+<td> Additional information whether the switch shall be done synchron (default: false)
+</td></tr></table>
+<p>It is possible to assign several tls to a single WAUT. It is also possible to assign several WAUTs to a single junction in theory, but this is not done in reality.
+</p><p>A complete definition within an <a href="../SUMO.html#Format_of_additional_files" title="SUMO"><i>additional-file</i></a> is shown below. It would
+trigger switching between programs <b>S1</b> and <b>S2</b> for traffic light logic <b>X</b> with an initial program called <b>0</b>.
+</p>
+<pre class="xml">
+&lt;additional&gt;
+
+  &lt;tlLogic id=&quot;X&quot; type=&quot;static&quot; programID=&quot;S1&quot; offset=&quot;0&quot;&gt;
+    &lt;phase duration=&quot;50&quot; state=&quot;Gr&quot;/&gt;
+    &lt;phase duration=&quot;50&quot; state=&quot;rG&quot;/&gt;
+  &lt;/tlLogic&gt;
+  
+  &lt;tlLogic id=&quot;X&quot; type=&quot;static&quot; programID=&quot;S2&quot; offset=&quot;0&quot;&gt;
+    &lt;phase duration=&quot;30&quot; state=&quot;Gr&quot;/&gt;
+    &lt;phase duration=&quot;80&quot; state=&quot;rG&quot;/&gt;
+  &lt;/tlLogic&gt;
+
+
+  &lt;WAUT startProg=&quot;0&quot; refTime=&quot;100&quot; id=&quot;w1&quot;&gt;
+    &lt;wautSwitch to=&quot;S1&quot; time=&quot;300&quot;&gt;&lt;/wautSwitch&gt;
+    &lt;wautSwitch to=&quot;SS&quot; time=&quot;800&quot;&gt;&lt;/wautSwitch&gt;
+  &lt;/WAUT&gt;
+
+  &lt;wautJunction junctionID=&quot;X&quot; wautID=&quot;w1&quot;&gt;&lt;/wautJunction&gt;
+
+&lt;additional&gt;
+</pre>
+<h1> <span class="mw-headline" id="Evaluation_of_Traffic_Lights_Performance">Evaluation of Traffic Lights Performance</span></h1>
+<h2> <span class="mw-headline" id="Tools_for_automatic_Detector_Generation">Tools for automatic Detector Generation</span></h2>
+<p>Some tools are available which help generating detector definitions for the evaluation of traffic lights. All are located in <i><b>&lt;SUMO_HOME&gt;</b></i>/tools/output.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />The actuated traffic lights do not require detector definitions to be added as they generate their own detectors for internal use.</div>
+<ul><li> <i><b>generateTLSE2Detectors.py</b></i> generates a file which includes areal detectors. All lanes incoming into an intersection are covered with these detectors. The offset from the intersection may be given using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--distance-to-TLS <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-d <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>), the default is .1m. The generated detectors end either after a given length, defined using <span style="color: #111144; font-weight: bold; white-space: pre;">--detector-length <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-l <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>) where the default is 250m, or at the lane's end if the lane is shorter than this length.
+</li><li> <i><b>generateTLSE3Detectors.py</b></i> generates a file which includes multi-entry/multi-exit detectors. Detectors are built for each edge incoming to the traffic light. All lanes of each of these edges are covered with exit points. These point's offset from the intersection may be given using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--distance-to-TLS <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-d <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>), the default is .1m. The incoming edges are followed upstream, either until a given length, defined using <span style="color: #111144; font-weight: bold; white-space: pre;">--detector-length <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-l <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span>) where the default is 250m, or another traffic light is reached or no further upstream edge exists. Entry points are generated at these points.
+</li></ul>
+<p>In both cases, the network must be given using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--net-file <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-n <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>). The file including the detector definitions to generate may be given using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--output <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-o <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>), default is "e2.add.xml" for areal detectors, and "e3.add.xml" for multi-entry/multi-exit detectors. Per default, the areal detectors generated by <i><b>generateTLSE2Detectors.py</b></i> are writing their measures to "e2output.xml", the multi-entry/multi-exit detectors generated by <i><b>generateTLSE2Detectors.py</b></i> to "e3output.xml". The output file name can be changed for both scripts using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--results-file <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-r <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;</i></a></span>). The frequency of generated reports is 60s per default. It can be changed using the option <span style="color: #111144; font-weight: bold; white-space: pre;">--frequency <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span> (or <span style="color: #111144; font-weight: bold; white-space: pre;">-f <a href="../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;INT&gt;</i></a></span>).
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 311/1000000
+Preprocessor generated node count: 954/1000000
+Post‐expand include size: 4109/2097152 bytes
+Template argument size: 1386/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:231-0!*!0!!en!2!* and timestamp 20150331082844 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 1 March 2015, at 18:06.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

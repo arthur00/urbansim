@@ -1,0 +1,23 @@
+INSTUPmobdat.simulator.SocialConnector
+C:\Users\Arthur Valadares\Copy\Projects\mobdat\mobdat\simulator\SocialConnector.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5&&3|8|2|5&&3|9|2|5&&2|10|2|1&&2|11|2|1&&2|12|2|1&&2|13|2|1&&2|14|2|1&&2|15|2|1&&2|16|2|1&&3|17|2|18&&2|19|2|1&&2|20|2|1
+TripCallbackMap=7
+HandleTimerEvent=16
+SocialConnector.HandleTimerEvent=18
+GenerateTripBegEvent=12
+SocialConnector=1
+HandleDeleteObjectEvent=15
+SimulationStart=20
+GenerateTripEndEvent=13
+SocialConnector.__init__=5
+__Logger=4
+CreateTravelers=11
+GenerateAddVehicleEvent=14
+MaximumTravelers=6
+HandleShutdownEvent=19
+mobdat.simulator.SocialConnector=2
+TripTimerEventQ=8
+Travelers=9
+CurrentStep=17
+AddTripToEventQueue=10
+__init__=3

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>SUMO_edge_type_file - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="Installing.html">Installing SUMO</a></li>
+  <li><a href="Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="Simulation/Output.html">Simulation output</a></li>
+  <li><a href="TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="Models/Emissions.html">Emissions</a></li>
+  <li><a href="Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="Other/Glossary.html">Glossary</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+  <li><a href="Tools/Main.html">Additional Tools</a></li>
+  <li><a href="Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="SUMO.html">SUMO</a></li>
+   <li><a href="SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="DFROUTER.html">DFROUTER</a></li>
+   <li><a href="MAROUTER.html">MAROUTER</a></li>
+   <li><a href="POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">SUMO edge type file</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.015178 from <a href="http://sumo.dlr.de/wiki/SUMO_edge_type_file">the wiki page for SUMO_edge_type_file</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="wikitable" style="width:25em; border-width:1px 1px; border-style:solid; border-color:#909090; background-color:#f8f8ff; font-size:90%; margin:1em 0em 1em 2em; padding:3px 6px">
+<caption> <b>SUMO edge type file</b>
+</caption>
+<tr>
+<td width="45%"> Filename extension </td>
+<td> .typ.xml
+</td></tr>
+<tr>
+<td> Type of content </td>
+<td> Road type description
+</td></tr>
+<tr>
+<td> Open format? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> SUMO specific? </td>
+<td> Yes
+</td></tr>
+<tr>
+<td> XML Schema
+</td>
+<td> <a rel="nofollow" class="external text" href="http://sumo.sourceforge.net/xsd/types_file.xsd">types_file.xsd</a>
+</td></tr></table>
+<p>A <b>SUMO edge type file</b> assigns default values for certain attributes to types of roads. It configures <a href="NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> when importing, for example, <a href="Networks/Building_Networks_from_own_XML-descriptions.html" title="Networks/Building Networks from own XML-descriptions">SUMO XML descriptions</a>, <a href="OpenStreetMap_file.html" title="OpenStreetMap file">OpenStreetMap files</a> or <a href="Networks/Import/ArcView.html" title="Networks/Import/ArcView">ArcView files</a>. The type configuration is saved in an XML structure.
+</p><p>This article introduces the file format first. After that, it discusses the application of the SUMO edge type file on certain types of map files and collects reasonable templates for these map files. <i>You are very welcome to provide additional templates for various contexts or to start a discussion about existing templates.</i>
+</p>
+<h2> <span class="mw-headline" id="Syntax"> Syntax </span></h2>
+<p>The XML root element is called <i>types</i>. It contains a collection of <i>type</i> elements. A type element represents a record with the following attributes:
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#f8f8ff"> Attribute Name
+</th>
+<th style="background:#f8f8ff"> Value Type
+</th>
+<th style="background:#f8f8ff"> Description
+</th></tr>
+<tr>
+<td class="inlxml"> <b>id</b>
+</td>
+<td> id (string)
+</td>
+<td> The name of the road type. This is the only mandatory attribute. For OpenStreetMap data, the name could, for example, be <i>highway.trunk</i> or <i>highway.residential</i>. For ArcView data, the name of the road type is a number.
+</td></tr>
+<tr>
+<td class="inlxml"> allow
+</td>
+<td> string
+</td>
+<td> List of allowed vehicle classes. The classes are space separated (e.g. "pedestrian bicycle").
+</td></tr>
+<tr>
+<td class="inlxml"> disallow
+</td>
+<td> string
+</td>
+<td> List of not allowed vehicle classes. The classes are space separated too.
+</td></tr>
+<tr>
+<td class="inlxml"> discard
+</td>
+<td> bool
+</td>
+<td> If "yes", edges of that type are not imported. This parameter is optional and defaults to false.
+</td></tr>
+<tr>
+<td class="inlxml"> numLanes
+</td>
+<td> int
+</td>
+<td> The number of lanes on an edge. This is the default number of lanes per direction.
+</td></tr>
+<tr>
+<td class="inlxml"> oneway
+</td>
+<td> bool
+</td>
+<td> If "yes", only the edge for one direction is created during the import. (This attribute makes no sense for SUMO XML descriptions but, for example, for OpenStreetMap files.)
+</td></tr>
+<tr>
+<td class="inlxml"> priority
+</td>
+<td> int
+</td>
+<td> A number, which determines the priority between different road types. NETCONVERT derives the right-of-way rules at junctions from the priority. The number starts with one; higher numbers represent more important roads.
+</td></tr>
+<tr>
+<td class="inlxml"> speed
+</td>
+<td> float
+</td>
+<td> The default (implicit) speed limit in m/s.
+</td></tr>
+<tr>
+<td class="inlxml"> sidewalkWidth
+</td>
+<td> float
+</td>
+<td> The default width for added sidewalks (defaults to -1 which disables extra sidewalks).
+</td></tr></table>
+<p>The names of the SUMO vehicle classes are:
+</p>
+<dl><dt> By ownership&#160;</dt><dd> private, public_transport, public_emergency, public_authority, public_army, vip, ignoring,
+</dd><dt> By size&#160;</dt><dd> passenger (a “normal” car), hov, taxi, bus, delivery, transport, lightrail, cityrail, rail_slow, rail_fast, motorcycle, bicycle, pedestrian.
+</dd></dl>
+<p>So an example of a SUMO edge type file is:
+</p>
+<pre class="xml">
+&lt;types&gt;
+ &lt;type id=&quot;highway.motorway&quot; priority=&quot;13&quot; numLanes=&quot;2&quot; speed=&quot;44.0&quot; /&gt;
+ &lt;type id=&quot;highway.residential&quot; priority=&quot;4&quot; numLanes=&quot;1&quot; speed=&quot;13.889&quot; /&gt;
+&lt;/types&gt;
+</pre>
+<h2> <span class="mw-headline" id="Templates_for_OpenStreetMap"> Templates for OpenStreetMap </span></h2>
+<p>The SUMO edge type file defines default values for some tags, which are taken if no explicit value is given for a certain road in a OpenStreetMap file. So the OpenStreetMap tags <i>maxspeed</i>, <i>lanes</i> and <i>oneway</i> override these defaults. If the map is tagged correctly, these tags should only be omitted if their value equals an implicitly assumed value. In this section, SUMO edge type files are collected that contain these implicit values of OpenStreetMap for various contexts. The following OpenStreetMap pages help to find out the implicit values for the following attributes:
+</p>
+<dl><dt> allow/disallow&#160;</dt><dd> <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Map_Features">Map features</a>, <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions">OSM tags for routing/Access restrictions</a>.
+</dd><dt> numLanes&#160;</dt><dd> <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Map_Features">Map features</a>, <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Editing_Standards_and_Conventions">Editing standards and conventions</a>, <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Key:lanes">Key:lanes</a>, <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Key:highway">Key:highway</a> and <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Tagging">Tagging scheme by country</a>.
+</dd><dt> priority&#160;</dt><dd> <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Map_Features">Map features</a>.
+</dd><dt> oneway&#160;</dt><dd> <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Key:oneway">Key:oneway</a>.
+</dd><dt> speed&#160;</dt><dd> <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Key:maxspeed">Key:maxspeed</a>, <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Maxspeed">OSM tags for routing/Maxspeed</a>, <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Key:source:maxspeed">Key:source:maxspeed</a> and <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/Key:traffic_sign">Key:traffic_sign</a>. Wikipedia lists the <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Speed_limits_by_country">Speed limits by country</a>.
+</dd></dl>
+<p>The right values are hard to find. Because they depend at least partly on the legislation (maxspeed, for  example); the values vary from country to country. Further context information, like the fact whether a road is inside or outside a city border, may determine the defaults as well. In the following, SUMO edge type files for various contexts are given, using the country as the main ordering criterion. The lists and files contain only way types as they correspond to SUMO edges; node and area types (like highway=services) are not considered. <i>You are very welcome to provide additional templates for various contexts or to start a discussion about existing templates.</i>
+</p>
+<h3> <span class="mw-headline" id="Germany"> Germany </span></h3>
+<p>In Germany, the legislation for the speed limit distinguishes roads inside from those outside city borders, roads with a central barrier separation from those without, and special road like living streets and pedestrian areas. There is no direct connection to the importance of a road. However in OpenStreetMap, a motorway is supposed to have such a central barrier separation per default <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway">[1]</a>. As a consequence, the maxspeed value only varies between rural and urban contexts but not between road types, except for motorways, living streets and pedestrian areas. The two SUMO edge type files are given next, a table with all values and references after them.
+</p>
+<table style="margin:1em auto 2em auto; border:1px solid #909090">
+<tr>
+<td style="padding:0px 15px; background-color:#f8f8ff"> <a href="Osm-urban-de.typ.xml.html" title="Osm-urban-de.typ.xml">osm-urban-de.typ.xml</a>
+</td>
+<td style="padding:0px 15px; background-color:#f8f8ff"> <a href="Osm-rural-de.typ.xml.html" title="Osm-rural-de.typ.xml">osm-rural-de.typ.xml</a>
+</td></tr></table>
+<table cellspacing="0" border="1" style="text-align:left">
+<tr>
+<th style="background:#f8f8ff"> id
+</th>
+<th style="background:#f8f8ff"> priority
+</th>
+<th style="background:#f8f8ff"> numLanes
+</th>
+<th style="background:#f8f8ff"> speed<br />(rural)
+</th>
+<th style="background:#f8f8ff"> speed<br />(urban)
+</th>
+<th style="background:#f8f8ff"> Comments
+</th></tr>
+<tr>
+<td> highway.motorway      </td>
+<td> 13 </td>
+<td> 2 </td>
+<td> 41.667 </td>
+<td> 41.667 </td>
+<td> Autobahn. No legislative speed limit: 44.4 is just a reasonable default. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway">[2]</a> is a bit opposite to <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dmotorway">[3]</a> regarding oneway tagging. All types but pedestrian, bicycle and all kinds of railways.
+</td></tr>
+<tr>
+<td> highway.motorway_link </td>
+<td>  8 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Links are usually subordinate to the road that leads to the trunk (e.g. a secondary or tertiary road). As a consequence, I treat all links similar to the type unclassified.
+</td></tr>
+<tr>
+<td> highway.trunk         </td>
+<td> 12 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Autobahnähnlich <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrunk">[4]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dtrunk">[5]</a>.  Lanes, maxspeed and oneway should be tagged explicitely. All types but pedestrian, bicycle and all kinds of railways.
+</td></tr>
+<tr>
+<td> highway.trunk_link    </td>
+<td>  8 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Links are usually subordinate to the road that leads to the trunk (e.g. a secondary or tertiary road). As a consequence, I treat all links similar to the type unclassified.
+</td></tr>
+<tr>
+<td> highway.primary       </td>
+<td> 11 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Bundesstraße <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dprimary">[6]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dprimary">[7]</a>
+</td></tr>
+<tr>
+<td> highway.primary_link  </td>
+<td>  8 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Links are usually subordinate to the road that leads to the trunk (e.g. a secondary or tertiary road). As a consequence, I treat all links similar to the type unclassified.
+</td></tr>
+<tr>
+<td> highway.secondary     </td>
+<td> 10 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Land-, Staats-, or a major Kreisstraße <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dsecondary">[8]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dsecondary">[9]</a>
+</td></tr>
+<tr>
+<td> highway.secondary_link </td>
+<td>  8 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Links are usually subordinate to the road that leads to the trunk (e.g. a tertiary road). As a consequence, I treat all links similar to the type unclassified.
+</td></tr>
+<tr>
+<td> highway.tertiary      </td>
+<td>  9 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Kreisstraße, major Gemeindeverbindungsstraße or minor Staats-/Landesstraße <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtertiary">[10]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dtertiary">[11]</a>
+</td></tr>
+<tr>
+<td> highway.unclassified  </td>
+<td>  8 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Below tertiary, still interconnecting, not in a residential area <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dunclassified">[12]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dresidential">[13]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dunclassified">[14]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dresidential">[15]</a>
+</td></tr>
+<tr>
+<td> highway.residential   </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> Accessing a residential area, should probably not be outside a town <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dresidential">[16]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dresidential">[17]</a>
+</td></tr>
+<tr>
+<td> highway.road          </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> A road that is not yet classified. So we cannot know anything. Do classify them! <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Droad">[18]</a>
+</td></tr>
+<tr>
+<td> highway.living_street </td>
+<td>  6 </td>
+<td> 1 </td>
+<td>  1.389 </td>
+<td>  1.389 </td>
+<td> Verkehrsberuhigter Bereich (walking speed). If you leave that street, you have to give way <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dliving_street">[19]</a>
+</td></tr>
+<tr>
+<td> highway.pedestrian    </td>
+<td>  5 </td>
+<td> 1 </td>
+<td>  1.389 </td>
+<td>  1.389 </td>
+<td> Fußgängerzone. Pedestrians only. (Bicylces should be pushed.) <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack">[20]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dpedestrian">[21]</a>
+</td></tr>
+<tr>
+<td> highway.service       </td>
+<td>  5 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> No explicit regulatory speed limit. Usually you have to give way when leaving such a street as it is not part of the road network with moving traffic. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dservice">[22]</a>
+</td></tr>
+<tr>
+<td> highway.bus_guideway  </td>
+<td>  5 </td>
+<td> 1 </td>
+<td> 27.778 </td>
+<td> 13.889 </td>
+<td> For busses only. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbus_guideway">[23]</a>
+</td></tr>
+<tr>
+<td> highway.track         </td>
+<td>  4 </td>
+<td> 1 </td>
+<td>  8.333 </td>
+<td>  8.333 </td>
+<td> For agricultural traffic, usually not used by normal vehicles. Thus we assign it to bicylces and pedestrians. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack">[24]</a>
+</td></tr>
+<tr>
+<td> highway.path          </td>
+<td>  2 </td>
+<td> 1 </td>
+<td>  6.944 </td>
+<td>  6.944 </td>
+<td> Usually “not intended for motor vehicles”. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dpath">[25]</a>
+</td></tr>
+<tr>
+<td> highway.cycleway      </td>
+<td>  2 </td>
+<td> 1 </td>
+<td>  6.944 </td>
+<td>  6.944 </td>
+<td> “Access is only allowed for bikes” in Germany. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dcycleway">[26]</a>
+</td></tr>
+<tr>
+<td> highway.footway       </td>
+<td>  2 </td>
+<td> 1 </td>
+<td>  1.389 </td>
+<td>  1.389 </td>
+<td> For designated footpaths in Germany. (Bicycles must be tagged explicitely.) <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway">[27]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dfootway">[28]</a>
+</td></tr>
+<tr>
+<td> highway.bridleway     </td>
+<td>  2 </td>
+<td> 1 </td>
+<td>  6.944 </td>
+<td>  6.944 </td>
+<td> For pedestrians, horses and sometimes bicycles. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dbridleway">[29]</a>
+</td></tr>
+<tr>
+<td> highway.steps         </td>
+<td>  2 </td>
+<td> 1 </td>
+<td>  1.389 </td>
+<td>  1.389 </td>
+<td> Steps are usually for pedestrians. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dsteps">[30]</a>
+</td></tr>
+<tr>
+<td> railway.rail          </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 38.889 </td>
+<td> 22.222 </td>
+<td> Typical full sized trains. (I did not found reasonable data for typical speeds on German railway. The values in the Eisenbahn-Bau- und Betriebsordnung are quite high.) Assigned it to the SUMO class rail_fast. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Drail">[31]</a> <a rel="nofollow" class="external autonumber" href="http://www.gesetze-im-internet.de/bundesrecht/ebo/gesamt.pdf">[32]</a>
+</td></tr>
+<tr>
+<td> railway.tram          </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 16.667 </td>
+<td> 16.667 </td>
+<td> Trams. Assigned it to the SUMO class cityrail. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dtram">[33]</a> <a rel="nofollow" class="external autonumber" href="http://ka.stadtwiki.net/H%C3%B6chstgeschwindigkeit_%28Bahn%29">[34]</a>
+</td></tr>
+<tr>
+<td> railway.light_rail    </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 33.333 </td>
+<td> 33.333 </td>
+<td> The maximum speed of the S-Bahn in Munich is 120km/h <a rel="nofollow" class="external autonumber" href="http://de.wikipedia.org/wiki/S-Bahn_M%C3%BCnchen">[35]</a>. Assigned it to the SUMO class lightrail. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dlight_rail">[36]</a>
+</td></tr>
+<tr>
+<td> railway.subway        </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 22.222 </td>
+<td> 22.222 </td>
+<td> The maximum speed of the U-Bahn in Munich is 80km/h <a rel="nofollow" class="external autonumber" href="http://de.wikipedia.org/wiki/U-Bahn_M%C3%BCnchen">[37]</a>. Assigned it to the SUMO class cityrail. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dsubway">[38]</a>
+</td></tr>
+<tr>
+<td> railway.preserved     </td>
+<td>  7 </td>
+<td> 1 </td>
+<td>  8.333 </td>
+<td>  8.333 </td>
+<td> Historic trains. Assigned it to the SUMO class lightrail. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Map_Features">[39]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dpreserved">[40]</a>
+</td></tr>
+<tr>
+<td> railway.narrow_gauge  </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 33.333 </td>
+<td> 33.333 </td>
+<td> Smaller gauge. Assigned it to the SUMO class lightrail. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dnarrow_gauge">[41]</a>]
+</td></tr>
+<tr>
+<td> railway.monorail      </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 16.667 </td>
+<td> 16.667 </td>
+<td> “Trains run on one single rail”. Assigned it to the SUMO class lightrail. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dmonorail">[42]</a>
+</td></tr>
+<tr>
+<td> railway.funicular     </td>
+<td>  7 </td>
+<td> 1 </td>
+<td> 16.667 </td>
+<td> 16.667 </td>
+<td> “Cable driven inclined railways”. Assigned it to the SUMO class cityrail. <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Map_Features">[43]</a> <a rel="nofollow" class="external autonumber" href="http://wiki.openstreetmap.org/wiki/Tag:railway%3Dfunicular">[44]</a>
+</td></tr></table>
+<p>Only few data is available about the railway types. The most important document might be the <a rel="nofollow" class="external text" href="http://www.gesetze-im-internet.de/bundesrecht/ebo/gesamt.pdf">Eisenbahn-Bau- und Betriebsordnung (EBO)</a>, but even that did not help me much. So the given values are mostly personal opinion, except if a reference is given. More references are very welcome.
+</p>
+<p style="border:1px solid #909090; padding:1px 4px 3px 4px"><a href="images/CC-BY-SA-small.png" class="image" title="Creative Commons License"><img alt="Creative Commons License" src="images//CC-BY-SA-small.png" width="80" height="15" /></a>
+This work is licensed under a <a rel="nofollow" class="external text" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. The authors are listed in the history.</p>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 63/1000000
+Preprocessor generated node count: 272/1000000
+Post‐expand include size: 852/2097152 bytes
+Template argument size: 307/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:373-0!*!0!!*!2!* and timestamp 20150330202641 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 9 September 2014, at 08:26.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

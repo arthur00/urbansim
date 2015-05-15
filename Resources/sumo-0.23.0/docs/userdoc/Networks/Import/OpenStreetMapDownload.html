@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Networks/Import/OpenStreetMapDownload - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../../Installing.html">Installing SUMO</a></li>
+  <li><a href="../../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../../FAQ.html">FAQ</a></li>
+  <li><a href="../../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../SUMO.html">SUMO</a></li>
+   <li><a href="../../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Networks/Import/OpenStreetMapDownload</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.984696 from <a href="http://sumo.dlr.de/wiki/Networks/Import/OpenStreetMapDownload">the wiki page for Networks/Import/OpenStreetMapDownload</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>From <a rel="nofollow" class="external free" href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a>:
+</p>
+<blockquote>
+<i>"<a rel="nofollow" class="external text" href="http://www.openstreetmap.org/">OpenStreetMap</a> is a free editable map of the whole world. It is made by people like you."</i> 
+
+<i>"<a rel="nofollow" class="external text" href="http://www.openstreetmap.org/">OpenStreetMap</a> creates and provides free geographic data such as street maps to anyone who wants them. The project was started because most maps you think of as free actually have legal or technical restrictions on their use, holding back people from using them in creative, productive, or unexpected ways."</i>
+</blockquote>
+<p>The amount of data contained within <a rel="nofollow" class="external text" href="http://www.openstreetmap.org/">OpenStreetMap</a>, and their quality, is really amazing. Even though no demand data is available, the quality of the road networks makes it worth to regard <a rel="nofollow" class="external text" href="http://www.openstreetmap.org/">OpenStreetMap</a> as a data source for traffic simulations, especially if one is interested in multi- or inter-modal simulations.
+</p><p>This page describes how OpenStreetMap data can be obtained. OSM data must be converted before it can be used with Sumo (see <a href="../../Networks/Import/OpenStreetMap.html" title="Networks/Import/OpenStreetMap">Networks/Import/OpenStreetMap</a>). The page <a href="../../OpenStreetMap_file.html" title="OpenStreetMap file">OpenStreetMap file</a> gives further general information on the data format.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Downloading_a_small_rectangular_area"><span class="tocnumber">1</span> <span class="toctext">Downloading a small rectangular area</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Directly_from_the_Browser"><span class="tocnumber">1.1</span> <span class="toctext">Directly from the Browser</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#With_the_Java_OpenStreetMap_Editor_.28JOSM.29"><span class="tocnumber">1.2</span> <span class="toctext">With the Java OpenStreetMap Editor (JOSM)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Downloading_a_Larger_Rectangular_Area_Using_the_OpenStreetMap_API"><span class="tocnumber">2</span> <span class="toctext">Downloading a Larger Rectangular Area Using the OpenStreetMap API</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Obtain_the_geo-coordinates"><span class="tocnumber">2.1</span> <span class="toctext">Obtain the geo-coordinates</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Download_the_area"><span class="tocnumber">2.2</span> <span class="toctext">Download the area</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Downloading_a_City"><span class="tocnumber">3</span> <span class="toctext">Downloading a City</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Obtaining_an_area_Id"><span class="tocnumber">3.1</span> <span class="toctext">Obtaining an area Id</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Downloading_an_area_by_Id"><span class="tocnumber">3.2</span> <span class="toctext">Downloading an area by Id</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Downloading_a_very_large_area"><span class="tocnumber">4</span> <span class="toctext">Downloading a very large area</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Pre-packaged_Areas"><span class="tocnumber">4.1</span> <span class="toctext">Pre-packaged Areas</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Custom_Areas"><span class="tocnumber">4.2</span> <span class="toctext">Custom Areas</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Downloading_a_small_rectangular_area">Downloading a small rectangular area</span></h1>
+<h2> <span class="mw-headline" id="Directly_from_the_Browser">Directly from the Browser</span></h2>
+<p>Data can be downloaded comfortably at <a rel="nofollow" class="external free" href="http://www.openstreetmap.org/export">http://www.openstreetmap.org/export</a> by selecting a rectangular area. However, this page limits the amount of data that can be downloaded. Depending on the data-density in the selected area this may limit the downloadable area to less than a square kilometer (although downloading a while city may be possible).
+</p>
+<h2> <span class="mw-headline" id="With_the_Java_OpenStreetMap_Editor_.28JOSM.29">With the <a rel="nofollow" class="external text" href="http://josm.openstreetmap.de/">Java OpenStreetMap Editor (JOSM)</a></span></h2>
+<p>The <a rel="nofollow" class="external text" href="http://josm.openstreetmap.de/">Java OpenStreetMap Editor (JOSM)</a> is a mature tool for handling OSM-data. It allows for comfortable downloading of rectangular areas using an interactive map. It even supports searching for an area by name (i.e. Berlin). It also supports filtering and editing of OSM Data.
+</p><p><br />
+</p>
+<h1> <span class="mw-headline" id="Downloading_a_Larger_Rectangular_Area_Using_the_OpenStreetMap_API">Downloading a Larger Rectangular Area Using the OpenStreetMap API</span></h1>
+<p>Larger amounts of OSM-data can be downloaded using a web browser or preferably with a program such as <a rel="nofollow" class="external text" href="http://wget.addictivecode.org/">wget</a>.
+For detailed information refer to the <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/API">API overview</a> 
+</p><p>Downloading OSM-data via the API is a two step process: First you must determine the geo-coordinates for your area. Then you can download OSM-data using those coordinates.
+</p>
+<h2> <span class="mw-headline" id="Obtain_the_geo-coordinates">Obtain the geo-coordinates</span></h2>
+<p>You need the (longitude, latitude)-numbers for the south-west corner and for the north-east corner of your chosen area.
+You can get them at <a rel="nofollow" class="external text" href="http://www.openstreetmap.de/karte.html">this page</a> by pointing your mouse at the appropriate map location and observing the coordinates in the status bar. The inner city of Berlin lies within the following coordinates:
+</p><p><code>
+</p>
+<pre> SW-corner: 13.278 52.473
+ NE-corner: 13.471 52.552
+</pre>
+<p></code>
+</p>
+<h2> <span class="mw-headline" id="Download_the_area">Download the area</span></h2>
+<p>Construct an <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI (web adress)</a> from the geo-coordinates and download the data from that URI. The URI takes the following form:
+</p><p><code>
+<a rel="nofollow" class="external free" href="http://api.openstreetmap.org/api/0.6/map?bbox=">http://api.openstreetmap.org/api/0.6/map?bbox=</a>&lt;SW-longitude,SW-latitude,NE-longitude,NE-latitude&gt;
+</code>
+</p><p>for the above example this becomes
+<code>
+<a rel="nofollow" class="external free" href="http://api.openstreetmap.org/api/0.6/map?bbox=13.278,52.473,13.471,52.552">http://api.openstreetmap.org/api/0.6/map?bbox=13.278,52.473,13.471,52.552</a>
+</code>
+</p><p>you can download your data by entering the URI in a web-browers or by using another program such as <a rel="nofollow" class="external text" href="http://wget.addictivecode.org/">wget</a>.
+</p><p><code>
+</p>
+<pre>wget.exe "<a rel="nofollow" class="external free" href="http://api.openstreetmap.org/api/0.6/map?bbox=13.278,52.473,13.471,52.552">http://api.openstreetmap.org/api/0.6/map?bbox=13.278,52.473,13.471,52.552</a>" -O berlin.osm.xml
+</pre>
+<p></code>
+</p><p><b>Important:</b> the API version number <i>0.6</i> will eventually be outdated. Refer to the <a rel="nofollow" class="external text" href="http://wiki.openstreetmap.org/wiki/API">openstreetmap API page</a> for the latest version..
+</p>
+<h1> <span class="mw-headline" id="Downloading_a_City">Downloading a City</span></h1>
+<p>Modelling a single city is a common simulation use case. <a rel="nofollow" class="external text" href="http://www.overpass-api.de/">OSM Overpass API</a> provides a comfortable interface to obtain the road network and infrastructure within a city boundary (or other administrative region).
+</p><p>This is two step Process: First you must obtain the Id (Identification Number) of the area you want to download. Then you can use that Id to download the area.
+</p>
+<h2> <span class="mw-headline" id="Obtaining_an_area_Id">Obtaining an area Id</span></h2>
+<p>Copy the following query into the input box on the the <a rel="nofollow" class="external text" href="http://www.overpass-api.de/query_form.html">OSM Overpass API query page</a>. Replace <i>Berlin</i> by the city name of your choice and click the accompanying button "Explore".
+</p>
+<pre class="xml">
+ &lt;query type=&quot;relation&quot;&gt;
+ &lt;has-kv k=&quot;boundary&quot; v=&quot;administrative&quot;/&gt;
+ &lt;has-kv k=&quot;name&quot; v=&quot;Berlin&quot;/&gt;
+ &lt;/query&gt;
+ &lt;print mode=&quot;body&quot;/&gt;
+</pre>
+<p>This will prompt you to download or open a file containing the answer to your query. 
+</p>
+<pre class="xml">
+ &lt;relation id=&quot;62422&quot;&gt;
+   &lt;member type=&quot;way&quot; ref=&quot;36991886&quot; role=&quot;outer&quot;/&gt;
+   ...
+   &lt;member type=&quot;way&quot; ref=&quot;44020341&quot; role=&quot;outer&quot;/&gt;
+   &lt;tag k=&quot;de:amtlicher_gemeindeschluessel&quot; v=&quot;11&quot;/&gt;
+   &lt;tag k=&quot;TMC:cid_58:tabcd_1:LocationCode&quot; v=&quot;266&quot;/&gt;
+   &lt;tag k=&quot;type&quot; v=&quot;multipolygon&quot;/&gt;
+   &lt;tag k=&quot;boundary&quot; v=&quot;administrative&quot;/&gt;
+   &lt;tag k=&quot;admin_level&quot; v=&quot;4&quot;/&gt;
+   &lt;tag k=&quot;TMC:cid_58:tabcd_1:Class&quot; v=&quot;Area&quot;/&gt;
+   &lt;tag k=&quot;name&quot; v=&quot;Berlin&quot;/&gt;
+   &lt;tag k=&quot;source&quot; v=&quot;http://wiki.openstreetmap.org/wiki/Import/Catalogue/Kreisgrenzen_Deutschland_2005&quot;/&gt;
+   &lt;tag k=&quot;TMC:cid_58:tabcd_1:LCLversion&quot; v=&quot;9.00&quot;/&gt;
+ &lt;/relation&gt;
+ &lt;relation id=&quot;119876&quot;&gt;
+   &lt;member type=&quot;way&quot; ref=&quot;33628254&quot; role=&quot;outer&quot;/&gt;
+   &lt;tag k=&quot;tiger:PLACEFP&quot; v=&quot;07304&quot;/&gt;
+   &lt;tag k=&quot;tiger:PLACENS&quot; v=&quot;02403860&quot;/&gt;
+   &lt;tag k=&quot;tiger:PLCIDFP&quot; v=&quot;1307304&quot;/&gt;
+   &lt;tag k=&quot;wikipedia&quot; v=&quot;Berlin,_Georgia&quot;/&gt;
+   &lt;tag k=&quot;type&quot; v=&quot;multipolygon&quot;/&gt;
+   &lt;tag k=&quot;place&quot; v=&quot;city&quot;/&gt;
+   &lt;tag k=&quot;boundary&quot; v=&quot;administrative&quot;/&gt;
+   &lt;tag k=&quot;admin_level&quot; v=&quot;8&quot;/&gt;
+   &lt;tag k=&quot;name&quot; v=&quot;Berlin&quot;/&gt;
+   &lt;tag k=&quot;border_type&quot; v=&quot;city&quot;/&gt;
+   &lt;tag k=&quot;created_by&quot; v=&quot;polyshp2osm-multipoly&quot;/&gt;
+   &lt;tag k=&quot;source&quot; v=&quot;TIGER/Line® 2008 Place Shapefiles (http://www.census.gov/geo/www/tiger/)&quot;/&gt;
+   &lt;tag k=&quot;tiger:reviewed&quot; v=&quot;no&quot;/&gt;
+   &lt;tag k=&quot;is_in:country&quot; v=&quot;USA&quot;/&gt;
+   ...
+ &lt;/relation&gt;
+</pre>
+<p>The important parts of result data are the <code> &lt;relation id="..."&gt; </code> elements. This <code>id</code> attribute will be used to download the OSM-data for your chosen city. 
+</p><p><b>Important:</b> as in the <i>Berlin</i>-query above, there may be multiple results. Usually the accompanying tags will be sufficiently helpful to distinguish between <i>Berlin,Germany</i> and <i>Berlin,USA/Georgia</i>. If the output does not contain the region you were looking for, it might be helpful to add the type of region e.g. <i>Berlin, city</i>. If problems persist read on at the <a rel="nofollow" class="external text" href="http://www.overpass-api.de/">OSM Overpass API</a> site.
+</p>
+<h2> <span class="mw-headline" id="Downloading_an_area_by_Id">Downloading an area by Id</span></h2>
+<p>The Id obtained in the previous step for the city of <i>Berlin</i> was 62422. Technically this is only the Id of the <i>border</i> of Berlin and we must add the number 3,600,000,000 to obtain the Id of the area of berlin.
+<code>
+3,600,000,000 + 62,422 = 3,600,062,422
+</code>
+</p><p>Using this number we construct another query for an input box on the <a rel="nofollow" class="external text" href="http://www.overpass-api.de/query_form.html">OSM Overpass API qery page</a>.
+</p>
+<pre class="xml">
+ &lt;osm-script timeout=&quot;180&quot; element-limit=&quot;20000000&quot;&gt;
+ &lt;union&gt;
+   &lt;area-query ref=&quot;3600062422&quot;/&gt;
+   &lt;recurse type=&quot;node-relation&quot; into=&quot;rels&quot;/&gt;
+   &lt;recurse type=&quot;node-way&quot;/&gt;
+   &lt;recurse type=&quot;way-relation&quot;/&gt;
+ &lt;/union&gt;
+ &lt;union&gt;
+   &lt;item/&gt;
+   &lt;recurse type=&quot;way-node&quot;/&gt;
+ &lt;/union&gt;
+ &lt;print mode=&quot;body&quot;/&gt;
+ &lt;/osm-script&gt;
+</pre>
+<p>Replace the number for the <code> &lt;area-query ref="..."&gt; </code> by the number from above and click the accompanying button "Download". This will prompt you to download or open a file containing the OSM-data for your city.
+</p><p><br />
+<b>Important:</b> For large cities you may have to adapt the values for <code>timeout</code> and <code>element-limit</code>.
+</p><p><br />
+</p>
+<h1> <span class="mw-headline" id="Downloading_a_very_large_area">Downloading a very large area</span></h1>
+<h2> <span class="mw-headline" id="Pre-packaged_Areas"> Pre-packaged Areas </span></h2>
+<p>A large amount of pre-packaged areas are available at <a rel="nofollow" class="external free" href="http://www.geofabrik.de/data/download.html">http://www.geofabrik.de/data/download.html</a>. Many of these are quite large and will probably require filtering before they can be reasonably processed. Importing the whole of Germany with [NETCONVERT] takes about 60GB of RAM!
+</p>
+<h2> <span class="mw-headline" id="Custom_Areas"> Custom Areas</span></h2>
+<p>The OpenStreetMap-API still limits the size of an area to extract. The help script <i>osmGet.py</i> located within <i><b>&lt;SUMO_HOME&gt;</b></i>/tools/import/osm allows to extract a larger area by splitting the requests. The call is:
+</p>
+<pre>osmGet.py &lt;PREFIX&gt; &lt;BOUNDING_BOX&gt; &lt;TILES_NUMBER&gt;
+</pre>
+<p>The bounding box must be given as &lt;LAT_MIN&gt;,&lt;LONG_MIN&gt;,&lt;LAT_MAX&gt;,&lt;LONG_MAX&gt;. 
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />"wget" must be installed and located in the execution path.</div>
+<p>This script will extract OSM-data as <i>n</i> files with <i>n</i> =&lt;TILES_NUMBER&gt;, named "&lt;PREFIX&gt;&lt;INDEX&gt;_&lt;TILES_NUMBER&gt;.osm.xml". 
+These files can be imported by the scripts <i>osmBuild.Py</i> and <i>osmBuildPolys.py</i>, also located in <i><b>&lt;SUMO_HOME&gt;</b></i>/tools/import/osm. This is described in <a href="../../Networks/Import/OpenStreetMap.html#Import_Scripts" title="Networks/Import/OpenStreetMap">Networks/Import/OpenStreetMap#Import Scripts</a>.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 82/1000000
+Preprocessor generated node count: 156/1000000
+Post‐expand include size: 237/2097152 bytes
+Template argument size: 59/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:343-0!*!0!!en!*!* and timestamp 20150331082812 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 31 October 2014, at 09:05.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

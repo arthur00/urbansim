@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Tools/Routes - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Tools/Routes</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.110657 from <a href="http://sumo.dlr.de/wiki/Tools/Routes">the wiki page for Tools/Routes</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>The tools' names accord to their function.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#randomDepart.py"><span class="tocnumber">1</span> <span class="toctext">randomDepart.py</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Description"><span class="tocnumber">1.1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Acknowledgements"><span class="tocnumber">1.2</span> <span class="toctext">Acknowledgements</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#routecheck.py"><span class="tocnumber">2</span> <span class="toctext">routecheck.py</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Known_caveats"><span class="tocnumber">2.1</span> <span class="toctext">Known caveats</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#routes_Join.py"><span class="tocnumber">3</span> <span class="toctext">routes_Join.py</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#sort_routes.py"><span class="tocnumber">4</span> <span class="toctext">sort_routes.py</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#cutRoutes.py"><span class="tocnumber">5</span> <span class="toctext">cutRoutes.py</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#extractRouteEdges.py"><span class="tocnumber">6</span> <span class="toctext">extractRouteEdges.py</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#routeStats.py"><span class="tocnumber">7</span> <span class="toctext">routeStats.py</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#route2poly.py"><span class="tocnumber">8</span> <span class="toctext">route2poly.py</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="randomDepart.py">randomDepart.py</span></h1>
+<p>By using this Script we can increase the troughput (in terms of input vehicle volume accomodated by SUMO network in fixed time interval). By using this Script you can calibrate different traffic parameter based on the real traffic pattern (exponential distribution is closed to real pattern).  
+</p><p>"randomDepart" is a python Script which takes the input as a route file and generates the modified route file with depart time based on exponential distribution. And each time it generates the new traffic pattern.
+</p><p>How to Use: Go to Command prompt (supportable for python2X)
+</p><p>For assistance:
+</p>
+<pre>./randomDepart.py -h
+</pre>
+<p>or
+</p>
+<pre>./randomDepart.py --help
+</pre>
+<p>For using:
+</p>
+<pre>./randomDepart.py -r &lt;route-xml-file&gt; [-d] [-o &lt;output-xml-file&gt;]
+</pre>
+<p>or
+</p>
+<pre>./randomDepart.py --route-file &lt;route-xml-file&gt; [--depart-lane] \
+  [--output-route-file &lt;output-xml-file&gt;]
+</pre>
+<p>value under [] is optional
+</p>
+<h2> <span class="mw-headline" id="Description">Description</span></h2>
+<p>"randomDepart" is designed in such a way to reduce the overall complexity and increase the efficiency. Although it is having some constraint but still enough powerfull to serve transportation perspective.
+</p><p>It takes the input file in such a way where mandatory fields considered at the time of modification are:
+</p>
+<pre class="xml">
+&lt;routes&gt;
+   &lt;vehicle id=&quot;&quot; type=&quot;&quot; depart=&quot;&quot;&gt; &lt;route edges=&quot;&quot;/&gt; &lt;/vehicle&gt;
+   ...
+&lt;/routes&gt;
+</pre>
+<p>These are the parameter considered based on the necessity for calibration of traffic parameter. 
+</p><p>One optional parameter is DEPRTLANE which you can also override at the time of modification with option -d if this option is optional argument, if provided then DEPARTLANE=FREE for all lanes will be set otherwise FALSE.
+</p><p>The last parameter is output file [optional if not provided DEFAULT is "out.rou.xml", will be generated].
+so the output file may be in the form-
+</p>
+<pre class="xml">
+&lt;routes&gt;
+   &lt;vehicle id=&quot;&quot; type=&quot;&quot; depart=&quot;&quot; [departLane=&quot;&quot;]&gt; &lt;route edges=&quot;&quot;/&gt; &lt;/vehicle&gt;
+   ...
+&lt;/routes&gt;
+</pre>
+<p>Dump: you can also take the dump of modified depart time in excel file by just enabling the commented part in the python script. the all necessary things you need is xlwt package to write into excel file.
+</p>
+<h2> <span class="mw-headline" id="Acknowledgements">Acknowledgements</span></h2>
+<p>The script was written by Ashutosh Bajpai.
+</p>
+<h1> <span class="mw-headline" id="routecheck.py">routecheck.py</span></h1>
+<p>Allows to verify whether routes within the given route-file(s) are valid for the given network. Call(s):
+</p>
+<pre>routecheck.py &lt;net&gt; &lt;vehicletypes&gt; [-f|--fix] &lt;routes&gt;+
+</pre>
+<pre>routecheck.py &lt;net&gt; &lt;vehicletypes+routes&gt;
+</pre>
+<p>If a route is broken (a diconnected), the tool writes something like the following to cout:
+<a href="/w/index.php?title=Template:Warning&amp;action=edit&amp;redlink=1" class="new" title="Template:Warning (page does not exist)">Template:Warning</a>
+</p><p>If <b>--fix</b> (<b>-f</b>) is given, routes are tried to be repaired (assuming only one link is missing). The name of the output file(s) is generated by appending ".fixed". These file contain repaired routes (if it was possible), each appended link is written in comments after the vehicle.
+</p>
+<h2> <span class="mw-headline" id="Known_caveats">Known caveats</span></h2>
+<ul><li> The tool does not deal with vehicle types; it only checks whether routes are connected
+</li><li> When working in <b>--fix</b>-mode a vehicle type file must be given
+</li><li> No tests for dealing with networks that have internal edges
+</li></ul>
+<p><br />
+</p>
+<h1> <span class="mw-headline" id="routes_Join.py">routes_Join.py</span></h1>
+<p>Joins routes belonging to two networks.
+A map file with the following syntax is read first:
+</p>
+<pre>&lt;EDGE_ID&gt;-&gt;&lt;EDGE_ID&gt;
+</pre>
+<p>It describes at which edges the networks overlapped and which edge  was kept in the resulting one.
+Vehicles from both given route files starting at the first of those edges will be at first not regarded, but their routes are kept in memory. All other vehicles are kept, but if they pass one of the mapped edges, the route is continued by choosing a random route from the list of previously discarded ones which start at the corresponding edge.
+</p>
+<pre>routes_Join.py &lt;prefix#1&gt; &lt;routes#1&gt; &lt;prefix#2&gt; &lt;routes#2&gt; &lt;mapfile&gt;
+</pre>
+<ul><li> &lt;prefix#1&gt;: The prefix to use for vehicles from the first routes file
+</li><li> &lt;routes#1&gt;: The first routes file
+</li><li> &lt;prefix#2&gt;: The prefix to use for vehicles from the second routes file
+</li><li> &lt;routes#2&gt;: The second routes file
+</li><li> &lt;mapfile&gt;: The edge mapping
+</li></ul>
+<p>Attention! The routes are not sorted in time!
+</p>
+<h1> <span class="mw-headline" id="sort_routes.py">sort_routes.py</span></h1>
+<p>This script sorts the vehicles in the given route file by their depart time. If the option <span style="color: #111144; font-weight: bold; white-space: pre;">--big</span> is supplied, a slow but memory efficent algorithm is used.
+</p>
+<pre><i><b>&lt;SUMO_HOME&gt;</b></i>/tools/route/sort_routes.py input.rou.xml -o output.rou.xml
+</pre>
+<h1> <span class="mw-headline" id="cutRoutes.py">cutRoutes.py</span></h1>
+<p>This script cuts down routes from a large scenario to a sub-scenario. This assumes the existence of a big scenario (<i>orig.net.xml</i> and <i>orig.rou.xml</i>). The goal is to simulate only a smaller part of the network (<i>reduced.net.xml</i>) keeping all of the routes that pass through the reduced network. Output can be a  route file or a trip file. Depending on the given options the new departure times can be computed from exitTimes (see <a href="../SUMO.html" title="SUMO">SUMO</a> option <span style="color: #111144; font-weight: bold; white-space: pre;"> --vehroute-output.exit-times</span>), extrapolated from the original network or simply copied from the original departure times. If the option <span style="color: #111144; font-weight: bold; white-space: pre;">--big</span> is supplied, a slow but memory efficent algorithm is used for sorting the output by departure time. Example usage
+</p>
+<pre><i><b>&lt;SUMO_HOME&gt;</b></i>/tools/route/cutRoutes.py reduced.net.xml orig.rou.xml --routes-output output.rou.xml --orig-net orig.net.xml
+</pre>
+<h1> <span class="mw-headline" id="extractRouteEdges.py">extractRouteEdges.py</span></h1>
+<p>Extract all used edges from routes and person plans and output a file suitable for pruning edges with <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>. The below example creates the minimum network needed to simulate all vehicles and persons in <i>myRoutes.rou.xml</i>:
+</p>
+<pre><i><b>&lt;SUMO_HOME&gt;</b></i>/tools/extractRouteEdges.py myRoutes.rou.xml usedEdges.txt
+netconvert --net-file myNet.net.xml --keep-edges.input-file usedEdges.txt --output reduced.net.xml
+</pre>
+<h1> <span class="mw-headline" id="routeStats.py">routeStats.py</span></h1>
+<p>Compute a length-histogram for all routes in a given route file. Alternatively, compute the difference in lengths for two route files with the same vehicles. Routes must be child elements of <span class="inlxml">&lt;vehicle&gt;</span>-elements. Output for plotting may also be generated (see <span style="color: #111144; font-weight: bold; white-space: pre;">--help</span>).
+</p>
+<pre><i><b>&lt;SUMO_HOME&gt;</b></i>/tools/route/routeStats.py myNet.net.xml myRoutes.rou.xml
+</pre>
+<h1> <span class="mw-headline" id="route2poly.py">route2poly.py</span></h1>
+<p>Transform routes into polygons for visualization in <a href="../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a>. Using the options <span style="color: #111144; font-weight: bold; white-space: pre;">--hue, --saturation, --brightness</span> the colors can be controlled. Each of these options supports values from [0, 1] as well as the special value <i>random</i>.
+</p>
+<pre><i><b>&lt;SUMO_HOME&gt;</b></i>/tools/route/routeStats.py myNet.net.xml myRoutes.rou.xml
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 118/1000000
+Preprocessor generated node count: 280/1000000
+Post‐expand include size: 611/2097152 bytes
+Template argument size: 87/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:13-0!*!0!!en!*!* and timestamp 20150331082853 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 27 January 2015, at 12:10.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

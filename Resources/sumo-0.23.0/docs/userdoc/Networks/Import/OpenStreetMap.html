@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Networks/Import/OpenStreetMap - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../../Installing.html">Installing SUMO</a></li>
+  <li><a href="../../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../../FAQ.html">FAQ</a></li>
+  <li><a href="../../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../SUMO.html">SUMO</a></li>
+   <li><a href="../../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Networks/Import/OpenStreetMap</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:54.984202 from <a href="http://sumo.dlr.de/wiki/Networks/Import/OpenStreetMap">the wiki page for Networks/Import/OpenStreetMap</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><i>"<a rel="nofollow" class="external text" href="http://www.openstreetmap.org/">OpenStreetMap</a> is a free editable map of the whole world. It is made by people like you."</i> (from <a rel="nofollow" class="external text" href="http://www.openstreetmap.org/">http://www.openstreetmap.org</a>). This page discusses the conversion of files with data from OpenStreetMap to a SUMO network file. 
+</p><p>There are several ways how to download the data from OpenStreetMap to a file. Please read the page <a href="../../Networks/Import/OpenStreetMapDownload.html" title="Networks/Import/OpenStreetMapDownload">Networks/Import/OpenStreetMapDownload</a> to learn about these ways. For more information about the file format visit the page <a href="../../OpenStreetMap_file.html" title="OpenStreetMap file">OpenStreetMap file</a>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Importing_the_Road_Network"><span class="tocnumber">1</span> <span class="toctext">Importing the Road Network</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Importing_additional_Polygons_.28Buildings.2C_Water.2C_etc..29"><span class="tocnumber">2</span> <span class="toctext">Importing additional Polygons (Buildings, Water, etc.)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Import_Scripts"><span class="tocnumber">3</span> <span class="toctext">Import Scripts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Recommended_NETCONVERT_Options"><span class="tocnumber">3.1</span> <span class="toctext">Recommended NETCONVERT Options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Further_Notes"><span class="tocnumber">4</span> <span class="toctext">Further Notes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Junctions"><span class="tocnumber">4.1</span> <span class="toctext">Junctions</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Traffic_Lights"><span class="tocnumber">4.2</span> <span class="toctext">Traffic Lights</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Interpreting_traffic_light_information_in_OSM"><span class="tocnumber">4.2.1</span> <span class="toctext">Interpreting traffic light information in OSM</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Joining_traffic_lights"><span class="tocnumber">4.2.2</span> <span class="toctext">Joining traffic lights</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Overriding_the_traffic_light_information"><span class="tocnumber">4.2.3</span> <span class="toctext">Overriding the traffic light information</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Highway_On-_and_Off-Ramps"><span class="tocnumber">4.3</span> <span class="toctext">Highway On- and Off-Ramps</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Roundabouts"><span class="tocnumber">4.4</span> <span class="toctext">Roundabouts</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Editing_OSM_networks"><span class="tocnumber">4.5</span> <span class="toctext">Editing OSM networks</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#JOSM"><span class="tocnumber">4.5.1</span> <span class="toctext">JOSM</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#OSMOSIS"><span class="tocnumber">4.5.2</span> <span class="toctext">OSMOSIS</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#NETCONVERT_Details"><span class="tocnumber">5</span> <span class="toctext">NETCONVERT Details</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Road_Types"><span class="tocnumber">5.1</span> <span class="toctext">Road Types</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Explicite_Road_Attributes"><span class="tocnumber">5.2</span> <span class="toctext">Explicite Road Attributes</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Dismissing_unwanted_traffic_modes"><span class="tocnumber">5.3</span> <span class="toctext">Dismissing unwanted traffic modes</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Relationship_between_OSM_ids_and_SUMO-ids"><span class="tocnumber">5.4</span> <span class="toctext">Relationship between OSM ids and SUMO-ids</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Warnings_during_Import"><span class="tocnumber">5.5</span> <span class="toctext">Warnings during Import</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Missing_Descriptions"><span class="tocnumber">6</span> <span class="toctext">Missing Descriptions</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Importing_the_Road_Network">Importing the Road Network</span></h1>
+<p><a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> can import OSM-files natively. The according option is named <span style="color: #111144; font-weight: bold; white-space: pre;">--osm-files <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;[,&lt;FILE&gt;]*</i></a></span> or <span style="color: #111144; font-weight: bold; white-space: pre;">--osm <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FILE&gt;[,&lt;FILE&gt;]*</i></a></span> for short.
+</p><p>The following call to <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> imports the road network stored in "berlin.osm.xml" and stores the SUMO-network generated from this data into "berlin.net.xml":
+</p>
+<pre>netconvert --osm-files berlin.osm.xml -o berlin.net.xml
+</pre>
+<p>OSM-data has always WGS84 geo coordinates which will be automatically UTM transformed by netconvert (since sumo 0.11.1). Thus you need explicit projection parameters only if you need a different projection. Refer to the <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> documentation for other conversion options.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br /> Several aspects of the imported network may have to be modified to suit your needs. Some of the relevant <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> options are described below. For more flexible alterations see <a href="../../Tutorials/ScenarioGuide.html#Modifying_the_Network" title="Tutorials/ScenarioGuide">Tutorials/ScenarioGuide#Modifying_the_Network</a>.</div>}
+<h1> <span class="mw-headline" id="Importing_additional_Polygons_.28Buildings.2C_Water.2C_etc..29">Importing additional Polygons (Buildings, Water, etc.)</span></h1>
+<p>OSM-data not only contains the road network but also a wide range of additional polygons such as buildings and rivers. 
+These polygons can be imported using <a href="../../POLYCONVERT.html" title="POLYCONVERT">POLYCONVERT</a> and then added to a <code>sumo-gui</code>-configuration.
+</p><p>To interpret the OSM-data an additional <i>typemap</i>-file is required:
+</p>
+<pre class="xml">
+ &lt;polygonTypes&gt;
+ 	&lt;polygonType id=&quot;waterway&quot; name=&quot;water&quot; color=&quot;.71,.82,.82&quot; layer=&quot;-10&quot;/&gt;
+ 	&lt;polygonType id=&quot;natural.water&quot; name=&quot;water&quot; color=&quot;.71,.82,.82&quot; layer=&quot;-10&quot;/&gt;
+ 	&lt;polygonType id=&quot;natural.wetland&quot; name=&quot;water&quot; color=&quot;.71,.82,.82&quot; layer=&quot;-10&quot;/&gt;
+ 	&lt;polygonType id=&quot;sport&quot; name=&quot;sport&quot; color=&quot;.31,.90,.49&quot; layer=&quot;2&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.forest&quot; name=&quot;forest&quot; color=&quot;0.55,.77,.42&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;natural.wood&quot; name=&quot;forest&quot; color=&quot;0.55,.77,.42&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;natural&quot; name=&quot;natural&quot; color=&quot;0.55,.77,.42&quot; layer=&quot;2&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.park&quot; name=&quot;park&quot; color=&quot;.81,.96,.79&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;leisure&quot; name=&quot;leisure&quot; color=&quot;.81,.96,.79&quot; layer=&quot;0&quot;/&gt;
+ 	&lt;polygonType id=&quot;leisure.park&quot; name=&quot;tourism&quot; color=&quot;.81,.96,.79&quot; layer=&quot;-10&quot;/&gt;
+ 	&lt;polygonType id=&quot;tourism&quot; name=&quot;tourism&quot; color=&quot;.81,.96,.79&quot; layer=&quot;2&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse&quot; name=&quot;landuse&quot; color=&quot;.76,.76,.51&quot; layer=&quot;-4&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.residential&quot; name=&quot;residential&quot; color=&quot;.92,.92,.89&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.commercial&quot; name=&quot;commercial&quot; color=&quot;.82,.82,.80&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;shop&quot; name=&quot;shop&quot; color=&quot;.93,.78,1.0&quot; layer=&quot;2&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.industrial&quot; name=&quot;industrial&quot; color=&quot;.82,.82,.80&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;man_made&quot; name=&quot;building&quot; color=&quot;1.0,.90,.90&quot; layer=&quot;2&quot;/&gt;
+ 	&lt;polygonType id=&quot;building&quot; name=&quot;building&quot; color=&quot;1.0,.90,.90&quot; layer=&quot;2&quot;/&gt;
+ 	&lt;polygonType id=&quot;amenity&quot; name=&quot;amenity&quot; color=&quot;.93,.78,.78&quot; layer=&quot;2&quot;/&gt;
+ 	&lt;polygonType id=&quot;amenity.parking&quot; name=&quot;parking&quot; color=&quot;.72,.72,.70&quot; layer=&quot;-2&quot;/&gt;
+ 	&lt;polygonType id=&quot;military&quot; name=&quot;military&quot; color=&quot;.60,.60,.36&quot; layer=&quot;-10&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.military&quot; name=&quot;military&quot; color=&quot;.60,.60,.36&quot; layer=&quot;-10&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.farm&quot; name=&quot;farm&quot; color=&quot;.95,.95,.8&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.greenfield&quot; name=&quot;farm&quot; color=&quot;.95,.95,.8&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;landuse.village_green&quot; name=&quot;farm&quot; color=&quot;.95,.95,.8&quot; layer=&quot;-11&quot;/&gt;
+ 	&lt;polygonType id=&quot;power&quot; name=&quot;power&quot; color=&quot;.1,.1,.3&quot; layer=&quot;5&quot;/&gt;
+ 	&lt;polygonType id=&quot;natural.land&quot; name=&quot;land&quot; color=&quot;.98,.87,.46&quot; layer=&quot;-9&quot;/&gt;
+  	&lt;polygonType id=&quot;aeroway&quot; name=&quot;aeroway&quot; color=&quot;.5,.5,.5&quot; layer=&quot;1&quot;/&gt;
+ 	&lt;polygonType id=&quot;aerialway&quot; name=&quot;aerialway&quot; color=&quot;.2,.2,.2&quot; layer=&quot;1&quot;/&gt;
+ 	&lt;polygonType id=&quot;historic&quot; name=&quot;historic&quot; color=&quot;.5,1,.5&quot; layer=&quot;2&quot;/&gt;
+    
+        &lt;polygonType id=&quot;power&quot; name=&quot;power&quot; color=&quot;.10,.10,.30&quot; layer=&quot;-1&quot; discard=&quot;true&quot;/&gt;                         
+        &lt;polygonType id=&quot;highway&quot; name=&quot;highway&quot; color=&quot;.10,.10,.10&quot; layer=&quot;-1&quot; discard=&quot;true&quot;/&gt;                                       
+        &lt;polygonType id=&quot;boundary&quot; name=&quot;boundary&quot; color=&quot;1.0,.33,.33&quot; layer=&quot;0&quot; fill=&quot;false&quot; discard=&quot;true&quot;/&gt;                            
+        &lt;polygonType id=&quot;admin_level&quot; name=&quot;admin_level&quot; color=&quot;1.0,.33,.33&quot; layer=&quot;0&quot; fill=&quot;false&quot; discard=&quot;true&quot;/&gt;  
+ &lt;/polygonTypes&gt;
+</pre>
+<p>Using the typemap file <i>typemap.xml</i> the following call to <a href="../../POLYCONVERT.html" title="POLYCONVERT">POLYCONVERT</a> imports polygons from OSM-data and produces a Sumo-polygon file.
+</p>
+<pre>polyconvert --net-file berlin.net.xml --osm-files berlin.osm --type-file typemap.xml -o berlin.poly.xml
+</pre>
+<p>The created polygon file <i>berlin.poly.xml</i> can then be added to a <code>sumo-gui</code> configuration:
+</p>
+<pre class="xml">
+ &lt;configuration&gt;
+     &lt;input&gt;
+         &lt;net-file value=&quot;berlin.net.xml&quot;/&gt; 		
+         &lt;additional-files value=&quot;berlin.poly.xml&quot;/&gt;
+     &lt;/input&gt;
+ &lt;/configuration&gt;
+</pre>
+<h1> <span class="mw-headline" id="Import_Scripts">Import Scripts</span></h1>
+<p>The help script <i>osmGet.py</i> allows downloading a large area. The resulting file called "&lt;PREFIX&gt;.osm.xml" can then be imported using the script <i>osmBuild.Py</i>. Both scripts are located in <i><b>&lt;SUMO_HOME&gt;</b></i>/tools/import/osm.
+</p><p>The call is:
+</p>
+<pre>osmGet.py --bbox &lt;BOUNDING_BOX&gt; --prefix &lt;NAME&gt;
+osmBuild.py --osm-file &lt;NAME&gt;.osm.xml  [--vehicle-classes (all|road|passenger)] [--type-file &lt;TYEPMAP_FILE&gt;] [--netconvert-options &lt;OPT1,OPT2,OPT3&gt;] [--polyconvert-options &lt;OPT1,OPT2,OPT3&gt;]
+</pre>
+<p>If "road" is given as parameter, only roads usable by road vehicles are extracted, if "passenger" is given, only those accessible by passenger vehicles. 
+</p><p>When using the option <span style="color: #111144; font-weight: bold; white-space: pre;"> --type-file</span> an additional output file with polygons of rivers and buildings as well as Points of Interest (POIs) will be generated. This can be loaded in <a href="../../SUMO-GUI.html" title="SUMO-GUI">SUMO-GUI</a> for additional visualization. An example type-file file can be found at <i><b>&lt;SUMO_HOME&gt;</b></i>/tools/import/osm/typemap_example.xml.
+</p><p>Additional options for <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> and <a href="../../POLYCONVERT.html" title="POLYCONVERT">POLYCONVERT</a> can be supplied using the options <span style="color: #111144; font-weight: bold; white-space: pre;">--netconvert-options</span> and <span style="color: #111144; font-weight: bold; white-space: pre;">-polyconvert-options</span>
+</p><p>Note that the scripts also support a secondary syntax for loading even large areas by splitting them into multiple tiles and download requests. In this case the calls look like this:
+</p>
+<pre>osmGet.py --bbox &lt;BOUNDING_BOX&gt; --prefix &lt;NAME&gt; --oldapi --tiles &lt;INT&gt;
+osmBuild.py --oldapi-prefix &lt;NAME --tiles &lt;INT&gt; [--vehicle-classes (all|road|passenger),ramps,tls] [--type-file &lt;TYEPMAP_FILE&gt;] 
+</pre>
+<p>The number of tiles given in both calls must match.
+</p>
+<h3> <span class="mw-headline" id="Recommended_NETCONVERT_Options"> Recommended <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> Options </span></h3>
+<p>These options are used by default in the script <i>osmBuild.py</i>:
+</p>
+<pre> --geometry.remove,--remove-edges.isolated,--roundabouts.guess,--ramps.guess,--junctions.join,--osm.railway.oneway-default,--tls.guess-signals,--tls.discard-simple,--tls.join
+</pre>
+<p>The rationale for these options is explained below.
+</p>
+<h1> <span class="mw-headline" id="Further_Notes">Further Notes</span></h1>
+<h2> <span class="mw-headline" id="Junctions">Junctions</span></h2>
+<p>In OpenStreetMap roads forming a single street and separated by, for example, a lawn or tram line, are represented by two edges that are parallel to each other. When crossing with another street, they form two junctions instead of one. To merge such junctions into a single junction, one can define which nodes to merge. See <a href="../../Networks/Building_Networks_from_own_XML-descriptions.html#Joining_Nodes" title="Networks/Building Networks from own XML-descriptions">Networks/Building Networks from own XML-descriptions#Joining Nodes</a> and <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> documentation for usage details.
+</p><p>The <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> option <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join</span> applies a heuristic to join these junction clusters automatically and is used by default when using the <i>osmBuild.py</i> script described above. However, some junction clusters are too complex for the heuristic and should be checked manually (as indicated by the warning messages). Also, sometimes the heuristic wrongly joins some junctions. These can be excluded by giving them as a list to the option <span style="color: #111144; font-weight: bold; white-space: pre;">--junctions.join-exclude <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;ID&gt;[,&lt;ID&gt;]*</i></a></span>.
+</p><p>When leaving junctions unjoined, there is a high risk of getting low throughput, jams and even deadlocks due to the short intermediate edges and the difficulty in computing proper traffic light plans for the junction clusters.
+</p>
+<h2> <span class="mw-headline" id="Traffic_Lights">Traffic Lights</span></h2>
+<h3> <span class="mw-headline" id="Interpreting_traffic_light_information_in_OSM">Interpreting traffic light information in OSM</span></h3>
+<p><a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> prefers each intersection to be represented by a single node with a single traffic light controller. To achieve the former, see <a href="#Junctions">#Junctions</a>. To achieve the latter some extra options are recommended. OSM often uses nodes ahead of an intersection to represent the position of traffic light signals. The actual intersection itself is then not marked as controlled. To interpret these structures the option <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.guess-signals</span> and <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.guess-signals.dist <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;FLOAT&gt;</i></a></span> may be used. 
+To cover the cases where this heuristic fails, the options below may be used to computed a joint tls plan for multiple nodes.
+</p>
+<h3> <span class="mw-headline" id="Joining_traffic_lights">Joining traffic lights</span></h3>
+<p>OSM does not have the possibility to assign several nodes to a single traffic light. This means that near-by nodes, normally controlled by one traffic light system are controlled by two after the network is imported. It is obvious that traffic collapses in such areas if both traffic lights are not synchronized. Better representation of the reality can be achieved by giving the option <span style="color: #111144; font-weight: bold; white-space: pre;">--try-join-tls</span> to <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>. <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> then assigns near-by nodes to the same traffic light.
+</p>
+<h3> <span class="mw-headline" id="Overriding_the_traffic_light_information">Overriding the traffic light information</span></h3>
+<p>If the traffic light information embedded in the OSM file does not fit your needs, you can strip it with <span style="color: #111144; font-weight: bold; white-space: pre;">--osm.discard-tls</span> option in <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> and then provide your own definition in a separate <a href="../../Networks/Building_Networks_from_own_XML-descriptions.html#Node_Descriptions" title="Networks/Building Networks from own XML-descriptions">*.nod.xml</a> file in a second run of <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>:
+</p>
+<pre># 1. Import the OSM file to SUMO, discarding TLS information.
+netconvert --osm-files berlin.osm.xml --output-file berlin-without-tls.net.xml \
+   --osm.discard-tls
+
+# 2. Set traffic light information.
+netconvert --sumo-net-file berlin-without-tls.net.xml --node-files tls-controlled-nodes.nod.xml \
+   --output-file berlin-with-tls.net.xml
+</pre>
+<p>where <b>tls-controlled-nodes.nod.xml</b> overwrites the type of node to <b>"traffic_light"</b>. If the node already exists (which is usually the case) you don't have to provide any information other than the node's ID and new node type.
+</p>
+<h2> <span class="mw-headline" id="Highway_On-_and_Off-Ramps">Highway On- and Off-Ramps</span></h2>
+<p>OSM networks often lack additional lanes for highway on- and off-ramps. They can be guessed via <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> using the <span style="color: #111144; font-weight: bold; white-space: pre;">--guess-ramps</span> option.
+</p>
+<h2> <span class="mw-headline" id="Roundabouts">Roundabouts</span></h2>
+<p>To ensure correct right-of-way at roundabouts, the option <span style="color: #111144; font-weight: bold; white-space: pre;">--roundabouts.guess</span> should be added. This option is set automatically when using the <i>osmBuild.py</i> script.
+</p>
+<h2> <span class="mw-headline" id="Editing_OSM_networks">Editing OSM networks</span></h2>
+<h3> <span class="mw-headline" id="JOSM">JOSM</span></h3>
+<p><i>From George Dita, on 01.07.2009</i>
+<a rel="nofollow" class="external text" href="http://josm.openstreetmap.de/">JOSM</a> can be used to edit OSM-data (i.e. for trimming a rectangular map and deleting unwated features). After you delete the part that does not interest you have to alter the file using xmlstarlet which actually deletes the nodes.
+</p><p>xmlstarlet can be used like this:
+</p>
+<pre>xmlstarlet ed -d "/osm/*[@action='delete']" &lt; input.osm &gt; output.osm
+</pre>
+<div style="background: #ffcc44; padding: .5em; border: 1px dashed #ff8800; margin-right:10px; margin-left:10px;"><b>Caution:</b><br /> Up to version 4279 of JOSM, nodes and ways created or modified by JOSM are assigned a negative ID. With each run of JOSM, these IDs are recalculated. Please do not rely on them in your SUMO files. If you decide not to upload your changes to OpenStreetMap, you can remove the minuses in the IDs, assure that IDs are unique and then safely refer to them in SUMO files.</div>
+<h3> <span class="mw-headline" id="OSMOSIS">OSMOSIS</span></h3>
+<p><i>From Christian Klotz, on 01.07.2009, tip by Christoph Sommmer</i>
+</p><p>The java tool osmosis (<a rel="nofollow" class="external free" href="http://wiki.openstreetmap.org/index.php/Osmosis">http://wiki.openstreetmap.org/index.php/Osmosis</a>) can be used to filter out unwanted features from an OSM-file.
+The following command keeps motorways and motorway links while filtering out everything else:
+</p>
+<pre>java -jar osmosis.jar --read-xml file="orginal.osm.xml" --way-key-value \ 
+    keyValueList="highway.motorway,highway.motorway_link" \
+    --used-node --write-xml file="filtered.osm.xml"
+</pre>
+<p><br />
+</p>
+<h1> <span class="mw-headline" id="NETCONVERT_Details">NETCONVERT Details</span></h1>
+<h2> <span class="mw-headline" id="Road_Types">Road Types</span></h2>
+<p>When importing road networks, <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> searches for the street type, encoded in OSM as a key/value-pair where the key is either "<i>highway</i>" or "<i>railway</i>". Only if such a key occures in the edge definition, the edge is imported (see also below). The edge's type name is built from the found key/value pair by building a name as: <i>&lt;KEY&gt;</i>.<i>&lt;VALUE&gt;</i>. Using this type name, the edge's attributes are determined using a predefined map of type names to type definitions. It is possible to override the default types with own type definitions. This is documented in the article about the <a href="../../SUMO_edge_type_file.html" title="SUMO edge type file">SUMO edge type file</a>.
+</p><p>The following table lists the internal default values.
+</p>
+<div style="background: #ffcc44; padding: .5em; border: 1px dashed #ff8800; margin-right:10px; margin-left:10px;"><b>Caution:</b><br />The values were set-up ad-hoc and are not yet verified. It would be a great help if someone would revisit and improve them. Please let us know.</div>
+<p><br />
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Type Name
+</th>
+<th style="background:#ddddff;"> #lanes
+</th>
+<th style="background:#ddddff;"> speed
+</th>
+<th style="background:#ddddff;"> priority
+</th>
+<th style="background:#ddddff;"> allowed vehicle classes
+</th>
+<th style="background:#ddddff;"> one-way is default
+</th></tr>
+<tr>
+<td> highway.motorway
+</td>
+<td> 3
+</td>
+<td> 160 km/h
+</td>
+<td> 13
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td> x
+</td></tr>
+<tr>
+<td> highway.motorway_link
+</td>
+<td> 3
+</td>
+<td> 80 km/h
+</td>
+<td> 12
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td> x
+</td></tr>
+<tr>
+<td> highway.trunk
+</td>
+<td> 2
+</td>
+<td> 100 km/h
+</td>
+<td> 11
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.trunk_link
+</td>
+<td> 1
+</td>
+<td> 80 km/h
+</td>
+<td> 10
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.primary
+</td>
+<td> 2
+</td>
+<td> 100 km/h
+</td>
+<td> 9
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.primary_link
+</td>
+<td> 1
+</td>
+<td> 80 km/h
+</td>
+<td> 8
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.secondary
+</td>
+<td> 2
+</td>
+<td> 100 km/h
+</td>
+<td> 7
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.secondary_link
+</td>
+<td> 1
+</td>
+<td> 80 km/h
+</td>
+<td> 6
+</td>
+<td> all (SVC_IGNORING)
+</td></tr>
+<tr>
+<td> highway.tertiary
+</td>
+<td> 1
+</td>
+<td> 80 km/h
+</td>
+<td> 6
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.tertiary_link
+</td>
+<td> 1
+</td>
+<td> 80 km/h
+</td>
+<td> 5
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.unclassified
+</td>
+<td> 1
+</td>
+<td> 80 km/h
+</td>
+<td> 5
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.residential
+</td>
+<td> 1
+</td>
+<td> 50 km/h
+</td>
+<td> 4
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.living_street
+</td>
+<td> 1
+</td>
+<td> 10 km/h
+</td>
+<td> 3
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.service
+</td>
+<td> 1
+</td>
+<td> 20 km/h
+</td>
+<td> 2
+</td>
+<td> SVC_DELIVERY
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.track
+</td>
+<td> 1
+</td>
+<td> 20 km/h
+</td>
+<td> 1
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.services
+</td>
+<td> 1
+</td>
+<td> 20 km/h
+</td>
+<td> 1
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.unsurfaced
+</td>
+<td> 1
+</td>
+<td> 30 km/h
+</td>
+<td> 1
+</td>
+<td> all (SVC_IGNORING)
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.pedestrian
+</td>
+<td> 1
+</td>
+<td> 30 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.path
+</td>
+<td> 1
+</td>
+<td> 10 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.footway
+</td>
+<td> 1
+</td>
+<td> 30 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.pedestrian
+</td>
+<td> 1
+</td>
+<td> 30 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.bridleway
+</td>
+<td> 1
+</td>
+<td> 10 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.cycleway
+</td>
+<td> 1
+</td>
+<td> 20 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_BICYCLE
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.footway
+</td>
+<td> 1
+</td>
+<td> 10 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.step
+</td>
+<td> 1
+</td>
+<td> 5 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.steps
+</td>
+<td> 1
+</td>
+<td> 5 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.stairs
+</td>
+<td> 1
+</td>
+<td> 5 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_PEDESTRIAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> highway.bus_guideway
+</td>
+<td> 1
+</td>
+<td> 30 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_BUS
+</td>
+<td>
+</td></tr>
+
+<tr>
+<td> railway.rail
+</td>
+<td> 1
+</td>
+<td> 300 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_RAIL
+</td>
+<td>
+</td></tr>
+<tr>
+<td> railway.tram
+</td>
+<td> 1
+</td>
+<td> 100 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_TRAM
+</td>
+<td>
+</td></tr>
+<tr>
+<td> railway.light_rail
+</td>
+<td> 1
+</td>
+<td> 100 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_RAIL_URBAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> railway.subway
+</td>
+<td> 1
+</td>
+<td> 100 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_RAIL_URBAN
+</td>
+<td>
+</td></tr>
+<tr>
+<td> railway.preserved
+</td>
+<td> 1
+</td>
+<td> 100 km/h
+</td>
+<td> 1
+</td>
+<td> SVC_RAIL
+</td>
+<td>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Explicite_Road_Attributes">Explicite Road Attributes</span></h2>
+<p>In the case an edge contains the definition about the number of lanes (key="<i>lanes</i>") or the allowed speed (key="<i>maxspeed</i>"), this information is used instead of the according type's value. Also, the per-edge information whether the edge is a one-way edge is read (key="<i>oneway</i>"). In the case the edge belongs to a roundabout (key="<i>junction</i>" and value="<i>roundabout</i>"), it is also set as being a one-way edge.
+</p>
+<h2> <span class="mw-headline" id="Dismissing_unwanted_traffic_modes">Dismissing unwanted traffic modes</span></h2>
+<p>In most cases, tracks and edges which not may be crossed by motorised traffic are not interesting for road traffic research. It is possible to exclude these edges from being imported using the <a href="../../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>-option <span style="color: #111144; font-weight: bold; white-space: pre;">--remove-edges.by-vclass <a href="../../Basics/Notation.html#Referenced_Data_Types" title="Basics/Notation"><i>&lt;STRING&gt;[,&lt;STRING&gt;]*</i></a></span>. 
+</p><p>For removing all edges which can not be used by passenger vehicles the call must be extended by:
+</p>
+<pre>--remove-edges.by-vclass hov,taxi,bus,delivery,transport,lightrail,cityrail, \ 
+  rail_slow,rail_fast,motorcycle,bicycle,pedestrian
+</pre>
+<p>For removing all edges which can not be used by road vehicles the call must be extended by:
+</p>
+<pre>--remove-edges.by-vclass rail_slow,rail_fast,bicycle,pedestrian
+</pre>
+<h2> <span class="mw-headline" id="Relationship_between_OSM_ids_and_SUMO-ids"> Relationship between OSM ids and SUMO-ids </span></h2>
+<p>For the most part, the relationship between OSM and .net.xml is simple:
+</p>
+<ul><li> OSM node id "1234" translates into junction id "1234".
+</li><li> OSM way id "5677" translatess into multiple edge ids "5678#0", "5678#1", "5678#2", "-5678#0", "-5678#1", "-5678#2"
+</li></ul>
+<p>OSM ways are mostly bi-directional and cross multiple intersections. In .net.xml they are split at each intersection with a running index #n and the edges with prefix '-' are those in the opposite direction.
+</p><p>However, some OSM elements may not appear in the created network because they
+are joined with other elements or converted to (unnamed) geometry points along
+an edge.
+</p>
+<h2> <span class="mw-headline" id="Warnings_during_Import"> Warnings during Import </span></h2>
+<p>Several types of warnings and errors with different levels of severity may be issued during OSM import. 
+</p>
+<table cellspacing="0" border="1" align="center" width="80%">
+
+<tr>
+<th style="background:#ddddff;"> Message
+</th>
+<th style="background:#ddddff;"> Explanation
+</th>
+<th style="background:#ddddff;"> Recommended Action
+</th></tr>
+<tr>
+<td> Warning: Discarding unusable type "...." (first occurence for edge "....")
+</td>
+<td> Unknown edge types are ignored during import.
+</td>
+<td> Ignore or provide an <a href="../../SUMO_edge_type_file.html" title="SUMO edge type file">Edge-type file</a> which contains that type.
+</td></tr>
+<tr>
+<td> Warning: Ignoring restriction relation ...
+</td>
+<td> Some data is missing within the OSM file.
+</td>
+<td> Ignore, because this relation most likely falls outside the boundaries of the road network.
+</td></tr>
+<tr>
+<td> Warning: Direction of restriction relation could not be determined
+</td>
+<td> Some data is missing within the OSM file.
+</td>
+<td> Ignore, because this relation most likely falls outside the boundaries of the road network.
+</td></tr>
+</table>
+<p><a href="../../NETCONVERT.html#Warnings_during_Import" title="NETCONVERT">Additional warnings are described here</a>.
+</p>
+<h1> <span class="mw-headline" id="Missing_Descriptions">Missing Descriptions</span></h1>
+<ul><li> TLS computation
+</li><li> computation of lane-2-lane connections
+</li><li> what is exactly imported (how edge attributes are determined)
+</li><li> other traffic modes
+</li><li> Network quality
+</li></ul>
+<h1> <span class="mw-headline" id="References">References</span></h1>
+<ul><li> <a rel="nofollow" class="external free" href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a> - the home site
+</li><li> <a rel="nofollow" class="external free" href="http://www.openstreetmap.de/">http://www.openstreetmap.de/</a> - the German home site
+</li><li> <a rel="nofollow" class="external free" href="http://wiki.openstreetmap.org/index.php/Map_Features">http://wiki.openstreetmap.org/index.php/Map_Features</a> - information about database attributes
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 244/1000000
+Preprocessor generated node count: 560/1000000
+Post‐expand include size: 3081/2097152 bytes
+Template argument size: 1288/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:98-0!*!0!!en!*!* and timestamp 20150330114639 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 27 March 2015, at 09:05.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>

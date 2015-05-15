@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Tutorials/ScenarioGuide - SUMO - Simulation of Urban Mobility</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../sumo.css">
+  <link rel="license" href=
+  "http://creativecommons.org/licenses/by-sa/3.0/">
+</head>
+
+<body id="bmission">
+  <div id="container">
+    <div id="logo" style="text-align:left">
+      <img src="../logo.png" width="128" height="128"
+      alt="SUMO-Simulation of Urban Mobility" style=
+      "float:left; margin-left:10px; margin-right:20px;">
+      <div id="logo_text1">SUMO</div>
+      <div id="logo_text2">Simulation of Urban MObility</div>
+    </div>
+
+    <div id="subsMenu">
+      <ul>
+        <li class="sub"><a href=
+        "http://sumo-sim.org/">Home</a></li>
+
+        <li class="sub"><a href="../Downloads.html">Download</a></li>
+
+        <li class="sub"><a href="../index.html">Documentation</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/wiki/">Wiki</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/trac/">Trac</a></li>
+
+        <li class="sub"><a href=
+        "http://sumo-sim.org/blog/">Blog</a></li>
+
+        <li class="sub"><a href="../Contact.html">Contact</a></li>
+
+        <li class="sub"><a href=
+        "http://sourceforge.net/projects/sumo/">SF-Project</a></li>
+      </ul>
+    </div>
+
+    <div id="nav">
+      <div id="step1">
+        <h3>User</h3>
+        <ul>
+        <!-- nav begins --> <li><a href="../SUMO_User_Documentation.html">Introduction</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Sumo_at_a_Glance.html">The traffic simulation SUMO</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Basic_Usage">Basic Usage</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Basics/Notation.html">Notation in this Documentation</a></li>
+  <li><a href="../Basics/Basic_Computer_Skills.html">Needed, basic Computer Skills</a></li>
+  <li><a href="../Installing.html">Installing SUMO</a></li>
+  <li><a href="../Basics/Using_the_Command_Line_Applications.html">Using SUMO Command Line Applications</a></li>
+  <li><a href="../Tutorials.html">Tutorials</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Network_Building">Network Building</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Networks/SUMO_Road_Networks.html">SUMO Road Networks</a></li>
+  <li><a href="../Networks/Abstract_Network_Generation.html">Abstract networks generation</a></li>
+  <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Networks/Building_Networks_from_own_XML-descriptions.html">Defining own networks using XML</a></li>
+   <li><a href="../Networks/Import.html">Importing non-SUMO networks</a></li>
+<li style="list-style: none; display: inline"><ul>
+    <li><a href="../Networks/Import/OpenStreetMap.html">... from OpenStreetMap</a></li>
+    <li><a href="../Networks/Import/VISUM.html">... from VISUM</a></li>
+    <li><a href="../Networks/Import/Vissim.html">... from Vissim</a></li>
+    <li><a href="../Networks/Import/OpenDRIVE.html">... from OpenDRIVE</a></li>
+    <li><a href="../Networks/Import/MATsim.html">... from MATsim</a></li>
+    <li><a href="../Networks/Import/ArcView.html">... from ArcView (shapefiles)</a></li>
+    <li><a href="../Networks/Import/DlrNavteq.html">... from Elmar's GDF</a></li>
+    <li><a href="../Networks/Import/RoboCup.html">... from Robocup Simulation League</a></li>
+</ul></li>
+   <li><a href="../Networks/Import/SUMO_Road_Networks.html">Importing SUMO networks</a></li>
+   <li><a href="../Simulation/Pedestrians.html#Building_a_network_for_pedestrian_simulation">Building networks for pedestrian simulation</a></li>
+   <li><a href="../Networks/Further_Options.html">Further NETCONVERT options</a></li>
+   <li><a href="../Networks/Further_Outputs.html">Additional output</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Demand_Modelling">Demand Modelling</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html">Introduction to SUMO Demand Modelling</a></li>
+  <li><a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html">Definition of Vehicles, Vehicle Types, and Routes</a></li>
+  <li><a href="../Simulation/Public_Transport.html">Simulation of public transport</a></li>
+  <li><a href="../Specification/Persons.html">Simulation of individual persons and trip chains</a></li>
+  <li><a href="../Specification/Logistics.html">Simulation of logistics</a></li>
+  <li><a href="../Demand/Shortest_or_Optimal_Path_Routing.html">Shortest or Optimal Path Routing</a></li>
+  <li><a href="../Demand/Automatic_Routing_.html">Routing in the Simulation</a></li>
+  <li><a href="../Demand/Dynamic_User_Assignment.html">Computing Dynamic User Assignment</a></li>
+</ul></li>
+  <li>Data sources for demand generation</li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Demand/Importing_O/D_Matrices.html">Importing O/D Matrices</a></li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Demand/Further_Ways_to_import_VISUM_Demand_Definitions.html">Other VISUM Demand Importers</a></li>
+   <li><a href="../Demand/Further_Ways_to_import_Vissim_Demand_Definitions.html">Other Vissim Demand Importers</a></li>
+</ul></li>
+  <li><a href="../Demand/Routes_from_Observation_Points.html">Routes from Observation Points</a></li>
+  <li><a href="../Demand/Routing_by_Turn_Probabilities.html">Routing by Turn Probabilities</a></li>
+  <li><a href="../Demand/Activity-based_Demand_Generation.html">Activity-based Demand Generation</a></li>
+  <li><a href="../Tools/Trip.html#randomTrips.py">Random Trips</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Simulation">Simulation</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Simulation/Basic_Definition.html">Basic Definition</a></li>
+  <li>Traffic Management and Other Structures</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Traffic_Lights.html">Traffic Lights</a></li>
+   <li><a href="../Simulation/Public_Transport.html">Public Transport</a></li>
+   <li><a href="../Simulation/Variable_Speed_Signs.html">Variable Speed Signs</a></li>
+   <li><a href="../Simulation/Rerouter.html">Rerouter / Alternative Route Signage</a></li>
+   <li><a href="../Simulation/Vaporizer.html">Vaporizer</a></li>
+   <li><a href="../Simulation/Calibrator.html">Dynamic calibration of flow and speed</a></li>
+</ul></li>
+  <li><a href="../Simulation/Output.html">Simulation output</a></li>
+  <li><a href="../TraCI.html">TraCI (On-line Interaction)</a></li>
+  <li><a href="../Simulation/Pedestrians.html">Pedestrian simulation</a></li>
+  <li><a href="../Simulation/Shapes.html">Shapes Visualisation</a></li>
+  <li><a href="../Models/Emissions.html">Emissions</a></li>
+  <li><a href="../Simulation/VehicleSpeed.html">Vehicle speed</a></li>
+  <li><a href="../Simulation/Randomness.html">Randomness</a></li>
+  <li><a href="../Simulation/GenericParameters.html">Generic Parameters</a></li>
+  <li>Common Problems</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Simulation/Why_Vehicles_are_teleporting.html">Why Vehicles are teleporting</a></li>
+</ul></li>
+</ul></li>
+   <li><a href="../SUMO_User_Documentation.html#Theory">Theory</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Theory/Traffic_Simulations.html">Traffic simulations in general</a></li>
+</ul></li>
+  <li><a href="../SUMO_User_Documentation.html#Appendices">Appendices</a></li>
+<li style="list-style: none; display: inline"><ul>
+  <li><a href="../Other/Glossary.html">Glossary</a></li>
+  <li><a href="../FAQ.html">FAQ</a></li>
+  <li><a href="../Tools/Main.html">Additional Tools</a></li>
+  <li><a href="../Other/File_Extensions.html">Known File Extensions</a></li>
+  <li>Application Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../SUMO.html">SUMO</a></li>
+   <li><a href="../SUMO-GUI.html">SUMO-GUI</a></li>
+   <li><a href="../NETCONVERT.html">NETCONVERT</a></li>
+   <li><a href="../NETGENERATE.html">NETGENERATE</a></li>
+   <li><a href="../OD2TRIPS.html">OD2TRIPS</a></li>
+   <li><a href="../DUAROUTER.html">DUAROUTER</a></li>
+   <li><a href="../JTRROUTER.html">JTRROUTER</a></li>
+   <li><a href="../DFROUTER.html">DFROUTER</a></li>
+   <li><a href="../MAROUTER.html">MAROUTER</a></li>
+   <li><a href="../POLYCONVERT.html">POLYCONVERT</a></li>
+   <li><a href="../ACTIVITYGEN.html">ACTIVITYGEN</a></li>
+</ul></li>
+  <li>Tool Manuals</li>
+<li style="list-style: none; display: inline"><ul>
+   <li><a href="../Tools/TraceExporter.html">Tools/TraceExporter</a></li>
+   <li><a href="../Tools/Visualization.html">Tools/Visualization</a></li>
+   <li><a href="../Tools/Emissions.html">Tools/Emissions</a></li>
+</ul></li>
+  <li><a href="../ChangeLog.html">ChangeLog</a></li>
+</ul></li>
+<!-- nav ends -->
+        </ul>
+      </div>
+
+      <div id="step2">
+        <h3>Further Resources</h3>
+
+        <ul>
+          <li><a href="../Data/Networks.html">Example
+          Networks</a></li>
+
+          <li><a href="../Data/Scenarios.html">Example
+          Scenarios</a></li>
+
+          <li><a href="../Data/Traffic_Data.html">Traffic
+          Data</a></li>
+        </ul>
+      </div>
+
+      <div id="step3">
+        <h3>Developer</h3>
+
+        <ul>
+          <li><a href="../Developer/Main.html">Developer Docs</a></li>
+
+          <li><a href="http://sumo-sim.org/daily/">Daily Tests
+          Status</a></li>
+
+          <li><a href="../../doxygen/">Doxygen Documentation</a></li>
+
+          <li>Python Modules Documentation</li>
+
+          <li style="list-style: none; display: inline">
+            <ul>
+              <li><a href="../../pydoc/traci.html">traci</a></li>
+
+              <li><a href="../../pydoc/sumolib.html">sumolib</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Tutorials/ScenarioGuide</span></h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">generated on 2015-03-31 10:30:55.187848 from <a href="http://sumo.dlr.de/wiki/Tutorials/ScenarioGuide">the wiki page for Tutorials/ScenarioGuide</a> for SUMO 0.23.0</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Build_the_road_network"><span class="tocnumber">2</span> <span class="toctext">Build the road network</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#If_you_already_have_some_network_data"><span class="tocnumber">2.1</span> <span class="toctext">If you already have some network data</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#If_you_do_not_yet_have_any_network_data"><span class="tocnumber">2.2</span> <span class="toctext">If you do not yet have any network data</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Generate_the_traffic"><span class="tocnumber">3</span> <span class="toctext">Generate the traffic</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Improve_your_Scenario"><span class="tocnumber">4</span> <span class="toctext">Improve your Scenario</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Modifying_the_Network"><span class="tocnumber">4.1</span> <span class="toctext">Modifying the Network</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Example:_Patching_the_type_of_a_node"><span class="tocnumber">4.1.1</span> <span class="toctext">Example: Patching the type of a node</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Modifying_an_imported_network_via_plain.xml"><span class="tocnumber">4.1.2</span> <span class="toctext">Modifying an imported network via plain.xml</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Traffic_Light_Programs"><span class="tocnumber">4.2</span> <span class="toctext">Traffic Light Programs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Manage_Scenarios"><span class="tocnumber">5</span> <span class="toctext">Manage Scenarios</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Introduction"> Introduction </span></h1>
+<p>This Tutorial is meant to serve as a high-level guide for building a <a href="../SUMO.html" title="SUMO">SUMO</a> scenario. It provides an outline of the typical steps when building a scenario and lists the recommended  wiki pages for each step.
+</p>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />This tutorial assumes familiarity with <a href="../Tutorials/Hello_Sumo.html" title="Tutorials/Hello Sumo">Tutorials/Hello Sumo</a> and <a href="../Tutorials/Quick_Start.html" title="Tutorials/Quick Start">Tutorials/Quick Start</a></div>
+<h1> <span class="mw-headline" id="Build_the_road_network"> Build the road network </span></h1>
+<p>Every simulation requires a road network. The application <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> is used to create a network which can be used by the simulation <a href="../SUMO.html" title="SUMO">SUMO</a>.
+</p>
+<h2> <span class="mw-headline" id="If_you_already_have_some_network_data"> If you already have some network data </span></h2>
+<p>Check whether a direct import is possible: <a href="../Networks/Import.html" title="Networks/Import">Networks/Import</a>.
+Otherwise you will need to convert the data to a simple XML-format which can be read by <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>. Read this page:
+<a href="../Networks/Import.html" title="Networks/Import">Networks/Import</a>.
+</p>
+<h2> <span class="mw-headline" id="If_you_do_not_yet_have_any_network_data"> If you do not yet have any network data </span></h2>
+<p>Use publicly available network data from <a rel="nofollow" class="external text" href="http://www.openstreetmap.org/">OpenStreetMap</a> as described here: <a href="../Networks/Import/OpenStreetMapDownload.html" title="Networks/Import/OpenStreetMapDownload">Networks/Import/OpenStreetMapDownload</a>.
+Then import the network as described here: <a href="../Networks/Import/OpenStreetMap.html" title="Networks/Import/OpenStreetMap">Networks/Import/OpenStreetMap</a>.
+</p>
+<h1> <span class="mw-headline" id="Generate_the_traffic"> Generate the traffic </span></h1>
+<p>First you should understand the basics of vehicle modelling: <a href="../Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html" title="Definition of Vehicles, Vehicle Types, and Routes">Definition_of_Vehicles,_Vehicle_Types,_and_Routes</a>.
+You have various ways to insert vehicles into the map. Your choice basically depends on what kind of information about the traffic you have: <a href="../Demand/Introduction_to_demand_modelling_in_SUMO.html" title="Demand/Introduction to demand modelling in SUMO">Demand/Introduction_to_demand_modelling_in_SUMO</a>.
+</p>
+<h1> <span class="mw-headline" id="Improve_your_Scenario"> Improve your Scenario </span></h1>
+<p>Most methods for network import leave some aspect of deficient network quality. Very often this manifests as unexpected/unrealistic traffic jams and teleporting vehicle errors. 
+</p>
+<h2> <span class="mw-headline" id="Modifying_the_Network"> Modifying the Network </span></h2>
+<p>You will have to patch your network data to add missing roads, prohibit some turns, correct the number of lanes and add/remove some traffic lights. 
+The recommended way to perform the necessary changes is this:
+</p>
+<ol><li> Encode the changes in <i>plain-xml</i> files as described in <a href="../Networks/Building_Networks_from_own_XML-descriptions.html" title="Networks/Building Networks from own XML-descriptions">Networks/Building_Networks_from_own_XML-descriptions</a>. Most XML-attributes are optional so you only need to set the values you would like to change.
+</li><li> patch your network using <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> by loading the net.xml along with the plain-xml files. You can even use this during the initial import (i.e. load an OSM-file along with your plain-xml files)
+</li></ol>
+<h3> <span class="mw-headline" id="Example:_Patching_the_type_of_a_node"> Example: Patching the type of a node </span></h3>
+<p>prepare a file like this:
+</p><p>patch.nod.xml&#160;:
+</p>
+<pre> &lt;nodes&gt;
+    &lt;node id="id_of_the_node_you_want_to_modify" type="right_before_left"/&gt;
+ &lt;nodes&gt;
+</pre>
+<p>and patch the network like this:
+</p>
+<pre> netconvert --sumo-net-file your.net.xml --node-files patch.nod.xml -o yourpatched.net.xml
+</pre>
+<p>or perform the patch during the initial import:
+</p>
+<pre>netconvert --osm-file yourOSMfile.xml --node-files patch.nod.xml ...&lt;other options&gt;
+</pre>
+<h3> <span class="mw-headline" id="Modifying_an_imported_network_via_plain.xml"> Modifying an imported network via plain.xml </span></h3>
+<p>Instead of patching individual elements you can also convert your network to plain.xml and modify the plain file and then re-assemble the network like this:
+</p>
+<pre> netconvert --sumo-net-file your.net.xml --plain-output-prefix yourplain
+</pre>
+<p>or during import:
+</p>
+<pre> netconvert --osm-files yourOSMinput.xml --plain-output-prefix yourplain ... &lt;your other options&gt;
+</pre>
+<p>This will give you the files:
+</p>
+<pre> yourplain.edg.xml
+ yourplain.nod.xml
+ yourplain.con.xml
+ yourplain.tll.xml
+</pre>
+<p>You can edit these files and then reassamble the network buy loading some or all of them:
+</p>
+<pre> netconvert --edge-files yourplain.edg.xml --node-files yourplain.nod.xml -o new.net.xml
+</pre>
+<p>or 
+</p>
+<pre> netconvert --edge-files yourplain.edg.xml --node-files yourplain.nod.xml --connection-files yourplain.con.xml -o new.net.xml
+</pre>
+<div style="background: #ffffdd; padding: .5em; border: 1px dashed #ffcc44; margin-right:10px; margin-left:10px;"><b>Note:</b><br />When working with networks based on OSM input, the .edg.xml file will contain information on the OSM-type of an edge (i.e. <i>highway.residential</i>. When loading such an .edg.xml file with <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> you need to supply the option <span style="color: #111144; font-weight: bold; white-space: pre;">--ignore-errors.edge-type</span> or load a type-file to prevent errors of the form <i>Type ... not defined</i>.</div>
+<h2> <span class="mw-headline" id="Traffic_Light_Programs"> Traffic Light Programs</span></h2>
+<p>In almost all cases the traffic light programs will have been guessed by <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> and turn out different from the real traffic lights. A simple way to improve traffic lights programs is making them start their program cycle at a different time. Experiment with the option <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.half-offset</span> and all the other <span style="color: #111144; font-weight: bold; white-space: pre;">--tls.*</span> options of <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a>. 
+</p><p>A more powerful way to improve your traffic lights is to <a href="../Networks/Building_Networks_from_own_XML-descriptions.html#Traffic_Light_Program_Definition" title="Networks/Building Networks from own XML-descriptions">give the program explicitly with a <i>tls.xml</i> file</a>.
+</p><p>At this time <a href="../NETCONVERT.html" title="NETCONVERT">NETCONVERT</a> only supports the creation of static traffic light programs. For dynamic traffic lights see <a href="../Tutorials/TraCI4Traffic_Lights.html" title="Tutorials/TraCI4Traffic Lights">Tutorials/TraCI4Traffic_Lights</a>.
+</p>
+<h1> <span class="mw-headline" id="Manage_Scenarios"> Manage Scenarios </span></h1>
+<p>If you have two networks <i>A.net.xml</i> and <i>B.net.xml</i> you may wish to find out how they differ. This can be accomplished using the tool <i><b>&lt;SUMO_HOME&gt;</b></i> <i>/tools/net/netdiff.py</i>. Running this tool will give you a set of plain-XML difference files. They only contain the differences grouped by <i>deleted</i>, <i>created</i> and <i>changed</i> elements. It is even possible to load these files along with <i>A.net.xml</i> to recreate <i>B.net.xml</i>.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor visited node count: 77/1000000
+Preprocessor generated node count: 170/1000000
+Post‐expand include size: 1065/2097152 bytes
+Template argument size: 550/2097152 bytes
+Highest expansion depth: 3/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sumoSimWiki:pcache:idhash:448-0!*!0!!en!*!* and timestamp 20150330225147 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				</div><hr/><div id="lastmod">This page was last modified on 7 November 2014, at 09:38.</div> </div>
+
+    <div id="footer">
+      <div>
+        (c) 2011-2013, German Aerospace Center, Institute of
+        Transportation Systems
+      </div>
+
+      <div>
+        Layout based on <a href=
+        "http://www.oswd.org/design/preview/id/3365">"Three
+        Quarters"</a> by "SimplyGold"
+      </div>
+    </div>
+  </div>
+</body>
+</html>
