@@ -1,0 +1,52 @@
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [OpenSimFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [OpenSimFederate]: label already registered
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-20486] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-20486] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [OpenSimFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [OpenSimFederate]: label already registered
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-56110] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-56110] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [OpenSimFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [OpenSimFederate]: label already registered
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-59986] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-59986] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [OpenSimFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [OpenSimFederate]: label already registered
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-63499] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-63499] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederateAlreadyExecutionMember: federate name in use: OpenSimFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [OpenSimFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [OpenSimFederate]: label already registered
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-13866] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-13866] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-31800] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-8404] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [OpenSimFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [OpenSimFederate]: label already registered
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.

@@ -1,0 +1,377 @@
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JCouldNotOpenFED: Error opening fed file from [file:/C:/Users/Arthur%20Valadares/Copy/Projects/UrbanSim/MobdatRTI/SocialFederate/fom/Sumo.xml]: C:\Users\Arthur Valadares\Copy\Projects\UrbanSim\MobdatRTI\SocialFederate\fom\Sumo.xml (The system cannot find the file specified)
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JCouldNotOpenFED: Error opening fed file from [file:/C:/Users/Arthur%20Valadares/Copy/Projects/UrbanSim/MobdatRTI/SocialFederate/fom/Social.xml]: C:\Users\Arthur Valadares\Copy\Projects\UrbanSim\MobdatRTI\SocialFederate\fom\Social.xml (The system cannot find the file specified)
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederateAlreadyExecutionMember: federate name in use: SocialFederate
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-23587] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederateAlreadyExecutionMember: federate name in use: SocialFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-37002] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-43107] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-43107] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc: org.portico.lrc.compat.JObjectClassNotPublished: class [740] not published by [SocialFederate]
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederateAlreadyExecutionMember: federate name in use: SocialFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:167)
+	at urbansim.social.SocialFederateAmbassador.reflectAttributeValues(SocialFederateAmbassador.java:139)
+	at org.portico.impl.hla1516e.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [VERIFY_SUSPECT.TimerThread,UrbanSimFederation,avaladar-30176] portico.lrc.jgroups: Detected that federate [1] may have crashed, investigating...
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederateAlreadyExecutionMember: federate name in use: SocialFederate
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered

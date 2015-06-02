@@ -1,0 +1,785 @@
+MFXMenuHeader.o: MFXMenuHeader.cpp ../../../src/config.h MFXMenuHeader.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/fx.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/stdio.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/cdefs.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_symbol_aliasing.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_posix_availability.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/Availability.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/AvailabilityInternal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_pthread/_pthread_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_va_list.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_size_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_null.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/stdio.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_off_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/stdlib.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/wait.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_pid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_id_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/signal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/appleapiopts.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/signal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/signal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/_mcontext.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/_mcontext.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/mach/i386/_structs.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_sigaltstack.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_ucontext.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_sigset_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_uid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/resource.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_int8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_int16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_int32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_int64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uint8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uint16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uint32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uint64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_intptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_uintptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_intmax_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uintmax_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_timeval.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/endian.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/endian.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_endian.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/libkern/_OSByteOrder.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/libkern/i386/_OSByteOrder.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/alloca.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_ct_rune_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_rune_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_wchar_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_dev_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_mode_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include/stdarg.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_errno_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/strings.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/fxver.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/fxdefs.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/fxascii.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/fxunicode.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXHash.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXException.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXThread.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStream.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIO.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFile.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPipe.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSocket.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileStream.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMemoryStream.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXString.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSize.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPoint.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRectangle.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXObject.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDelegator.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDict.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPath.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSystem.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStat.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDir.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDate.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXURL.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStringDict.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSettings.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRegistry.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXObjectList.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXAccelTable.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRecentFiles.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXApp.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXId.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXVisual.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFont.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXCursor.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGUISignal.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXCURCursor.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGIFCursor.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDrawable.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBitmap.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGIFImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIFFImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBMPImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXICOImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXXBMImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXXPMImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPCXImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTGAImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRGBImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPPMImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRASImage.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGIFIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIFFIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBMPIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXICOIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXXBMIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXXPMIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPCXIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTGAIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRGBIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPPMIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRASIcon.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRegion.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDC.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDCWindow.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDCPrint.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIconSource.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIconDict.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileDict.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXWindow.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFrame.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSeparator.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXLabel.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FX7Segment.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDial.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXKnob.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorBar.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorRing.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorWell.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorWheel.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTextField.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXButton.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPicker.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToggleButton.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTriStateButton.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXCheckButton.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRadioButton.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXArrowButton.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuButton.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXComposite.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPacker.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXHorizontalFrame.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXVerticalFrame.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSpring.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMatrix.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSpinner.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRealSpinner.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRootWindow.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXCanvas.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGroupBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXShell.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolTip.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPopup.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTopWindow.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDialogBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMainWindow.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuPane.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXScrollPane.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuCaption.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuSeparator.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuTitle.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuCascade.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuCommand.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuCheck.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuRadio.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuBar.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolBar.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDockBar.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXOptionMenu.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSwitcher.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTabBar.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTabBook.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTabItem.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXScrollBar.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXScrollArea.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXScrollWindow.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXList.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXComboBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXListBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTreeList.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTreeListBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFoldingList.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBitmapView.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBitmapFrame.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXImageView.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXImageFrame.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTable.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDragCorner.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStatusBar.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStatusLine.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXChoiceBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMessageBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDirList.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSlider.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRealSlider.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSplitter.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FX4Splitter.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXHeader.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXShutter.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIconList.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileList.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDirBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDriveBox.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDirSelector.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDirDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileSelector.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorSelector.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFontSelector.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFontDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXUndoList.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRex.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXText.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDataTarget.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXProgressBar.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXReplaceDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRuler.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRulerView.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSearchDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXInputDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXProgressDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXWizard.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMDIButton.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMDIClient.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMDIChild.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDocument.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDockSite.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDockHandler.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDockTitle.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolBarGrip.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolBarShell.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolBarTab.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPrintDialog.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDebugTarget.h \
+  /usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSplashWindow.h
+
+../../../src/config.h:
+
+MFXMenuHeader.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/fx.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/stdio.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/cdefs.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_symbol_aliasing.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_posix_availability.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/Availability.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/AvailabilityInternal.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/_types.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/_types.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_pthread/_pthread_types.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_va_list.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_size_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_null.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/stdio.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_off_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_ssize_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/stdlib.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/wait.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_pid_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_id_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/signal.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/appleapiopts.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/signal.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/signal.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/_mcontext.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/_mcontext.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/mach/i386/_structs.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_sigaltstack.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_ucontext.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_sigset_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_uid_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/resource.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include/stdint.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/stdint.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_int8_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_int16_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_int32_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_int64_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uint8_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uint16_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uint32_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uint64_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_intptr_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_uintptr_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_intmax_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/_types/_uintmax_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_timeval.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/endian.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/endian.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_endian.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/libkern/_OSByteOrder.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/libkern/i386/_OSByteOrder.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/alloca.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_ct_rune_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_rune_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_wchar_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/machine/types.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/i386/types.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_dev_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_mode_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include/stdarg.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/math.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/string.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_rsize_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/sys/_types/_errno_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/strings.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/fxver.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/fxdefs.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/fxascii.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/fxunicode.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXHash.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXException.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXThread.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStream.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIO.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFile.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPipe.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSocket.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileStream.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMemoryStream.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXString.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSize.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPoint.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRectangle.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXObject.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDelegator.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDict.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPath.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSystem.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStat.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDir.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDate.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXURL.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStringDict.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSettings.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRegistry.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXObjectList.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXAccelTable.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRecentFiles.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXApp.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXId.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXVisual.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFont.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXCursor.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGUISignal.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXCURCursor.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGIFCursor.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDrawable.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBitmap.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGIFImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIFFImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBMPImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXICOImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXXBMImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXXPMImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPCXImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTGAImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRGBImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPPMImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRASImage.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGIFIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIFFIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBMPIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXICOIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXXBMIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXXPMIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPCXIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTGAIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRGBIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPPMIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRASIcon.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRegion.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDC.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDCWindow.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDCPrint.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIconSource.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIconDict.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileDict.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXWindow.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFrame.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSeparator.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXLabel.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FX7Segment.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDial.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXKnob.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorBar.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorRing.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorWell.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorWheel.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTextField.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXButton.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPicker.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToggleButton.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTriStateButton.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXCheckButton.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRadioButton.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXArrowButton.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuButton.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXComposite.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPacker.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXHorizontalFrame.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXVerticalFrame.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSpring.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMatrix.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSpinner.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRealSpinner.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRootWindow.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXCanvas.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXGroupBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXShell.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolTip.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPopup.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTopWindow.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDialogBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMainWindow.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuPane.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXScrollPane.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuCaption.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuSeparator.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuTitle.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuCascade.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuCommand.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuCheck.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuRadio.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMenuBar.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolBar.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDockBar.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXOptionMenu.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSwitcher.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTabBar.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTabBook.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTabItem.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXScrollBar.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXScrollArea.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXScrollWindow.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXList.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXComboBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXListBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTreeList.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTreeListBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFoldingList.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBitmapView.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXBitmapFrame.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXImageView.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXImageFrame.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXTable.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDragCorner.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStatusBar.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXStatusLine.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXChoiceBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMessageBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDirList.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSlider.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRealSlider.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSplitter.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FX4Splitter.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXHeader.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXShutter.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXIconList.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileList.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDirBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDriveBox.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDirSelector.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDirDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileSelector.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFileDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorSelector.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXColorDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFontSelector.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXFontDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXUndoList.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRex.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXText.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDataTarget.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXProgressBar.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXReplaceDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRuler.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXRulerView.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSearchDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXInputDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXProgressDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXWizard.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMDIButton.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMDIClient.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXMDIChild.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDocument.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDockSite.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDockHandler.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDockTitle.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolBarGrip.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolBarShell.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXToolBarTab.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXPrintDialog.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXDebugTarget.h:
+
+/usr/local/Cellar/fox/1.6.49/include/fox-1.6/FXSplashWindow.h:

@@ -1,0 +1,6 @@
+NIVissimVehicleClass.o: NIVissimVehicleClass.cpp ../../../../src/config.h \
+  NIVissimVehicleClass.h
+
+../../../../src/config.h:
+
+NIVissimVehicleClass.h:
