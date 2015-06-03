@@ -1,6 +1,5 @@
 package urbansim.sumo;
 
-import urbansim.sumo.SumoFederate;
 import hla.rti1516e.AttributeHandle;
 import hla.rti1516e.AttributeHandleValueMap;
 import hla.rti1516e.FederateHandleSet;
@@ -17,8 +16,6 @@ import hla.rti1516e.TransportationTypeHandle;
 import hla.rti1516e.encoding.DecoderException;
 import hla.rti1516e.encoding.EncoderFactory;
 import hla.rti1516e.encoding.HLAASCIIstring;
-import hla.rti1516e.encoding.HLAinteger16BE;
-import hla.rti1516e.encoding.HLAinteger32BE;
 import hla.rti1516e.exceptions.FederateInternalError;
 import hla.rti1516e.time.HLAfloat64Time;
 
@@ -42,8 +39,10 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 		
 		protected boolean isAnnounced        = false;
 		protected boolean isReadyToRun       = false;
+		protected boolean registrationFailed = false;
 		protected PositionCoder _positionRecordCoder;
 		protected EncoderFactory _encoderFactory;
+		protected boolean isRegistered = 	   false;
 
 		//----------------------------------------------------------
 		//                      CONSTRUCTORS
@@ -75,13 +74,18 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 		                                                    SynchronizationPointFailureReason reason )
 		{
 			log( "Failed to register sync point: " + label + ", reason="+reason );
+			registrationFailed = true;
+			isRegistered = true;
 		}
 
 		@Override
 		public void synchronizationPointRegistrationSucceeded( String label )
 		{
 			log( "Successfully registered sync point: " + label );
+			registrationFailed = false;
+			isRegistered = true;
 		}
+
 
 		@Override
 		public void announceSynchronizationPoint( String label, byte[] tag )
@@ -248,9 +252,17 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 			
 			// print the handle
 			builder.append( " handle=" + interactionClass );
-			if( interactionClass.equals(AddVehicle.handle) )
+			if ( interactionClass.equals(AddVehicle.handle) )
 			{
 				builder.append( " (VehicleHandle)" );
+			}
+			else if ( interactionClass.equals(CreateObject.handle) )
+			{
+				builder.append( " (CreateObject)" );
+			}
+			else if ( interactionClass.equals(DeleteObject.handle) )
+			{
+				builder.append( " (DeleteObject)" );
 			}
 			
 			// print the tag
@@ -271,13 +283,21 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 				builder.append( "\tparamHandle=" );
 				builder.append( parameter );
 				try {
-					strParam.decode(theParameters.get(parameter));
-					// print the parameter value
-					builder.append( ", paramValue=" );
-					builder.append( strParam.getValue() );
-				} catch (DecoderException e) {
-					// TODO Auto-generated catch block
-					builder.append("Couldn't read!");
+					if (parameter.equals(CreateObject.pos))
+					{
+						builder.append( ", paramValue=" );
+						builder.append(_positionRecordCoder.decode(theParameters.get(parameter)));
+					}
+					else
+					{
+						strParam.decode(theParameters.get(parameter));
+						// print the parameter value
+						builder.append( ", paramValue=" );
+						builder.append( strParam.getValue() );
+					}
+				} 
+				catch (DecoderException e) {
+					builder.append("Couldn't read!");						
 				}
 				builder.append( "\n" );
 			}

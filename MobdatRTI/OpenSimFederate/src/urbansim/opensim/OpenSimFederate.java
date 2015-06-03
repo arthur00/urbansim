@@ -148,7 +148,7 @@ public class OpenSimFederate {
 			// but we don't care about that, as long as someone registered it
 			rtiamb.registerFederationSynchronizationPoint( READY_TO_RUN, null );
 			// wait until the point is announced
-			while( fedamb.isAnnounced == false )
+			while( fedamb.isAnnounced == false || fedamb.isRegistered == false )
 			{
 				Thread.sleep(500);
 			}
@@ -157,7 +157,8 @@ public class OpenSimFederate {
 			// So that there is time to add other federates, we will wait until the
 			// user hits enter before proceeding. That was, you have time to start
 			// other federates.
-			waitForUser();
+			if (!fedamb.registrationFailed)
+				waitForUser();
 			
 			///////////////////////////////////////////////////////
 			// 6. achieve the point and wait for synchronization //

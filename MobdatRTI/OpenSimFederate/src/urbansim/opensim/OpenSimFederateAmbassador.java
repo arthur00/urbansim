@@ -42,6 +42,8 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 		protected boolean isReadyToRun       = false;
 		protected PositionCoder _positionRecordCoder;
 		protected EncoderFactory _encoderFactory;
+		protected boolean isRegistered = 	   false;
+		protected boolean registrationFailed = false;
 
 		//----------------------------------------------------------
 		//                      CONSTRUCTORS
@@ -73,14 +75,19 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 		                                                    SynchronizationPointFailureReason reason )
 		{
 			log( "Failed to register sync point: " + label + ", reason="+reason );
+			registrationFailed = true;
+			isRegistered = true;
 		}
 
 		@Override
 		public void synchronizationPointRegistrationSucceeded( String label )
 		{
 			log( "Successfully registered sync point: " + label );
+			registrationFailed = false;
+			isRegistered = true;
 		}
 
+		
 		@Override
 		public void announceSynchronizationPoint( String label, byte[] tag )
 		{
@@ -239,9 +246,17 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 			
 			// print the handle
 			builder.append( " handle=" + interactionClass );
-			if( interactionClass.equals(AddVehicle.handle) )
+			if ( interactionClass.equals(AddVehicle.handle) )
 			{
 				builder.append( " (VehicleHandle)" );
+			}
+			else if ( interactionClass.equals(CreateObject.handle) )
+			{
+				builder.append( " (CreateObject)" );
+			}
+			else if ( interactionClass.equals(DeleteObject.handle) )
+			{
+				builder.append( " (DeleteObject)" );
 			}
 			
 			// print the tag
@@ -262,13 +277,21 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 				builder.append( "\tparamHandle=" );
 				builder.append( parameter );
 				try {
-					strParam.decode(theParameters.get(parameter));
-					// print the parameter value
-					builder.append( ", paramValue=" );
-					builder.append( strParam.getValue() );
-				} catch (DecoderException e) {
-					// TODO Auto-generated catch block
-					builder.append("Couldn't read!");
+					if (parameter.equals(CreateObject.pos))
+					{
+						builder.append( ", paramValue=" );
+						builder.append(_positionRecordCoder.decode(theParameters.get(parameter)));
+					}
+					else
+					{
+						strParam.decode(theParameters.get(parameter));
+						// print the parameter value
+						builder.append( ", paramValue=" );
+						builder.append( strParam.getValue() );
+					}
+				} 
+				catch (DecoderException e) {
+					builder.append("Couldn't read!");						
 				}
 				builder.append( "\n" );
 			}
@@ -290,14 +313,7 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 	   public void discoverObjectInstance(ObjectInstanceHandle theObject, ObjectClassHandle theObjectClass, String objectName) throws FederateInternalError {
 			log( "Discoverd Object: handle=" + theObject + ", classHandle=" +
 				     theObjectClass + ", name=" + objectName );
-	      /*
-		  Car car = new Car();
-	      synchronized (_localCars) {
-	         _localCars.put(theObject, car.getIdentifier());
-	      }
-	      for (CarListener listener : _carListeners) {
-	         listener.carAdded(car);
-	      }*/
+
 	   }
 
 	   @Override

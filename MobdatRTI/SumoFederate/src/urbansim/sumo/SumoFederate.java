@@ -150,7 +150,7 @@ public class SumoFederate {
 			// but we don't care about that, as long as someone registered it
 			rtiamb.registerFederationSynchronizationPoint( READY_TO_RUN, null );
 			// wait until the point is announced
-			while( fedamb.isAnnounced == false )
+			while( fedamb.isAnnounced == false || fedamb.isRegistered == false )
 			{
 				rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
 			}
@@ -159,7 +159,8 @@ public class SumoFederate {
 			// So that there is time to add other federates, we will wait until the
 			// user hits enter before proceeding. That was, you have time to start
 			// other federates.
-			waitForUser();
+			if (!fedamb.registrationFailed)
+				waitForUser();
 
 			///////////////////////////////////////////////////////
 			// 6. achieve the point and wait for synchronization //
@@ -314,7 +315,7 @@ public class SumoFederate {
 			// to tell the RTI that we're publishing it first. We don't need to
 			// inform it of the parameters, only the class, making it much simpler
 			AddVehicle.handle = rtiamb.getInteractionClassHandle( "HLAinteractionRoot.AddVehicle" );
-			DeleteObject.handle = rtiamb.getInteractionClassHandle("HLAinteractionRoot.CreateObject");
+			DeleteObject.handle = rtiamb.getInteractionClassHandle("HLAinteractionRoot.DeleteObject");
 			CreateObject.handle = rtiamb.getInteractionClassHandle("HLAinteractionRoot.CreateObject");
 			
 			/////////////////////////////////////////////////////////
