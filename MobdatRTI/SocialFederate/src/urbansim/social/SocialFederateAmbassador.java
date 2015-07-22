@@ -204,40 +204,26 @@ public class SocialFederateAmbassador extends NullFederateAmbassador
 			JSONObject json = new JSONObject();
 			StringBuilder builder = new StringBuilder( "Reflection for object:" );			
 			// print the handle
-			//builder.append( " handle=" + theObject );		//!	
 			json.put("handle", theObject);
-			// print the tag
-			//builder.append( ", tag=" + new String(tag) ); //!
 			json.put("tag", new String(tag));
-			// print the time (if we have it) we'll get null if we are just receiving
-			// a forwarded call from the other reflect callback above
 			if (time != null)
-				//builder.append( ", time=" + ((HLAfloat64Time)time).getValue() ); //!
 				json.put("time",((HLAfloat64Time)time).getValue());
 			else
-				//builder.append( ", time=???" ); //!
 				json.put("time","???");
 			
 			// print the attribute information
-			//builder.append( ", attributeCount=" + theAttributes.size() ); //!
 			json.put("attributeCount", theAttributes.size());
 			builder.append( "\n" );
 			for( AttributeHandle attributeHandle : theAttributes.keySet() )
 			{
 				// print the attibute handle
-				//builder.append( "\tattributeHandle=" ); //!
-
 				// if we're dealing with Flavor, decode into the appropriate enum value
 				if( attributeHandle.equals(Vehicle.position) )
 				{
-					//builder.append( attributeHandle ); //!
 					json.put("Attribute Handle", attributeHandle);
-					//builder.append( " (Position)" );
-					// builder.append( ", attributeValue=" ); //!
 					Position rec;
 					try {
 						rec = _positionRecordCoder.decode(theAttributes.get(attributeHandle));
-						//builder.append(rec.toString()); //!
 						json.put("attributeValue",rec.toString());
 					} catch (DecoderException e) {
 						// TODO Auto-generated catch block
@@ -246,26 +232,9 @@ public class SocialFederateAmbassador extends NullFederateAmbassador
 				}
 				else
 				{
-					//builder.append( attributeHandle );
-					//builder.append( " (Unknown)   " );
 					json.put("attributeHandle", "Unknown");
 				}
-				
-				// builder.append( "\n" ); //!
-			      /*try (OutputStreamWriter out = new OutputStreamWriter(soc.getOutputStream(), StandardCharsets.UTF_8)) 	              
-			      {
-			          out.write(json.toString());
-			          System.out.println(json.toString());
-			      } catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-*/			}
-			
-			
-			//log( builder.toString() );
-
-
+			}
 		}
 
 		@Override
@@ -306,66 +275,45 @@ public class SocialFederateAmbassador extends NullFederateAmbassador
 			HLAASCIIstring strParam = this._encoderFactory.createHLAASCIIstring(); 
 			
 			// print the handle
-			// builder.append( " handle=" + interactionClass ); //!
 			json.put("handle", interactionClass);
+			log(json.get("handle").toString());
 			
-			/*
-			if ( interactionClass.equals(AddVehicle.handle) )
-			{
-				builder.append( " (VehicleHandle)" );
-			}
-			else if ( interactionClass.equals(CreateObject.handle) )
-			{
-				builder.append( " (CreateObject)" );
-			}
-			else if ( interactionClass.equals(DeleteObject.handle) )
-			{
-				builder.append( " (DeleteObject)" );
-			}
-			*/ //!
 			
 			// print the tag
-			// builder.append( ", tag=" + new String(tag) ); //!
 			json.put("tag",new String(tag));
+			log(json.get("tag").toString());
 			// print the time (if we have it) we'll get null if we are just receiving
 			// a forwarded call from the other reflect callback above
 			if( time != null )
 			{
-				// builder.append( ", time=" + ((HLAfloat64Time)time).getValue() ); //!
 				json.put("time",((HLAfloat64Time)time).getValue());
+				log(json.get("time").toString());
 			}
 			
 			// print the parameter information
-			//builder.append( ", parameterCount=" + theParameters.size() ); //!
-			//builder.append( "\n" ); //!
 			json.put("parameterCount", theParameters.size());
+			log(json.get("parameterCount").toString());
 			for( ParameterHandle parameter : theParameters.keySet() )
 			{
 				// print the parameter handle
-				//builder.append( "\tparamHandle=" ); //!
-				//builder.append( parameter ); //!
 				json.put("ParamHandle",parameter);
+				log(json.get("ParamHandle").toString());
 				try {
 					if (parameter.equals(CreateObject.pos))
 					{
-						//builder.append( ", paramValue=" ); //!
-						//builder.append(_positionRecordCoder.decode(theParameters.get(parameter))); //!
 						json.put("paramValue",_positionRecordCoder.decode(theParameters.get(parameter)));
 					}
 					else
 					{
 						strParam.decode(theParameters.get(parameter));
 						// print the parameter value
-						//builder.append( ", paramValue=" ); //!
-						//builder.append( strParam.getValue() ); //!
 						json.put("paramValue",strParam.getValue());
+						log(json.get("paramValue").toString());
 					}
 				} 
 				catch (DecoderException e) {
-					//builder.append("Couldn't read!");
 					json.put("message", "Couldn't read");
 				}
-				//builder.append( "\n" );
 			}
 			
 			try
@@ -385,18 +333,10 @@ public class SocialFederateAmbassador extends NullFederateAmbassador
 		                                  SupplementalRemoveInfo removeInfo )
 		    throws FederateInternalError
 		{
-			//log( "Object Removed: handle=" + theObject );.
 			JSONObject json = new JSONObject();
 			log( "Object Removed:");
 			json.put("handle", theObject);
-/*		      try (OutputStreamWriter out = new OutputStreamWriter(soc.getOutputStream(), StandardCharsets.UTF_8)) 	              
-		      {
-		          out.write(json.toString());
-		          System.out.println(json.toString());
-		      } catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}*/
+			log(json.get("handle").toString());
 		}
 		
 		@Override
@@ -408,17 +348,7 @@ public class SocialFederateAmbassador extends NullFederateAmbassador
 			json.put("classHandle", theObjectClass);
 			json.put("name", objectName);
 			log(json.toString());
-		      /*try (OutputStreamWriter out = new OutputStreamWriter(soc.getOutputStream(), StandardCharsets.UTF_8)) 	              
-		      {
-		          out.write(json.toString());
-		          //System.out.println(json.toString());
-		      } catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-				//log( "Discoverd Object: handle=" + theObject + ", classHandle=" +
-			    //theObjectClass + ", name=" + objectName );
-*/		}
+	   }
 			
 
 	   @Override
@@ -426,13 +356,5 @@ public class SocialFederateAmbassador extends NullFederateAmbassador
 	   {
 	    discoverObjectInstance(theObject, theObjectClass, objectName);
 	   }
-
-		//----------------------------------------------------------
-		//                     STATIC METHODS
-		//----------------------------------------------------------
-
-		
-		//----------------------------------------------------------
-		//                    MAIN METHOD
-		//----------------------------------------------------------		 
+	 
 }

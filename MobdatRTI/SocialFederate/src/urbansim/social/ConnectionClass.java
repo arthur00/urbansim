@@ -57,7 +57,7 @@ public class ConnectionClass {
 	public void initServer(){
 		try{
 			server = new ServerSocket(port);
-			log("Socket in port 8080");
+			log("Socket in port: " + port);
 			//return server;
 
 			

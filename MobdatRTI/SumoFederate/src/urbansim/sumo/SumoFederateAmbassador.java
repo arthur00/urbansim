@@ -65,7 +65,6 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 		public  Socket SocketElement;
 		OutputStream OutElement;
 		BufferedWriter bufOut;
-		Connect socketThread;
 		connectionClass connection;
 		BlockingQueue receiveQueue;
 		BlockingQueue sendQueue;
@@ -91,6 +90,7 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 		//                    INSTANCE METHODS
 		//----------------------------------------------------------
 		
+		//Start the connection
 		public void StartConnection(){
 			connection = federate.GetConnection();
 			receiveQueue = connection.GetInQueue();

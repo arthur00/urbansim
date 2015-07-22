@@ -54,8 +54,8 @@ public class SocialFederate {
 	//----------------------------------------------------------
 	//                   INSTANCE VARIABLES
 	//----------------------------------------------------------
-	private RTIambassador rtiamb; // Eh como se fosse o controlador do Social Federate
-	private SocialFederateAmbassador fedamb;  // created when we connect   //Eh o responsavel por receber os dados do RTI.
+	private RTIambassador rtiamb; // It's the federate controller
+	private SocialFederateAmbassador fedamb;  // created when we connect   // It's the responsible to get the data from the federate
 	private HLAfloat64TimeFactory timeFactory; // set when we join
 	protected EncoderFactory encoderFactory;     // set when we join
 	protected PositionCoder _positionRecordCoder;
@@ -77,7 +77,7 @@ public class SocialFederate {
 	 */
 	private void log( String message )
 	{
-		System.out.println( "SumoFederate   : " + message );
+		System.out.println( "Social Federate   : " + message );
 	}
 
 	/**
@@ -224,16 +224,7 @@ public class SocialFederate {
 		// send an interaction.
 		
 		// Wait for pub-sub to propagate.
-		
-		/*
-		Thread.sleep(1000);
-		for( int i = 0; i < ITERATIONS; i++ )
-		{
-			sendInteraction();
-			advanceTime( 1.0 );
-			Thread.sleep(2000);
-		}
-		*/
+
 		
 		//TODO RECEIVE COMMANDS (SOCKETS, JSON - SERVER).
         String fromClient;
@@ -259,7 +250,6 @@ public class SocialFederate {
                 if(map.containsValue("AddVehicle"))
                 {
                 	AddVehicleInteraction addVehicleInteraction = new AddVehicleInteraction();
-                	//System.out.println(map);
                     ObjectMapper mapperIn = new ObjectMapper(); // Cria o Objeto mapper
                     try
                     {
@@ -267,12 +257,9 @@ public class SocialFederate {
                     }catch(JsonGenerationException e)
                     {
                     	e.printStackTrace();
-                    }
-                    //System.out.println("AEEEEEW!  " + addVehicleInteraction);  
+                    } 
                     sendInteraction(addVehicleInteraction);
                 }
-                //server.close();
-                //run = false;
             }
 
          }

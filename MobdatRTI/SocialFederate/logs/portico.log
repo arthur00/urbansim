@@ -880,3 +880,25 @@ ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExis
 ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
 ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
 WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [Thread-0] portico.lrc: FAILURE Exception encountered while processing incoming message: JSONObject["handle"] not a string.
+org.json.JSONException: JSONObject["handle"] not a string.
+	at org.json.JSONObject.getString(JSONObject.java:661)
+	at urbansim.social.SocialFederateAmbassador.receiveInteraction(SocialFederateAmbassador.java:279)
+	at urbansim.social.SocialFederateAmbassador.receiveInteraction(SocialFederateAmbassador.java:252)
+	at org.portico.impl.hla1516e.handlers.ReceiveInteractionCallbackHandler.process(ReceiveInteractionCallbackHandler.java:102)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:678)
+	at org.portico.lrc.LRC.access$200(LRC.java:106)
+	at org.portico.lrc.LRC$ImmediateCallbackDispatcher.run(LRC.java:818)
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+WARN  [main] portico.lrc: MOM support is currently unsupported in IEEE-1516e federations.
+ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=UrbanSimFederation
+ERROR [main] portico.lrc: org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: UrbanSimFederation
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [SocialFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [SocialFederate]: label already registered
