@@ -1,5 +1,12 @@
 package urbansim.social;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+
+import hla.rti13.java1.ReflectedAttributes;
 import hla.rti1516e.AttributeHandle;
 import hla.rti1516e.AttributeHandleValueMap;
 import hla.rti1516e.FederateHandle;
@@ -20,11 +27,21 @@ import hla.rti1516e.encoding.HLAASCIIstring;
 import hla.rti1516e.exceptions.FederateInternalError;
 import hla.rti1516e.time.HLAfloat64Time;
 
-public class SocialFederateAmbassador extends NullFederateAmbassador {
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.BlockingQueue;
+
+import org.json.JSONObject;
+
+public class SocialFederateAmbassador extends NullFederateAmbassador 
+
+{
 	//----------------------------------------------------------
 		//                    STATIC VARIABLES
 		//----------------------------------------------------------
 
+		
 		//----------------------------------------------------------
 		//                   INSTANCE VARIABLES
 		//----------------------------------------------------------
@@ -46,6 +63,12 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 		protected PositionCoder _positionRecordCoder;
 		protected EncoderFactory _encoderFactory;
 
+		public  Socket socketElement;
+		OutputStream OutElement;
+		BufferedWriter bufOut;
+		ConnectionClass connection;
+		BlockingQueue receiveQueue;
+		BlockingQueue sendQueue;
 		//----------------------------------------------------------
 		//                      CONSTRUCTORS
 		//----------------------------------------------------------
@@ -59,6 +82,8 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 			//HLAASCIIstring test = encoder.createHLAASCIIstring("lalal");
 			
 		}
+		
+
 
 		//----------------------------------------------------------
 		//                    INSTANCE METHODS
@@ -67,6 +92,15 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 		{
 			System.out.println( "FederateAmbassador: " + message );
 		}
+		
+		public void startConnection() throws IOException 
+		{
+			connection = federate.getConnection();
+			receiveQueue = connection.GetInQueue();
+			sendQueue = connection.GetOutQueue();
+		}
+		
+        
 		
 		//////////////////////////////////////////////////////////////////////////
 		////////////////////////// RTI Callback Methods //////////////////////////
@@ -107,7 +141,9 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 		/**
 		 * The RTI has informed us that time regulation is now enabled.
 		 */
+		/*
 		@Override
+
 		public void timeRegulationEnabled( LogicalTime time )
 		{
 			this.federateTime = ((HLAfloat64Time)time).getValue();
@@ -121,6 +157,8 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 			this.isConstrained = true;
 		}
 
+		*/
+		
 		@Override
 		public void timeAdvanceGrant( LogicalTime time )
 		{
@@ -149,6 +187,8 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 				                        sentOrder,
 				                        reflectInfo );
 		}
+		
+		
 
 		@Override
 		public void reflectAttributeValues( ObjectInstanceHandle theObject,
@@ -161,36 +201,44 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 		                                    SupplementalReflectInfo reflectInfo )
 		    throws FederateInternalError
 		{
-			StringBuilder builder = new StringBuilder( "Reflection for object:" );
+			JSONObject json = new JSONObject();
+			StringBuilder builder = new StringBuilder( "Reflection for object:" );			
 			// print the handle
-			builder.append( " handle=" + theObject );
+			//builder.append( " handle=" + theObject );		//!	
+			json.put("handle", theObject);
 			// print the tag
-			builder.append( ", tag=" + new String(tag) );
+			//builder.append( ", tag=" + new String(tag) ); //!
+			json.put("tag", new String(tag));
 			// print the time (if we have it) we'll get null if we are just receiving
 			// a forwarded call from the other reflect callback above
 			if (time != null)
-				builder.append( ", time=" + ((HLAfloat64Time)time).getValue() );
+				//builder.append( ", time=" + ((HLAfloat64Time)time).getValue() ); //!
+				json.put("time",((HLAfloat64Time)time).getValue());
 			else
-				builder.append( ", time=???" );
+				//builder.append( ", time=???" ); //!
+				json.put("time","???");
 			
 			// print the attribute information
-			builder.append( ", attributeCount=" + theAttributes.size() );
+			//builder.append( ", attributeCount=" + theAttributes.size() ); //!
+			json.put("attributeCount", theAttributes.size());
 			builder.append( "\n" );
 			for( AttributeHandle attributeHandle : theAttributes.keySet() )
 			{
 				// print the attibute handle
-				builder.append( "\tattributeHandle=" );
+				//builder.append( "\tattributeHandle=" ); //!
 
 				// if we're dealing with Flavor, decode into the appropriate enum value
 				if( attributeHandle.equals(Vehicle.position) )
 				{
-					builder.append( attributeHandle );
-					builder.append( " (Position)" );
-					builder.append( ", attributeValue=" );
+					//builder.append( attributeHandle ); //!
+					json.put("Attribute Handle", attributeHandle);
+					//builder.append( " (Position)" );
+					// builder.append( ", attributeValue=" ); //!
 					Position rec;
 					try {
 						rec = _positionRecordCoder.decode(theAttributes.get(attributeHandle));
-						builder.append(rec.toString());
+						//builder.append(rec.toString()); //!
+						json.put("attributeValue",rec.toString());
 					} catch (DecoderException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -198,14 +246,26 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 				}
 				else
 				{
-					builder.append( attributeHandle );
-					builder.append( " (Unknown)   " );
+					//builder.append( attributeHandle );
+					//builder.append( " (Unknown)   " );
+					json.put("attributeHandle", "Unknown");
 				}
 				
-				builder.append( "\n" );
-			}
+				// builder.append( "\n" ); //!
+			      /*try (OutputStreamWriter out = new OutputStreamWriter(soc.getOutputStream(), StandardCharsets.UTF_8)) 	              
+			      {
+			          out.write(json.toString());
+			          System.out.println(json.toString());
+			      } catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+*/			}
 			
-			log( builder.toString() );
+			
+			//log( builder.toString() );
+
+
 		}
 
 		@Override
@@ -241,11 +301,15 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 		                                SupplementalReceiveInfo receiveInfo )
 		    throws FederateInternalError
 		{
+			JSONObject json = new JSONObject();
 			StringBuilder builder = new StringBuilder( "Interaction Received:" );
 			HLAASCIIstring strParam = this._encoderFactory.createHLAASCIIstring(); 
 			
 			// print the handle
-			builder.append( " handle=" + interactionClass );
+			// builder.append( " handle=" + interactionClass ); //!
+			json.put("handle", interactionClass);
+			
+			/*
 			if ( interactionClass.equals(AddVehicle.handle) )
 			{
 				builder.append( " (VehicleHandle)" );
@@ -258,46 +322,61 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 			{
 				builder.append( " (DeleteObject)" );
 			}
+			*/ //!
 			
 			// print the tag
-			builder.append( ", tag=" + new String(tag) );
+			// builder.append( ", tag=" + new String(tag) ); //!
+			json.put("tag",new String(tag));
 			// print the time (if we have it) we'll get null if we are just receiving
 			// a forwarded call from the other reflect callback above
 			if( time != null )
 			{
-				builder.append( ", time=" + ((HLAfloat64Time)time).getValue() );
+				// builder.append( ", time=" + ((HLAfloat64Time)time).getValue() ); //!
+				json.put("time",((HLAfloat64Time)time).getValue());
 			}
 			
 			// print the parameter information
-			builder.append( ", parameterCount=" + theParameters.size() );
-			builder.append( "\n" );
+			//builder.append( ", parameterCount=" + theParameters.size() ); //!
+			//builder.append( "\n" ); //!
+			json.put("parameterCount", theParameters.size());
 			for( ParameterHandle parameter : theParameters.keySet() )
 			{
 				// print the parameter handle
-				builder.append( "\tparamHandle=" );
-				builder.append( parameter );
+				//builder.append( "\tparamHandle=" ); //!
+				//builder.append( parameter ); //!
+				json.put("ParamHandle",parameter);
 				try {
 					if (parameter.equals(CreateObject.pos))
 					{
-						builder.append( ", paramValue=" );
-						builder.append(_positionRecordCoder.decode(theParameters.get(parameter)));
+						//builder.append( ", paramValue=" ); //!
+						//builder.append(_positionRecordCoder.decode(theParameters.get(parameter))); //!
+						json.put("paramValue",_positionRecordCoder.decode(theParameters.get(parameter)));
 					}
 					else
 					{
 						strParam.decode(theParameters.get(parameter));
 						// print the parameter value
-						builder.append( ", paramValue=" );
-						builder.append( strParam.getValue() );
+						//builder.append( ", paramValue=" ); //!
+						//builder.append( strParam.getValue() ); //!
+						json.put("paramValue",strParam.getValue());
 					}
 				} 
 				catch (DecoderException e) {
-					builder.append("Couldn't read!");						
+					//builder.append("Couldn't read!");
+					json.put("message", "Couldn't read");
 				}
-				builder.append( "\n" );
+				//builder.append( "\n" );
 			}
-
-			log( builder.toString() );
+			
+			try
+			{
+				sendQueue.put(json);
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 		}
+		
 
 		@Override
 		public void removeObjectInstance( ObjectInstanceHandle theObject,
@@ -306,22 +385,54 @@ public class SocialFederateAmbassador extends NullFederateAmbassador {
 		                                  SupplementalRemoveInfo removeInfo )
 		    throws FederateInternalError
 		{
-			log( "Object Removed: handle=" + theObject );
+			//log( "Object Removed: handle=" + theObject );.
+			JSONObject json = new JSONObject();
+			log( "Object Removed:");
+			json.put("handle", theObject);
+/*		      try (OutputStreamWriter out = new OutputStreamWriter(soc.getOutputStream(), StandardCharsets.UTF_8)) 	              
+		      {
+		          out.write(json.toString());
+		          System.out.println(json.toString());
+		      } catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}*/
 		}
 		
 		@Override
-	   public void discoverObjectInstance(ObjectInstanceHandle theObject, ObjectClassHandle theObjectClass, String objectName) throws FederateInternalError {
-			log( "Discoverd Object: handle=" + theObject + ", classHandle=" +
-				     theObjectClass + ", name=" + objectName );
-	   }
+	   public void discoverObjectInstance(ObjectInstanceHandle theObject, ObjectClassHandle theObjectClass, String objectName) throws FederateInternalError 
+	   {	
+			JSONObject json = new JSONObject();
+			log( "Discovered Object:");
+			json.put("handle", theObject);
+			json.put("classHandle", theObjectClass);
+			json.put("name", objectName);
+			log(json.toString());
+		      /*try (OutputStreamWriter out = new OutputStreamWriter(soc.getOutputStream(), StandardCharsets.UTF_8)) 	              
+		      {
+		          out.write(json.toString());
+		          //System.out.println(json.toString());
+		      } catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+				//log( "Discoverd Object: handle=" + theObject + ", classHandle=" +
+			    //theObjectClass + ", name=" + objectName );
+*/		}
+			
 
 	   @Override
-	   public void discoverObjectInstance(ObjectInstanceHandle theObject, ObjectClassHandle theObjectClass, String objectName, FederateHandle producingFederate) throws FederateInternalError {
-	      discoverObjectInstance(theObject, theObjectClass, objectName);
+	   public void discoverObjectInstance(ObjectInstanceHandle theObject, ObjectClassHandle theObjectClass, String objectName, FederateHandle producingFederate) throws FederateInternalError
+	   {
+	    discoverObjectInstance(theObject, theObjectClass, objectName);
 	   }
 
 		//----------------------------------------------------------
 		//                     STATIC METHODS
 		//----------------------------------------------------------
 
+		
+		//----------------------------------------------------------
+		//                    MAIN METHOD
+		//----------------------------------------------------------		 
 }

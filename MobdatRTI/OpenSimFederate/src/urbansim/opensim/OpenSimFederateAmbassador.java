@@ -1,5 +1,14 @@
 package urbansim.opensim;
 
+import java.net.*;
+import java.util.concurrent.BlockingQueue;
+
+import org.codehaus.jackson.JsonFactory;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.*;
+
 import hla.rti1516e.AttributeHandle;
 import hla.rti1516e.AttributeHandleValueMap;
 import hla.rti1516e.FederateHandle;
@@ -19,6 +28,7 @@ import hla.rti1516e.encoding.EncoderFactory;
 import hla.rti1516e.encoding.HLAASCIIstring;
 import hla.rti1516e.exceptions.FederateInternalError;
 import hla.rti1516e.time.HLAfloat64Time;
+import jdk.nashorn.internal.ir.Block;
 
 public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 	//----------------------------------------------------------
@@ -44,20 +54,45 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 		protected EncoderFactory _encoderFactory;
 		protected boolean isRegistered = 	   false;
 		protected boolean registrationFailed = false;
-
+		
+		
+		protected connectionClass connection;
+		protected BlockingQueue out;
+		
+		
 		//----------------------------------------------------------
 		//                      CONSTRUCTORS
 		//----------------------------------------------------------
 
 		public OpenSimFederateAmbassador( OpenSimFederate federate, EncoderFactory encoder )
 		{
+			//connect();
 			this.federate = federate;
 			this._encoderFactory = encoder;
 			this._positionRecordCoder = new PositionCoder(_encoderFactory);
-
-			//HLAASCIIstring test = encoder.createHLAASCIIstring("lalal");
+			HLAASCIIstring test = encoder.createHLAASCIIstring("lalal");
 			
 		}
+		
+		public void CreateConnection(){
+			connection = federate.con;
+			out = connection.getSendQueue();
+			
+		}
+		
+//		//Connect using socket
+//				public void connect(){
+//				String host = "localhost";
+//				int port = 8080;
+//				
+//					try{
+//					Socket client = new Socket(host, port);
+//					log("Send the connection------------>Connector");
+//					}
+//					catch (Exception err ){
+//						System.out.println( "FederateAmbassador socket: " + err );
+//					}
+//				}
 
 		//----------------------------------------------------------
 		//                    INSTANCE METHODS
@@ -161,20 +196,51 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 		                                    SupplementalReflectInfo reflectInfo )
 		    throws FederateInternalError
 		{
-			StringBuilder builder = new StringBuilder( "Reflection for object:" );
+			
 			// print the handle
-			builder.append( " handle=" + theObject );
+			JSONObject json = new JSONObject();
+			StringBuilder builder = new StringBuilder( "Reflection for object:" );
+			
+			
+			try {
+				json.put("handle", theObject);
+				json.put("tag", new String(tag));
+				
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+				//builder.append( " handle=" + theObject );
 			// print the tag
-			builder.append( ", tag=" + new String(tag) );
+				//builder.append( ", tag=" + new String(tag) );
 			// print the time (if we have it) we'll get null if we are just receiving
 			// a forwarded call from the other reflect callback above
-			if (time != null)
-				builder.append( ", time=" + ((HLAfloat64Time)time).getValue() );
-			else
-				builder.append( ", time=???" );
+			if (time != null){
+				try {
+					json.put("time",((HLAfloat64Time)time).getValue());
+				} catch (JSONException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				}
+			else{
+				try {
+					json.put("time","???");
+				} catch (JSONException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				}
+				//builder.append( ", time=???" );
 			
 			// print the attribute information
-			builder.append( ", attributeCount=" + theAttributes.size() );
+			try {
+				json.put("attributeCount", theAttributes.size());
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+				//builder.append( ", attributeCount=" + theAttributes.size() );
 			builder.append( "\n" );
 			for( AttributeHandle attributeHandle : theAttributes.keySet() )
 			{
@@ -184,28 +250,44 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 				// if we're dealing with Flavor, decode into the appropriate enum value
 				if( attributeHandle.equals(Vehicle.position) )
 				{
-					builder.append( attributeHandle );
-					builder.append( " (Position)" );
-					builder.append( ", attributeValue=" );
+					try {
+						json.put("Attribute Handle", attributeHandle);
+					} catch (JSONException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+//					builder.append( attributeHandle );
+//					builder.append( " (Position)" );
+//					builder.append( ", attributeValue=" );
 					Position rec;
 					try {
 						rec = _positionRecordCoder.decode(theAttributes.get(attributeHandle));
-						builder.append(rec.toString());
+						json.put("attributeValue",rec.toString());
+						//builder.append(rec.toString());
 					} catch (DecoderException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (JSONException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}
 				else
 				{
-					builder.append( attributeHandle );
-					builder.append( " (Unknown)   " );
+					try {
+						json.put("attributeHandle", "Unknown");
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+//					builder.append( attributeHandle );
+//					builder.append( " (Unknown)   " );
 				}
 				
-				builder.append( "\n" );
+				//builder.append( "\n" );
 			}
 			
-			log( builder.toString() );
+			//log( builder.toString() );
 		}
 
 		@Override
@@ -241,62 +323,113 @@ public class OpenSimFederateAmbassador extends NullFederateAmbassador {
 		                                SupplementalReceiveInfo receiveInfo )
 		    throws FederateInternalError
 		{
-			StringBuilder builder = new StringBuilder( "Interaction Received:" );
+			JSONObject json = new JSONObject();
+			StringBuilder builder = new StringBuilder( "Interaction Received:----------------->" );
 			HLAASCIIstring strParam = this._encoderFactory.createHLAASCIIstring(); 
 			
-			// print the handle
-			builder.append( " handle=" + interactionClass );
-			if ( interactionClass.equals(AddVehicle.handle) )
-			{
-				builder.append( " (VehicleHandle)" );
-			}
-			else if ( interactionClass.equals(CreateObject.handle) )
-			{
-				builder.append( " (CreateObject)" );
-			}
-			else if ( interactionClass.equals(DeleteObject.handle) )
-			{
-				builder.append( " (DeleteObject)" );
-			}
+//			JSONObject receiveInteraction = new JSONObject();
+//			try {
+//				receiveInteraction.put("handle", interactionClass );
+//			} catch (JSONException e1) {
+//				// TODO Auto-generated catch block
+//				e1.printStackTrace();
+//			}
 			
+			// print the handle
+			try {
+				json.put("handle", interactionClass);
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+				//builder.append( " handle=" + interactionClass );
+//			if ( interactionClass.equals(AddVehicle.handle) )
+//			{
+//				
+//				builder.append( " (VehicleHandle)" );
+//			}
+//			else if ( interactionClass.equals(CreateObject.handle) )
+//			{
+//				builder.append( " (CreateObject)" );
+//			}
+//			else if ( interactionClass.equals(DeleteObject.handle) )
+//			{
+//				builder.append( " (DeleteObject)" );
+//			}
+//			
 			// print the tag
-			builder.append( ", tag=" + new String(tag) );
+			//builder.append( ", tag=" + new String(tag) );
+			try {
+				json.put("tag",new String(tag));
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			// print the time (if we have it) we'll get null if we are just receiving
 			// a forwarded call from the other reflect callback above
 			if( time != null )
 			{
-				builder.append( ", time=" + ((HLAfloat64Time)time).getValue() );
+				try {
+					json.put("time",((HLAfloat64Time)time).getValue());
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//builder.append( ", time=" + ((HLAfloat64Time)time).getValue() );
 			}
 			
 			// print the parameter information
-			builder.append( ", parameterCount=" + theParameters.size() );
-			builder.append( "\n" );
+//			builder.append( ", parameterCount=" + theParameters.size() );
+//			builder.append( "\n" );
+			try {
+				json.put("parameterCount", theParameters.size());
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			for( ParameterHandle parameter : theParameters.keySet() )
 			{
 				// print the parameter handle
-				builder.append( "\tparamHandle=" );
-				builder.append( parameter );
+//				builder.append( "\tparamHandle=" );
+//				builder.append( parameter );
+				try {
+					json.put("ParamHandle",parameter);
+				} catch (JSONException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				try {
 					if (parameter.equals(CreateObject.pos))
 					{
-						builder.append( ", paramValue=" );
-						builder.append(_positionRecordCoder.decode(theParameters.get(parameter)));
+//						builder.append( ", paramValue=" );
+//						builder.append(_positionRecordCoder.decode(theParameters.get(parameter)));
+						json.put("paramValue",_positionRecordCoder.decode(theParameters.get(parameter)));
 					}
 					else
 					{
 						strParam.decode(theParameters.get(parameter));
 						// print the parameter value
-						builder.append( ", paramValue=" );
-						builder.append( strParam.getValue() );
+//						builder.append( ", paramValue=" );
+//						builder.append( strParam.getValue() );
+						json.put("paramValue",strParam.getValue());
 					}
 				} 
 				catch (DecoderException e) {
-					builder.append("Couldn't read!");						
+					try {
+						json.put("message", "Couldn't read");
+					} catch (JSONException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					//builder.append("Couldn't read!");						
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-				builder.append( "\n" );
+				//builder.append( "\n" );
 			}
 
-			log( builder.toString() );
+			//log( builder.toString() );
 		}
 
 		@Override

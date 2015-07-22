@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Program Files/Portico/portico-2.0.1/lib/portico.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/C:/Program%20Files/Portico/portico-2.0.1/documentation/javadoc/ieee1516e/"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Users/Bruno/workspace/Socket/.settings/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bruno/workspace/Socket/.settings/json-20141113.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bruno/Documents/GitHub/urbansim/Resources/portico.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

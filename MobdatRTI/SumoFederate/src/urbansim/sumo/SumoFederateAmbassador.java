@@ -18,6 +18,25 @@ import hla.rti1516e.encoding.EncoderFactory;
 import hla.rti1516e.encoding.HLAASCIIstring;
 import hla.rti1516e.exceptions.FederateInternalError;
 import hla.rti1516e.time.HLAfloat64Time;
+import hla.rti1516e.time.HLAfloat64TimeFactory;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class SumoFederateAmbassador extends NullFederateAmbassador {
 	//----------------------------------------------------------
@@ -43,6 +62,14 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 		protected PositionCoder _positionRecordCoder;
 		protected EncoderFactory _encoderFactory;
 		protected boolean isRegistered = 	   false;
+		public  Socket SocketElement;
+		OutputStream OutElement;
+		BufferedWriter bufOut;
+		Connect socketThread;
+		connectionClass connection;
+		BlockingQueue receiveQueue;
+		BlockingQueue sendQueue;
+		
 
 		//----------------------------------------------------------
 		//                      CONSTRUCTORS
@@ -53,6 +80,8 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 			this.federate = federate;
 			this._encoderFactory = encoder;
 			this._positionRecordCoder = new PositionCoder(_encoderFactory);
+			
+			//StartConnection();
 
 			//HLAASCIIstring test = encoder.createHLAASCIIstring("lalal");
 			
@@ -61,6 +90,13 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 		//----------------------------------------------------------
 		//                    INSTANCE METHODS
 		//----------------------------------------------------------
+		
+		public void StartConnection(){
+			connection = federate.GetConnection();
+			receiveQueue = connection.GetInQueue();
+			sendQueue = connection.GetOutQueue();
+		}
+		
 		private void log( String message )
 		{
 			System.out.println( "FederateAmbassador: " + message );
@@ -234,6 +270,7 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 			                         null,
 			                         sentOrdering,
 			                         receiveInfo );
+			
 		}
 
 		@Override
@@ -247,64 +284,83 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 		                                SupplementalReceiveInfo receiveInfo )
 		    throws FederateInternalError
 		{
-			StringBuilder builder = new StringBuilder( "Interaction Received:" );
-			HLAASCIIstring strParam = this._encoderFactory.createHLAASCIIstring(); 
 			
-			// print the handle
-			builder.append( " handle=" + interactionClass );
+			
+			HLAASCIIstring strParam = this._encoderFactory.createHLAASCIIstring(); 
+			//HLAfloat64Time timeParam = (HLAfloat64Time) this._encoderFactory.createHLAfloat64BE();
+			JSONObject receiveInteraction= new JSONObject();
+			
+
 			if ( interactionClass.equals(AddVehicle.handle) )
 			{
-				builder.append( " (VehicleHandle)" );
-			}
-			else if ( interactionClass.equals(CreateObject.handle) )
-			{
-				builder.append( " (CreateObject)" );
-			}
-			else if ( interactionClass.equals(DeleteObject.handle) )
-			{
-				builder.append( " (DeleteObject)" );
-			}
-			
-			// print the tag
-			builder.append( ", tag=" + new String(tag) );
-			// print the time (if we have it) we'll get null if we are just receiving
-			// a forwarded call from the other reflect callback above
-			if( time != null )
-			{
-				builder.append( ", time=" + ((HLAfloat64Time)time).getValue() );
-			}
-			
-			// print the parameter information
-			builder.append( ", parameterCount=" + theParameters.size() );
-			builder.append( "\n" );
-			for( ParameterHandle parameter : theParameters.keySet() )
-			{
-				// print the parameter handle
-				builder.append( "\tparamHandle=" );
-				builder.append( parameter );
+
 				try {
-					if (parameter.equals(CreateObject.pos))
+					receiveInteraction.put("evt_type", "AddVehicle");
+					receiveInteraction.append("tag", new String(tag));
+					
+					// print the time (if we have it) we'll get null if we are just receiving
+					// a forwarded call from the other reflect callback above
+					if( time != null )					
+						receiveInteraction.put("time", ((HLAfloat64Time)time).getValue());					
+					
+
+					for( ParameterHandle parameter : theParameters.keySet() )
 					{
-						builder.append( ", paramValue=" );
-						builder.append(_positionRecordCoder.decode(theParameters.get(parameter)));
+
+						try {
+							if (parameter.equals(CreateObject.position))							{
+								receiveInteraction.put("pos",_positionRecordCoder.decode(theParameters.get(parameter)) );								
+							}
+							else{
+								strParam.decode(theParameters.get((AttributeHandle)parameter));
+								receiveInteraction.put(AddVehicle.InteractionDataByHandle.get(parameter).name.toString(), strParam.getValue().toString());
+							}
+						}catch (DecoderException e) {
+							e.printStackTrace();				
+						}						
 					}
-					else
-					{
-						strParam.decode(theParameters.get(parameter));
-						// print the parameter value
-						builder.append( ", paramValue=" );
-						builder.append( strParam.getValue() );
-					}
-				} 
-				catch (DecoderException e) {
-					builder.append("Couldn't read!");						
+
+				}catch (JSONException e2) {
+					e2.printStackTrace();
 				}
-				builder.append( "\n" );
+				
+				try {
+					sendQueue.put(receiveInteraction);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
 			}
-
-			log( builder.toString() );
+			
 		}
+		
+							
+					          
+						
+			 	          
+			 	          
+			 	      
+			      
 
+			 public Socket GetSocket(){
+				 return SocketElement;
+			 }
+			 public void SetSocket(Socket in){
+				 SocketElement = in;
+			 }
+			 
+			 	
+			
+			 
+			
+				
+						
+			
+		
+
+		
 		@Override
 		public void removeObjectInstance( ObjectInstanceHandle theObject,
 		                                  byte[] tag,
@@ -318,5 +374,5 @@ public class SumoFederateAmbassador extends NullFederateAmbassador {
 		//----------------------------------------------------------
 		//                     STATIC METHODS
 		//----------------------------------------------------------
-
+	
 }

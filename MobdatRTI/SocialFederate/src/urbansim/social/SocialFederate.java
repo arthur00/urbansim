@@ -18,9 +18,25 @@ import hla.rti1516e.time.HLAfloat64TimeFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.net.URL;
+import java.io.*;
+import java.net.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
+import org.json.*;
+import org.portico.lrc.services.object.msg.SendInteraction;
 
 public class SocialFederate {
 	//----------------------------------------------------------
@@ -31,18 +47,24 @@ public class SocialFederate {
 
 	/** The sync point all federates will sync up on before starting */
 	public static final String READY_TO_RUN = "ReadyToRun";
+	
+
+
 
 	//----------------------------------------------------------
 	//                   INSTANCE VARIABLES
 	//----------------------------------------------------------
-	private RTIambassador rtiamb;
-	private SocialFederateAmbassador fedamb;  // created when we connect
+	private RTIambassador rtiamb; // Eh como se fosse o controlador do Social Federate
+	private SocialFederateAmbassador fedamb;  // created when we connect   //Eh o responsavel por receber os dados do RTI.
 	private HLAfloat64TimeFactory timeFactory; // set when we join
 	protected EncoderFactory encoderFactory;     // set when we join
-
 	protected PositionCoder _positionRecordCoder;
-
-	
+	public final String host = "localhost";
+	public final int socketPort = 8081;
+	public Socket socketElement;
+	BlockingQueue receiveQueue;
+	BlockingQueue sendQueue;
+	ConnectionClass connection;
 	//----------------------------------------------------------
 	//                      CONSTRUCTORS
 	//----------------------------------------------------------
@@ -148,7 +170,9 @@ public class SocialFederate {
 		// has already been registered, we'll get a callback saying it failed,
 		// but we don't care about that, as long as someone registered it
 		rtiamb.registerFederationSynchronizationPoint( READY_TO_RUN, null );
-
+		startConnection();
+		fedamb.startConnection();
+		
 		// wait until the point is announced
 		while( fedamb.isAnnounced == false || fedamb.isRegistered == false )
 		{
@@ -178,9 +202,12 @@ public class SocialFederate {
 		/////////////////////////////
 		// in this section we enable/disable all time policies
 		// note that this step is optional!
+		
+		/*
 		enableTimePolicy();
 		log( "Time Policy Enabled" );
-
+		*/
+		
 		//////////////////////////////
 		// 8. publish and subscribe //
 		//////////////////////////////
@@ -196,7 +223,9 @@ public class SocialFederate {
 		// update the attribute values of the object we registered, and will
 		// send an interaction.
 		
-		// Wait for pub-sub to propagate
+		// Wait for pub-sub to propagate.
+		
+		/*
 		Thread.sleep(1000);
 		for( int i = 0; i < ITERATIONS; i++ )
 		{
@@ -204,6 +233,51 @@ public class SocialFederate {
 			advanceTime( 1.0 );
 			Thread.sleep(2000);
 		}
+		*/
+		
+		//TODO RECEIVE COMMANDS (SOCKETS, JSON - SERVER).
+        String fromClient;
+        Map<String,Object> map = new HashMap<String,Object>(); //Cria um hashmap baseado em duas strings
+        ObjectMapper mapper = new ObjectMapper(); 	// Cria o Objeto mapper
+        
+        boolean run = true;
+        while(run) 
+        {
+        	System.out.println("While do Socket");
+            if((fromClient = receiveQueue.take().toString()) != null)
+            {
+            	System.out.println("From Client: " + fromClient);
+                try
+                {            	
+                	map = mapper.readValue(fromClient, new TypeReference<HashMap<String,Object>>(){}); //map recebera o HASHMAP criado a partir do JSON
+                }
+                catch(Exception e)
+                {
+                	e.printStackTrace();
+                }
+                
+                if(map.containsValue("AddVehicle"))
+                {
+                	AddVehicleInteraction addVehicleInteraction = new AddVehicleInteraction();
+                	//System.out.println(map);
+                    ObjectMapper mapperIn = new ObjectMapper(); // Cria o Objeto mapper
+                    try
+                    {
+                    	addVehicleInteraction = mapperIn.readValue(fromClient, AddVehicleInteraction.class);
+                    }catch(JsonGenerationException e)
+                    {
+                    	e.printStackTrace();
+                    }
+                    //System.out.println("AEEEEEW!  " + addVehicleInteraction);  
+                    sendInteraction(addVehicleInteraction);
+                }
+                //server.close();
+                //run = false;
+            }
+
+         }
+  
+		
 
 		////////////////////////////////////
 		// 12. resign from the federation //
@@ -231,6 +305,19 @@ public class SocialFederate {
 		}
 	}
 	
+	public void startConnection() throws IOException 
+	{
+		connection = new ConnectionClass(host, socketPort);
+		receiveQueue = connection.GetInQueue();
+		sendQueue = connection.GetOutQueue();
+		socketElement = connection.GetSocket();
+	}
+	
+	public ConnectionClass getConnection()
+	{
+		return connection;
+	}
+
 	////////////////////////////////////////////////////////////////////////////
 	////////////////////////////// Helper Methods //////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
@@ -238,6 +325,9 @@ public class SocialFederate {
 	 * This method will attempt to enable the various time related properties for
 	 * the federate
 	 */
+	
+	/*
+	
 	private void enableTimePolicy() throws Exception
 	{
 		// NOTE: Unfortunately, the LogicalTime/LogicalTimeInterval create code is
@@ -245,6 +335,8 @@ public class SocialFederate {
 		//       different RTI implementation. As such, we've isolated it into a
 		//       method so that any change only needs to happen in a couple of spots 
 		HLAfloat64Interval lookahead = timeFactory.makeInterval( fedamb.federateLookahead );
+		
+		
 		
 		////////////////////////////
 		// enable time regulation //
@@ -269,11 +361,15 @@ public class SocialFederate {
 		}
 	}
 	
+	*/
+	
 	/**
 	 * This method will inform the RTI about the types of data that the federate will
 	 * be creating, and the types of data we are interested in hearing about as other
 	 * federates produce it.
 	 */
+	
+	
 	private void publishAndSubscribe() throws RTIexception
 	{
 		Vehicle.handle = rtiamb.getObjectClassHandle( "HLAobjectRoot.Vehicle" );
@@ -296,23 +392,22 @@ public class SocialFederate {
 		rtiamb.subscribeInteractionClass( DeleteObject.handle );
 	}
 	
-	private void sendInteraction() throws RTIexception
+	private void sendInteraction(AddVehicleInteraction object) throws RTIexception
 	{
 		//////////////////////////
 		// send the interactions //
 		//////////////////////////
 		ParameterHandleValueMap parameters = rtiamb.getParameterHandleValueMapFactory().create(4);
-		HLAASCIIstring vehicleName = encoderFactory.createHLAASCIIstring("My Cool Vehicle!");
-		HLAASCIIstring vehicleType = encoderFactory.createHLAASCIIstring("Awesome Type");
-		HLAASCIIstring destinationName = encoderFactory.createHLAASCIIstring("Stairway to Heaven");
-		HLAASCIIstring destinationSource = encoderFactory.createHLAASCIIstring("Highway to Hell");
+		HLAASCIIstring vehicleName = encoderFactory.createHLAASCIIstring(object.getVname());
+		HLAASCIIstring vehicleType = encoderFactory.createHLAASCIIstring(object.getVtype());
+		HLAASCIIstring destinationName = encoderFactory.createHLAASCIIstring(object.getSname());
+		HLAASCIIstring destinationSource = encoderFactory.createHLAASCIIstring(object.getDname());
 		parameters.put(AddVehicle.vname, vehicleName.toByteArray());
 		parameters.put(AddVehicle.vtype, vehicleType.toByteArray());
 		parameters.put(AddVehicle.dname, destinationName.toByteArray());
 		parameters.put(AddVehicle.source, destinationSource.toByteArray());
 		
-		
-		HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
+ 		HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
 		rtiamb.sendInteraction( AddVehicle.handle, parameters, generateTag(), time );
 	}
 

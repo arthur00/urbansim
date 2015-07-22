@@ -12,3 +12,5 @@ class Vehicle
 	static AttributeHandle vname;
 	static AttributeHandle vtype;
 }
+
+

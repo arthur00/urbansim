@@ -15,13 +15,27 @@ import hla.rti1516e.exceptions.RTIexception;
 import hla.rti1516e.time.HLAfloat64Time;
 import hla.rti1516e.time.HLAfloat64TimeFactory;
 
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 
 public class OpenSimFederate {
+	protected String server = "localhost";
+	protected int port = 8082;
+	protected BlockingQueue in;
+	protected connectionClass con;
 	//----------------------------------------------------------
 	//                    STATIC VARIABLES
 	//----------------------------------------------------------
@@ -40,12 +54,13 @@ public class OpenSimFederate {
 	protected EncoderFactory encoderFactory;     // set when we join
 
 	protected PositionCoder _positionRecordCoder;
-
+		
 	
 	//----------------------------------------------------------
 		//                      CONSTRUCTORS
 		//----------------------------------------------------------
-
+		
+	
 		//----------------------------------------------------------
 		//                    INSTANCE METHODS
 		//----------------------------------------------------------
@@ -85,6 +100,8 @@ public class OpenSimFederate {
 		 */
 		public void runFederate( String federateName ) throws Exception
 		{
+			
+			
 			/////////////////////////////////////////////////
 			// 1 & 2. create the RTIambassador and Connect //
 			/////////////////////////////////////////////////
@@ -143,6 +160,9 @@ public class OpenSimFederate {
 			////////////////////////////////
 			// 5. announce the sync point //
 			////////////////////////////////
+			con = new connectionClass(server,port);
+			fedamb.CreateConnection();
+			
 			// announce a sync point to get everyone on the same page. if the point
 			// has already been registered, we'll get a callback saying it failed,
 			// but we don't care about that, as long as someone registered it
@@ -195,14 +215,74 @@ public class OpenSimFederate {
 			// update the attribute values of the object we registered, and will
 			// send an interaction.
 			
-			// Wait for pub-sub to propagate
-			Thread.sleep(1000);
-			for( int i = 0; i < ITERATIONS; i++ )
-			{
-				advanceTime( 1.0 );
-				Thread.sleep(2000);
-			}
-
+//			String fromClient;
+//	        String toClient;
+//	        String clientMessage;
+//	 
+//	        ServerSocket server = new ServerSocket(8080);
+//	        System.out.println("wait for connection on port 8080");
+//	        Socket client = server.accept();
+			
+			String fromClient;
+			Map<String,Object> map;
+			ObjectMapper mapper;
+			
+			 boolean run = true;
+			 in = con.getRecevQueue();
+		        while(run) 
+		        {  
+		        	
+		            if((fromClient = in.take().toString()) != null){
+		            	System.out.println("fromClient: "+fromClient);
+		            	//Transform the map sent by socket in a hash map
+		            	//keep the same structure of a json object
+			            map = new HashMap<String,Object>(); //Cria um hashmap baseado em duas strings 
+			            mapper = new ObjectMapper(); // Cria o Objeto mapper
+			            
+			            
+			            try{
+			            	//map recebera o HASHMAP criado a partir do JSON
+			            	map = mapper.readValue(fromClient, new TypeReference<HashMap<String,Object>>(){}); }
+			            catch(Exception e){            
+			            	e.printStackTrace();}
+			           
+//			            if(map.containsValue("InductionLoop"))            
+//			            	sendInteraction(map);   
+//			            	
+//			            
+//			            
+//			            if(map.containsValue("InductionLoop"))
+//			            	sendInteraction(map);   
+//			            
+//			            if(map.containsValue("DeleteObject"))         	
+//					           sendInteraction(map); 
+//			            	
+//			            
+			            if(map.containsValue("CreateObject"))	//evt_type=	            	
+			            	log("CreateObject"+map.toString());
+			            	//sendInteraction(map); 		      
+			            if(map.containsValue("DeleteObject"))
+			            	log("DeleteObject" + map.toString());
+			            if(map.containsValue("VehicleArrived"))
+			            	log("VehicleArrived" + map.toString());
+			            if(map.containsValue("InductionLoop"))
+			            	log("InductionLoop"+ map.toString());
+			            if(map.containsValue("VehicleDeparted"))
+			            	log("VehicleDeparted:"+map.toString());
+			            if(map.containsValue("CreateObject"))
+			            	log("CreateObject" + map.toString());
+			            
+		            }
+		         }     
+	            /*if(map.containsValue("AddVehicle"))
+	            {
+	            	System.out.println(map);
+	            }*/
+	            
+	            //System.out.println(map.get("sname")); //Obtem value a partir de uma key ou vice versa.
+	               
+//	            server.close(); // Fecha o socket
+//	            run = false;
 			////////////////////////////////////
 			// 12. resign from the federation //
 			////////////////////////////////////
@@ -254,6 +334,11 @@ public class OpenSimFederate {
 			{
 				Thread.sleep(500);
 			}
+			Object a= new Object();
+			int[] b = new int[2];
+			b[0] = 1;
+			a = b;
+			
 		}
 		
 		/**
@@ -288,8 +373,11 @@ public class OpenSimFederate {
 			DeleteObject.handle = rtiamb.getInteractionClassHandle( "HLAinteractionRoot.DeleteObject" );
 			DeleteObject.vid = rtiamb.getParameterHandle(CreateObject.handle, "ID");
 			
+			
+			
 			rtiamb.subscribeInteractionClass( DeleteObject.handle );
 			rtiamb.subscribeInteractionClass( CreateObject.handle );
+			
 		}
 		
 		/**
@@ -313,6 +401,8 @@ public class OpenSimFederate {
 			// we send another interaction, this time with a timestamp:
 			HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
 			rtiamb.sendInteraction( DeleteObject.handle, parameters, generateTag(), time );
+			
+			
 		}
 
 		/**

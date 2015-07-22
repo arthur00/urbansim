@@ -25,3 +25,11 @@ class DeleteObject
 	static InteractionClassHandle handle;
 	static ParameterHandle vid;
 }
+
+class CreateObjectRTI{
+	
+	String ID;
+	String VeicleType;
+	int[] position;	
+	
+}

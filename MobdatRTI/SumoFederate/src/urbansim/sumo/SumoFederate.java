@@ -1,9 +1,15 @@
 package urbansim.sumo;
 
+import hla.rti1516.jlc.HLAfloat32BE;
+import hla.rti1516.jlc.HLAfloat64BE;
+import hla.rti1516e.AttributeHandle;
 import hla.rti1516e.AttributeHandleSet;
 import hla.rti1516e.AttributeHandleValueMap;
 import hla.rti1516e.CallbackModel;
+import hla.rti1516e.InteractionClassHandle;
+import hla.rti1516e.ObjectClassHandle;
 import hla.rti1516e.ObjectInstanceHandle;
+import hla.rti1516e.ParameterHandle;
 import hla.rti1516e.ParameterHandleValueMap;
 import hla.rti1516e.RTIambassador;
 import hla.rti1516e.ResignAction;
@@ -20,9 +26,54 @@ import hla.rti1516e.time.HLAfloat64TimeFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
+
+
+
+
+
+
+import org.jgroups.util.AdditionalDataUUID;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Date;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.function.BiConsumer;
+
 
 public class SumoFederate {
 	//----------------------------------------------------------
@@ -42,6 +93,14 @@ public class SumoFederate {
 	private HLAfloat64TimeFactory timeFactory; // set when we join
 	protected EncoderFactory encoderFactory;     // set when we join
 	protected PositionCoder _positionRecordCoder;
+	connectionClass conection;
+	BlockingQueue receiveQueue;
+	BlockingQueue sendQueue;
+	public  Socket SocketElement;
+	public final int socketPort = 8080;
+	public final String host = "localhost";
+	// = // StartConnection();
+	//public final Socket client =  StartConnection();
 
 	
 	//----------------------------------------------------------
@@ -87,6 +146,11 @@ public class SumoFederate {
 		 */
 		public void runFederate( String federateName ) throws Exception
 		{
+			
+			
+			
+			
+			
 			/////////////////////////////////////////////////
 			// 1 & 2. create the RTIambassador and Connect //
 			/////////////////////////////////////////////////
@@ -97,11 +161,14 @@ public class SumoFederate {
 			// connect
 			log( "Connecting..." );
 			fedamb = new SumoFederateAmbassador( this, encoderFactory);
-			rtiamb.connect( fedamb, CallbackModel.HLA_EVOKED );
+			rtiamb.connect( fedamb, CallbackModel.HLA_IMMEDIATE);
 
 			//////////////////////////////
 			// 3. create the federation //
 			//////////////////////////////
+			
+			//Socket b = fedamb.StartConnection1();
+			log("Stating socket Connection");
 			log( "Creating Federation..." );
 			// We attempt to create a new federation with the first three of the
 			// restaurant FOM modules covering processes, food and drink
@@ -141,10 +208,15 @@ public class SumoFederate {
 			
 			// cache the time factory for easy access
 			this.timeFactory = (HLAfloat64TimeFactory)rtiamb.getTimeFactory();
-
+			
 			////////////////////////////////
 			// 5. announce the sync point //
 			////////////////////////////////
+			
+			
+			StartConnection();
+			fedamb.StartConnection();
+			log("Connected with the Socket");
 			// announce a sync point to get everyone on the same page. if the point
 			// has already been registered, we'll get a callback saying it failed,
 			// but we don't care about that, as long as someone registered it
@@ -152,7 +224,7 @@ public class SumoFederate {
 			// wait until the point is announced
 			while( fedamb.isAnnounced == false || fedamb.isRegistered == false )
 			{
-				rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
+				Thread.sleep(200);
 			}
 
 			// WAIT FOR USER TO KICK US OFF
@@ -171,7 +243,7 @@ public class SumoFederate {
 			log( "Achieved sync point: " +READY_TO_RUN+ ", waiting for federation..." );
 			while( fedamb.isReadyToRun == false )
 			{
-				rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
+				Thread.sleep(200);
 			}
 
 			/////////////////////////////
@@ -189,38 +261,158 @@ public class SumoFederate {
 			// produce, and all the data we want to know about
 			publishAndSubscribe();
 			log( "Published and Subscribed" );
-
+			///////////////////////////////
+			// 8.1 Create objects layout //
+			//////////////////////////////
+			//Vehicle vehicle = new Vehicle();
+			//TrafficLight trafficLight = new TrafficLight();
+			//log( "Veicle layout created");
+			//log( "TrafficLight layout created");
+			
+			
+			
+			
+			
 			/////////////////////////////////////
 			// 9. register an object to update //
 			/////////////////////////////////////
-			ObjectInstanceHandle objectHandle = registerObject();
-			log( "Registered Object, handle=" + objectHandle );
+			
+			//ObjectInstanceHandle objectHandle = registerObject();
+			//log( "Registered Object, handle=" + objectHandle );
 			
 			
-			Thread.sleep(1000);
-			/////////////////////////////////////
-			// 10. do the main simulation loop //
-			/////////////////////////////////////
-			// here is where we do the meat of our work. in each iteration, we will
-			// update the attribute values of the object we registered, and will
-			// send an interaction.
-			for( int i = 0; i < ITERATIONS; i++ )
+			//Thread.sleep(1000);
+			///////////////////////////////////////////
+			// 10. Send Interactions/Register Objects//
+			//////////////////////////////////////////
+			/*
+			for (Map.Entry<String, Object> entry : map.entrySet())
 			{
-				// 9.1 update the attribute values of the instance //
-				updateAttributeValues( objectHandle );
-				advanceTime( 1.0 );
-				
-				Thread.sleep(100);
+			    System.out.println(entry.getKey() + "/" + entry.getValue());
+			}*/
+			
+			
+			
 
-				// 9.2 send an interaction
-				sendInteraction();
-			}
+			//String that store the income information from the socket
+			
+			   
+			String fromClient ;
+			// 2 Dictionaries that store all the elements created by the Sumo, 
+			//1 Dictionary sotore the information with the key the ID that Sumo give to its elements
+			// and the other use the Handle that the RTI give to the Sumo Federation
+			Map<Integer,ObjectReferencesByID> objectHashMapByID = new HashMap<Integer,ObjectReferencesByID>();
+			Map<ObjectInstanceHandle,ObjectReferencesByHandle> objectHashMapByHandle = new HashMap<ObjectInstanceHandle,ObjectReferencesByHandle>();
+			Map<String,Object> map;
+			ObjectMapper mapper;
+			//vatiables used to store the current  ID and handle to strore in the Dictionaries
+			ObjectReferencesByID objectReferencesByID;
+			ObjectReferencesByHandle objectReferencesByHandle;
+				   
+            boolean run = true;
+	        while(run) 
+	        {  
+	        	System.out.println("oooo");
+	            if((fromClient = receiveQueue.take().toString()) != null){
+	            	System.out.println("fromClient: "+fromClient);
+	            	//Transform the map sent by socket in a hash map
+	            	//keep the same structure of a json object
+		            map = new HashMap<String,Object>(); //Cria um hashmap baseado em duas strings 
+		            mapper = new ObjectMapper(); // Cria o Objeto mapper
+		            
+		            
+		            try{
+		            	//map recebera o HASHMAP criado a partir do JSON
+		            	map = mapper.readValue(fromClient, new TypeReference<HashMap<String,Object>>(){}); }
+		            catch(Exception e){            
+		            	e.printStackTrace();}
+		            
+		            /*-----------------check all the possible messages that SumoConnector can send -------------*/
+		            
+		            if(map.containsValue("InductionLoop"))            
+		            	sendInteraction(map);   
+		            	
+		            
+		            
+		            if(map.containsValue("InductionLoop"))
+		            	sendInteraction(map);   
+		            
+		            if(map.containsValue("DeleteObject"))         	
+				           sendInteraction(map); 
+		            	
+		            
+		            if(map.containsValue("CreateObject"))		            	
+		            	sendInteraction(map); 		            	
+		            
+		            	            	            
+		            
+		            // The program uses the same message "TrafficlightInstance" when sumo order to create another object
+		            // or to update an object of  TrafficLight
+		            if(map.containsValue("TrafficlightInstance")){
+		            	ObjectInstanceHandle objectHandle = null;
+		            	//Check if the object already exist in the list 
+		            	//If the ID is Given and it is in the dictionary the Connector wants to update an element, if not, create a new element and insert in the Dictionary
+		            	if(!objectHashMapByID.containsKey((Integer) map.get("id"))){
+		            		//Register TrafficLightsInstance object 
+		            		objectHandle = registerObject(map);
+		            		System.out.println("11111");
+		            		//Insert to the Dictionary the object TrafficLight
+		            		objectReferencesByID = new ObjectReferencesByID(objectHandle, "TrafficLight" );
+		            		objectReferencesByHandle = new ObjectReferencesByHandle((Integer) map.get("id"),"TrafficLight");
+		            		objectHashMapByID.put((Integer) map.get("id"), objectReferencesByID);
+		            		objectHashMapByHandle.put(objectHandle,objectReferencesByHandle);		  	            		
 
+		            	}
+		            	else{
+		            		
+		            		//take the handle gave by the sumo connector
+		            		objectHandle = (ObjectInstanceHandle) objectHashMapByID.get(map.get("id")).handle;
+		            	}
+		            	
+		            	try{
+		            		updateAttributeValues(map,objectHandle);
+		            	}catch(Exception e){
+		            		log("Wrong input to TrafficlightInstance");
+		            	}	 
+		            }
+		            
+		            // The program uses the same message "VehicleInstance" when sumo order to create another object
+		            // or to update an object of  Vehicle
+		           if(map.containsValue("VehicleInstance")){
+		        	   System.out.println("opaaaa");
+		            	ObjectInstanceHandle objectHandle = null;
+		            	//Check if the object already exist in the list 
+		            	//If the ID is Given and it is in the dictionary the Connector wants to update an element, if not, create a new element and insert in the Dictionary
+		            	if(!objectHashMapByID.containsKey((Integer) map.get("id"))){
+		            		//Register TrafficLightsInstance object 
+		            		objectHandle = registerObject(map);
+		            		
+		            		//Insert to the Dictionary the object TrafficLight
+		            		objectReferencesByID = new ObjectReferencesByID(objectHandle, "Vehicle" );
+		            		objectReferencesByHandle = new ObjectReferencesByHandle((Integer) map.get("id"),"TrafficLight");
+		            		objectHashMapByID.put((Integer) map.get("id"), objectReferencesByID);
+		            		objectHashMapByHandle.put(objectHandle,objectReferencesByHandle);
+		            		
+		            	}
+		            	else{
+		            		//take the handle gave by the sumo connector
+		            		objectHandle = (ObjectInstanceHandle) objectHashMapByID.get(map.get("id")).handle;
+		            	}
+		            	
+
+		            		            		
+		            		updateAttributeValues(map,objectHandle);
+		            	            	 
+		            }
+	            }
+	        }
+			
+	        
 			//////////////////////////////////////
 			// 11. delete the object we created //
 			//////////////////////////////////////
-			deleteObject( objectHandle );
-			log( "Deleted Object, handle=" + objectHandle );
+			//deleteObject( objectHandle );
+			//log( "Deleted Object, handle=" + objectHandle );
 
 			////////////////////////////////////
 			// 12. resign from the federation //
@@ -255,6 +447,9 @@ public class SumoFederate {
 		 * This method will attempt to enable the various time related properties for
 		 * the federate
 		 */
+		
+	
+		
 		private void enableTimePolicy() throws Exception
 		{
 			// NOTE: Unfortunately, the LogicalTime/LogicalTimeInterval create code is
@@ -264,13 +459,30 @@ public class SumoFederate {
 			/////////////////////////////
 			// enable time constrained //
 			/////////////////////////////
+			
+			
+			
+			HLAfloat64Interval lookahead = timeFactory.makeInterval( fedamb.federateLookahead );			
+			////////////////////////////
+			// enable time regulation //
+			////////////////////////////
+			this.rtiamb.enableTimeRegulation( lookahead );
+		    /////////////////////////////
+			// enable time constrained //
+			/////////////////////////////
 			this.rtiamb.enableTimeConstrained();
+			
+	
+			
+			/*this.rtiamb.enableTimeConstrained();
+			  
+			 
 			
 			// tick until we get the callback
 			while( fedamb.isConstrained == false )
 			{
 				rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
-			}
+			}*/
 		}
 		
 		/**
@@ -280,69 +492,185 @@ public class SumoFederate {
 		 */
 		private void publishAndSubscribe() throws RTIexception
 		{
-			///////////////////////////////////////////////
-			// publish all attributes of Food.Drink.Soda //
-			///////////////////////////////////////////////
-			// before we can register instance of the object class Food.Drink.Soda and
+			
+			
+			// before we can register instance of the object class and
 			// update the values of the various attributes, we need to tell the RTI
 			// that we intend to publish this information
-
-			// get all the handle information for the attributes of Food.Drink.Soda
+			
+			//Hash maps used to designed the correct information to the Dictionary inside each class
+			//This dictionaries store the type, name and handle of each attribute 
+			Map<ParameterHandle,InteractionData> interactionDataByHandle;
+			Map<String,ObjectData> objectDataByName;
+			Map<AttributeHandle,ObjectData> ObjectDataByHandle;
+			
+			/*------------------------------InductionLoop Interaction -------------------------*/
+					
+			// get all the handle information for the attributes of the class
+			InductionLoop.handle = rtiamb.getInteractionClassHandle("HLAinteractionRoot.InductionLoop");
+			InductionLoop.id = rtiamb.getParameterHandle(InductionLoop.handle, "ID");
+			InductionLoop.count = rtiamb.getParameterHandle(InductionLoop.handle, "Count");
+						
+			//create the Dictionary that store the handle of the attributes as the key to a object that stores 
+			//the handle, type and its name.
+			//The objective is to know its type and name when necessary to any convention
+			interactionDataByHandle = new HashMap<ParameterHandle,InteractionData>();
+			interactionDataByHandle.put(InductionLoop.id , new InteractionData(InductionLoop.id ,"id", "string"));
+			interactionDataByHandle.put(InductionLoop.count , new InteractionData(InductionLoop.count ,"id", "intenger"));
+			InductionLoop.InteractionDataByHandle = interactionDataByHandle;
+			
+			
+			rtiamb.publishInteractionClass(InductionLoop.handle);
+			/*----------------------------- DeleteObject Interaction --------------------------*/
+			
+			// get all the handle information for the attributes of the class
+			DeleteObject.handle = rtiamb.getInteractionClassHandle("HLAinteractionRoot.DeleteObject");
+			DeleteObject.vid = rtiamb.getParameterHandle(DeleteObject.handle, "ID");
+			
+			//create the Dictionary that store the handle of the attributes as the key to a object that stores 
+			//the handle, type and its name.
+			//The objective is to know its type and name when necessary to any convention
+			interactionDataByHandle = new HashMap<ParameterHandle,InteractionData>();
+			interactionDataByHandle.put(DeleteObject.vid , new InteractionData(CreateObject.vid ,"id", "string"));
+			DeleteObject.InteractionDataByHandle = interactionDataByHandle;
+			
+			rtiamb.publishInteractionClass(DeleteObject.handle);
+			
+			/*----------------------------- AddVehicle Interaction-----------------------------*/
+			
+			// get all the handle information for the attributes of the class
+			AddVehicle.handle = rtiamb.getInteractionClassHandle( "HLAinteractionRoot.AddVehicle" );
+			AddVehicle.vname = rtiamb.getParameterHandle(AddVehicle.handle, "VehicleName");
+			AddVehicle.vtype = rtiamb.getParameterHandle(AddVehicle.handle, "VehicleType");
+			AddVehicle.dname = rtiamb.getParameterHandle(AddVehicle.handle, "DestinationName");
+			AddVehicle.source = rtiamb.getParameterHandle(AddVehicle.handle, "Source");
+			
+			//create the Dictionary that store the handle of the attributes as the key to a object that stores 
+			//the handle, type and its name.
+			//The objective is to know its type and name when necessary to any convention
+			interactionDataByHandle = new HashMap<ParameterHandle,InteractionData>();
+			interactionDataByHandle.put(AddVehicle.vname, new InteractionData(AddVehicle.vname,"vname", "string"));
+			interactionDataByHandle.put(AddVehicle.vtype, new InteractionData(AddVehicle.vtype,"vtype", "string"));
+			interactionDataByHandle.put(AddVehicle.dname, new InteractionData(AddVehicle.dname,"dname", "string"));
+			interactionDataByHandle.put(AddVehicle.source, new InteractionData(AddVehicle.source,"sorce", "string"));
+			AddVehicle.InteractionDataByHandle = interactionDataByHandle;
+			
+			
+			rtiamb.subscribeInteractionClass(AddVehicle.handle);
+			
+			/* ----------------------------- Create Object Interaction-----------------------------*/
+			
+			// get all the handle information for the attributes of the class
+			CreateObject.handle = rtiamb.getInteractionClassHandle( "HLAinteractionRoot.CreateObject" );
+			CreateObject.vid = rtiamb.getParameterHandle(urbansim.sumo.CreateObject.handle, "ID");
+			CreateObject.vtype = rtiamb.getParameterHandle(urbansim.sumo.CreateObject.handle, "VehicleType");
+			CreateObject.position = rtiamb.getParameterHandle(urbansim.sumo.CreateObject.handle, "Position");
+			
+			//create the Dictionary that store the handle of the attributes as the key to a object that stores 
+			//the handle, type and its name.
+			//The objective is to know its type and name when necessary to any convention
+			interactionDataByHandle = new HashMap<ParameterHandle,InteractionData>();
+			interactionDataByHandle.put(CreateObject.vid , new InteractionData(CreateObject.vid ,"id", "string"));
+			interactionDataByHandle.put(CreateObject.vtype , new InteractionData(CreateObject.vtype ,"vtype", "string"));
+			interactionDataByHandle.put(CreateObject.position  , new InteractionData(CreateObject.position  ,"position", "position"));
+			CreateObject.InteractionDataByHandle = interactionDataByHandle;
+			
+			
+			rtiamb.publishInteractionClass( CreateObject.handle );
+			/* ----------------------------- Vehicle Object -----------------------------*/
+			// get all the handle information for the attributes of the class
+			System.out.println("SUMO  first- "+Vehicle.vtype);
 			Vehicle.handle = rtiamb.getObjectClassHandle( "HLAobjectRoot.Vehicle" );
+			System.out.println("SUMO  Second- "+Vehicle.vtype);
 			Vehicle.position = rtiamb.getAttributeHandle( Vehicle.handle, "Position" );
 			Vehicle.vname = rtiamb.getAttributeHandle( Vehicle.handle, "VehicleName" );
 			Vehicle.vtype = rtiamb.getAttributeHandle( Vehicle.handle, "VehicleType" );
 			Vehicle.velocity = rtiamb.getAttributeHandle( Vehicle.handle, "Velocity" );
 			Vehicle.angle = rtiamb.getAttributeHandle( Vehicle.handle, "Angle" );
-			// package the information into a handle set
-			AttributeHandleSet attributes = rtiamb.getAttributeHandleSetFactory().create();
-			attributes.add( Vehicle.position );
 			
-			// do the actual publication
-			rtiamb.publishObjectClassAttributes( Vehicle.handle, attributes );
-
-			////////////////////////////////////////////////////
-			// subscribe to all attributes of Food.Drink.Soda //
-			////////////////////////////////////////////////////
+			//create the Dictionary that store the handle of the attributes as the key to a object that stores 
+			//the handle, type and its name.
+			//The objective is to know its type and name when necessary to any convention
+			objectDataByName = new HashMap<String,ObjectData>();	
+			objectDataByName.put("pos",new ObjectData(Vehicle.position,"position","position"));
+			objectDataByName.put("angle",new ObjectData(Vehicle.angle,"angle","float"));
+			objectDataByName.put("velocity",new ObjectData(Vehicle.velocity,"velocity","float"));
+			objectDataByName.put("vname",new ObjectData(Vehicle.vname,"vname","String"));
+			objectDataByName.put("vtype",new ObjectData(Vehicle.vtype,"vtype","String"));
+			Vehicle.ObjectDataByName = objectDataByName;
+			
+			//create the Dictionary that store the handle of the attributes as the key to a object that stores 
+			//the handle, type and its name.
+			//The objective is to know its type and name when necessary to any convention
+			ObjectDataByHandle = new HashMap<AttributeHandle,ObjectData>();	
+			ObjectDataByHandle.put(Vehicle.position,new ObjectData(Vehicle.position,"position","position"));
+			ObjectDataByHandle.put(Vehicle.angle,new ObjectData(Vehicle.angle,"angle","float"));
+			ObjectDataByHandle.put(Vehicle.velocity,new ObjectData(Vehicle.velocity,"velocity","float"));
+			ObjectDataByHandle.put(Vehicle.vname,new ObjectData(Vehicle.vname,"vname","String"));
+			ObjectDataByHandle.put(Vehicle.vtype,new ObjectData(Vehicle.vtype,"vtype","String"));
+			Vehicle.ObjectDataByHandle = ObjectDataByHandle;
+			
+			// package the information into a handle set
+			AttributeHandleSet attributesVehicle = rtiamb.getAttributeHandleSetFactory().create();
+			attributesVehicle.add( Vehicle.position );
+			attributesVehicle.add(Vehicle.vname);
+			attributesVehicle.add(Vehicle.vtype);
+			attributesVehicle.add(Vehicle.velocity);
+			attributesVehicle.add(Vehicle.angle);
+			
+			
 			// we also want to hear about the same sort of information as it is
 			// created and altered in other federates, so we need to subscribe to it
-			rtiamb.subscribeObjectClassAttributes( Vehicle.handle, attributes );
-
-			//////////////////////////////////////////////////////////
-			// publish the interaction class FoodServed.DrinkServed //
-			//////////////////////////////////////////////////////////
-			// we want to send interactions of type FoodServed.DrinkServed, so we need
-			// to tell the RTI that we're publishing it first. We don't need to
-			// inform it of the parameters, only the class, making it much simpler
-			AddVehicle.handle = rtiamb.getInteractionClassHandle( "HLAinteractionRoot.AddVehicle" );
-			DeleteObject.handle = rtiamb.getInteractionClassHandle("HLAinteractionRoot.DeleteObject");
-			CreateObject.handle = rtiamb.getInteractionClassHandle("HLAinteractionRoot.CreateObject");
+			rtiamb.publishObjectClassAttributes( Vehicle.handle, attributesVehicle  );
+			rtiamb.subscribeObjectClassAttributes( Vehicle.handle, attributesVehicle  );
 			
-			/////////////////////////////////////////////////////////
-			// subscribe to the FoodServed.DrinkServed interaction //
-			/////////////////////////////////////////////////////////
-			// we also want to receive other interaction of the same type that are
-			// sent out by other federates, so we have to subscribe to it first
-			rtiamb.subscribeInteractionClass( AddVehicle.handle );
+			/* ----------------------------- TrafficLight Object -----------------------------*/
+			TrafficLight.handle = rtiamb.getObjectClassHandle( "HLAobjectRoot.TrafficLight" );
+			TrafficLight.id = rtiamb.getAttributeHandle( TrafficLight.handle, "ID" );
+			TrafficLight.position = rtiamb.getAttributeHandle( TrafficLight.handle, "Position" );
+			TrafficLight.status= rtiamb.getAttributeHandle( TrafficLight.handle, "Status" );
+			//package the information into a handle set
+			AttributeHandleSet attributesTrafficLight = rtiamb.getAttributeHandleSetFactory().create();
+			attributesTrafficLight.add( TrafficLight.id );
+			attributesTrafficLight.add( TrafficLight.status );
+			attributesTrafficLight.add( TrafficLight.id );
 			
-			DeleteObject.vid = rtiamb.getParameterHandle(DeleteObject.handle, "ID");
-			rtiamb.publishInteractionClass(DeleteObject.handle);
+			ObjectDataByHandle = new HashMap<AttributeHandle,ObjectData>();	
+			ObjectDataByHandle.put(TrafficLight.position,new ObjectData(TrafficLight.position,"position","position"));
+			ObjectDataByHandle.put(TrafficLight.id,new ObjectData(TrafficLight.id,"id","intenger"));
+			ObjectDataByHandle.put(TrafficLight.status,new ObjectData(TrafficLight.status,"status","string"));
+			TrafficLight.ObjectDataByHandle = ObjectDataByHandle;
 			
-			CreateObject.vid = rtiamb.getParameterHandle(CreateObject.handle, "ID");
-			CreateObject.vtype = rtiamb.getParameterHandle(CreateObject.handle, "VehicleType");
-			CreateObject.pos = rtiamb.getParameterHandle(CreateObject.handle, "Position");
-			rtiamb.publishInteractionClass(CreateObject.handle);
+			objectDataByName = new HashMap<String,ObjectData>();	
+			objectDataByName .put("position",new ObjectData(TrafficLight.position,"position","position"));
+			objectDataByName .put("id",new ObjectData(TrafficLight.id,"id","intenger"));
+			objectDataByName .put("status",new ObjectData(TrafficLight.status,"status","string"));
+			TrafficLight.ObjectDataByName = objectDataByName;
+			
+			
+			// we also want to hear about the same sort of information as it is
+			// created and altered in other federates, so we need to subscribe to it
+			rtiamb.publishObjectClassAttributes(TrafficLight.handle, attributesTrafficLight);
+			rtiamb.subscribeObjectClassAttributes( TrafficLight.handle, attributesTrafficLight );
+			
 			
 		}
+		
 		
 		/**
 		 * This method will register an instance of the Soda class and will
 		 * return the federation-wide unique handle for that instance. Later in the
 		 * simulation, we will update the attribute values for this instance
 		 */
-		private ObjectInstanceHandle registerObject() throws RTIexception
+		private ObjectInstanceHandle registerObject(Map<String,Object> map) throws RTIexception
 		{
-			return rtiamb.registerObjectInstance( Vehicle.handle );
+			if(map.containsValue("TrafficlightInstance")){
+				return rtiamb.registerObjectInstance( TrafficLight.handle );
+			}
+			else if((map.containsValue("VehicleInstance"))){
+				return rtiamb.registerObjectInstance( Vehicle.handle );
+			}
+			return null;
 		}
 		
 		/**
@@ -354,70 +682,143 @@ public class SumoFederate {
 		 * Note that we don't actually have to update all the attributes at once, we
 		 * could update them individually, in groups or not at all!
 		 */
-		private void updateAttributeValues( ObjectInstanceHandle objectHandle ) throws RTIexception
+		private void updateAttributeValues( Map<String,Object> map ,ObjectInstanceHandle objectHandle ) throws RTIexception
 		{
-			///////////////////////////////////////////////
-			// create the necessary container and values //
-			///////////////////////////////////////////////
-			// create a new map with an initial capacity - this will grow as required
-			AttributeHandleValueMap attributes = rtiamb.getAttributeHandleValueMapFactory().create(1);
+	/*
 			
-			// create the collection to store the values in, as you can see
-			// this is quite a lot of work. You don't have to use the encoding
-			// helpers if you don't want. The RTI just wants an arbitrary byte[]
+			for (Map.Entry<String, Object> entry : map.entrySet())
+			{
+			    System.out.println(entry.getKey() + "/" + entry.getValue());
+			}*/
+		    //Check by the name of the event with object should be updated
+			if(map.containsValue("VehicleInstance")){
+				
+				//create the a bundle of elements to send to the RTI, this bundle has size of: Number of elements sent by the socket -2 
+				// because 2 of the fields will not be used by the object -   evt_type and id
+				AttributeHandleValueMap attributes = rtiamb.getAttributeHandleValueMapFactory().create(map.size()-2);
 
-			// generate the value for the number of cups (same as the timestep)
-			Position pos = new Position(fedamb.federateTime,fedamb.federateTime,25.5);
-	        attributes.put(Vehicle.position, _positionRecordCoder.encode(pos));
+				//For each possible attribute for the class, check if it is in the map, if so put inside the blundle 
+				
+				
+				if(map.containsKey("position")){
+					ArrayList array = (ArrayList) map.get("position");
+					Position pos = new Position((double)array.get(0),(double)array.get(1),(double)array.get(2));
+					attributes.put(Vehicle.position, _positionRecordCoder.encode(pos));}
+				
+				
+				if(map.containsKey("angle")){
+					hla.rti1516e.encoding.HLAfloat64BE angle =  encoderFactory.createHLAfloat64BE((double) map.get("angle"));
+					attributes.put(Vehicle.angle, angle.toByteArray());}
+				
+				
+				if(map.containsKey("velocity")){
+					hla.rti1516e.encoding.HLAfloat64BE velocity =   encoderFactory.createHLAfloat64BE((double) map.get("velocity"));
+					attributes.put(Vehicle.velocity, velocity.toByteArray());}
+				
+				
+				if(map.containsKey("vname")){
+					HLAASCIIstring vName = encoderFactory.createHLAASCIIstring((String) map.get("vname"));
+					attributes.put(Vehicle.vname, vName.toByteArray());}
+				
+				
+				if(map.containsKey("vtype")){
+					HLAASCIIstring vType = encoderFactory.createHLAASCIIstring((String) map.get("vtype"));
+					attributes.put(Vehicle.vname, vType.toByteArray());}
+				
+				
+				//send to RTI the new values of the attributes
+				rtiamb.updateAttributeValues( objectHandle, attributes, generateTag());							
+
+			}
 			
-			// note that if you want to associate a particular timestamp with the
-			// update. here we send another update, this time with a timestamp:
-	        rtiamb.updateAttributeValues( objectHandle, attributes, generateTag());
-			//HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
-			//rtiamb.updateAttributeValues( objectHandle, attributes, generateTag(), time );
-			//log( "X,Y,Z: " + pos.toString());
+			
+			if(map.containsValue("TrafficLigthInstance")){
+
+				//create the a bundle of elements to send to the RTI, this bundle has size of: Number of elements sent by the socket -2 
+				// because 2 of the fields will not be used by the object -   evt_type and id
+				AttributeHandleValueMap attributes = rtiamb.getAttributeHandleValueMapFactory().create(map.size()-2);
+				
+			
+				//For each possible attribute for the class, check if it is in the map, if so put inside the blundle 
+				
+				if(map.containsKey("pos")){
+					ArrayList array = (ArrayList) map.get("pos");
+					Position pos = new Position((double)array.get(0),(double)array.get(1),(double)array.get(2));
+					attributes.put(Vehicle.position, _positionRecordCoder.encode(pos));}
+				
+				
+				if(map.containsKey("status")){
+					HLAASCIIstring vName = encoderFactory.createHLAASCIIstring((String) map.get("status"));
+					attributes.put(Vehicle.vname, vName.toByteArray());}
+				
+				
+				if(map.containsKey("id")){
+					HLAASCIIstring vType = encoderFactory.createHLAASCIIstring((String) map.get("id"));
+					attributes.put(Vehicle.vname, vType.toByteArray());}
+				
+				
+				//send to RTI the new values of the attributes
+				rtiamb.updateAttributeValues( objectHandle, attributes, generateTag());							
+				
+			}
 		}
 		
-		/**
-		 * This method will send out an interaction of the type FoodServed.DrinkServed. Any
-		 * federates which are subscribed to it will receive a notification the next time
-		 * they tick(). This particular interaction has no parameters, so you pass an empty
-		 * map, but the process of encoding them is the same as for attributes.
-		 */
-		private void sendInteraction() throws RTIexception
+		
+		//Send  the interactions to the RTI
+		private void sendInteraction(Map<String,Object> map) throws RTIexception
 		{
-			//////////////////////////
-			// send the interaction //
-			//////////////////////////
-			ParameterHandleValueMap creObjParam = rtiamb.getParameterHandleValueMapFactory().create(3);
-			HLAASCIIstring crevID = encoderFactory.createHLAASCIIstring("Departing Vehicle");
-			HLAASCIIstring crevType = encoderFactory.createHLAASCIIstring("Awesome Type");
-			Position pos = new Position(fedamb.federateTime, fedamb.federateTime, 25.5);
 
-			creObjParam.put(CreateObject.vid, crevID.toByteArray());
-			creObjParam.put(CreateObject.vtype, crevType.toByteArray());
-			creObjParam.put(CreateObject.pos, _positionRecordCoder.encode(pos));
+					   
+			if(map.containsValue("CreateObject")){
+				
+				
+				ParameterHandleValueMap creObjParam = rtiamb.getParameterHandleValueMapFactory().create(3);
+				HLAASCIIstring crevID = encoderFactory.createHLAASCIIstring((String) map.get("vid"));
+				HLAASCIIstring crevType = encoderFactory.createHLAASCIIstring((String) map.get("vtype"));
+				ArrayList array = (ArrayList) map.get("pos");
+				Position pos;				
+				pos = new Position((double)array.get(0),(double)array.get(1),(double)array.get(2));
+							
+				creObjParam.put(CreateObject.vid, crevID.toByteArray());
+				creObjParam.put(CreateObject.vtype, crevType.toByteArray());
+				creObjParam.put(CreateObject.position, _positionRecordCoder.encode(pos));
+				HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
+				rtiamb.sendInteraction( CreateObject.handle, creObjParam, generateTag());
+			}
+			
+			if(map.containsValue("DeleteObject")){
+				ParameterHandleValueMap delObjParam = rtiamb.getParameterHandleValueMapFactory().create(1);
+				HLAASCIIstring delvID = encoderFactory.createHLAASCIIstring((String) map.get("vid"));
+				delObjParam.put(DeleteObject.vid, delvID.toByteArray());
+			
+				HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
+				rtiamb.sendInteraction( DeleteObject.handle, delObjParam, generateTag());
+			}
+				
+			if(map.containsValue("InductionLoop")){
+				ParameterHandleValueMap inductionLoop = rtiamb.getParameterHandleValueMapFactory().create(2);
+				HLAASCIIstring indID = encoderFactory.createHLAASCIIstring((String) map.get("id"));
+				HLAASCIIstring indCount = encoderFactory.createHLAASCIIstring((String) map.get("count"));
+				
+	
+				inductionLoop.put(InductionLoop.id, indID.toByteArray());
+				inductionLoop.put(InductionLoop.count, indCount.toByteArray());
+				
+				System.out.println("wooooow "+ InductionLoop.id);
+				HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
+				rtiamb.sendInteraction( InductionLoop.handle , inductionLoop, generateTag());
+			}
 			
 			
-			ParameterHandleValueMap delObjParam = rtiamb.getParameterHandleValueMapFactory().create(1);
-			HLAASCIIstring delvID = encoderFactory.createHLAASCIIstring("Arrived Vehicle");
-			delObjParam.put(DeleteObject.vid, delvID.toByteArray());
-			
-			
-			// if you want to associate a particular timestamp with the
-			// interaction, you will have to supply it to the RTI. Here
-			// we send another interaction, this time with a timestamp:
-			HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
-			rtiamb.sendInteraction( CreateObject.handle, creObjParam, generateTag());
-			rtiamb.sendInteraction( DeleteObject.handle, delObjParam, generateTag());
 		}
 
 		/**
 		 * This method will request a time advance to the current time, plus the given
 		 * timestep. It will then wait until a notification of the time advance grant
 		 * has been received.
+		 * @throws InterruptedException 
 		 */
-		private void advanceTime( double timestep ) throws RTIexception
+		private void advanceTime( double timestep ) throws RTIexception, InterruptedException
 		{
 			// request the advance
 			fedamb.isAdvancing = true;
@@ -429,7 +830,7 @@ public class SumoFederate {
 			log("Time is " + time.toString());
 			while( fedamb.isAdvancing )
 			{
-				rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
+				Thread.sleep(200);
 			}
 		}
 
@@ -443,11 +844,26 @@ public class SumoFederate {
 			rtiamb.deleteObjectInstance( handle, generateTag() );
 		}
 
-		private byte[] generateTag()
-		{
+		private byte[] generateTag(){
 			return ("(timestamp) "+System.currentTimeMillis()).getBytes();
 		}
 	
+		
+		public void StartConnection(){
+			
+			conection = new connectionClass(host,socketPort);
+			receiveQueue = conection.GetInQueue();
+			sendQueue = conection.GetOutQueue();
+			SocketElement = conection.GetSocket();
+		}
+		
+		public connectionClass GetConnection(){
+			return conection;
+		}
+		
+		
+		
+		
 	public static void main(String[] args) {
 		// get a federate name, use "exampleFederate" as default
 		String federateName = "SumoFederate";
