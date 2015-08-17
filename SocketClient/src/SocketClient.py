@@ -2,7 +2,7 @@
  
 import socket
 import json
- 
+
 HOST = "localhost"
 PORT = 8080
 

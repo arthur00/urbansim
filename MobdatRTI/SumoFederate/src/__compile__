@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+export CLASSPATH=:/share/urbansim/urbansimbr/MobdatRTI/SumoFederate/src/jackson.jar:/share/urbansim/urbansimbr/MobdatRTI/SumoFederate/src/json.jar:/share/urbansim/urbansimbr/MobdatRTI/SumoFederate/src/portico.jar
+javac   urbansim/sumo/SumoFederate.java  urbansim/sumo/connectionClass.java  urbansim/sumo/Interactions.java  urbansim/sumo/Objects.java  urbansim/sumo/PositionCoder.java  urbansim/sumo/recvWork.java  urbansim/sumo/sendWork.java  urbansim/sumo/SumoFederateAmbassador.java 
+
+java   urbansim.sumo.SumoFederate  urbansim.sumo.connectionClass urbansim.sumo.Interactions  urbansim.sumo.Objects  urbansim.sumo.PositionCoder  urbansim.sumo.recvWork  urbansim.sumo.sendWork  urbansim.sumo.SumoFederateAmbassador 

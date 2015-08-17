@@ -1,4 +1,3 @@
-package urbansim.sumo;
 
 
 
@@ -9,6 +8,9 @@ package urbansim.sumo;
 //		sendData(jsonObj) --- send a json object
 //
 // *********************************************************************************
+
+package urbansim.sumo;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -99,6 +101,7 @@ public class connectionClass {
 			
 			
 		}catch (IOException e){
+			e.printStackTrace();
 			log("could not listene on port 8080");
 			System.exit(-1);
 			//return null;

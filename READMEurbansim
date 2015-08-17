@@ -1,0 +1,14 @@
+Federates 
+
+go to the folder /share/urbansim/urbansimbr/MobdatRTI/SumoFederate/src/
+and at the terminal write ./__compile__, the program should run
+inside __compile__ has the compile and the run comands, if you want just to compile remove the second comand
+there is a __run__ script as well if you want to each script do a job, run with to run the program
+to run the program ./__conpile__ and than ./__run__
+
+
+Connector 
+
+go to the folder /share/urbansim/mobdat
+write ./scripts/mobdat --config networks/fullnet/settings.js networks/fullnet/cardata.js  to run the program
+

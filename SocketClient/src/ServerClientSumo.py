@@ -1,5 +1,5 @@
-import asynchat
 import asyncore
+import asynchat
 import socket
 import threading
 import json
@@ -171,9 +171,9 @@ TrafficLightUpgrade = {
 
 if __name__ == "__main__":
     interface = 'localhost'
-    port = 8080
-    server = ChatClient('localhost', 8080)
+    port = 23456
     print 'Serving on localhost:8080'
+    server = ChatClient('localhost', 23456)
     arroz = True
     comm = threading.Thread(target=asyncore.loop)
     comm.daemon = True

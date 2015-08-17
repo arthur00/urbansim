@@ -1,4 +1,7 @@
+
 package urbansim.sumo;
+
+
 import hla.rti1516e.encoding.*;
 
 class Position {

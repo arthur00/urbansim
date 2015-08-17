@@ -1,5 +1,7 @@
 
+
 package urbansim.sumo;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +10,7 @@ import org.codehaus.jackson.map.ser.std.ToStringSerializer;
 
 
 
-import org.jgroups.annotations.Immutable;
+//import org.jgroups.annotations.Immutable;
 
 import hla.rti1516e.AttributeHandle;
 import hla.rti1516e.ObjectClassHandle;

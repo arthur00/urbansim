@@ -1,5 +1,6 @@
 package urbansim.sumo;
-
+import urbansim.*;
+                                             
 import hla.rti1516.jlc.HLAfloat32BE;
 import hla.rti1516.jlc.HLAfloat64BE;
 import hla.rti1516e.AttributeHandle;
@@ -23,7 +24,6 @@ import hla.rti1516e.exceptions.RTIexception;
 import hla.rti1516e.time.HLAfloat64Interval;
 import hla.rti1516e.time.HLAfloat64Time;
 import hla.rti1516e.time.HLAfloat64TimeFactory;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -37,42 +37,39 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
 
-
-
-
-
-import org.jgroups.util.AdditionalDataUUID;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import java.util.Date;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
-import java.util.function.BiConsumer;
+
+//Fucionality of Sumo Federate 
+// 1 - Receive from the socket the information(Receive Work)
+// 2 - Treats this information and make sure that the information is not broken, if it is resolve the problem(Receive work)
+// 3 - Store in the Queue (Receive work)
+// 4 - pop from the Queue to precess the information ( Sumo Federate)
+// 5 - Create 2 dictionaries to trace all objects sent from Sumo - byId byHandle ( Sumo Federate)
+// 6 - Define what kind of event and send to RTI ( Sumo Federate)
+
+// 1 - Receive from RTI ( Sumo Ambassador )
+// 2 - Transfor to Json Object ( Sumo Ambassador )
+// 3 - Place in a Queue( Sumo Ambassador)
+// 4 - Send via Socket (Send Work)
+
+
+
+/* Proximos passos 
+
+1 - editar angle e velocity para o array de 4 eleemtos - esta definido como sera no Sumofederate
+mas nao na FOM
+2 - 
+
+
 
 
 public class SumoFederate {
@@ -97,7 +94,7 @@ public class SumoFederate {
 	BlockingQueue receiveQueue;
 	BlockingQueue sendQueue;
 	public  Socket SocketElement;
-	public final int socketPort = 8080;
+	public final int socketPort = 23456;
 	public final String host = "localhost";
 	// = // StartConnection();
 	//public final Socket client =  StartConnection();
@@ -311,8 +308,7 @@ public class SumoFederate {
 				   
             boolean run = true;
 	        while(run) 
-	        {  
-	        	System.out.println("oooo");
+	        { 
 	            if((fromClient = receiveQueue.take().toString()) != null){
 	            	System.out.println("fromClient: "+fromClient);
 	            	//Transform the map sent by socket in a hash map
@@ -329,8 +325,6 @@ public class SumoFederate {
 		            
 		            /*-----------------check all the possible messages that SumoConnector can send -------------*/
 		            
-		            if(map.containsValue("InductionLoop"))            
-		            	sendInteraction(map);   
 		            	
 		            
 		            
@@ -379,15 +373,12 @@ public class SumoFederate {
 		            // The program uses the same message "VehicleInstance" when sumo order to create another object
 		            // or to update an object of  Vehicle
 		           if(map.containsValue("VehicleInstance")){
-		        	   System.out.println("opaaaa");
 		            	ObjectInstanceHandle objectHandle = null;
 		            	//Check if the object already exist in the list 
 		            	//If the ID is Given and it is in the dictionary the Connector wants to update an element, if not, create a new element and insert in the Dictionary
 		            	if(!objectHashMapByID.containsKey((Integer) map.get("id"))){
 		            		//Register TrafficLightsInstance object 
 		            		objectHandle = registerObject(map);
-		            		
-		            		//Insert to the Dictionary the object TrafficLight
 		            		objectReferencesByID = new ObjectReferencesByID(objectHandle, "Vehicle" );
 		            		objectReferencesByHandle = new ObjectReferencesByHandle((Integer) map.get("id"),"TrafficLight");
 		            		objectHashMapByID.put((Integer) map.get("id"), objectReferencesByID);
@@ -400,7 +391,6 @@ public class SumoFederate {
 		            	}
 		            	
 
-		            		            		
 		            		updateAttributeValues(map,objectHandle);
 		            	            	 
 		            }
@@ -709,12 +699,21 @@ public class SumoFederate {
 				if(map.containsKey("angle")){
 					hla.rti1516e.encoding.HLAfloat64BE angle =  encoderFactory.createHLAfloat64BE((double) map.get("angle"));
 					attributes.put(Vehicle.angle, angle.toByteArray());}
+
+					//ArrayList array = (ArrayList) map.get("position");
+			       		//Position angle  = new Position((double)array.get(0),(double)array.get(1),(double)array.get(2));
+
+					//attributes.put(Vehicle.angle, _positionRecordCoder.encode(angle));}
 				
-				
+
+
 				if(map.containsKey("velocity")){
 					hla.rti1516e.encoding.HLAfloat64BE velocity =   encoderFactory.createHLAfloat64BE((double) map.get("velocity"));
 					attributes.put(Vehicle.velocity, velocity.toByteArray());}
-				
+					//ArrayList array  = (ArrayList) map.get("velocity");
+			       		//Position velocity  = new Position((double)array.get(0),(double)array.get(1),(double)array.get(2));
+
+					//attributes.put(Vehicle.velocity, _positionRecordCoder.encode(velocity));}
 				
 				if(map.containsKey("vname")){
 					HLAASCIIstring vName = encoderFactory.createHLAASCIIstring((String) map.get("vname"));
@@ -744,17 +743,17 @@ public class SumoFederate {
 				if(map.containsKey("pos")){
 					ArrayList array = (ArrayList) map.get("pos");
 					Position pos = new Position((double)array.get(0),(double)array.get(1),(double)array.get(2));
-					attributes.put(Vehicle.position, _positionRecordCoder.encode(pos));}
+					attributes.put(TrafficLight.position, _positionRecordCoder.encode(pos));}
 				
 				
 				if(map.containsKey("status")){
 					HLAASCIIstring vName = encoderFactory.createHLAASCIIstring((String) map.get("status"));
-					attributes.put(Vehicle.vname, vName.toByteArray());}
+					attributes.put(TrafficLight.status, vName.toByteArray());}
 				
 				
 				if(map.containsKey("id")){
 					HLAASCIIstring vType = encoderFactory.createHLAASCIIstring((String) map.get("id"));
-					attributes.put(Vehicle.vname, vType.toByteArray());}
+					attributes.put(TrafficLight.id, vType.toByteArray());}
 				
 				
 				//send to RTI the new values of the attributes
@@ -771,6 +770,7 @@ public class SumoFederate {
 					   
 			if(map.containsValue("CreateObject")){
 				
+		    		System.out.println("event Create"); 
 				
 				ParameterHandleValueMap creObjParam = rtiamb.getParameterHandleValueMapFactory().create(3);
 				HLAASCIIstring crevID = encoderFactory.createHLAASCIIstring((String) map.get("vid"));
@@ -786,7 +786,10 @@ public class SumoFederate {
 				rtiamb.sendInteraction( CreateObject.handle, creObjParam, generateTag());
 			}
 			
+
 			if(map.containsValue("DeleteObject")){
+				
+		    		System.out.println("event Delete"); 
 				ParameterHandleValueMap delObjParam = rtiamb.getParameterHandleValueMapFactory().create(1);
 				HLAASCIIstring delvID = encoderFactory.createHLAASCIIstring((String) map.get("vid"));
 				delObjParam.put(DeleteObject.vid, delvID.toByteArray());
@@ -887,3 +890,4 @@ public class SumoFederate {
 	
 
 }
+
